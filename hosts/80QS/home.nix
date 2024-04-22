@@ -31,6 +31,11 @@
 
   catppuccin.flavour = "mocha";
 
+  services.mako = {
+    enable = true;
+    catppuccin.enable = true;
+  };
+
   nixpkgs = {
     # You can add overlays here
     overlays = [

@@ -21,8 +21,8 @@
         modules-right = [
           # "mpd"
           # "custom/updates"
-          # "pulseaudio"
-          # "backlight"
+          "pulseaudio"
+          "backlight"
           # "battery"
           "network"
           "group/hardware"
@@ -101,6 +101,43 @@
           persistent-workspaces = {
             "*" = 5;
           };
+        };
+
+        "pulseaudio" = {
+          format = "{icon} {volume}%";
+          format-bluetooth = "{volume}% {icon} {format_source}";
+          format-bluetooth-muted = " {icon} {format_source}";
+          format-muted = " Mute";
+          format-source = "{volume}% ";
+          format-source-muted = "";
+          format-icons = {
+            headphone = "";
+            hands-free = "󰏶";
+            headset = "󰋎";
+            phone = "";
+            portable = "";
+            car = "";
+            default = [ "" " " " " ];
+          };
+          scroll-step = 5.0;
+          on-click = "pamixer -t";
+          on-click-right = "pavucontrol";
+          smooth-scrolling-threshold = 1;
+        };
+
+        "backlight" = {
+          interval = 2;
+          align = 0;
+          rotate = 0;
+          format = "{icon} {percent}%";
+          format-icons = [ "󱩏" "󱩑" "󱩔" "󱩖" ];
+          on-click = "";
+          on-click-middle = "";
+          on-click-right = "";
+          on-update = "";
+          on-scroll-up = "light -A 5%";
+          on-scroll-down = "light -U 5%";
+          smooth-scrolling-threshold = 1;
         };
 
         "network" = {
@@ -540,7 +577,7 @@
                 border-radius: 15px;
                 padding: 2px 10px 0px 10px;
                 margin: 5px 15px 5px 0px;
-                opacity:0.8;
+                /* opacity:0.8; */
             }
 
             /* -----------------------------------------------------

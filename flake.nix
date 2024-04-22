@@ -40,7 +40,10 @@
         nixos = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs outputs; };
           # > Our main nixos configuration file <
-          modules = [ ./hosts/80QS/configuration.nix ];
+          modules = [
+            # inputs.catppuccin.nixosModules.catppuccin
+            ./hosts/80QS/configuration.nix
+          ];
         };
       };
 

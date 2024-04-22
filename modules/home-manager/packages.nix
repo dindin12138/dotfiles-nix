@@ -9,6 +9,10 @@
     lazygit
     fd
     ripgrep
+    pamixer
+    brightnessctl
+    light
+    xfce.thunar
   ];
 
   programs.vscode.enable = true;

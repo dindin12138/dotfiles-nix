@@ -110,15 +110,14 @@
     };
   };
   environment.systemPackages = with pkgs; [
-    # Flakes 通过 git 命令拉取其依赖项，所以必须先安装好 git
     vim
     wget
     curl
+    killall
   ];
 
   fonts.packages = with pkgs; [
     source-han-sans
-    noto-fonts
     noto-fonts-cjk
     noto-fonts-emoji
     fira-code-nerdfont
@@ -154,6 +153,16 @@
       # Use keys only. Remove if you want to SSH using password (not recommended)
       # PasswordAuthentication = false;
     };
+  };
+
+  sound.enable = true;
+  hardware.pulseaudio.enable = false;
+  security.rtkit.enable = true;
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
   };
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion

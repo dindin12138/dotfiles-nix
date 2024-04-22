@@ -52,13 +52,36 @@
       ];
 
       "$term" = "kitty";
-      "$menu" = "wofi --show drun --prompt 'Search...'";
+      "$launch" = "wofi --show drun --prompt 'Search...'";
+      "$lockscreen" = "hyprlock";
+      "$colorpicker" = "hyprpicker";
+      "$filemanager" = "thunar";
+      "$editor" = "code";
+      "$browser" = "firefox";
+      "$music" = "$term -e ncmpcpp";
+      "$note" = "obsidian";
 
       bind = [
+        # APPs
         "ALT,Return,exec,$term"
-        "ALT,D,exec,$menu"
+        "ALT,D,exec,$launch"
+        "ALT,E,exec,$filemanager"
+        "ALT,C,exec,$editor"
+        "ALT,G,exec,$browser"
+        "ALT,M,exec,$music"
+        "ALT,O,exec,$note"
+        "ALT,B,exec,waybar"
+        "ALT,T,exec,killall -SIGUSR1 .waybar-wrapped"
+        "ALT,P,exec,$colorpicker"
+        "SUPER,L,exec,$lockscreen"
+
+        # Hyprland
         "ALTSHIFT,Q,killactive"
         "ALTSHIFT,x,exit"
+        "ALT,F,fullscreen"
+        "ALT,space,togglefloating"
+
+        # Focus
         "ALT,left,movefocus,l"
         "ALT,right,movefocus,r"
         "ALT,up,movefocus,u"
@@ -67,6 +90,8 @@
         "ALT,L,movefocus,r"
         "ALT,K,movefocus,u"
         "ALT,J,movefocus,d"
+
+        # Move
         "ALTSHIFT,left,movewindow,l"
         "ALTSHIFT,right,movewindow,r"
         "ALTSHIFT,up,movewindow,u"
@@ -75,6 +100,8 @@
         "ALTSHIFT,L,movewindow,r"
         "ALTSHIFT,K,movewindow,u"
         "ALTSHIFT,J,movewindow,d"
+
+        # Workspaces
         "ALT,1,workspace,1"
         "ALT,2,workspace,2"
         "ALT,3,workspace,3"
@@ -85,6 +112,8 @@
         "ALT,8,workspace,8"
         "ALT,9,workspace,9"
         "ALT,0,workspace,10"
+
+        # Send to Workspaces
         "ALTSHIFT,1,movetoworkspace,1"
         "ALTSHIFT,2,movetoworkspace,2"
         "ALTSHIFT,3,movetoworkspace,3"
@@ -95,6 +124,18 @@
         "ALTSHIFT,8,movetoworkspace,8"
         "ALTSHIFT,9,movetoworkspace,9"
         "ALTSHIFT,0,movetoworkspace,10"
+
+        # Function keys
+        ",XF86MonBrightnessUp,exec,brightnessctl set 5%+ -q"
+        ",XF86MonBrightnessDown,exec,brightnessctl set 5%-  -q"
+        ",XF86AudioRaiseVolume,exec,pamixer -i 3"
+        ",XF86AudioLowerVolume,exec,pamixer -d 3"
+        ",XF86AudioMute,exec,pamixer -t"
+        ",XF86AudioMicMute,exec,pamixer -t"
+        ",XF86AudioNext,exec,mpc next"
+        ",XF86AudioPrev,exec,mpc prev"
+        ",XF86AudioPlay,exec,mpc toggle"
+        ",XF86AudioStop,exec,mpc stop"
       ];
     };
   };
