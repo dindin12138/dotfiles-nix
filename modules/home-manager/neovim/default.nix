@@ -15,8 +15,6 @@
       nixpkgs-fmt
       # Tools
       gnumake
-      fd
-      ripgrep
     ];
   };
 

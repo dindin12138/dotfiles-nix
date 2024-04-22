@@ -7,6 +7,8 @@
     bat
     eza
     lazygit
+    fd
+    ripgrep
   ];
 
   programs.vscode.enable = true;

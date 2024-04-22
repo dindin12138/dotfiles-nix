@@ -27,6 +27,39 @@
   programs.fzf = {
     enable = true;
     enableZshIntegration = true;
+    colors = {
+      "bg+" = "#313244";
+      bg = "#1e1e2e";
+      spinner = "#f5e0dc";
+      hl = "#f38ba8";
+      fg = "#cdd6f4";
+      header = "#f38ba8";
+      info = "#cba6f7";
+      pointer = "#f5e0dc";
+      marker = "#f5e0dc";
+      "fg+" = "#cdd6f4";
+      prompt = "#cba6f7";
+      "hl+" = "#f38ba8";
+    };
+    defaultCommand = "fd --exclude={.git,.idea,.vscode,.sass-cache,node_modules,build,dist,vendor} --type f";
+    defaultOptions = [
+      "--prompt=' FZF 󰄾 '"
+      "--height 50%"
+      "--layout reverse"
+      "--border rounded"
+    ];
+    fileWidgetOptions = [
+      "--prompt=' FZF 󰄾 '"
+      "--height 50%"
+      "--layout reverse"
+      "--border rounded"
+    ];
+    historyWidgetOptions = [
+      "--prompt=' FZF 󰄾 '"
+      "--height 50%"
+      "--layout reverse"
+      "--border rounded"
+    ];
   };
 
   programs.zoxide = {

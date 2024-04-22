@@ -1,6 +1,7 @@
 {
   programs.yazi = {
     enable = true;
+    catppuccin.enable = true;
     settings = {
       manager = {
         ratio = [ 1 2 4 ];

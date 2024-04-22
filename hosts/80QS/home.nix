@@ -10,6 +10,7 @@
   imports = [
     # If you want to use home-manager modules from other flakes (such as nix-colors):
     # inputs.nix-colors.homeManagerModule
+    inputs.catppuccin.homeManagerModules.catppuccin
 
     # You can also split up your configuration and import pieces of it here:
     ../../modules/home-manager/hyprland
@@ -27,6 +28,8 @@
     ../../modules/home-manager/btop.nix
     ../../modules/home-manager/bat.nix
   ];
+
+  catppuccin.flavour = "mocha";
 
   nixpkgs = {
     # You can add overlays here
@@ -55,6 +58,8 @@
     username = "din";
     homeDirectory = "/home/din";
   };
+
+  xdg.enable = true;
 
   xdg.userDirs = {
     enable = true;
