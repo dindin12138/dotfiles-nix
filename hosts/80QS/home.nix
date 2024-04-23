@@ -28,6 +28,7 @@
     ../../modules/home-manager/btop.nix
     ../../modules/home-manager/bat.nix
     ../../modules/home-manager/theme.nix
+    ../../modules/home-manager/swww.nix
   ];
 
   catppuccin.flavour = "mocha";

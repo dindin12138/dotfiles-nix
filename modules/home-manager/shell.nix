@@ -104,6 +104,11 @@
         "Downloads" = " ";
         "Music" = " ";
         "Pictures" = " ";
+        "Public" = " ";
+        "Desktop" = " ";
+        "Templates" = " ";
+        "Videos" = " ";
+        "Workspace" = " ";
       };
 
       git_branch = {
