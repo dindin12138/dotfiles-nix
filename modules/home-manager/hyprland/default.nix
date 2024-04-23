@@ -15,6 +15,11 @@
 
       monitor = ",preferred,auto,1";
 
+      misc = {
+        disable_hyprland_logo = true;
+        vrr = 0;
+      };
+
       input = {
         natural_scroll = "0";
         touchpad = {
@@ -50,6 +55,7 @@
 
       exec-once = [
         "waybar"
+        "${pkgs.swww}/bin/swww img ~/Pictures/background.png --transition-type any"
       ];
 
       "$term" = "kitty";
