@@ -2,6 +2,7 @@
 {
   imports = [
     ./hyprlock.nix
+    ./hypridle.nix
   ];
 
   home.packages = with pkgs; [
@@ -53,10 +54,11 @@
 
       "$term" = "kitty";
       "$launch" = "wofi --show drun --prompt 'Search...'";
+      "$clipboard" = "cliphist list | wofi --dmenu | cliphist decode | wl-copy";
       "$lockscreen" = "hyprlock";
       "$colorpicker" = "hyprpicker";
       "$filemanager" = "thunar";
-      "$editor" = "code";
+      "$editor" = "nvim";
       "$browser" = "firefox";
       "$music" = "$term -e ncmpcpp";
       "$note" = "obsidian";
@@ -66,7 +68,7 @@
         "ALT,Return,exec,$term"
         "ALT,D,exec,$launch"
         "ALT,E,exec,$filemanager"
-        "ALT,C,exec,$editor"
+        "ALT,C,exec,$clipboard"
         "ALT,G,exec,$browser"
         "ALT,M,exec,$music"
         "ALT,O,exec,$note"

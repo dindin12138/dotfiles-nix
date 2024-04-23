@@ -2,6 +2,12 @@
 {
   programs.joshuto = {
     enable = true;
+    # package = pkgs.joshuto.overrideAttrs (oldAttrs: {
+    #   buildInputs = oldAttrs.buildInputs ++ (with pkgs; [
+    #     file
+    #     swappy
+    #   ]);
+    # });
   };
   home.file = {
     ".config/joshuto/bookmarks.toml".source = ./bookmarks.toml;

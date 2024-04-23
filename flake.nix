@@ -20,6 +20,7 @@
     # everything match nicely? Try nix-colors!
     # nix-colors.url = "github:misterio77/nix-colors";
     hyprlock.url = "github:hyprwm/hyprlock";
+    hypridie.url = "github:hyprwm/hypridie";
     catppuccin.url = "github:catppuccin/nix";
   };
 

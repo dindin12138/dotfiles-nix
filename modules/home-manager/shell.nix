@@ -19,6 +19,8 @@
       icat = "kitty +kitten icat";
       lg = "lazygit";
 
+      fc = "cliphist list | fzf | cliphist decode | wl-copy";
+
       nixos-rebuild-flake = "sudo nixos-rebuild switch --flake";
       nixos-update-flake = "nix flake update && sudo nixos-rebuild switch --flake";
     };

@@ -13,7 +13,10 @@
     brightnessctl
     light
     xfce.thunar
+    wl-clipboard
   ];
+
+  services.cliphist.enable = true;
 
   programs.vscode.enable = true;
 
