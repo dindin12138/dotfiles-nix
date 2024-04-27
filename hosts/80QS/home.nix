@@ -29,14 +29,10 @@
     ../../modules/home-manager/bat.nix
     ../../modules/home-manager/theme.nix
     ../../modules/home-manager/swww.nix
+    ../../modules/home-manager/mako.nix
   ];
 
   catppuccin.flavour = "mocha";
-
-  services.mako = {
-    enable = true;
-    catppuccin.enable = true;
-  };
 
   nixpkgs = {
     # You can add overlays here
