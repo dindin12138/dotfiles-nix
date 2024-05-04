@@ -11,8 +11,9 @@
       ll = "exa -lh --group-directories-first --git";
       lt = "exa -T --git-ignore --level=2 --group-directories-first";
 
-      ra = "joshuto";
+      ra = "yazi";
       nf = "fastfetch";
+      astronvim = "NVIM_APPNAME=astronvim nvim";
       # vim = "nvim";
       # vi = "nvim";
       cat = "bat";
