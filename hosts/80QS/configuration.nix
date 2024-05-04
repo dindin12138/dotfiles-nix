@@ -73,7 +73,6 @@
     auto-optimise-store = true;
     substituters = [
       "https://mirrors.ustc.edu.cn/nix-channels/store"
-      "https://nix-community.cachix.org"
     ];
   };
 

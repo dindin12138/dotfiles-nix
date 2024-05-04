@@ -18,7 +18,7 @@
     ../../modules/home-manager/waybar.nix
     ../../modules/home-manager/wofi.nix
     ../../modules/home-manager/shell.nix
-    ../../modules/home-manager/yazi.nix
+    ../../modules/home-manager/yazi
     ../../modules/home-manager/joshuto
     ../../modules/home-manager/git.nix
     ../../modules/home-manager/packages.nix
@@ -30,6 +30,7 @@
     ../../modules/home-manager/theme.nix
     ../../modules/home-manager/swww.nix
     ../../modules/home-manager/mako.nix
+    ../../modules/home-manager/wezterm.nix
   ];
 
   catppuccin.flavour = "mocha";

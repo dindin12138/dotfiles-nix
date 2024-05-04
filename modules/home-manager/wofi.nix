@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 {
   programs.wofi = {
     enable = true;
@@ -7,7 +8,7 @@
       prompt = "Apps";
       normal_window = true;
       layer = "top";
-      term = "kitty";
+      term = "${pkgs.kitty}/bin/kitty";
 
       ## Geometry
       width = "500px";
