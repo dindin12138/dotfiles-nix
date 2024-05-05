@@ -31,6 +31,7 @@
     ../../modules/home-manager/swww.nix
     ../../modules/home-manager/mako.nix
     ../../modules/home-manager/wezterm.nix
+    ../../modules/home-manager/screenshot
   ];
 
   catppuccin.flavour = "mocha";
