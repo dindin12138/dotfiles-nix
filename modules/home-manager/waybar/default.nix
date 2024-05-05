@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 {
   programs.waybar = {
     enable = true;
@@ -43,7 +44,7 @@
 
         "custom/wallpaper" = {
           format = "";
-          on-click = "~/.config/hypr/scripts/w.sh";
+          on-click = "${pkgs.swww}/bin/swww img $(find ~/Pictures/Wallpapers/. -name '*.png' | shuf -n1) --transition-type any";
           # on-click-right =  "~/dotfiles/hypr/scripts/wallpaper.sh"
           tooltip = false;
         };

@@ -55,12 +55,13 @@
 
       exec-once = [
         "waybar"
-        "${pkgs.swww}/bin/swww img ~/Pictures/background.png --transition-type any"
+        "${pkgs.swww}/bin/swww img ~/Pictures/Wallpapers/background.png --transition-type any"
       ];
 
       "$term" = "kitty";
       "$launch" = "wofi --show drun --prompt 'Search...'";
       "$clipboard" = "cliphist list | wofi --dmenu | cliphist decode | wl-copy";
+      "$randomwallpaper" = "${pkgs.swww}/bin/swww img $(find ~/Pictures/Wallpapers/. -name '*.png' | shuf -n1) --transition-type any";
       "$lockscreen" = "hyprlock";
       "$colorpicker" = "hyprpicker";
       "$screenshot" = "grimblast";
@@ -84,6 +85,7 @@
         "ALT,P,exec,$colorpicker"
         "SUPER,L,exec,$lockscreen"
         "ALT,S,exec,$screenshot --notify copysave area"
+        "ALT,W,exec,$randomwallpaper"
 
         # Hyprland
         "ALTSHIFT,Q,killactive"
