@@ -24,7 +24,7 @@
     ../../modules/home-manager/btop.nix
     ../../modules/home-manager/bat.nix
     ../../modules/home-manager/theme.nix
-    ../../modules/home-manager/swww.nix
+    ../../modules/home-manager/wall
     ../../modules/home-manager/mako.nix
     ../../modules/home-manager/wezterm.nix
     ../../modules/home-manager/screenshot
