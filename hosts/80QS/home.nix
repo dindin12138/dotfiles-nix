@@ -16,7 +16,7 @@
     ../../modules/home-manager/hyprland
     ../../modules/home-manager/kitty.nix
     ../../modules/home-manager/waybar
-    ../../modules/home-manager/wofi.nix
+    ../../modules/home-manager/wofi
     ../../modules/home-manager/shell.nix
     ../../modules/home-manager/yazi
     # ../../modules/home-manager/joshuto
