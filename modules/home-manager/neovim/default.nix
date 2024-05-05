@@ -13,6 +13,9 @@
       # Formatter
       stylua
       nixpkgs-fmt
+      nodePackages.prettier
+      shfmt
+      jq
       # Tools
       gnumake
     ];

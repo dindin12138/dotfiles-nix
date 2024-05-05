@@ -17,19 +17,5 @@
         Restart = "on-failure";
       };
     };
-    # default_wall = {
-    #   Unit = {
-    #     Description = "default wallpaper";
-    #     Requires = [ "swww.service" ];
-    #     After = [ "swww.service" ];
-    #     PartOf = [ "swww.service" ];
-    #   };
-    #   Install.WantedBy = [ "swww.service" ];
-    #   Service = {
-    #     ExecStart = ''${pkgs.swww}/bin/swww img "${wallpaper}" --transition-type random'';
-    #     Restart = "on-failure";
-    #     Type = "oneshot";
-    #   };
-    # };
   };
 }
