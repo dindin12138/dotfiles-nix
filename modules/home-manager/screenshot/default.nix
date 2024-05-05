@@ -1,12 +1,12 @@
 { pkgs, ... }:
-let
-  mygrimblast = pkgs.grimblast.overrideAttrs (oldAttrs: {
-    src = ./grimblast;
-  });
-in
 {
   home.packages = with pkgs; [
-    mygrimblast
+    slurp
+    grim
+    jq
+    libnotify
+    (pkgs.writeShellScriptBin "grimblast" ''${builtins.readFile ./grimblast}'')
+    satty
   ];
 }
 

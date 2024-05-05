@@ -63,6 +63,7 @@
       "$clipboard" = "cliphist list | wofi --dmenu | cliphist decode | wl-copy";
       "$lockscreen" = "hyprlock";
       "$colorpicker" = "hyprpicker";
+      "$screenshot" = "grimblast";
       "$filemanager" = "thunar";
       "$editor" = "nvim";
       "$browser" = "firefox";
@@ -82,6 +83,7 @@
         "ALT,T,exec,killall -SIGUSR1 .waybar-wrapped"
         "ALT,P,exec,$colorpicker"
         "SUPER,L,exec,$lockscreen"
+        "ALT,S,exec,$screenshot --notify copysave area"
 
         # Hyprland
         "ALTSHIFT,Q,killactive"

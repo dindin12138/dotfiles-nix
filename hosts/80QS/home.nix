@@ -15,7 +15,7 @@
     # You can also split up your configuration and import pieces of it here:
     ../../modules/home-manager/hyprland
     ../../modules/home-manager/kitty.nix
-    ../../modules/home-manager/waybar.nix
+    ../../modules/home-manager/waybar
     ../../modules/home-manager/wofi.nix
     ../../modules/home-manager/shell.nix
     ../../modules/home-manager/yazi
@@ -71,6 +71,7 @@
     createDirectories = true;
     extraConfig = {
       XDG_WORKSPACE_DIR = "${config.home.homeDirectory}/Workspace";
+      XDG_SCREENSHOT_DIR = "${config.home.homeDirectory}/Pictures/Screenshots";
     };
   };
 
