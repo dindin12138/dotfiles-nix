@@ -30,7 +30,7 @@
     ../../modules/home-manager/screenshot
   ];
 
-  catppuccin.flavour = "mocha";
+  catppuccin.flavor = "mocha";
 
   nixpkgs = {
     # You can add overlays here
