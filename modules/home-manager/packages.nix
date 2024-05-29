@@ -19,6 +19,7 @@
     # typora
     # obsidian
     zotero
+    zed-editor
   ];
 
   services.cliphist.enable = true;
