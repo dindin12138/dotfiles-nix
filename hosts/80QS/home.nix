@@ -26,7 +26,7 @@
     ../../modules/home-manager/theme.nix
     ../../modules/home-manager/wall
     ../../modules/home-manager/mako.nix
-    ../../modules/home-manager/wezterm.nix
+    ../../modules/home-manager/wezterm
     ../../modules/home-manager/screenshot
   ];
 
