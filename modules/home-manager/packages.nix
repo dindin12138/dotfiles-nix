@@ -14,6 +14,11 @@
     light
     xfce.thunar
     wl-clipboard
+    mpv
+    vlc
+    # typora
+    # obsidian
+    zotero
   ];
 
   services.cliphist.enable = true;

@@ -10,11 +10,20 @@
       # LSP
       lua-language-server
       nil
+      clang-tools_18
+      pyright
+      rust-analyzer
+      neocmakelsp
+      gopls
+      ruff-lsp
+      sqls
       # Formatter
       stylua
       nixpkgs-fmt
       nodePackages.prettier
       shfmt
+      beautysh
+      gofumpt
       jq
       # Tools
       gnumake
