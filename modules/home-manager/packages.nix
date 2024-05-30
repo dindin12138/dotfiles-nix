@@ -16,8 +16,8 @@
     wl-clipboard
     mpv
     vlc
-    # typora
-    # obsidian
+    typora
+    obsidian
     zotero
     zed-editor
   ];

@@ -108,6 +108,9 @@
     wget
     curl
     killall
+    gcc
+    clang
+    gdb
   ];
 
   fonts.packages = with pkgs; [

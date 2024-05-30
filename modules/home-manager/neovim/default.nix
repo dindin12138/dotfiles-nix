@@ -10,7 +10,7 @@
       # LSP
       lua-language-server
       nil
-      clang-tools_18
+      clang-tools
       pyright
       rust-analyzer
       neocmakelsp
@@ -35,9 +35,9 @@
       source = ./nvim;
       recursive = true;
     };
-    ".config/astronvim/" = {
-      source = ./astronvim;
-      recursive = true;
-    };
+    # ".config/astronvim/" = {
+    #   source = ./astronvim;
+    #   recursive = true;
+    # };
   };
 }
