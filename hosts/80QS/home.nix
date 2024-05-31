@@ -28,6 +28,7 @@
     ../../modules/home-manager/mako.nix
     ../../modules/home-manager/wezterm
     ../../modules/home-manager/screenshot
+    ../../modules/home-manager/vscode.nix
   ];
 
   catppuccin.flavor = "mocha";
