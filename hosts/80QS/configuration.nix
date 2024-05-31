@@ -71,6 +71,11 @@
     ];
   };
 
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+  };
+
   # FIXME: Add the rest of your current configuration
 
   # TODO: Set your hostname
@@ -164,6 +169,37 @@
     alsa.support32Bit = true;
     pulse.enable = true;
   };
+
+  hardware.opengl = {
+    enable = true;
+    driSupport = true;
+    driSupport32Bit = true;
+  };
+
+  services.tlp.enable = true;
+  services.auto-cpufreq.enable = true;
+  services.xserver.videoDrivers = [ "nvidia" ];
+
+  hardware.nvidia = {
+    modesetting.enable = true;
+    prime = {
+      offload.enable = true;
+      intelBusId = "PCI:00:02:0";
+      nvidiaBusId = "PCI:03:00:0";
+    };
+  };
+
+  programs.steam = {
+    enable = true;
+    gamescopeSession.enable = true;
+    remotePlay.openFirewall = true;
+    dedicatedServer.openFirewall = true;
+    extraCompatPackages = with pkgs; [ proton-ge-bin ];
+    fontPackages = with pkgs; [ source-han-sans ];
+    extraPackages = with pkgs; [ mangohud ];
+  };
+
+  programs.gamemode.enable = true;
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "23.11";

@@ -58,6 +58,15 @@
         "${pkgs.swww}/bin/swww img ~/Pictures/Wallpapers/background.png --transition-type any"
       ];
 
+      windowrulev2 = [
+        "float, class:(steam), title:(Friends List)"
+        "float, class:(steam), title:(Special Offers)"
+        "float, class:(steam), title:(Steam Settings)"
+        "float, class:(steam), title:(好友列表)"
+        "float, class:(steam), title:(特惠)"
+        "float, class:(steam), title:(Steam 设置)"
+      ];
+
       "$term" = "kitty";
       "$launch" = "wofi --show drun --prompt 'Search...'";
       "$clipboard" = "cliphist list | wofi --dmenu | cliphist decode | wl-copy";
@@ -148,6 +157,26 @@
         ",XF86AudioPrev,exec,mpc prev"
         ",XF86AudioPlay,exec,mpc toggle"
         ",XF86AudioStop,exec,mpc stop"
+
+        # Resize window
+        "ALTCTRL,left,resizeactive,-20 0"
+        "ALTCTRL,right,resizeactive,20 0"
+        "ALTCTRL,up,resizeactive,0 -20"
+        "ALTCTRL,down,resizeactive,0 20"
+        "ALTCTRL,H,resizeactive,-20 0"
+        "ALTCTRL,L,resizeactive,20 0"
+        "ALTCTRL,K,resizeactive,0 -20"
+        "ALTCTRL,J,resizeactive,0 20"
+
+        # Mouse
+        "ALT,mouse_down,workspace,e+1"
+        "ALT,mouse_up,workspace,e-1"
+      ];
+
+      bindm = [
+        # Mouse
+        "ALT,mouse:272,movewindow"
+        "ALT,mouse:273,resizewindow"
       ];
     };
   };
