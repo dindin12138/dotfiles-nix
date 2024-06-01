@@ -12,6 +12,7 @@
       alefragnani.project-manager
       gruntfuggly.todo-tree
       jnoortheen.nix-ide
+      esbenp.prettier-vscode
     ];
     userSettings = {
       "files" = {
@@ -31,8 +32,9 @@
         "formatOnType" = true;
         "tabCompletion" = "on";
         "cursorSmoothCaretAnimation" = "on";
-        "minimap.enabled" = false;
+        "defaultFormatter" = "esbenp.prettier-vscode";
       };
+      "editor.minimap.enabled" = false;
       "[cpp]" = {
         "editor.defaultFormatter" = "llvm-vs-code-extensions.vscode-clangd";
         "editor.quickSuggestions" = {
@@ -42,6 +44,7 @@
         };
       };
       "[c]" = {
+        "editor.defaultFormatter" = "llvm-vs-code-extensions.vscode-clangd";
         "editor.quickSuggestions" = {
           "comments" = "on";
           "strings" = "on";
@@ -67,19 +70,20 @@
         "path" = "${pkgs.clang-tools}/bin/clangd";
       };
       "cmake.configureOnOpen" = true;
-      "nix" = {
-        "enableLanguageServer" = true;
-        "serverPath" = "${pkgs.nil}/bin/nil";
-        "formatterPath" = "${pkgs.nixpkgs-fmt}/bin/nixpkgs-fmt";
-        "serverSettings" = {
-          "nil" = {
-            "diagnostics.ignored" = [
-              "unused_binding"
-              "unused_with"
-            ];
-            "formatting.command" = "${pkgs.nixpkgs-fmt}/bin/nixpkgs-fmt";
-          };
+      "nix.enableLanguageServer" = true;
+      "nix.serverPath" = "${pkgs.nil}/bin/nil";
+      "nix.formatterPath" = "${pkgs.nixpkgs-fmt}/bin/nixpkgs-fmt";
+      "nix.serverSettings" = {
+        "nil" = {
+          "diagnostics.ignored" = [
+            "unused_binding"
+            "unused_with"
+          ];
+          "formatting.command" = "${pkgs.nixpkgs-fmt}/bin/nixpkgs-fmt";
         };
+      };
+      "[nix]" = {
+        "editor.defaultFormatter"= "jnoortheen.nix-ide";
       };
     };
   };
