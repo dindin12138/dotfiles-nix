@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 {
   imports = [
     ./hyprlock.nix
@@ -33,14 +33,14 @@
         workspace_swipe_fingers = "3";
       };
 
-      general = {
+      general = with config.colorScheme.colors; {
         layout = "master";
         apply_sens_to_raw = "0";
         gaps_in = "3";
         gaps_out = "5";
         border_size = "2";
-        "col.active_border" = "0xFF6C7086";
-        "col.inactive_border" = "0xFF343A40";
+        "col.active_border" = "0xFF${base07}";
+        "col.inactive_border" = "0xFF${base00}";
       };
 
       decoration = {
@@ -146,18 +146,6 @@
         "ALTSHIFT,9,movetoworkspace,9"
         "ALTSHIFT,0,movetoworkspace,10"
 
-        # Function keys
-        ",XF86MonBrightnessUp,exec,brightnessctl set 5%+ -q"
-        ",XF86MonBrightnessDown,exec,brightnessctl set 5%-  -q"
-        ",XF86AudioRaiseVolume,exec,pamixer -i 3"
-        ",XF86AudioLowerVolume,exec,pamixer -d 3"
-        ",XF86AudioMute,exec,pamixer -t"
-        ",XF86AudioMicMute,exec,pamixer -t"
-        ",XF86AudioNext,exec,mpc next"
-        ",XF86AudioPrev,exec,mpc prev"
-        ",XF86AudioPlay,exec,mpc toggle"
-        ",XF86AudioStop,exec,mpc stop"
-
         # Resize window
         "ALTCTRL,left,resizeactive,-20 0"
         "ALTCTRL,right,resizeactive,20 0"
@@ -177,6 +165,19 @@
         # Mouse
         "ALT,mouse:272,movewindow"
         "ALT,mouse:273,resizewindow"
+      ];
+
+      binde = [
+        ",XF86MonBrightnessUp,exec,brightnessctl set 3%+ -q"
+        ",XF86MonBrightnessDown,exec,brightnessctl set 3%-  -q"
+        ",XF86AudioRaiseVolume,exec,wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 3%+"
+        ",XF86AudioLowerVolume,exec,wpctl set-volume @DEFAULT_AUDIO_SINK@ 3%-"
+        ",XF86AudioMute,exec,wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+        ",XF86AudioMicMute,exec,wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+        ",XF86AudioNext,exec,mpc next"
+        ",XF86AudioPrev,exec,mpc prev"
+        ",XF86AudioPlay,exec,mpc toggle"
+        ",XF86AudioStop,exec,mpc stop"
       ];
     };
   };

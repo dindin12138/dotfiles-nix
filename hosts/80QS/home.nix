@@ -7,6 +7,7 @@
     # If you want to use home-manager modules from other flakes (such as nix-colors):
     # inputs.nix-colors.homeManagerModule
     inputs.catppuccin.homeManagerModules.catppuccin
+    inputs.nix-colors.homeManagerModules.default
 
     # You can also split up your configuration and import pieces of it here:
     ../../modules/home-manager/hyprland
@@ -30,8 +31,6 @@
     ../../modules/home-manager/screenshot
     ../../modules/home-manager/vscode.nix
   ];
-
-  catppuccin.flavor = "mocha";
 
   nixpkgs = {
     # You can add overlays here

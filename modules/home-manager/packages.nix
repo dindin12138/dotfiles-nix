@@ -9,9 +9,9 @@
     lazygit
     fd
     ripgrep
-    pamixer
+    # pamixer
     brightnessctl
-    light
+    # light
     xfce.thunar
     wl-clipboard
     mpv

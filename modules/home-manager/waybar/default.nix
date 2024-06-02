@@ -122,7 +122,7 @@
             default = [ "" " " " " ];
           };
           scroll-step = 5.0;
-          on-click = "pamixer -t";
+          on-click = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
           on-click-right = "pavucontrol";
           smooth-scrolling-threshold = 1;
         };
@@ -137,8 +137,8 @@
           on-click-middle = "";
           on-click-right = "";
           on-update = "";
-          on-scroll-up = "light -A 5%";
-          on-scroll-down = "light -U 5%";
+          on-scroll-up = "brightnessctl set 3%+ -q";
+          on-scroll-down = "brightnessctl set 3%-  -q";
           smooth-scrolling-threshold = 1;
         };
 

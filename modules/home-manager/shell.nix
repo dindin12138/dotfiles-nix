@@ -1,4 +1,4 @@
-{ lib, ... }:
+{ lib, config, ... }:
 {
   programs.zsh = {
     enable = true;
@@ -30,19 +30,19 @@
   programs.fzf = {
     enable = true;
     enableZshIntegration = true;
-    colors = {
-      "bg+" = "#313244";
-      bg = "#1e1e2e";
-      spinner = "#f5e0dc";
-      hl = "#f38ba8";
-      fg = "#cdd6f4";
-      header = "#f38ba8";
-      info = "#cba6f7";
-      pointer = "#f5e0dc";
-      marker = "#f5e0dc";
-      "fg+" = "#cdd6f4";
-      prompt = "#cba6f7";
-      "hl+" = "#f38ba8";
+    colors = with config.colorScheme.colors; {
+      "bg+" = "#${base02}";
+      bg = "#${base00}";
+      spinner = "#${base06}";
+      hl = "#${base08}";
+      fg = "#${base05}";
+      header = "#${base08}";
+      info = "#${base0E}";
+      pointer = "#${base06}";
+      marker = "#${base06}";
+      "fg+" = "#${base05}";
+      prompt = "#${base0E}";
+      "hl+" = "#${base08}";
     };
     defaultCommand = "fd --exclude={.git,.idea,.vscode,.sass-cache,node_modules,build,dist,vendor} --type f";
     defaultOptions = [
@@ -73,28 +73,28 @@
   programs.starship = {
     enable = true;
     enableZshIntegration = true;
-    settings = {
+    settings = with config.colorScheme.colors; {
       format = lib.concatStrings [
-        "[░▒▓](#a3aed2)"
-        "[  ](bg:#a3aed2 fg:#090c0c)"
-        "[](bg:#769ff0 fg:#a3aed2)"
+        "[░▒▓](#${base07})"
+        "[  ](bg:#${base07} fg:#${base00})"
+        "[](bg:#${base0D} fg:#${base07})"
         "$directory"
-        "[](fg:#769ff0 bg:#394260)"
+        "[](fg:#${base0D} bg:#${base03})"
         "$git_branch"
         "$git_status"
-        "[](fg:#394260 bg:#212736)"
+        "[](fg:#${base03} bg:#${base02})"
         "$nodejs"
         "$rust"
         "$golang"
         "$php"
-        "[](fg:#212736 bg:#1d2230)"
+        "[](fg:#${base02} bg:#${base00})"
         "$time"
-        "[ ](fg:#1d2230)"
+        "[ ](fg:#${base00})"
         "\n$character"
       ];
 
       directory = {
-        style = "fg:#e3e5e5 bg:#769ff0";
+        style = "fg:#${base05} bg:#${base0D}";
         format = "[ $path ]($style)";
         truncation_length = 3;
         truncation_symbol = "…/";
@@ -114,44 +114,44 @@
 
       git_branch = {
         symbol = "";
-        style = "bg:#394260";
-        format = "[[ $symbol $branch ](fg:#769ff0 bg:#394260)]($style)";
+        style = "bg:#${base03}";
+        format = "[[ $symbol $branch ](fg:#${base0D} bg:#${base03})]($style)";
       };
 
       git_status = {
-        style = "bg:#394260";
-        format = "[[($all_status$ahead_behind )](fg:#769ff0 bg:#394260)]($style)";
+        style = "bg:#${base03}";
+        format = "[[($all_status$ahead_behind )](fg:#${base0D} bg:#${base03})]($style)";
       };
 
       nodejs = {
         symbol = "";
-        style = "bg:#212736";
-        format = "[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)";
+        style = "bg:#${base02}";
+        format = "[[ $symbol ($version) ](fg:#${base0D} bg:#${base02})]($style)";
       };
 
       rust = {
         symbol = "";
-        style = "bg:#212736";
-        format = "[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)";
+        style = "bg:#${base02}";
+        format = "[[ $symbol ($version) ](fg:#${base0D} bg:#${base02})]($style)";
       };
 
       golang = {
         symbol = "";
-        style = "bg:#212736";
-        format = "[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)";
+        style = "bg:#${base02}";
+        format = "[[ $symbol ($version) ](fg:#${base0D} bg:#${base02})]($style)";
       };
 
       php = {
         symbol = "";
-        style = "bg:#212736";
-        format = "[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)";
+        style = "bg:#${base02}";
+        format = "[[ $symbol ($version) ](fg:#${base0D} bg:#${base02})]($style)";
       };
 
       time = {
         disabled = false;
         time_format = "%R";
-        style = "bg:#1d2230";
-        format = "[[  $time ](fg:#a0a9cb bg:#1d2230)]($style)";
+        style = "bg:#${base00}";
+        format = "[[  $time ](fg:#${base05} bg:#${base00})]($style)";
       };
     };
   };

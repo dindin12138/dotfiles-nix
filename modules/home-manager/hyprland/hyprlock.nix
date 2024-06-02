@@ -1,5 +1,6 @@
+{ config, ... }:
 {
-  programs.hyprlock = {
+  programs.hyprlock = with config.colorScheme.colors; {
     enable = true;
     settings = {
       general = {
@@ -26,11 +27,11 @@
           dots_size = 0.2;
           dots_spacing = 0.2;
           dots_center = true;
-          outer_color = "rgba(0, 0, 0, 0)";
-          inner_color = "rgba(0, 0, 0, 0.5)";
-          font_color = "rgb(200, 200, 200)";
+          outer_color = "0xFF${base05}";
+          inner_color = "0x80${base05}";
+          font_color = "0xFF${base00}";
           fade_on_empty = false;
-          placeholder_text = "<i><span foreground=\"##cdd6f4\">Input Password...</span></i>";
+          placeholder_text = "<i><span foreground=\"##${base00}\">Input Password...</span></i>";
           hide_input = false;
           position = "0, -120";
           halign = "center";
@@ -41,8 +42,7 @@
         {
           monitor = "";
           text = "cmd[update:1000] echo \"$(date +\"%-I:%M%p\")\"";
-          color = "rgba(200, 200, 200, 1.0)";
-          #color = rgba(255, 255, 255, 0.6)
+          color = "0xFF${base05}";
           font_size = 100;
           font_family = "FiraCode Nerd Font";
           position = "0, -300";
@@ -52,8 +52,7 @@
         {
           monitor = "";
           text = "Hi there, $USER";
-          color = "rgba(200, 200, 200, 1.0)";
-          #color = rgba(255, 255, 255, 0.6)
+          color = "0xFF${base05}";
           font_size = 25;
           font_family = "FiraCode Nerd Font";
           position = "0, -40";
@@ -62,6 +61,5 @@
         }
       ];
     };
-
   };
 }

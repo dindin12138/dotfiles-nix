@@ -1,5 +1,6 @@
+{ config, ... }:
 {
-  services.mako = {
+  services.mako = with config.colorScheme.colors; {
     enable = true;
     actions = true;
     font = "FiraCode Nerd Font 10";
@@ -10,10 +11,10 @@
     layer = "overlay";
     markup = true;
     sort = "-time";
-    textColor = "#d9e0ee";
-    backgroundColor = "#1e1e2e";
-    borderColor = "#6C7086";
-    progressColor = "over #6C7086";
+    textColor = "#${base05}";
+    backgroundColor = "#${base00}";
+    borderColor = "#${base04}";
+    progressColor = "over #${base04}";
     borderRadius = 4;
     borderSize = 2;
     width = 300;
@@ -28,17 +29,17 @@
       on-button-right=dismiss-all
       on-touch=dismiss
       [urgency=low]
-      border-color=#6C7086
+      border-color=#${base04}
       default-timeout=2000
       [urgency=normal]
-      border-color=#6C7086
+      border-color=#${base04}
       default-timeout=5000
       [urgency=high]
-      border-color=#f38ba8
-      text-color=#f38ba8
+      border-color=#${base08}
+      text-color=#${base08}
       default-timeout=0
       [category=mpd]
-      border-color=#6C7086
+      border-color=#${base04}
       default-timeout=2000
       group-by=category
     '';
