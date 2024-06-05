@@ -16,7 +16,7 @@
           "custom/wallpaper"
           "custom/colorpicker"
           "custom/screenshot"
-          "wlr/taskbar"
+          # "wlr/taskbar"
           "hyprland/window"
         ];
         modules-center = [ "hyprland/workspaces" ];
@@ -80,14 +80,17 @@
         };
 
         "hyprland/window" = {
+          format = "{}";
+          icon = true;
+          icon-size = 20;
           rewrite = {
-            "(.*) - Brave" = "$1";
-            "(.*) - Chromium" = "$1";
-            "(.*) - Brave Search" = "$1";
-            "(.*) - Outlook" = "$1";
-            "(.*) Microsoft Teams" = "$1";
+            "(.*)Mozilla Firefox" = "Mozilla Firefox";
+            "(.*)Google Chrome" = "Google Chrome";
+            "(.*)Visual Studio Code" = "Visual Studio Code";
+            "(.*)Zotero" = "Zotero";
+            "(.*)Obsidian(.*)" = "Obsidian";
+            "(.*)Typora" = "Typora";
           };
-          "separate-outputs" = true;
         };
 
         "hyprland/workspaces" = {

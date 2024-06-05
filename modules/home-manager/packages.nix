@@ -12,7 +12,7 @@
     # pamixer
     brightnessctl
     # light
-    xfce.thunar
+    # xfce.thunar
     wl-clipboard
     mpv
     vlc

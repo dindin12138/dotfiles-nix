@@ -1,6 +1,6 @@
 { config, ... }:
 {
-  services.mako = with config.colorScheme.colors; {
+  services.mako = with config.colorScheme.palette; {
     enable = true;
     actions = true;
     font = "FiraCode Nerd Font 10";

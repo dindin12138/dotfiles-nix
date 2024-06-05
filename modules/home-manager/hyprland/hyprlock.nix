@@ -1,6 +1,6 @@
 { config, ... }:
 {
-  programs.hyprlock = with config.colorScheme.colors; {
+  programs.hyprlock = with config.colorScheme.palette; {
     enable = true;
     settings = {
       general = {

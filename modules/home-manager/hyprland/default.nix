@@ -33,7 +33,7 @@
         workspace_swipe_fingers = "3";
       };
 
-      general = with config.colorScheme.colors; {
+      general = with config.colorScheme.palette; {
         layout = "master";
         apply_sens_to_raw = "0";
         gaps_in = "3";

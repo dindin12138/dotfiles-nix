@@ -88,6 +88,8 @@
 
   boot.kernelPackages = pkgs.linuxPackagesFor (pkgs.linux_6_1);
 
+  boot.supportedFilesystems = [ "ntfs" ];
+
   time.timeZone = "Asia/Shanghai";
   i18n.defaultLocale = "en_US.UTF-8";
 
@@ -201,6 +203,16 @@
   };
 
   programs.gamemode.enable = true;
+
+  programs.thunar = {
+    enable = true;
+    plugins = with pkgs.xfce; [
+      # thunar-archive-plugin
+      thunar-media-tags-plugin
+      thunar-volman
+    ];
+  };
+  services.tumbler.enable = true;
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "23.11";

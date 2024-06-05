@@ -30,7 +30,7 @@
   programs.fzf = {
     enable = true;
     enableZshIntegration = true;
-    colors = with config.colorScheme.colors; {
+    colors = with config.colorScheme.palette; {
       "bg+" = "#${base02}";
       bg = "#${base00}";
       spinner = "#${base06}";
@@ -73,7 +73,7 @@
   programs.starship = {
     enable = true;
     enableZshIntegration = true;
-    settings = with config.colorScheme.colors; {
+    settings = with config.colorScheme.palette; {
       format = lib.concatStrings [
         "[░▒▓](#${base07})"
         "[  ](bg:#${base07} fg:#${base00})"
