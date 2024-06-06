@@ -350,6 +350,7 @@ window#waybar.empty #window {
 #pulseaudio.muted {
   background-color: @backgrounddark;
   color: @textcolor1;
+  opacity: 0.8;
 }
 
 /* -----------------------------------------------------
@@ -478,4 +479,3 @@ window#waybar.empty #window {
 #tray > .needs-attention {
   -gtk-icon-effect: highlight;
 }
-

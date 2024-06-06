@@ -61,23 +61,23 @@
           tooltip = false;
         };
 
-        "wlr/taskbar" = {
-          all-outputs = false;
-          format = "{icon}";
-          icon-size = 20;
-          tooltip = false;
-          # tooltip-format =  "{title}";
-          on-click = "activate";
-          on-click-middle = "close";
-          ignore-list = [ "wofi" "rofi" ];
-          app_ids-mapping = {
-            firefoxdeveloperedition = "firefox-developer-edition";
-          };
-          rewrite = {
-            "Firefox Web Browser" = "Firefox";
-            "Foot Server" = "Terminal";
-          };
-        };
+        # "wlr/taskbar" = {
+        #   all-outputs = false;
+        #   format = "{icon}";
+        #   icon-size = 20;
+        #   tooltip = false;
+        #   # tooltip-format =  "{title}";
+        #   on-click = "activate";
+        #   on-click-middle = "close";
+        #   ignore-list = [ "wofi" "rofi" ];
+        #   app_ids-mapping = {
+        #     firefoxdeveloperedition = "firefox-developer-edition";
+        #   };
+        #   rewrite = {
+        #     "Firefox Web Browser" = "Firefox";
+        #     "Foot Server" = "Terminal";
+        #   };
+        # };
 
         "hyprland/window" = {
           format = "{}";
