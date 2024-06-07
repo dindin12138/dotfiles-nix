@@ -15,8 +15,22 @@
 
     # Import your generated (nixos-generate-config) hardware configuration
     ./hardware-configuration.nix
+    ../../modules/nixos/bootloader.nix
+    ../../modules/nixos/fcitx5.nix
+    ../../modules/nixos/fonts.nix
+    ../../modules/nixos/nix.nix
     ../../modules/nixos/display-manager
     ../../modules/nixos/polkit.nix
+    ../../modules/nixos/packages.nix
+    ../../modules/nixos/powermanager.nix
+    ../../modules/nixos/proxy.nix
+    ../../modules/nixos/shell.nix
+    ../../modules/nixos/sound.nix
+    ../../modules/nixos/ssh.nix
+    ../../modules/nixos/steam.nix
+    ../../modules/nixos/thunar.nix
+    ../../modules/nixos/users.nix
+    ../../modules/nixos/hyprland.nix
   ];
 
   home-manager = {
@@ -61,20 +75,20 @@
       })
       config.nix.registry;
 
-  nix.settings = {
-    # Enable flakes and new 'nix' command
-    experimental-features = "nix-command flakes";
-    # Deduplicate and optimize nix store
-    auto-optimise-store = true;
-    substituters = [
-      "https://mirrors.ustc.edu.cn/nix-channels/store"
-    ];
-  };
+  # nix.settings = {
+  #   # Enable flakes and new 'nix' command
+  #   experimental-features = "nix-command flakes";
+  #   # Deduplicate and optimize nix store
+  #   auto-optimise-store = true;
+  #   substituters = [
+  #     "https://mirrors.ustc.edu.cn/nix-channels/store"
+  #   ];
+  # };
 
-  nix.gc = {
-    automatic = true;
-    dates = "weekly";
-  };
+  # nix.gc = {
+  #   automatic = true;
+  #   dates = "weekly";
+  # };
 
   # FIXME: Add the rest of your current configuration
 
@@ -83,8 +97,8 @@
   networking.networkmanager.enable = true;
 
   # TODO: This is just an example, be sure to use whatever bootloader you prefer
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  # boot.loader.systemd-boot.enable = true;
+  # boot.loader.efi.canTouchEfiVariables = true;
 
   boot.kernelPackages = pkgs.linuxPackagesFor (pkgs.linux_6_1);
 
@@ -95,91 +109,91 @@
 
 
   # TODO: Configure your system-wide user settings (groups, etc), add more users as needed.
-  users.users = {
-    # FIXME: Replace with your username
-    din = {
-      # TODO: You can set an initial password for your user.
-      # If you do, you can skip setting a root password by passing '--no-root-passwd' to nixos-install.
-      # Be sure to change it (using passwd) after rebooting!
-      # initialPassword = "correcthorsebatterystaple";
-      isNormalUser = true;
-      openssh.authorizedKeys.keys = [
-        # TODO: Add your SSH public key(s) here, if you plan on using SSH to connect
-      ];
-      # TODO: Be sure to add any other groups you need (such as networkmanager, audio, docker, etc)
-      extraGroups = [ "networkmanager" "wheel" ];
-    };
-  };
-  environment.systemPackages = with pkgs; [
-    vim
-    wget
-    curl
-    killall
-    gcc
-    clang
-    gdb
-  ];
+  # users.users = {
+  #   # FIXME: Replace with your username
+  #   din = {
+  #     # TODO: You can set an initial password for your user.
+  #     # If you do, you can skip setting a root password by passing '--no-root-passwd' to nixos-install.
+  #     # Be sure to change it (using passwd) after rebooting!
+  #     # initialPassword = "correcthorsebatterystaple";
+  #     isNormalUser = true;
+  #     openssh.authorizedKeys.keys = [
+  #       # TODO: Add your SSH public key(s) here, if you plan on using SSH to connect
+  #     ];
+  #     # TODO: Be sure to add any other groups you need (such as networkmanager, audio, docker, etc)
+  #     extraGroups = [ "networkmanager" "wheel" ];
+  #   };
+  # };
+  # environment.systemPackages = with pkgs; [
+  #   vim
+  #   wget
+  #   curl
+  #   killall
+  #   gcc
+  #   clang
+  #   gdb
+  # ];
 
-  fonts.packages = with pkgs; [
-    source-han-sans
-    noto-fonts-cjk
-    noto-fonts-emoji
-    fira-code-nerdfont
-  ];
+  # fonts.packages = with pkgs; [
+  #   # source-han-sans
+  #   noto-fonts-cjk
+  #   noto-fonts-emoji
+  #   fira-code-nerdfont
+  # ];
 
-  programs.hyprland.enable = true;
-  programs.zsh.enable = true;
-  users.defaultUserShell = pkgs.zsh;
-  environment.pathsToLink = [ "/share/zsh" ];
+  # programs.hyprland.enable = true;
+  # programs.zsh.enable = true;
+  # users.defaultUserShell = pkgs.zsh;
+  # environment.pathsToLink = [ "/share/zsh" ];
 
-  i18n.inputMethod = {
-    enabled = "fcitx5";
-    fcitx5 = {
-      addons = with pkgs; [
-        fcitx5-rime
-        fcitx5-chinese-addons
-      ];
-    };
-  };
+  # i18n.inputMethod = {
+  #   enabled = "fcitx5";
+  #   fcitx5 = {
+  #     addons = with pkgs; [
+  #       fcitx5-rime
+  #       fcitx5-chinese-addons
+  #     ];
+  #   };
+  # };
 
-  systemd.services.nix-daemon.environment = {
-    http_proxy = "http://192.168.0.106:7890";
-    https_proxy = "http://192.168.0.106:7890";
-  };
+  # systemd.services.nix-daemon.environment = {
+  #   http_proxy = "http://192.168.0.106:7890";
+  #   https_proxy = "http://192.168.0.106:7890";
+  # };
 
   # This setups a SSH server. Very important if you're setting up a headless system.
   # Feel free to remove if you don't need it.
-  services.openssh = {
-    enable = true;
-    settings = {
-      # Forbid root login through SSH.
-      PermitRootLogin = "no";
-      # Use keys only. Remove if you want to SSH using password (not recommended)
-      # PasswordAuthentication = false;
-    };
-  };
+  # services.openssh = {
+  #   enable = true;
+  #   settings = {
+  #     # Forbid root login through SSH.
+  #     PermitRootLogin = "no";
+  #     # Use keys only. Remove if you want to SSH using password (not recommended)
+  #     # PasswordAuthentication = false;
+  #   };
+  # };
 
-  services.gvfs.enable = true;
-  services.udisks2.enable = true;
+  # services.gvfs.enable = true;
+  # services.udisks2.enable = true;
 
-  sound.enable = true;
-  hardware.pulseaudio.enable = false;
-  security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-  };
+  # sound.enable = true;
+  # hardware.pulseaudio.enable = false;
+  # security.rtkit.enable = true;
+  # services.pipewire = {
+  #   enable = true;
+  #   alsa.enable = true;
+  #   alsa.support32Bit = true;
+  #   pulse.enable = true;
+  # };
 
-  hardware.opengl = {
-    enable = true;
-    driSupport = true;
-    driSupport32Bit = true;
-  };
+  # hardware.opengl = {
+  #   enable = true;
+  #   driSupport = true;
+  #   driSupport32Bit = true;
+  # };
 
-  services.tlp.enable = true;
-  services.auto-cpufreq.enable = true;
+  # services.tlp.enable = true;
+  # services.auto-cpufreq.enable = true;
 
   services.xserver.videoDrivers = [ "nvidia" ];
 
@@ -192,27 +206,27 @@
     };
   };
 
-  programs.steam = {
-    enable = true;
-    gamescopeSession.enable = true;
-    remotePlay.openFirewall = true;
-    dedicatedServer.openFirewall = true;
-    extraCompatPackages = with pkgs; [ proton-ge-bin ];
-    fontPackages = with pkgs; [ source-han-sans ];
-    extraPackages = with pkgs; [ mangohud ];
-  };
+  # programs.steam = {
+  #   enable = true;
+  #   gamescopeSession.enable = true;
+  #   remotePlay.openFirewall = true;
+  #   dedicatedServer.openFirewall = true;
+  #   extraCompatPackages = with pkgs; [ proton-ge-bin ];
+  #   fontPackages = with pkgs; [ noto-fonts-cjk noto-fonts-emoji ];
+  #   extraPackages = with pkgs; [ mangohud ];
+  # };
+  #
+  # programs.gamemode.enable = true;
 
-  programs.gamemode.enable = true;
-
-  programs.thunar = {
-    enable = true;
-    plugins = with pkgs.xfce; [
-      # thunar-archive-plugin
-      thunar-media-tags-plugin
-      thunar-volman
-    ];
-  };
-  services.tumbler.enable = true;
+  # programs.thunar = {
+  #   enable = true;
+  #   plugins = with pkgs.xfce; [
+  #     # thunar-archive-plugin
+  #     thunar-media-tags-plugin
+  #     thunar-volman
+  #   ];
+  # };
+  # services.tumbler.enable = true;
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "23.11";
