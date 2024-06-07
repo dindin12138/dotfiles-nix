@@ -1,3 +1,4 @@
+''
 # Vertical Candidate List
 Vertical Candidate List=False
 # Use mouse wheel to go to prev or next page
@@ -32,4 +33,4 @@ PerScreenDPI=False
 ForceWaylandDPI=0
 # Enable fractional scale under Wayland
 EnableFractionalScale=True
-
+''

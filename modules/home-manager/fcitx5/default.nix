@@ -8,8 +8,8 @@
     ];
   };
   home.file = {
-    ".config/fcitx5/conf/classicui.conf".source = ./classicui.conf;
-    ".config/fcitx5/profile".source = ./profile;
+    ".config/fcitx5/conf/classicui.conf".text = import ./classicui.nix;
+    ".config/fcitx5/profile".text = import ./profile.nix;
     ".local/share/fcitx5/themes/Nord/theme.conf".text = import ./theme.nix;
   };
 }
