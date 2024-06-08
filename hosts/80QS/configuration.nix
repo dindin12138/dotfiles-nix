@@ -1,15 +1,8 @@
 { inputs, outputs, pkgs, ... }:
 {
   imports = [
-    # If you want to use modules from other flakes (such as nixos-hardware):
-    # inputs.hardware.nixosModules.common-cpu-amd
-    # inputs.hardware.nixosModules.common-ssd
     inputs.home-manager.nixosModules.home-manager
 
-    # You can also split up your configuration and import pieces of it here:
-    # ./users.nix
-
-    # Import your generated (nixos-generate-config) hardware configuration
     ./hardware-configuration.nix
     ../../modules/nixos/bootloader.nix
     ../../modules/nixos/fcitx5.nix
