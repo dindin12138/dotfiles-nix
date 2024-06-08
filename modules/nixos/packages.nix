@@ -8,5 +8,6 @@
     gcc
     clang
     gdb
+    # bibata-cursors
   ];
 }

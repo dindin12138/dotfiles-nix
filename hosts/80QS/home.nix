@@ -71,6 +71,10 @@
     };
   };
 
+  xresources.properties = {
+    "Xcursor.theme" = "Bibata-Modern-Ice";
+  };
+
   services.udiskie.enable = true;
 
   # Nicely reload system units when changing configs

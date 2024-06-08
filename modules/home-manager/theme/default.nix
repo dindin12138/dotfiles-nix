@@ -39,6 +39,7 @@
     style.name = "kvantum";
   };
   home.file = {
+    ".local/share/icons/default/index.theme".text = ''${builtins.readFile ./index.theme}'';
     ".config/Kvantum/kvantum.kvconfig".text = "
       [General]
       theme=Catppuccin-Mocha-Blue
@@ -87,10 +88,6 @@
         variant = "mocha";
       };
     };
-    # cursorTheme = {
-    #   name = "Catppuccin-Mocha-Light-Cursors";
-    #   package = pkgs.catppuccin-cursors.mochaLight;
-    # };
     cursorTheme = {
       name = "Bibata-Modern-Ice";
       package = pkgs.bibata-cursors;
