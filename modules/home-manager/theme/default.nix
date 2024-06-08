@@ -38,12 +38,13 @@
     enable = true;
     style.name = "kvantum";
   };
+  home.pointerCursor = {
+    package = pkgs.bibata-cursors;
+    name = "Bibata-Modern-Ice";
+    size = 24;
+  };
   home.file = {
-    ".local/share/icons/default/index.theme".text = ''${builtins.readFile ./index.theme}'';
-    ".config/Kvantum/kvantum.kvconfig".text = "
-      [General]
-      theme=Catppuccin-Mocha-Blue
-    ";
+    ".config/Kvantum/kvantum.kvconfig".text = ''${builtins.readFile ./kvantum.kvconfig}'';
     ".config/qt5ct/qt5ct.conf".text = ''
       [Appearance]
       color_scheme_path=${pkgs.catppuccin-qt5ct}/share/qt5ct/colors/Catppuccin-Mocha.conf
