@@ -24,7 +24,7 @@
     ../../modules/home-manager/neovim
     ../../modules/home-manager/btop.nix
     ../../modules/home-manager/bat.nix
-    ../../modules/home-manager/theme.nix
+    ../../modules/home-manager/theme
     ../../modules/home-manager/wall
     ../../modules/home-manager/mako.nix
     ../../modules/home-manager/wezterm
@@ -69,10 +69,6 @@
       XDG_WORKSPACE_DIR = "${config.home.homeDirectory}/Workspace";
       XDG_SCREENSHOT_DIR = "${config.home.homeDirectory}/Pictures/Screenshots";
     };
-  };
-
-  xresources.properties = {
-    "Xcursor.theme" = "Bibata-Modern-Ice";
   };
 
   services.udiskie.enable = true;
