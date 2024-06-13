@@ -20,6 +20,7 @@
     obsidian
     zotero
     zed-editor
+    clash-verge-rev
   ];
 
   services.cliphist.enable = true;

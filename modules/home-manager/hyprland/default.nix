@@ -39,7 +39,7 @@
         gaps_in = "3";
         gaps_out = "5";
         border_size = "2";
-        "col.active_border" = "0xFF${base07}";
+        "col.active_border" = "0xFF${base05}";
         "col.inactive_border" = "0xFF${base00}";
       };
 

@@ -9,7 +9,11 @@
     fontPackages = with pkgs; [ noto-fonts-cjk noto-fonts-emoji ];
     extraPackages = with pkgs; [ mangohud ];
   };
+
   programs.gamemode.enable = true;
+
+  programs.gamescope.enable = true;
+
   hardware.opengl = {
     enable = true;
     driSupport = true;
