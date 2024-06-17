@@ -38,26 +38,26 @@
         "custom/appmenu" = {
           format = "Apps";
           on-click = "wofi";
-          # on-click-right =  "~/dotfiles/hypr/scripts/keybindings.sh";
           tooltip = false;
         };
 
         "custom/wallpaper" = {
           format = "";
           on-click = "${pkgs.swww}/bin/swww img $(find ~/Pictures/Wallpapers/. -name '*.png' | shuf -n1) --transition-type any";
-          # on-click-right =  "~/dotfiles/hypr/scripts/wallpaper.sh"
+          on-click-right = "${pkgs.swww}/bin/swww img ~/Pictures/Wallpapers/background.png --transition-type any";
           tooltip = false;
         };
 
         "custom/colorpicker" = {
           format = "󰸱";
-          on-click = "hyprpicker";
+          on-click = "hyprpicker --format=hex --autocopy";
           tooltip = false;
         };
 
         "custom/screenshot" = {
           format = "󰩬";
           on-click = "grimblast --notify copysave area";
+          on-click-right = "grimblast --notify copysave screen";
           tooltip = false;
         };
 

@@ -25,6 +25,7 @@
     ../../modules/home-manager/screenshot
     ../../modules/home-manager/vscode.nix
     ../../modules/home-manager/tmux.nix
+    ../../modules/home-manager/ags
   ];
 
   nixpkgs = {
