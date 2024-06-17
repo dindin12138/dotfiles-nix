@@ -21,6 +21,7 @@
     ../../modules/nixos/users.nix
     ../../modules/nixos/hyprland.nix
     ../../modules/nixos/networking.nix
+    ../../modules/nixos/docker.nix
   ];
 
   home-manager = {

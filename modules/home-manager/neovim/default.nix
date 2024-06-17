@@ -24,6 +24,7 @@
       gopls
       ruff-lsp
       sqls
+      bash-language-server
       # Formatter
       stylua
       nixpkgs-fmt
