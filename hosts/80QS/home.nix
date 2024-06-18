@@ -8,7 +8,7 @@
     ../../modules/home-manager/kitty.nix
     ../../modules/home-manager/waybar
     ../../modules/home-manager/wofi
-    ../../modules/home-manager/shell.nix
+    ../../modules/home-manager/shell
     ../../modules/home-manager/yazi
     # ../../modules/home-manager/joshuto
     ../../modules/home-manager/git.nix
@@ -26,6 +26,7 @@
     ../../modules/home-manager/vscode.nix
     # ../../modules/home-manager/tmux.nix
     # ../../modules/home-manager/ags
+    ../../modules/home-manager/cliphist.nix
   ];
 
   nixpkgs = {
@@ -51,6 +52,8 @@
       XDG_SCREENSHOT_DIR = "${config.home.homeDirectory}/Pictures/Screenshots";
     };
   };
+
+  programs.home-manager.enable = true;
 
   services.udiskie.enable = true;
 
