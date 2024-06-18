@@ -4,7 +4,7 @@
   home.packages = with pkgs; [
     google-chrome
     fastfetch
-    bat
+    # bat
     eza
     lazygit
     fd

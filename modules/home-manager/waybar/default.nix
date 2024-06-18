@@ -29,7 +29,7 @@
           "network"
           "group/hardware"
           "tray"
-          # "idle_inhibitor"
+          "idle_inhibitor"
           "group/power"
           "clock"
         ];
@@ -190,6 +190,16 @@
         "tray" = {
           icon-size = 20;
           spacing = 10;
+        };
+
+        "idle_inhibitor" = {
+          format = "{icon}";
+          tooltip = true;
+          format-icons = {
+            activated = "";
+            deactivated = "";
+          };
+          on-click-right = "hyprlock";
         };
 
         "custom/exit" = {
