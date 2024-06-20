@@ -24,7 +24,7 @@
     # ../../modules/home-manager/wezterm
     ../../modules/home-manager/screenshot
     ../../modules/home-manager/vscode.nix
-    # ../../modules/home-manager/tmux.nix
+    ../../modules/home-manager/tmux.nix
     # ../../modules/home-manager/ags
     ../../modules/home-manager/cliphist.nix
   ];

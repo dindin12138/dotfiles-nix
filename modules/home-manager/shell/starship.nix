@@ -17,7 +17,11 @@
         "$rust"
         "$golang"
         "$php"
+        "$python"
+        "$lua"
+        "$c"
         "[](fg:#${base02} bg:#${base00})"
+        "$nix_shell"
         "$time"
         "[ ](fg:#${base00})"
         "\n$character"
@@ -71,6 +75,24 @@
         format = "[[ $symbol ($version) ](fg:#${base0D} bg:#${base02})]($style)";
       };
 
+      python = {
+        symbol = "";
+        style = "bg:#${base02}";
+        format = "[[ $symbol ($version) ](fg:#${base0D} bg:#${base02})]($style)";
+      };
+
+      lua = {
+        symbol = "";
+        style = "bg:#${base02}";
+        format = "[[ $symbol ($version) ](fg:#${base0D} bg:#${base02})]($style)";
+      };
+
+      c = {
+        symbol = "";
+        style = "bg:#${base02}";
+        format = "[[ $symbol ($version) ](fg:#${base0D} bg:#${base02})]($style)";
+      };
+
       php = {
         symbol = "";
         style = "bg:#${base02}";
@@ -82,6 +104,14 @@
         time_format = "%R";
         style = "bg:#${base00}";
         format = "[[  $time ](fg:#${base05} bg:#${base00})]($style)";
+      };
+
+      nix_shell = {
+        disabled = false;
+        impure_msg = "[impure](bold red)";
+        pure_msg = "[pure](bold green)";
+        unknown_msg = "[unknown](bold yellow)";
+        format = "[ 󱄅 $state( \($name\))](bold blue) ";
       };
     };
   };
