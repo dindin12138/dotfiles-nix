@@ -1,7 +1,6 @@
 { pkgs, ... }:
 let
-  preview_file = pkgs.writeShellScriptBin "preview_file" ''${import ./preview_file.nix}'';
-  # (pkgs.writeShellScriptBin "grimblast" ''${builtins.readFile ./grimblast}'')
+  scripts = import ./preview_file.nix { inherit pkgs; };
 in
 {
   programs.joshuto = {
@@ -53,7 +52,7 @@ in
 
       preview = {
         max_preview_size = 10737418240; # 10GB
-        preview_script = "${preview_file}/bin/preview_file"; # make sure it's marked as executable
+        preview_script = "${scripts.preview_file}/bin/preview_file"; # make sure it's marked as executable
       };
 
       search = {
@@ -75,24 +74,11 @@ in
     # theme = { };
   };
 
-
   home.file = {
     ".config/joshuto/bookmarks.toml".source = ./bookmarks.toml;
     ".config/joshuto/icons.toml".source = ./icons.toml;
-    # ".config/joshuto/joshuto.toml".source = ./joshuto.toml;
     ".config/joshuto/keymap.toml".source = ./keymap.toml;
     ".config/joshuto/mimetype.toml".source = ./mimetype.toml;
     ".config/joshuto/theme.toml".source = ./theme.toml;
-    # ".config/joshuto/preview_file.sh".source = ./preview_file.sh;
   };
-  # home.packages = with pkgs; [
-  #   file
-  #   swappy
-  #   atool
-  #   unrar
-  #   p7zip
-  #   w3m
-  #   mediainfo
-  #   exiftool
-  # ];
 }
