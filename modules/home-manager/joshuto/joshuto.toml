@@ -1,10 +1,15 @@
 numbered_command = false
 
+mouse_support = true
+focus_on_create = true
 use_trash = true
 watch_files = true
 xdg_open = false
 xdg_open_fork = false
+case_insensitive_ext = false
+zoxide_update = false
 
+custom_commands = []
 
 [display]
 # default, hsplit
@@ -36,8 +41,6 @@ reverse = false
 [preview]
 max_preview_size = 10737418240                           # 10GB
 preview_script = "~/.config/joshuto/preview_file.sh" # make sure it's marked as executable
-preview_shown_hook_script = "~/.config/joshuto/on_preview_shown.sh"
-preview_removed_hook_script = "~/.config/joshuto/on_preview_removed.sh"
 
 [search]
 # insensitive, sensitive, smart

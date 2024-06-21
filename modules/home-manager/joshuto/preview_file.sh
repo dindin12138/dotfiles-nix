@@ -41,6 +41,10 @@ IFS=$'\n'
 # * pipefail causes a pipeline to fail also if a command other than the last one fails
 set -o noclobber -o noglob -o nounset -o pipefail
 
+# Enable exiftool large file support
+shopt -s expand_aliases
+alias exiftool='exiftool -api largefilesupport=1'
+
 FILE_PATH=""
 PREVIEW_WIDTH=10
 PREVIEW_HEIGHT=10
@@ -68,24 +72,17 @@ handle_extension() {
 	## Archive
 	a | ace | alz | arc | arj | bz | bz2 | cab | cpio | deb | gz | jar | lha | lz | lzh | lzma | lzo | \
 		rpm | rz | t7z | tar | tbz | tbz2 | tgz | tlz | txz | tZ | tzo | war | xpi | xz | Z | zip)
-		# PKG: atool
 		atool --list -- "${FILE_PATH}" && exit 0
 		bsdtar --list --file "${FILE_PATH}" && exit 0
 		exit 1
 		;;
-	iso)
-		file "${FILE_PATH}" && exit 0
-		exit 1
-		;;
 	rar)
 		## Avoid password prompt by providing empty password
-		# PKG: unrar
 		unrar lt -p- -- "${FILE_PATH}" && exit 0
 		exit 1
 		;;
 	7z)
 		## Avoid password prompt by providing empty password
-		# PKG: p7zip
 		7z l -p -- "${FILE_PATH}" && exit 0
 		exit 1
 		;;
@@ -93,18 +90,16 @@ handle_extension() {
 		## PDF
 	pdf)
 		## Preview as text conversion
-		# pdftotext -l 10 -nopgbrk -q -- "${FILE_PATH}" - |
-		# 	fmt -w "${PREVIEW_WIDTH}" && exit 0
-		# mutool draw -F txt -i -- "${FILE_PATH}" 1-10 |
-		# 	fmt -w "${PREVIEW_WIDTH}" && exit 0
-		# exiftool "${FILE_PATH}" && exit 0
-		# file "${FILE_PATH}" && exit 0
-		exit 0
+		pdftotext -l 10 -nopgbrk -q -- "${FILE_PATH}" - |
+			fmt -w "${PREVIEW_WIDTH}" && exit 0
+		mutool draw -F txt -i -- "${FILE_PATH}" 1-10 |
+			fmt -w "${PREVIEW_WIDTH}" && exit 0
+		exiftool "${FILE_PATH}" && exit 0
+		exit 1
 		;;
 
 		## BitTorrent
 	torrent)
-		# PKG: transmission-cli
 		transmission-show -- "${FILE_PATH}" && exit 0
 		exit 1
 		;;
@@ -149,9 +144,7 @@ handle_extension() {
 		## Direct Stream Digital/Transfer (DSDIFF) and wavpack aren't detected
 		## by file(1).
 	dff | dsf | wv | wvc)
-		# PKG: mediainfo
 		mediainfo "${FILE_PATH}" && exit 0
-		# PKG: perl-image-exiftool
 		exiftool "${FILE_PATH}" && exit 0
 		;; # Continue with next handler on failure
 	esac
@@ -199,7 +192,7 @@ handle_mime() {
 		;;
 
 		## Text
-	text/* | */xml | application/x-subrip | application/x-ndjson | */json | */javascript | inode/x-empty)
+	text/* | */xml)
 		bat --color=always --paging=never \
 			--style=plain \
 			--terminal-width="${PREVIEW_WIDTH}" \
@@ -211,26 +204,23 @@ handle_mime() {
 		## DjVu
 	image/vnd.djvu)
 		## Preview as text conversion (requires djvulibre)
-		# djvutxt "${FILE_PATH}" | fmt -w "${PREVIEW_WIDTH}" && exit 0
-		# exiftool "${FILE_PATH}" && exit 0
-		# file "${FILE_PATH}" && exit 0
-		exit 0
+		djvutxt "${FILE_PATH}" | fmt -w "${PREVIEW_WIDTH}" && exit 0
+		exiftool "${FILE_PATH}" && exit 0
+		exit 1
 		;;
 
 		## Image
 	image/*)
 		## Preview as text conversion
-		# exiftool "${FILE_PATH}" && exit 0
-		# file "${FILE_PATH}" && exit 0
-		exit 0
+		exiftool "${FILE_PATH}" && exit 0
+		exit 1
 		;;
 
 		## Video and audio
 	video/* | audio/*)
-		# mediainfo "${FILE_PATH}" && exit 0
-		# exiftool "${FILE_PATH}" && exit 0
-		# file "${FILE_PATH}" && exit 0
-		exit 0
+		mediainfo "${FILE_PATH}" && exit 0
+		exiftool "${FILE_PATH}" && exit 0
+		exit 1
 		;;
 	esac
 }

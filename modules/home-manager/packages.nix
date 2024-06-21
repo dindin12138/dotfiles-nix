@@ -6,9 +6,11 @@
 
     eza
 
+    lazygit
+    lazydocker
+
     google-chrome
     fastfetch
-    lazygit
     mpv
     vlc
     typora

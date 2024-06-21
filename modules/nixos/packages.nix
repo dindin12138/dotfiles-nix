@@ -4,6 +4,8 @@
     wget
     curl
     killall
+    file
+
     gcc
     clang
     gdb

@@ -1,32 +1,51 @@
 [class]
 audio_default = [
-  { command = "mpv", args = [ "--" ] },
-  { command = "mediainfo", confirm_exit = true },
+  { command = "mpv", args = [
+    "--",
+  ] },
+  { command = "mediainfo", pager = true },
 ]
 
 image_default = [
-  { command = "swappy", args = [ "-f" ], fork = true },
-  { command = "qimgv", args = [ "--" ], fork = true, silent = true },
-  { command = "krita", args = [ "--" ], fork = true, silent = true },
-  { command = "exiftool", confirm_exit = true },
+  { command = "satty", args = [
+    "--filename",
+  ], fork = true },
+  { command = "qimgv", args = [
+    "--",
+  ], fork = true, silent = true },
+  { command = "krita", args = [
+    "--",
+  ], fork = true, silent = true },
+  { command = "exiftool", pager = true },
+  { command = "swappy", args = [
+    "-f",
+  ], fork = true },
 ]
 
 video_default = [
-  { command = "mpv", args = [ "--" ], fork = true, silent = true },
-  { command = "mediainfo", confirm_exit = true },
-  { command = "mpv", args = [ "--mute", "on", "--" ], fork = true, silent = true },
+  { command = "mpv", args = [
+    "--",
+  ], fork = true, silent = true },
+  { command = "mediainfo", pager = true },
+  { command = "mpv", args = [
+    "--mute",
+    "on",
+    "--",
+  ], fork = true, silent = true },
 ]
 
 text_default = [
   { command = "nvim"},
   { command = "micro" },
   { command = "gedit", fork = true, silent = true },
-  { command = "bat", args = [ "--paging=always" ] },
+  { command = "bat", args = [
+    "--paging=always",
+  ] },
 ]
 
 reader_default = [
-  { command = "google-chrome-stable", fork = true, silent = true },
-  { command = "evince", fork = true, silent = true },
+  { command = "firefox", fork = true, silent = true },
+  { command = "evince", fork = true, silent = true }
 ]
 
 libreoffice_default = [{ command = "libreoffice", fork = true, silent = true }]
@@ -112,6 +131,7 @@ log.inherit = "text_default"
 md.inherit = "text_default"
 micro.inherit = "text_default"
 ninja.inherit = "text_default"
+norg.inherit = "text_default"
 org.inherit = "text_default"
 py.inherit = "text_default"
 rkt.inherit = "text_default"
@@ -130,50 +150,56 @@ yml.inherit = "text_default"
 
 # archive formats
 7z.app_list = [
+  { command = "file-roller", fork = true, silent = true },
   { command = "7z", args = [
     "x",
-  ], confirm_exit = true },
-  { command = "file-roller", fork = true, silent = true },
+  ] },
 ]
 bz2.app_list = [
+  { command = "file-roller", fork = true, silent = true },
   { command = "tar", args = [
     "-xvjf",
-  ], confirm_exit = true },
-  { command = "file-roller", fork = true, silent = true },
+  ] },
 ]
 gz.app_list = [
+  { command = "file-roller", fork = true, silent = true },
   { command = "tar", args = [
     "-xvzf",
-  ], confirm_exit = true },
-  { command = "file-roller", fork = true, silent = true },
+  ] },
 ]
 tar.app_list = [
+  { command = "file-roller", fork = true, silent = true },
   { command = "tar", args = [
     "-xvf",
-  ], confirm_exit = true },
-  { command = "file-roller", fork = true, silent = true },
+  ] },
 ]
 tgz.app_list = [
+  { command = "file-roller", fork = true, silent = true },
   { command = "tar", args = [
     "-xvzf",
-  ], confirm_exit = true },
-  { command = "file-roller", fork = true, silent = true },
+  ] },
 ]
 rar.app_list = [
+  { command = "file-roller", fork = true, silent = true },
   { command = "unrar", args = [
     "x",
-  ], confirm_exit = true },
-  { command = "file-roller", fork = true, silent = true },
+  ] },
 ]
 xz.app_list = [
+  { command = "file-roller", fork = true, silent = true },
   { command = "tar", args = [
     "-xvJf",
-  ], confirm_exit = true },
-  { command = "file-roller", fork = true, silent = true },
+  ] },
 ]
 zip.app_list = [
-  { command = "unzip", confirm_exit = true },
   { command = "file-roller", fork = true, silent = true },
+  { command = "unzip" },
+]
+zst.app_list = [
+  { command = "file-roller", fork = true, silent = true },
+  { command = "zstd", args = [
+      "-d"
+    ] },
 ]
 
 # misc formats
@@ -183,7 +209,7 @@ m3u.app_list = [
   { command = "micro" },
   { command = "mpv" },
   { command = "gedit", fork = true, silent = true },
-  { command = "bat", confirm_exit = true },
+  { command = "bat", pager = true },
 ]
 
 odt.inherit = "libreoffice_default"
@@ -206,7 +232,7 @@ kdenlive.app_list = [{ command = "kdenlive", fork = true, silent = true }]
 tex.app_list = [
   { command = "micro" },
   { command = "gedit", fork = true, silent = true },
-  { command = "bat", confirm_exit = true },
+  { command = "bat", pager = true },
   { command = "pdflatex" },
 ]
 
