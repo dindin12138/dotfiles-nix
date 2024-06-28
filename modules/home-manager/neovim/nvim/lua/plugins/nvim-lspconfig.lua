@@ -5,7 +5,7 @@ return {
     { "folke/neodev.nvim", config = true },
     {
       "williamboman/mason-lspconfig.nvim",
-      enabled = os.execute("grep -q '^ID=.*nixos' /etc/os-release") == 1,
+      cond = os.execute("grep -q '^ID=.*nixos' /etc/os-release") == 1,
       config = true,
     },
     { "ray-x/lsp_signature.nvim", config = true },

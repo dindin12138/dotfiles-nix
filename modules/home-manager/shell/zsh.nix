@@ -20,6 +20,9 @@
       fc = "cliphist list | fzf | cliphist decode | wl-copy";
     };
     initExtra = ''
+
+      zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+
       function joshuto() {
       	ID="''$$"
       	mkdir -p /tmp/$USER
