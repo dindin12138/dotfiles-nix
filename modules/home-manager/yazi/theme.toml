@@ -53,19 +53,19 @@ syntect_theme = ""
 # : Status {{{
 
 [status]
-separator_open  = ""
-separator_close = ""
+separator_open  = ""
+separator_close = ""
 separator_style = { fg = "gray", bg = "gray" }
 
 # Mode
-mode_normal = { bg = "blue", bold = true }
-mode_select = { bg = "red", bold = true }
-mode_unset  = { bg = "red", bold = true }
+mode_normal = { bg = "#1E1E2E", bold = true }
+mode_select = { bg = "#1E1E2E", bold = true }
+mode_unset  = { bg = "#1E1E2E", bold = true }
 
 # Progress
 progress_label  = { bold = true }
-progress_normal = { fg = "blue", bg = "black" }
-progress_error  = { fg = "red", bg = "black" }
+progress_normal = { fg = "blue", bg = "#1E1E2E" }
+progress_error  = { fg = "red", bg = "#1E1E2E" }
 
 # Permissions
 permissions_t = { fg = "green" }

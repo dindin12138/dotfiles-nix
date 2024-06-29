@@ -10,6 +10,11 @@
       ll = "exa -lh --group-directories-first --git";
       lt = "exa -T --git-ignore --level=2 --group-directories-first";
 
+      t = "tmux attach || tmux new-session";
+      ta = "tmux attach -t";
+      tn = "tmux new-session";
+      tl = "tmux list-sessions";
+
       ra = "yazi";
       nf = "fastfetch";
 
