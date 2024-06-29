@@ -10,7 +10,7 @@
     ../../modules/home-manager/wofi
     ../../modules/home-manager/shell
     ../../modules/home-manager/yazi
-    ../../modules/home-manager/joshuto
+    # ../../modules/home-manager/joshuto
     ../../modules/home-manager/git.nix
     ../../modules/home-manager/packages.nix
     ../../modules/home-manager/firefox
