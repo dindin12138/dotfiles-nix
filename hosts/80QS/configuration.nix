@@ -22,6 +22,7 @@
     ../../modules/nixos/hyprland.nix
     ../../modules/nixos/networking.nix
     ../../modules/nixos/docker.nix
+    ../../modules/nixos/virt-manager.nix
   ];
 
   home-manager = {

@@ -74,6 +74,7 @@
       bind = [
         # APPs
         "ALT,Return,exec,$term"
+        "ALTSHIFT,Return,exec,$term tmux attach"
         "ALT,D,exec,$launch"
         "ALT,E,exec,$filemanager"
         "ALT,C,exec,$clipboard"
