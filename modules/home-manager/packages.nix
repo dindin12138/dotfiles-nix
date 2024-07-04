@@ -18,5 +18,6 @@
     zotero
     zed-editor
     clash-verge-rev
+    qbittorrent-qt5
   ];
 }
