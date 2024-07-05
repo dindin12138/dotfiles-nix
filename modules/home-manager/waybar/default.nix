@@ -21,10 +21,10 @@
         ];
         modules-center = [ "hyprland/workspaces" ];
         modules-right = [
-          # "mpd"
+          "mpd"
           # "custom/updates"
           "pulseaudio"
-          "backlight"
+          # "backlight"
           # "battery"
           "network"
           "group/hardware"
@@ -108,6 +108,29 @@
           };
         };
 
+        "mpd" = {
+          interval = 2;
+          unknown-tag = "N/A";
+          format = "{stateIcon} {title}";
+          format-disconnected = "󱘖 Disconnected";
+          format-paused = "{stateIcon} {title}";
+          format-stopped = " Stopped";
+          state-icons = {
+            paused = "";
+            playing = "";
+          };
+          tooltip-format = "{artist} - {title}";
+          tooltip-format-disconnected = "MPD (disconnected)";
+          on-click = "mpc toggle";
+          # "on-click-middle": "mpc prev";
+          on-click-right = "kitty -e ncmpcpp";
+          on-update = "";
+          on-scroll-up = "mpc prev";
+          on-scroll-down = "mpc next";
+          smooth-scrolling-threshold = 1;
+          max-length = 40;
+        };
+
         "pulseaudio" = {
           format = "{icon} {volume}%";
           format-bluetooth = "{volume}% {icon} {format_source}";
@@ -147,10 +170,14 @@
 
         "network" = {
           format = "{ifname}";
-          format-wifi = "󰖩 {essid}";
-          format-ethernet = "󰈀 {ipaddr}/{cidr}";
-          format-disconnected = "󰖪 Disconnected";
-          format-disabled = "󰖪 Disabled";
+          format-wifi = "󰖩";
+          format-ethernet = "󰈀";
+          format-disconnected = "󰖪";
+          format-disabled = "󰖪";
+          # format-wifi = "󰖩 {essid}";
+          # format-ethernet = "󰈀 {ipaddr}/{cidr}";
+          # format-disconnected = "󰖪 Disconnected";
+          # format-disabled = "󰖪 Disabled";
           format-alt = " {bandwidthDownBytes} |  {bandwidthUpBytes}";
           tooltip-format = "󰖩 {ifname} via {gwaddr}";
           tooltip-format-wifi = "󰖩 {ifname} @ {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\nUp: {bandwidthUpBits} Down: {bandwidthDownBits}";
