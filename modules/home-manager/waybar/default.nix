@@ -121,12 +121,12 @@
           };
           tooltip-format = "{artist} - {title}";
           tooltip-format-disconnected = "MPD (disconnected)";
-          on-click = "mpc toggle";
+          on-click = "${pkgs.mpc-cli}/bin/mpc toggle";
           # "on-click-middle": "mpc prev";
           on-click-right = "kitty -e ncmpcpp";
           on-update = "";
-          on-scroll-up = "mpc prev";
-          on-scroll-down = "mpc next";
+          on-scroll-up = "${pkgs.mpc-cli}/bin/mpc prev";
+          on-scroll-down = "${pkgs.mpc-cli}/bin/mpc next";
           smooth-scrolling-threshold = 1;
           max-length = 40;
         };
@@ -149,7 +149,7 @@
           };
           scroll-step = 5.0;
           on-click = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
-          on-click-right = "pavucontrol";
+          on-click-right = "${pkgs.pavucontrol}/bin/pavucontrol";
           smooth-scrolling-threshold = 1;
         };
 
@@ -184,7 +184,7 @@
           tooltip-format-ethernet = "󰈀 {ifname}\nIP: {ipaddr}\n up: {bandwidthUpBits} down: {bandwidthDownBits}";
           tooltip-format-disconnected = "󰖪 Disconnected";
           max-length = 50;
-          on-click-right = "nm-connection-editor";
+          # on-click-right = "nm-connection-editor";
         };
 
         "cpu" = {

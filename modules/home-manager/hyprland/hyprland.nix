@@ -166,10 +166,10 @@
         ",XF86AudioLowerVolume,exec,wpctl set-volume @DEFAULT_AUDIO_SINK@ 3%-"
         ",XF86AudioMute,exec,wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
         ",XF86AudioMicMute,exec,wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
-        ",XF86AudioNext,exec,mpc next"
-        ",XF86AudioPrev,exec,mpc prev"
-        ",XF86AudioPlay,exec,mpc toggle"
-        ",XF86AudioStop,exec,mpc stop"
+        ",XF86AudioNext,exec,${pkgs.mpc-cli}/bin/mpc next"
+        ",XF86AudioPrev,exec,${pkgs.mpc-cli}/bin/mpc prev"
+        ",XF86AudioPlay,exec,${pkgs.mpc-cli}/bin/mpc toggle"
+        ",XF86AudioStop,exec,${pkgs.mpc-cli}/bin/mpc stop"
       ];
     };
   };
