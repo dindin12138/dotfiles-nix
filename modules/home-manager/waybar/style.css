@@ -386,23 +386,27 @@ window#waybar.empty #window {
   * ----------------------------------------------------- */
 
 #network {
-  background-color: @backgroundlight;
-  font-size: 16px;
-  color: @textcolor2;
-  border-radius: 15px;
-  padding: 2px 10px 0px 10px;
-  margin: 5px 15px 5px 0px;
+  /* background-color: @backgroundlight; */
+  /* font-size: 16px; */
+  /* color: @textcolor2; */
+  /* border-radius: 15px; */
+  /* padding: 2px 10px 0px 10px; */
+  /* margin: 5px 15px 5px 0px; */
   /* opacity:0.8; */
+  margin: 0px 20px 0px 0px;
+  padding: 0px;
+  font-size: 20px;
+  color: @iconcolor;
 }
 
 #network.ethernet {
-  background-color: @backgroundlight;
-  color: @textcolor2;
+  /* background-color: @backgroundlight; */
+  color: @iconcolor;
 }
 
 #network.wifi {
-  background-color: @backgroundlight;
-  color: @textcolor2;
+  /* background-color: @backgroundlight; */
+  color: @iconcolor;
 }
 
 /* -----------------------------------------------------

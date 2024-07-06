@@ -1,12 +1,12 @@
 { config, ... }:
 {
+
   services.mpd = {
     enable = true;
     musicDirectory = "${config.home.homeDirectory}/Music";
     network = {
       listenAddress = "127.0.0.1";
       port = 6600;
-      startWhenNeeded = true;
     };
     extraConfig = ''
       auto_update "yes"

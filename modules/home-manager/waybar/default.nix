@@ -21,14 +21,14 @@
         ];
         modules-center = [ "hyprland/workspaces" ];
         modules-right = [
-          "mpd"
+          # "mpd"
           # "custom/updates"
           "pulseaudio"
           # "backlight"
           # "battery"
-          "network"
           "group/hardware"
           "tray"
+          "network"
           "idle_inhibitor"
           "group/power"
           "clock"
@@ -178,9 +178,9 @@
           # format-ethernet = "󰈀 {ipaddr}/{cidr}";
           # format-disconnected = "󰖪 Disconnected";
           # format-disabled = "󰖪 Disabled";
-          format-alt = " {bandwidthDownBytes} |  {bandwidthUpBytes}";
+          # format-alt = " {bandwidthDownBytes} |  {bandwidthUpBytes}";
           tooltip-format = "󰖩 {ifname} via {gwaddr}";
-          tooltip-format-wifi = "󰖩 {ifname} @ {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\nUp: {bandwidthUpBits} Down: {bandwidthDownBits}";
+          tooltip-format-wifi = "󰖩 {ifname} @ {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\nUp: {bandwidthUpBytes} Down: {bandwidthDownBytes}";
           tooltip-format-ethernet = "󰈀 {ifname}\nIP: {ipaddr}\n up: {bandwidthUpBits} down: {bandwidthDownBits}";
           tooltip-format-disconnected = "󰖪 Disconnected";
           max-length = 50;
