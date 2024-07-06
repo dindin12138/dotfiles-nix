@@ -15,6 +15,13 @@
         type "pipewire"
         name "My PipeWire Output"
       }
+
+      audio_output {
+        type "fifo"
+        name "Visualizer"
+        format "44100:16:2"
+        path "/tmp/mpd.fifo"
+      }
     '';
   };
 }

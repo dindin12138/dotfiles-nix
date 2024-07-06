@@ -21,7 +21,7 @@
         ];
         modules-center = [ "hyprland/workspaces" ];
         modules-right = [
-          # "mpd"
+          "mpd"
           # "custom/updates"
           "pulseaudio"
           # "backlight"
