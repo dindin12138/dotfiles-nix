@@ -18,6 +18,7 @@
     zotero
     zed-editor
     clash-verge-rev
+    clash-meta
     qbittorrent-qt5
   ];
 }

@@ -47,6 +47,7 @@
       exec-once = [
         "waybar"
         "${pkgs.swww}/bin/swww img ~/Pictures/Wallpapers/background.png --transition-type any"
+        "clash-verge"
       ];
 
       windowrulev2 = [
