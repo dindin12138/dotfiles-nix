@@ -23,6 +23,8 @@
       lg = "lazygit";
 
       fc = "cliphist list | fzf | cliphist decode | wl-copy";
+
+      proxy-test = "curl -I http://www.google.com";
     };
     initExtra = ''
 

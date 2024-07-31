@@ -32,6 +32,13 @@ in
     profiles.default = {
       settings = {
         "browser.startup.homepage" = "file://${homepage}";
+        "network.proxy.type" = 1;
+        "network.proxy.http" = "127.0.0.1";
+        "network.proxy.http_port" = 7897;
+        "network.proxy.https" = "127.0.0.1";
+        "network.proxy.https_port" = 7897;
+        "network.proxy.socks" = "127.0.0.1";
+        "network.proxy.socks_port" = 7897;
       };
       userChrome = ''${builtins.readFile ./userChrome.css}'';
     };
