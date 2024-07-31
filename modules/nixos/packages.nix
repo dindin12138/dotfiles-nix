@@ -9,5 +9,6 @@
     gcc
     clang
     gdb
+    lldb
   ];
 }
