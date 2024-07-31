@@ -3,11 +3,9 @@
   qt = {
     enable = true;
     style.name = "kvantum";
+    platformTheme.name = "qt5ct";
   };
   home = {
-    sessionVariables = {
-      QT_QPA_PLATFORMTHEME = "qt5ct";
-    };
     packages = with pkgs; [
       qt5ct
       (catppuccin-kvantum.override {

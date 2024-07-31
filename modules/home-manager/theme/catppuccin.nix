@@ -1,5 +1,8 @@
 {
-  catppuccin.flavor = "mocha";
+  catppuccin = {
+    flavor = "mocha";
+    accent = "blue";
+  };
   colorScheme = {
     slug = "catppuccin-mocha";
     name = "catppuccin-mocha";
