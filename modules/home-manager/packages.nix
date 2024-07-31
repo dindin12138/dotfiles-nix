@@ -15,7 +15,8 @@
     vlc
     typora
     obsidian
-    zotero
+    # zotero
+    zotero_7
     zed-editor
     clash-verge-rev
     clash-meta
