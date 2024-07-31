@@ -3,7 +3,7 @@
   services.mako = with config.colorScheme.palette; {
     enable = true;
     actions = true;
-    font = "FiraCode Nerd Font 10";
+    font = "FiraCode Nerd Font 11";
     icons = true;
     anchor = "top-right";
     defaultTimeout = 5000;

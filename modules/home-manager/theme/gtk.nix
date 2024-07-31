@@ -3,8 +3,6 @@
   gtk = {
     enable = true;
     theme = {
-      # name = "Catppuccin-Mocha-Standard-Blue-Dark";
-      # name = "catppuccin-mocha-blue-standard+default";
       name = "catppuccin-mocha-blue-standard";
       package = pkgs.catppuccin-gtk.override {
         size = "standard";
@@ -19,6 +17,10 @@
     iconTheme = {
       name = "Papirus-Dark";
       package = pkgs.papirus-icon-theme;
+    };
+    font = {
+      name = "FiraCode Nerd Font";
+      size = 12;
     };
   };
 }
