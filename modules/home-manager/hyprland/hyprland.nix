@@ -57,6 +57,14 @@
         "float, class:(steam), title:(好友列表)"
         "float, class:(steam), title:(特惠)"
         "float, class:(steam), title:(Steam 设置)"
+        "float, class:(Zotero), title:(Zotero Settings)"
+        "float, class:(Zotero), title:(Add-ons Manager)"
+        "float, class:(Zotero), title:(Add-on Market)"
+        "float, class:(Zotero), title:(Progress)"
+        "float, class:(Zotero), title:(Import)"
+        "float, class:(Zotero), title:(高级搜索)"
+        "float, class:(Zotero), title:(Advanced Search)"
+        "float, class:(Zotero), title:(Software Update)"
       ];
 
       "$term" = "kitty";

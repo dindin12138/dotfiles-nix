@@ -21,7 +21,7 @@
     ../../modules/nixos/users.nix
     ../../modules/nixos/hyprland.nix
     ../../modules/nixos/networking.nix
-    # ../../modules/nixos/docker.nix
+    ../../modules/nixos/docker.nix
     # ../../modules/nixos/virt-manager.nix
   ];
 
@@ -49,6 +49,9 @@
       nvidiaBusId = "PCI:03:00:0";
     };
   };
+
+  # enable wayland support in chromium and electron
+  # environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "23.11";

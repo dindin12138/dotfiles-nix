@@ -13,6 +13,9 @@
       gruntfuggly.todo-tree
       jnoortheen.nix-ide
       esbenp.prettier-vscode
+      ms-vscode-remote.remote-ssh
+      ms-vscode-remote.remote-containers
+      ms-azuretools.vscode-docker
     ];
     userSettings = {
       "files" = {
@@ -83,7 +86,7 @@
         };
       };
       "[nix]" = {
-        "editor.defaultFormatter"= "jnoortheen.nix-ide";
+        "editor.defaultFormatter" = "jnoortheen.nix-ide";
       };
     };
   };
