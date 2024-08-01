@@ -78,6 +78,11 @@
         "cmakePath" = "${pkgs.cmake}/bin/cmake";
         "cpackPath" = "${pkgs.cmake}/bin/cpack";
         "ctestPath" = "${pkgs.cmake}/bin/ctest";
+        "pinnedCommands" = [
+          "workbench.action.tasks.configureTaskRunner"
+          "workbench.action.tasks.runTask"
+        ];
+        "showOptionsMovedNotification" = false;
       };
       "rust-analyzer" = {
         "server.path" = "${pkgs.rust-analyzer}/bin/rust-analyzer";

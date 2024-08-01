@@ -8,6 +8,7 @@
 
     # gcc
     clang
+    ninja
     # libcxx
     # gdb
     # lldb
