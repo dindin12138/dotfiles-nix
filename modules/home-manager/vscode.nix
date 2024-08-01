@@ -8,6 +8,7 @@
       llvm-vs-code-extensions.vscode-clangd
       ms-vscode.cmake-tools
       vadimcn.vscode-lldb
+      rust-lang.rust-analyzer
       eamodio.gitlens
       alefragnani.project-manager
       gruntfuggly.todo-tree
@@ -72,7 +73,16 @@
         "checkUpdates" = false;
         "path" = "${pkgs.clang-tools}/bin/clangd";
       };
-      "cmake.configureOnOpen" = true;
+      "cmake" = {
+        "configureOnOpen" = true;
+        "cmakePath" = "${pkgs.cmake}/bin/cmake";
+        "cpackPath" = "${pkgs.cmake}/bin/cpack";
+        "ctestPath" = "${pkgs.cmake}/bin/ctest";
+      };
+      "rust-analyzer" = {
+        "server.path" = "${pkgs.rust-analyzer}/bin/rust-analyzer";
+        "cargo.sysroot" = "discover";
+      };
       "nix.enableLanguageServer" = true;
       "nix.serverPath" = "${pkgs.nil}/bin/nil";
       "nix.formatterPath" = "${pkgs.nixpkgs-fmt}/bin/nixpkgs-fmt";

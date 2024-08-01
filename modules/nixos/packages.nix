@@ -6,9 +6,10 @@
     killall
     file
 
-    gcc
+    # gcc
     clang
-    gdb
-    lldb
+    # libcxx
+    # gdb
+    # lldb
   ];
 }

@@ -35,6 +35,7 @@
       jq
       # Tools
       gnumake
+      cmake
     ];
   };
 
