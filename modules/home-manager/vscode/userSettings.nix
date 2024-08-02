@@ -84,4 +84,11 @@
   "[nix]" = {
     "editor.defaultFormatter" = "jnoortheen.nix-ide";
   };
+  "vscode-neovim" = {
+    "neovimExecutablePaths.linux" = "${pkgs.neovim}/bin/nvim";
+    "NVIM_APPNAME" = "vscode-neovim";
+  };
+  "extensions.experimental.affinity" = {
+    "asvetliakov.vscode-neovim" = 1;
+  };
 }

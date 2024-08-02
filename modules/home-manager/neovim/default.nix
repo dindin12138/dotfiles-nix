@@ -44,9 +44,9 @@
       source = ./nvim;
       recursive = true;
     };
-    # ".config/astronvim/" = {
-    #   source = ./astronvim;
-    #   recursive = true;
-    # };
+    ".config/vscode-neovim/" = {
+      source = ./vscode-neovim;
+      recursive = true;
+    };
   };
 }

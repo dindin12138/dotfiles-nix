@@ -23,7 +23,8 @@
       ".config/qt5ct/qt5ct.conf".text = ''
         [Appearance]
         color_scheme_path=${pkgs.catppuccin-qt5ct}/share/qt5ct/colors/Catppuccin-Mocha.conf
-        custom_palette=true
+        custom_palette=false
+        icon_theme=Papirus-Dark
         standard_dialogs=default
         style=kvantum-dark
 
