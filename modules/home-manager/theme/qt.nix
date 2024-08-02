@@ -29,8 +29,8 @@
         style=kvantum-dark
 
         [Fonts]
-        fixed="FiraCode Nerd Font,12,-1,5,50,0,0,0,0,0"
-        general="FiraCode Nerd Font,12,-1,5,50,0,0,0,0,0"
+        fixed="FiraCode Nerd Font,11,-1,5,50,0,0,0,0,0"
+        general="FiraCode Nerd Font,11,-1,5,50,0,0,0,0,0"
 
         [Interface]
         activate_item_on_single_click=1
