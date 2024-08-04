@@ -15,7 +15,7 @@
     catppuccin.url = "github:catppuccin/nix";
     nix-colors.url = "github:misterio77/nix-colors";
 
-    ags.url = "github:Aylur/ags";
+    # ags.url = "github:Aylur/ags";
   };
 
   outputs =
