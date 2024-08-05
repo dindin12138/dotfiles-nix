@@ -24,6 +24,8 @@
 
       fc = "cliphist list | fzf | cliphist decode | wl-copy";
 
+      vscode-neovim = "NVIM_APPNAME=vscode-neovim nvim";
+
       proxy-test = "curl -I http://www.google.com";
     };
     initExtra = ''
