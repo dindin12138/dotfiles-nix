@@ -27,6 +27,9 @@
       vscode-neovim = "NVIM_APPNAME=vscode-neovim nvim";
 
       proxy-test = "curl -I http://www.google.com";
+
+      nix-profile-history = "nix profile history --profile /nix/var/nix/profiles/system";
+      nix-profile-wipe-history-7d = "sudo nix profile wipe-history --older-than 7d --profile /nix/var/nix/profiles/system";
     };
     initExtra = ''
 
