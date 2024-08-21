@@ -70,7 +70,7 @@
       "$term" = "kitty";
       "$launch" = "wofi --show drun --prompt 'Search...'";
       "$clipboard" = "cliphist list | wofi --dmenu | cliphist decode | wl-copy";
-      "$randomwallpaper" = "${pkgs.swww}/bin/swww img $(find ~/Pictures/Wallpapers/. -name '*.png' | shuf -n1) --transition-type any";
+      "$randomwallpaper" = "${pkgs.swww}/bin/swww img $(find ~/Pictures/Wallpapers/. -name '*' | shuf -n1) --transition-type any";
       "$lockscreen" = "hyprlock";
       "$colorpicker" = "hyprpicker";
       "$screenshot" = "grimblast";
