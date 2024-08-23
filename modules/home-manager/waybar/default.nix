@@ -82,7 +82,8 @@
         "hyprland/window" = {
           format = "{}";
           icon = true;
-          icon-size = 20;
+          # icon-size = 20; # 1080p
+          icon-size = 30; # 2k
           rewrite = {
             "(.*)Mozilla Firefox" = "Mozilla Firefox";
             "(.*)Google Chrome" = "Google Chrome";
@@ -215,8 +216,10 @@
         };
 
         "tray" = {
-          icon-size = 20;
-          spacing = 10;
+          # icon-size = 20; # 1080p
+          # spacing = 10;
+          icon-size = 30; # 2k
+          spacing = 15;
         };
 
         "idle_inhibitor" = {

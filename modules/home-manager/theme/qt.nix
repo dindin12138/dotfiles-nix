@@ -6,6 +6,9 @@
     platformTheme.name = "qt5ct";
   };
   home = {
+    sessionVariables = {
+      QT_WAYLAND_FORCE_DPI = 144;
+    };
     packages = with pkgs; [
       qt5ct
       (catppuccin-kvantum.override {
@@ -17,6 +20,7 @@
       package = pkgs.bibata-cursors;
       name = "Bibata-Modern-Ice";
       size = 24;
+      # size = 36;
     };
     file = {
       ".config/Kvantum/kvantum.kvconfig".source = ./kvantum.kvconfig;

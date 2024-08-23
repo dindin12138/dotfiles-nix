@@ -28,9 +28,9 @@
   # Follow system accent color if it is supported by theme and desktop
   UseAccentColor=True
   # Use Per Screen DPI on X11
-  PerScreenDPI=False
+  PerScreenDPI=True
   # Force font DPI on Wayland
-  ForceWaylandDPI=0
+  ForceWaylandDPI=144
   # Enable fractional scale under Wayland
   EnableFractionalScale=True
 ''

@@ -27,9 +27,9 @@
       general = with config.colorScheme.palette; {
         layout = "master";
         apply_sens_to_raw = "0";
-        gaps_in = "3";
-        gaps_out = "5";
-        border_size = "2";
+        gaps_in = "4";
+        gaps_out = "7";
+        border_size = "3";
         "col.active_border" = "0xFF${base05}";
         "col.inactive_border" = "0xFF${base00}";
       };
@@ -48,6 +48,7 @@
         "waybar"
         "${pkgs.swww}/bin/swww img ~/Pictures/Wallpapers/background.png --transition-type any"
         "clash-verge"
+        "echo 'Xft.dpi: 144' | ${pkgs.xorg.xrdb}/bin/xrdb -merge"
       ];
 
       windowrulev2 = [

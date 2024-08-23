@@ -4,7 +4,8 @@
     enable = true;
     font = {
       name = "FiraCode Nerd Font";
-      size = 13;
+      # size = 13; # 1080p
+      size = 19; # 2k
     };
     theme = "Catppuccin-Mocha";
     shellIntegration.enableZshIntegration = true;
