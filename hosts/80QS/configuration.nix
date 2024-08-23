@@ -2,8 +2,11 @@
 {
   imports = [
     inputs.home-manager.nixosModules.home-manager
+    inputs.disko.nixosModules.disko
 
     ./hardware-configuration.nix
+    ./disk-config.nix
+
     ../../modules/nixos/bootloader.nix
     ../../modules/nixos/fcitx5.nix
     ../../modules/nixos/fonts.nix
