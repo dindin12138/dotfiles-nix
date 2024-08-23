@@ -43,18 +43,6 @@
   i18n.defaultLocale = "en_US.UTF-8";
 
   # services.xserver.videoDrivers = [ "nvidia" ];
-  #
-  # hardware.nvidia = {
-  #   modesetting.enable = true;
-  #   prime = {
-  #     offload.enable = true;
-  #     intelBusId = "PCI:00:02:0";
-  #     nvidiaBusId = "PCI:03:00:0";
-  #   };
-  # };
-
-  # enable wayland support in chromium and electron
-  # environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "23.11";
