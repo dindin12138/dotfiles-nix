@@ -8,6 +8,18 @@
     };
   };
 
+  gtk = {
+    cursorTheme = {
+      size = lib.mkForce 36;
+    };
+  };
+
+  home = {
+    pointerCursor = {
+      size = lib.mkForce 36;
+    };
+  };
+
   programs.kitty = {
     font = {
       size = lib.mkForce 19;
