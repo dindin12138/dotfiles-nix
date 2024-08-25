@@ -2,7 +2,7 @@
 {
   home = {
     sessionVariables = {
-      GDK_DPI_SCALE = "1.5";
+      GDK_DPI_SCALE = "1.6";
       QT_SCALE_FACTOR = "1.5";
       QT_AUTO_SCREEN_SCALE_FACTOR = "1";
     };
@@ -41,7 +41,7 @@
 
   programs.kitty = {
     font = {
-      size = lib.mkForce 19;
+      size = lib.mkForce 20;
     };
   };
 

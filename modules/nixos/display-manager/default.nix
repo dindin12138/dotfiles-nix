@@ -7,6 +7,7 @@
     settings = {
       Theme = {
         CursorTheme = "Bibata-Modern-Ice";
+        CursorSize = 36;
       };
     };
   };
