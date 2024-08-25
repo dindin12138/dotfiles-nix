@@ -188,6 +188,18 @@
           # on-click-right = "nm-connection-editor";
         };
 
+        "battery" = {
+          "states" = {
+            "warning" = 30;
+            "critical" = 15;
+          };
+          "format" = "{icon}   {capacity}%";
+          "format-charging" = " {capacity}%";
+          "format-plugged" = " {capacity}%";
+          "format-alt" = "{icon}  {time}";
+          "format-icons" = [ " " " " " " " " " " ];
+        };
+
         "cpu" = {
           format = " {usage}% ";
           on-click = "kitty -e btop";

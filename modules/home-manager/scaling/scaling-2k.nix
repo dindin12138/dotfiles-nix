@@ -20,6 +20,25 @@
     };
   };
 
+  programs.waybar = {
+    style = lib.mkForce ''${builtins.readFile ../waybar/style-2k.css}'';
+    settings = {
+      mainBar = {
+        modules-right = lib.mkForce [
+          "mpd"
+          "pulseaudio"
+          "battery"
+          "group/hardware"
+          "tray"
+          "network"
+          "idle_inhibitor"
+          "group/power"
+          "clock"
+        ];
+      };
+    };
+  };
+
   programs.kitty = {
     font = {
       size = lib.mkForce 19;
