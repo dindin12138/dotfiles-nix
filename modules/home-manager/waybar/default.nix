@@ -189,15 +189,14 @@
         };
 
         "battery" = {
-          "states" = {
-            "warning" = 30;
-            "critical" = 15;
+          states = {
+            warning = 30;
+            critical = 15;
           };
-          "format" = "{icon}   {capacity}%";
-          "format-charging" = " {capacity}%";
-          "format-plugged" = " {capacity}%";
-          "format-alt" = "{icon}  {time}";
-          "format-icons" = [ " " " " " " " " " " ];
+          format = "{icon}{capacity}%";
+          format-charging = " {capacity}%";
+          format-plugged = " {capacity}%";
+          format-icons = [ " " " " " " " " " " ];
         };
 
         "cpu" = {

@@ -14,6 +14,7 @@
     fastfetch
 
     mpv
+    vlc
 
     typora
     obsidian
