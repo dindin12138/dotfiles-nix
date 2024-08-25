@@ -1,4 +1,4 @@
-{ inputs, config, ... }:
+{ inputs, config, lib, ... }:
 {
   imports = [
     inputs.catppuccin.homeManagerModules.catppuccin
@@ -28,6 +28,8 @@
     # ../../modules/home-manager/ags
     ../../modules/home-manager/cliphist.nix
     ../../modules/home-manager/music
+
+    ../../modules/home-manager/scaling/scaling-2k.nix
   ];
 
   nixpkgs = {

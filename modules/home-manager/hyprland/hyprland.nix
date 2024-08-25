@@ -48,7 +48,6 @@
         "waybar"
         "${pkgs.swww}/bin/swww img ~/Pictures/Wallpapers/background.png --transition-type any"
         "clash-verge"
-        "echo 'Xft.dpi: 144' | ${pkgs.xorg.xrdb}/bin/xrdb -merge"
       ];
 
       windowrulev2 = [

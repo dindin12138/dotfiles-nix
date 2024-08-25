@@ -6,9 +6,6 @@
     platformTheme.name = "qt5ct";
   };
   home = {
-    sessionVariables = {
-      QT_WAYLAND_FORCE_DPI = 144;
-    };
     packages = with pkgs; [
       qt5ct
       (catppuccin-kvantum.override {

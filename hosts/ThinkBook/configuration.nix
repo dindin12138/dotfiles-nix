@@ -1,4 +1,4 @@
-{ inputs, outputs, pkgs, ... }:
+{ inputs, outputs, ... }:
 {
   imports = [
     inputs.home-manager.nixosModules.home-manager
@@ -35,15 +35,12 @@
     };
   };
 
-  # boot.kernelPackages = pkgs.linuxPackagesFor (pkgs.linux_6_1);
-
   boot.supportedFilesystems = [ "ntfs" ];
 
   time.timeZone = "Asia/Shanghai";
   i18n.defaultLocale = "en_US.UTF-8";
 
   services.xserver.videoDrivers = [ "amdgpu" ];
-  # services.xserver.dpi = 144;
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "24.11";

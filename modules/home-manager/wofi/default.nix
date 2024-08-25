@@ -11,10 +11,8 @@
       term = "kitty";
 
       ## Geometry
-      # width = "500px";
-      # height = "305px";
-      width = "750px";
-      height = "457px";
+      width = "500px";
+      height = "305px";
       location = 0;
       orientation = "vertical";
       halign = "fill";
@@ -24,8 +22,7 @@
       ## Images
       allow_markup = true;
       allow_images = true;
-      # image_size = 24;
-      image_size = 36;
+      image_size = 24;
 
       ## Search
       exec_search = false;
