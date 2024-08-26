@@ -28,5 +28,9 @@
     clash-meta
 
     qbittorrent-qt5
+
+    spotify
+
+    telegram-desktop
   ];
 }
