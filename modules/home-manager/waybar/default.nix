@@ -227,10 +227,8 @@
         };
 
         "tray" = {
-          # icon-size = 20; # 1080p
-          # spacing = 10;
-          icon-size = 30; # 2k
-          spacing = 15;
+          icon-size = 20;
+          spacing = 10;
         };
 
         "idle_inhibitor" = {

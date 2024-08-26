@@ -35,6 +35,10 @@
           "group/power"
           "clock"
         ];
+        "tray" = lib.mkForce {
+          icon-size = 30;
+          spacing = 15;
+        };
       };
     };
   };
