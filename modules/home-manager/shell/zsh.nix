@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 {
   programs.zsh = {
     enable = true;
@@ -29,7 +30,7 @@
       proxy-test = "curl -I http://www.google.com";
 
       nix-profile-history = "nix profile history --profile /nix/var/nix/profiles/system";
-      nix-profile-wipe-history-7d = "sudo nix profile wipe-history --older-than 7d --profile /nix/var/nix/profiles/system";
+      nix-query = "nix-store --gc --print-roots | rg -v '/proc/' | rg -Po '(?<= -> ).*' | xargs -o ${pkgs.nix-tree}/bin/nix-tree";
     };
     initExtra = ''
 
