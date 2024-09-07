@@ -50,7 +50,7 @@
 
         "custom/colorpicker" = {
           format = "󰸱";
-          on-click = "hyprpicker --format=hex --autocopy";
+          on-click = "${pkgs.hyprpicker}/bin/hyprpicker --format=hex --autocopy";
           tooltip = false;
         };
 
@@ -164,8 +164,8 @@
           on-click-middle = "";
           on-click-right = "";
           on-update = "";
-          on-scroll-up = "brightnessctl set 3%+ -q";
-          on-scroll-down = "brightnessctl set 3%-  -q";
+          on-scroll-up = "${pkgs.brightnessctl}/bin/brightnessctl set 3%+ -q";
+          on-scroll-down = "${pkgs.brightnessctl}/bin/brightnessctl set 3%-  -q";
           smooth-scrolling-threshold = 1;
         };
 
@@ -238,7 +238,7 @@
             activated = "";
             deactivated = "";
           };
-          on-click-right = "hyprlock";
+          on-click-right = "${pkgs.hyprlock}/bin/hyprlock";
         };
 
         "custom/exit" = {

@@ -8,7 +8,6 @@
 
   home.packages = with pkgs; [
     hyprpicker
-    brightnessctl
     wl-clipboard
   ];
 }
