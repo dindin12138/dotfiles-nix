@@ -27,6 +27,7 @@
         modules-right = lib.mkForce [
           "mpd"
           "pulseaudio"
+          "backlight"
           "battery"
           "group/hardware"
           "tray"
