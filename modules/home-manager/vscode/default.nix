@@ -16,6 +16,9 @@
       # Rust
       rust-lang.rust-analyzer
 
+      # Go
+      golang.go
+
       # Python
       ms-python.python
       # ms-python.vscode-pylance
