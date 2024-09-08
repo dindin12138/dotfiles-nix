@@ -70,6 +70,14 @@
     "cargo.sysroot" = "discover";
   };
   "ruff.path" = [ "${pkgs.ruff}/bin/ruff" ];
+  "[python]" = {
+    "editor" = {
+      "defaultFormatter" = "charliermarsh.ruff";
+      "codeActionsOnSave" = {
+        "source.organizeImports.ruff" = "explicit";
+      };
+    };
+  };
   "nix.enableLanguageServer" = true;
   "nix.serverPath" = "${pkgs.nil}/bin/nil";
   "nix.formatterPath" = "${pkgs.nixpkgs-fmt}/bin/nixpkgs-fmt";

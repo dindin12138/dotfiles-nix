@@ -21,6 +21,13 @@
       # ms-python.vscode-pylance
       charliermarsh.ruff
 
+      # Jupyter
+      ms-toolsai.jupyter
+      ms-toolsai.vscode-jupyter-slideshow
+      ms-toolsai.vscode-jupyter-cell-tags
+      ms-toolsai.jupyter-renderers
+      ms-toolsai.jupyter-keymap
+
       # Debug
       vadimcn.vscode-lldb
 
