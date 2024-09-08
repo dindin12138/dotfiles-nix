@@ -23,6 +23,9 @@
       icat = "kitty +kitten icat";
       lg = "lazygit";
 
+      duf = "nix run nixpkgs#duf";
+      dust = "nix run nixpkgs#dust";
+
       fc = "cliphist list | fzf | cliphist decode | wl-copy";
 
       vscode-neovim = "NVIM_APPNAME=vscode-neovim nvim";
