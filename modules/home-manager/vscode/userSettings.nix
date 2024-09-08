@@ -69,6 +69,7 @@
     "server.path" = "${pkgs.rust-analyzer}/bin/rust-analyzer";
     "cargo.sysroot" = "discover";
   };
+  "ruff.path" = [ "${pkgs.ruff}/bin/ruff" ];
   "nix.enableLanguageServer" = true;
   "nix.serverPath" = "${pkgs.nil}/bin/nil";
   "nix.formatterPath" = "${pkgs.nixpkgs-fmt}/bin/nixpkgs-fmt";
