@@ -8,6 +8,7 @@
       patches = [
         ./patches/st-scrollback-ringbuffer-0.9.2.diff
         ./patches/st-ligatures-scrollback-ringbuffer-20240427-0.9.2.diff
+        ./patches/st-desktopentry-0.8.5.diff
       ];
     }))
   ];
