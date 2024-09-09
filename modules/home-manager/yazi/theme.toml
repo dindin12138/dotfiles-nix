@@ -218,7 +218,6 @@ dirs  = [
 	{ name = "Templates", text = "" },
 	{ name = "Screenshots", text = "󰸉" },
 	{ name = "Wallpapers", text = "󰸉" },
-	{ name = "go", text = "" },
 	{ name = "Larian Studios", text = "󱎓" },
 ]
 files = [

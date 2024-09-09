@@ -43,16 +43,20 @@
   home = {
     username = "din";
     homeDirectory = "/home/din";
+    sessionVariables = {
+      GOPATH = "${config.home.homeDirectory}/.cache/go";
+    };
   };
 
-  xdg.enable = true;
-
-  xdg.userDirs = {
+  xdg = {
     enable = true;
-    createDirectories = true;
-    extraConfig = {
-      XDG_WORKSPACE_DIR = "${config.home.homeDirectory}/Workspace";
-      XDG_SCREENSHOT_DIR = "${config.home.homeDirectory}/Pictures/Screenshots";
+    userDirs = {
+      enable = true;
+      createDirectories = true;
+      extraConfig = {
+        XDG_WORKSPACE_DIR = "${config.home.homeDirectory}/Workspace";
+        XDG_SCREENSHOT_DIR = "${config.home.homeDirectory}/Pictures/Screenshots";
+      };
     };
   };
 
