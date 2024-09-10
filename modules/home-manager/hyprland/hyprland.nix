@@ -65,6 +65,8 @@
         "float, class:(Zotero), title:(高级搜索)"
         "float, class:(Zotero), title:(Advanced Search)"
         "float, class:(Zotero), title:(Software Update)"
+        "float, class:(QQ), title:(设置)"
+        "float, class:(QQ), title:(图片查看器)"
       ];
 
       "$term" = "kitty";

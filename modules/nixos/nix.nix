@@ -29,6 +29,7 @@
         value.source = value.flake;
       })
       config.nix.registry;
+
   nixpkgs = {
     # Configure your nixpkgs instance
     config = {

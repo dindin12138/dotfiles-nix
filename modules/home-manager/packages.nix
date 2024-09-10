@@ -34,5 +34,9 @@
 
     telegram-desktop
 
+    # wechat-uos
+    qq
+
+    minecraft
   ];
 }

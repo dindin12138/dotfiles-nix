@@ -29,6 +29,7 @@
     ../../modules/home-manager/cliphist.nix
     ../../modules/home-manager/music
     # ../../modules/home-manager/st
+    ../../modules/home-manager/wechat
 
     ../../modules/home-manager/scaling/scaling-2k.nix
   ];
@@ -37,7 +38,11 @@
     overlays = [ ];
     config = {
       allowUnfree = true;
+      allowBroken = true;
       allowUnfreePredicate = _: true;
+      permittedInsecurePackages = [
+        "openssl-1.1.1w"
+      ];
     };
   };
 
