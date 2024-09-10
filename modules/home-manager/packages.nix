@@ -27,10 +27,12 @@
     clash-verge-rev
     clash-meta
 
-    qbittorrent-qt5
+    # qbittorrent-qt5
+    qbittorrent-enhanced
 
     spotify
 
     telegram-desktop
+
   ];
 }
