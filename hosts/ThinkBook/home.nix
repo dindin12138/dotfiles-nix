@@ -31,7 +31,7 @@
     # ../../modules/home-manager/st
     ../../modules/home-manager/wechat
 
-    ../../modules/home-manager/scaling/scaling-2k.nix
+    ./special.nix
   ];
 
   nixpkgs = {

@@ -1,4 +1,4 @@
-{ config, lib, ... }:
+{ config, pkgs, lib, ... }:
 {
   home = {
     sessionVariables = {
@@ -20,8 +20,20 @@
     };
   };
 
+  services.hypridle = {
+    settings = {
+      listener = lib.mkBefore [
+        {
+          timeout = 150; # 2.5min.
+          on-timeout = "${pkgs.brightnessctl}/bin/brightnessctl -sd platform::kbd_backlight set 0"; # turn off keyboard backlight.
+          on-resume = "${pkgs.brightnessctl}/bin/brightnessctl -rd platform::kbd_backlight"; # turn on keyboard backlight.
+        }
+      ];
+    };
+  };
+
   programs.waybar = {
-    style = lib.mkForce ''${builtins.readFile ../waybar/style-2k.css}'';
+    style = lib.mkForce ''${builtins.readFile ../../modules/home-manager/waybar/style-2k.css}'';
     settings = {
       mainBar = {
         modules-right = lib.mkForce [
@@ -61,7 +73,7 @@
   };
 
   programs.wofi = {
-    style = lib.mkForce ''${builtins.readFile ../wofi/style-2k.css}'';
+    style = lib.mkForce ''${builtins.readFile ../../modules/home-manager/wofi/style-2k.css}'';
     settings = lib.mkForce {
       ## General
       show = "drun";
