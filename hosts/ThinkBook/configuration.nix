@@ -37,7 +37,11 @@
 
   boot.supportedFilesystems = [ "ntfs" ];
 
-  time.timeZone = "Asia/Shanghai";
+  time = {
+    timeZone = "Asia/Shanghai";
+    hardwareClockInLocalTime = true;
+  };
+
   i18n.defaultLocale = "en_US.UTF-8";
 
   services.xserver.videoDrivers = [ "amdgpu" ];
