@@ -38,5 +38,7 @@
     qq
 
     minecraft
+
+    godot_4
   ];
 }
