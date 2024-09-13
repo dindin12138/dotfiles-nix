@@ -40,5 +40,6 @@
     minecraft
 
     godot_4
+    blender
   ];
 }

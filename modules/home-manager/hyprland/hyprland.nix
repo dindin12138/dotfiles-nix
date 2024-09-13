@@ -51,22 +51,24 @@
       ];
 
       windowrulev2 = [
-        "float, class:(steam), title:(Friends List)"
-        "float, class:(steam), title:(Special Offers)"
-        "float, class:(steam), title:(Steam Settings)"
-        "float, class:(steam), title:(好友列表)"
-        "float, class:(steam), title:(特惠)"
-        "float, class:(steam), title:(Steam 设置)"
-        "float, class:(Zotero), title:(Zotero Settings)"
-        "float, class:(Zotero), title:(Add-ons Manager)"
-        "float, class:(Zotero), title:(Add-on Market)"
-        "float, class:(Zotero), title:(Progress)"
-        "float, class:(Zotero), title:(Import)"
-        "float, class:(Zotero), title:(高级搜索)"
-        "float, class:(Zotero), title:(Advanced Search)"
-        "float, class:(Zotero), title:(Software Update)"
-        "float, class:(QQ), title:(设置)"
-        "float, class:(QQ), title:(图片查看器)"
+        # Steam
+        "float, class:(steam), title:(Friends List|Special Offers|Steam Settings|好友列表|特惠|Steam 设置)"
+        # Zotero
+        "float, class:^(Zotero)$, title:^(Zotero Settings|Add-ons Manager|Plugins Manager|Add-on Market|Progress|Import|高级搜索|Advanced Search|Software Update)$"
+        "center, class:^(Zotero)$, title:^(Zotero Settings|Add-ons Manager|Plugins Manager|Add-on Market|高级搜索|Advanced Search|Software Update)$"
+        # QQ
+        "float, class:(QQ), title:(设置|图片查看器|文件管理器|收藏|QQ机器人|腾讯频道|群相册|群作业 -.*|群精华)"
+        "center, class:(QQ), title:(设置|图片查看器|文件管理器|收藏|QQ机器人|腾讯频道|群相册|群作业 -.*|群精华)"
+        "float, class:(Qq), title:(Open Files)"
+        "center, class:(Qq), title:(Open Files)"
+        # Godot
+        "tile, class:^(Godot)$, title:^(Godot)$"
+        # Godot Chinese
+        "center, class:^(Godot)$, title:^(项目设置（project.godot）|编辑器设置)$"
+        "size 50% 70%, class:^(Godot)$, title:^(项目设置（project.godot）|编辑器设置)$"
+        # Godot English
+        "center, class:^(Godot)$, title:^(Project Settings.*|Editor Settings|Open a File or Directory|Select a Folder to Scan|Quick Settings|Command Palette|Manage Editor Feature Profiles|Export Template Manager|Configure FBX Importer|Run Instances|Search Help|Thanks from the Godot community!|Export|Orphan Resource Explorer|Edit Compilation Configuration Profile|Create New Node)$"
+        "size 50% 70%, class:^(Godot)$, title:^(Project Settings.*|Editor Settings|Open a File or Directory|Select a Folder to Scan|Command Palette|Search Help|Export|Orphan Resource Explorer|Edit Compilation Configuration Profile|Run Instances|Create New Node)$"
       ];
 
       "$term" = "kitty";
