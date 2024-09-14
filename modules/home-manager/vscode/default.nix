@@ -20,7 +20,7 @@
       golang.go
 
       # Python
-      ms-python.python
+      # ms-python.python
       # ms-python.vscode-pylance
       charliermarsh.ruff
 
