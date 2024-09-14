@@ -26,7 +26,7 @@
 
       general = with config.colorScheme.palette; {
         layout = "master";
-        apply_sens_to_raw = "0";
+        # apply_sens_to_raw = "0";
         gaps_in = "4";
         gaps_out = "7";
         border_size = "3";
@@ -53,6 +53,7 @@
       windowrulev2 = [
         # Steam
         "float, class:(steam), title:(Friends List|Special Offers|Steam Settings|好友列表|特惠|Steam 设置)"
+        "center, class:(steam), title:(关机)"
         # Zotero
         "float, class:^(Zotero)$, title:^(Zotero Settings|Add-ons Manager|Plugins Manager|Add-on Market|Progress|Import|高级搜索|Advanced Search|Software Update)$"
         "center, class:^(Zotero)$, title:^(Zotero Settings|Add-ons Manager|Plugins Manager|Add-on Market|高级搜索|Advanced Search|Software Update)$"
