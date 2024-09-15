@@ -26,6 +26,7 @@
     ../../modules/nixos/networking.nix
     ../../modules/nixos/docker.nix
     # ../../modules/nixos/virt-manager.nix
+    ../../modules/nixos/bluetooth.nix
   ];
 
   home-manager = {
