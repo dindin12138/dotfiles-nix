@@ -30,7 +30,7 @@
     ../../modules/home-manager/music
     # ../../modules/home-manager/st
     ../../modules/home-manager/wechat
-    ../../modules/home-manager/qutebrowser
+    ../../modules/home-manager/qutebrowser.nix
 
     ./special.nix
   ];
