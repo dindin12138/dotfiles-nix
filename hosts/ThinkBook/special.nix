@@ -37,7 +37,7 @@
     settings = {
       mainBar = {
         modules-right = lib.mkForce [
-          "mpd"
+          "bluetooth"
           "pulseaudio"
           "backlight"
           "battery"

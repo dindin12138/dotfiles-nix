@@ -17,12 +17,13 @@
           "custom/colorpicker"
           "custom/screenshot"
           # "wlr/taskbar"
+          "mpd"
           "hyprland/window"
         ];
         modules-center = [ "hyprland/workspaces" ];
         modules-right = [
-          "mpd"
           # "custom/updates"
+          "bluetooth"
           "pulseaudio"
           # "backlight"
           # "battery"
@@ -130,6 +131,19 @@
           on-scroll-down = "${pkgs.mpc-cli}/bin/mpc next";
           smooth-scrolling-threshold = 1;
           max-length = 40;
+        };
+
+        "bluetooth" = {
+          format = " {status}";
+          format-disabled = "";
+          format-off = "";
+          format-connected-battery = " {device_battery_percentage}%";
+          interval = 30;
+          on-click = "${pkgs.blueman}/bin/blueman-manager";
+          tooltip-format = "{controller_alias}\t{controller_address}\n\n{num_connections} connected";
+          tooltip-format-connected = "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}";
+          tooltip-format-enumerate-connected = "{device_alias}\t{device_address}";
+          tooltip-format-enumerate-connected-battery = "{device_alias}\t{device_address}\t{device_battery_percentage}%";
         };
 
         "pulseaudio" = {
