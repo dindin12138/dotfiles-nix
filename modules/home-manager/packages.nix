@@ -19,22 +19,18 @@
     typora
     obsidian
 
-    # zotero
     zotero_7
 
+    # wechat-uos
     # zed-editor
 
     clash-verge-rev
     clash-meta
 
-    # qbittorrent-qt5
     qbittorrent-enhanced
-
-    spotify
 
     telegram-desktop
 
-    # wechat-uos
     qq
 
     minecraft
