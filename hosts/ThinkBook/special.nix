@@ -50,7 +50,7 @@
         ];
         "tray" = lib.mkForce {
           icon-size = 30;
-          spacing = 15;
+          spacing = 22;
         };
       };
     };

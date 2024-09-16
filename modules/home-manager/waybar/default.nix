@@ -135,8 +135,9 @@
 
         "bluetooth" = {
           format = " {status}";
-          format-disabled = "";
-          format-off = "";
+          format-disabled = " Disabled";
+          format-off = " Off";
+          format-on = " On";
           format-connected-battery = " {device_battery_percentage}%";
           interval = 30;
           on-click = "${pkgs.blueman}/bin/blueman-manager";
@@ -242,7 +243,7 @@
 
         "tray" = {
           icon-size = 20;
-          spacing = 10;
+          spacing = 15;
         };
 
         "idle_inhibitor" = {
