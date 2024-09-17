@@ -24,8 +24,8 @@
     # wechat-uos
     # zed-editor
 
-    clash-verge-rev
-    clash-meta
+    # clash-verge-rev
+    # clash-meta
 
     qbittorrent-enhanced
 

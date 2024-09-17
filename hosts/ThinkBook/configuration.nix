@@ -15,7 +15,7 @@
     ../../modules/nixos/polkit.nix
     ../../modules/nixos/packages.nix
     ../../modules/nixos/powermanager.nix
-    ../../modules/nixos/proxy.nix
+    # ../../modules/nixos/proxy.nix
     ../../modules/nixos/shell.nix
     ../../modules/nixos/sound.nix
     ../../modules/nixos/ssh.nix
