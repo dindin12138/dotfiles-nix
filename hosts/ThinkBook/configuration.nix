@@ -39,7 +39,8 @@
   boot.supportedFilesystems = [ "ntfs" ];
 
   time = {
-    timeZone = "Asia/Shanghai";
+    # timeZone = "Asia/Shanghai";
+    timeZone = "Europe/London";
     hardwareClockInLocalTime = true;
   };
 
