@@ -6,7 +6,7 @@
       name = "FiraCode Nerd Font";
       size = 13;
     };
-    theme = "Catppuccin-Mocha";
+    themeFile = "Catppuccin-Mocha";
     shellIntegration.enableZshIntegration = true;
     settings = {
       confirm_os_window_close = 0;
