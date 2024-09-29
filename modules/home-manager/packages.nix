@@ -13,16 +13,10 @@
 
     fastfetch
 
-    mpv
-    vlc
-
     typora
     obsidian
 
     zotero_7
-
-    # wechat-uos
-    # zed-editor
 
     # clash-verge-rev
     # clash-meta
