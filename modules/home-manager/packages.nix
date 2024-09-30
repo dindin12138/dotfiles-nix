@@ -9,6 +9,8 @@
     lazygit
     lazydocker
 
+    superfile
+
     google-chrome
 
     fastfetch
@@ -20,8 +22,6 @@
 
     # clash-verge-rev
     # clash-meta
-
-    qbittorrent-enhanced
 
     telegram-desktop
 
