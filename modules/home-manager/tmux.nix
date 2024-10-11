@@ -4,6 +4,16 @@
     enable = true;
     keyMode = "vi";
     newSession = true;
+    baseIndex = 1;
+    mouse = true;
+    prefix = "C-s";
+    shell = "${pkgs.zsh}/bin/zsh";
+    terminal = "screen-256color";
+    customPaneNavigationAndResize = true;
+    disableConfirmationPrompt = true;
+    extraConfig = "
+      set -g renumber-windows on
+    ";
     plugins = with pkgs.tmuxPlugins; [
       {
         plugin = catppuccin;
@@ -34,17 +44,17 @@
           set -g @catppuccin_directory_text "#{pane_current_path}"
         '';
       }
-      {
-        plugin = resurrect;
-        extraConfig = "set -g @resurrect-strategy-nvim 'session'";
-      }
-      {
-        plugin = continuum;
-        extraConfig = ''
-          set -g @continuum-restore 'on'
-          set -g @continuum-save-interval '10'
-        '';
-      }
+      # {
+      #   plugin = resurrect;
+      #   extraConfig = "set -g @resurrect-strategy-nvim 'session'";
+      # }
+      # {
+      #   plugin = continuum;
+      #   extraConfig = ''
+      #     set -g @continuum-restore 'on'
+      #     set -g @continuum-save-interval '10'
+      #   '';
+      # }
     ];
   };
 }

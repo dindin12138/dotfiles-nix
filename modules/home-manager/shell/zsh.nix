@@ -15,6 +15,7 @@
       ta = "tmux attach -t";
       tn = "tmux new-session";
       tl = "tmux list-sessions";
+      tk = "tmux kill-session -t";
 
       ra = "yazi";
       nf = "fastfetch";
