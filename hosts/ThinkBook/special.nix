@@ -20,6 +20,10 @@
     };
   };
 
+  home.file = {
+    ".config/fcitx5/conf/classicui.conf".text = lib.mkForce (import ../../modules/home-manager/fcitx5/classicui-2k.nix);
+  };
+
   services.hypridle = {
     settings = {
       listener = lib.mkBefore [

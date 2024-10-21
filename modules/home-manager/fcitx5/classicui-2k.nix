@@ -4,11 +4,11 @@
   # Use mouse wheel to go to prev or next page
   WheelForPaging=True
   # Font
-  Font="FiraCode Nerd Font 11"
+  Font="FiraCode Nerd Font 20"
   # Menu Font
-  MenuFont="FiraCode Nerd Font 11"
+  MenuFont="FiraCode Nerd Font 20"
   # Tray Font
-  TrayFont="FiraCode Nerd Font Bold 11"
+  TrayFont="FiraCode Nerd Font Bold 20"
   # Tray Label Outline Color
   TrayOutlineColor=#000000
   # Tray Label Text Color
