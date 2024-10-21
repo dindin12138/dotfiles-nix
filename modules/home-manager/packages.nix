@@ -20,6 +20,8 @@
 
     zotero_7
 
+    qbittorrent-enhanced
+
     # clash-verge-rev
     # clash-meta
 
