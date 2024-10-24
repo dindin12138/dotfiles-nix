@@ -7,10 +7,10 @@
   };
   home = {
     packages = with pkgs; [
-      qt5ct
+      libsForQt5.qt5ct
       (catppuccin-kvantum.override {
-        variant = "Mocha";
-        accent = "Blue";
+        variant = "mocha";
+        accent = "blue";
       })
     ];
     pointerCursor = {
