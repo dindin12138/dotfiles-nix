@@ -128,7 +128,9 @@ return {
 
     lspconfig.sqlls.setup({ on_attach = on_attach })
 
-    lspconfig.nil_ls.setup({ on_attach = on_attach })
+    -- lspconfig.nil_ls.setup({ on_attach = on_attach })
+
+    lspconfig.nixd.setup({ on_attach = on_attach })
 
     local float_border = function()
       local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview

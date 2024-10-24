@@ -16,7 +16,8 @@
     extraPackages = with pkgs; [
       # LSP
       lua-language-server
-      nil
+      # nil
+      nixd
       clang-tools
       pyright
       rust-analyzer
@@ -27,7 +28,8 @@
       bash-language-server
       # Formatter
       stylua
-      nixpkgs-fmt
+      # nixpkgs-fmt
+      nixfmt-classic
       nodePackages.prettier
       shfmt
       beautysh

@@ -78,18 +78,20 @@
       };
     };
   };
+  "jupyter.widgetScriptSources" = [ "jsdelivr.com" "unpkg.com" ];
   "nix.enableLanguageServer" = true;
-  "nix.serverPath" = "${pkgs.nil}/bin/nil";
-  "nix.formatterPath" = "${pkgs.nixpkgs-fmt}/bin/nixpkgs-fmt";
+  "nix.serverPath" = "${pkgs.nixd}/bin/nixd";
+  "nix.formatterPath" = "${pkgs.nixfmt-classic}/bin/nixfmt";
   "nix.serverSettings" = {
     "nil" = {
       "diagnostics.ignored" = [
         "unused_binding"
         "unused_with"
       ];
-      "formatting.command" = "${pkgs.nixpkgs-fmt}/bin/nixpkgs-fmt";
+      "formatting.command" = "${pkgs.nixfmt-classic}/bin/nixfmt";
     };
   };
+  "nixpkgs" = { "expr" = "import <nixpkgs> { }"; };
   "[nix]" = {
     "editor.defaultFormatter" = "jnoortheen.nix-ide";
   };
