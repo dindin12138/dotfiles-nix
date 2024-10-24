@@ -6,7 +6,7 @@
     remotePlay.openFirewall = true;
     dedicatedServer.openFirewall = true;
     extraCompatPackages = with pkgs; [ proton-ge-bin ];
-    fontPackages = with pkgs; [ noto-fonts-cjk noto-fonts-emoji ];
+    fontPackages = with pkgs; [ noto-fonts-cjk-sans noto-fonts-emoji ];
     extraPackages = with pkgs; [ mangohud ];
   };
 
