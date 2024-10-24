@@ -19,26 +19,21 @@
 
     catppuccin.url = "github:catppuccin/nix";
     nix-colors.url = "github:misterio77/nix-colors";
+
+    st.url = "github:dindin12138/st";
   };
 
-  outputs =
-    { self, nixpkgs, home-manager, ... } @ inputs:
-    let
-      inherit (self) outputs;
-    in
-    {
+  outputs = { self, nixpkgs, home-manager, ... }@inputs:
+    let inherit (self) outputs;
+    in {
       nixosConfigurations = {
         "80qs" = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs outputs; };
-          modules = [
-            ./hosts/80QS/configuration.nix
-          ];
+          modules = [ ./hosts/80QS/configuration.nix ];
         };
         tb = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs outputs; };
-          modules = [
-            ./hosts/ThinkBook/configuration.nix
-          ];
+          modules = [ ./hosts/ThinkBook/configuration.nix ];
         };
       };
     };
