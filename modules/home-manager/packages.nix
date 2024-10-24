@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 {
   home.packages = with pkgs; [
     fd
@@ -21,6 +21,10 @@
     zotero_7
 
     qbittorrent-enhanced
+
+    follow
+
+    inputs.st.packages.x86_64-linux.default
 
     # clash-verge-rev
     # clash-meta
