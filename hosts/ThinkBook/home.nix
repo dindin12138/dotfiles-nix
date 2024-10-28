@@ -1,5 +1,4 @@
-{ inputs, config, lib, ... }:
-{
+{ inputs, config, lib, ... }: {
   imports = [
     inputs.catppuccin.homeManagerModules.catppuccin
     inputs.nix-colors.homeManagerModules.default
@@ -43,18 +42,14 @@
       allowUnfree = true;
       allowBroken = true;
       allowUnfreePredicate = _: true;
-      permittedInsecurePackages = [
-        "openssl-1.1.1w"
-      ];
+      permittedInsecurePackages = [ "openssl-1.1.1w" ];
     };
   };
 
   home = {
     username = "din";
     homeDirectory = "/home/din";
-    sessionVariables = {
-      GOPATH = "${config.home.homeDirectory}/.cache/go";
-    };
+    sessionVariables = { GOPATH = "${config.home.homeDirectory}/.cache/go"; };
   };
 
   xdg = {
@@ -64,7 +59,8 @@
       createDirectories = true;
       extraConfig = {
         XDG_WORKSPACE_DIR = "${config.home.homeDirectory}/Workspace";
-        XDG_SCREENSHOT_DIR = "${config.home.homeDirectory}/Pictures/Screenshots";
+        XDG_SCREENSHOT_DIR =
+          "${config.home.homeDirectory}/Pictures/Screenshots";
       };
     };
   };

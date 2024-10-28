@@ -1,5 +1,4 @@
-{ inputs, outputs, ... }:
-{
+{ inputs, outputs, ... }: {
   imports = [
     inputs.home-manager.nixosModules.home-manager
     inputs.disko.nixosModules.disko
@@ -25,15 +24,13 @@
     ../../modules/nixos/hyprland.nix
     ../../modules/nixos/networking.nix
     ../../modules/nixos/docker.nix
-    # ../../modules/nixos/virt-manager.nix
+    ../../modules/nixos/virt-manager.nix
     ../../modules/nixos/bluetooth.nix
   ];
 
   home-manager = {
     extraSpecialArgs = { inherit inputs outputs; };
-    users = {
-      din = import ./home.nix;
-    };
+    users = { din = import ./home.nix; };
   };
 
   boot.supportedFilesystems = [ "ntfs" ];

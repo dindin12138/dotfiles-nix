@@ -26,6 +26,7 @@
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
     let inherit (self) outputs;
     in {
+
       nixosConfigurations = {
         "80qs" = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs outputs; };
