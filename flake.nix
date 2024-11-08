@@ -21,6 +21,7 @@
     nix-colors.url = "github:misterio77/nix-colors";
 
     st.url = "github:dindin12138/st";
+
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
