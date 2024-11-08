@@ -1,5 +1,4 @@
-{ inputs, pkgs, ... }:
-{
+{ inputs, pkgs, ... }: {
   home.packages = with pkgs; [
     fd
     ripgrep
@@ -32,6 +31,8 @@
     telegram-desktop
 
     qq
+
+    whatsapp-for-linux
 
     minecraft
 
