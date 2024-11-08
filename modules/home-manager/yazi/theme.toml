@@ -219,6 +219,8 @@ dirs  = [
 	{ name = "Screenshots", text = "󰸉" },
 	{ name = "Wallpapers", text = "󰸉" },
 	{ name = "Larian Studios", text = "󱎓" },
+    { name = "VM", text = "" },
+	{ name = "ISO", text = "" },
 ]
 files = [
 	{ name = ".babelrc", text = "", fg_dark = "#cbcb41", fg_light = "#666620" },
