@@ -15,7 +15,7 @@ return {
       sh = { "shfmt" },
       json = { { "jq", "prettier" } },
       jsonc = { "prettier" },
-      sql = { "sql_formatter" },
+      sql = { "sqlfluff" },
       zsh = { "beautysh" },
       javascript = { "prettier" },
       javascriptreact = { "prettier" },

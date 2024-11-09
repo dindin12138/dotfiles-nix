@@ -33,6 +33,7 @@
       beautysh
       gofumpt
       jq
+      sqlfluff
 
       # Tools
       gnumake
