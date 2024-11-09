@@ -15,25 +15,25 @@
     extraPackages = with pkgs; [
       # LSP
       lua-language-server
-      # nil
       nixd
       clang-tools
       pyright
       rust-analyzer
       neocmakelsp
       gopls
-      ruff-lsp
+      ruff
       sqls
       bash-language-server
+
       # Formatter
       stylua
-      # nixpkgs-fmt
       nixfmt-classic
       nodePackages.prettier
       shfmt
       beautysh
       gofumpt
       jq
+
       # Tools
       gnumake
       cmake

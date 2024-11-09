@@ -30,7 +30,7 @@ return {
         )
       end
       -- Disable hover in favor of Pyright
-      if client.name == "ruff_lsp" then
+      if client.name == "ruff" then
         client.server_capabilities.hoverProvider = false
       end
     end
@@ -92,15 +92,7 @@ return {
       },
     })
 
-    lspconfig.ruff_lsp.setup({
-      on_attach = on_attach,
-      init_options = {
-        settings = {
-          -- Any extra CLI arguments for `ruff` go here.
-          args = {},
-        },
-      },
-    })
+    lspconfig.ruff.setup({ on_attach = on_attach })
 
     -- lspconfig.pylsp.setup({
     --   on_attach = on_attach,
