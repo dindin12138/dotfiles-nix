@@ -10,6 +10,9 @@
 
     superfile
 
+    mpv
+    vlc
+
     google-chrome
 
     fastfetch
@@ -31,6 +34,7 @@
     telegram-desktop
 
     qq
+    wechat-uos
 
     whatsapp-for-linux
 

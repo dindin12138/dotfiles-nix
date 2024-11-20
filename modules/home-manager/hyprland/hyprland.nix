@@ -63,6 +63,9 @@
         "center, class:(QQ), title:(设置|图片查看器|文件管理器|收藏|QQ机器人|腾讯频道|群相册|群作业 -.*|群精华)"
         "float, class:(Qq), title:(Open Files)"
         "center, class:(Qq), title:(Open Files)"
+        # Wechat
+        "float, class:(wechat), title:(预览)"
+        "center, class:(wechat), title:(预览)"
         # Godot
         "tile, class:^(Godot)$, title:^(Godot)$"
         # Godot Chinese

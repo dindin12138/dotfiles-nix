@@ -1,5 +1,4 @@
-{ config, ... }:
-{
+{ config, ... }: {
   programs.mpv = {
     enable = true;
     bindings = {
@@ -13,16 +12,16 @@
       G = "seek 100 absolute-percent";
     };
     config = {
-      save-position-on-quit = true;
-      sub-auto = "fuzzy";
-      keep-open = true;
-      screenshot-directory = "${config.home.homeDirectory}/Pictures/Screenshots";
-      gpu-api = "opengl";
-      gpu-context = "wayland";
-      hwdec = "auto-safe";
-      vo = "gpu";
-      profile = "gpu-hq";
-      script-opts = "ytdl_hook-ytdl_path=yt-dlp";
+      # save-position-on-quit = true;
+      # sub-auto = "fuzzy";
+      # keep-open = true;
+      # screenshot-directory = "${config.home.homeDirectory}/Pictures/Screenshots";
+      # gpu-api = "opengl";
+      # gpu-context = "wayland";
+      # hwdec = "auto-safe";
+      # vo = "gpu";
+      # profile = "gpu-hq";
+      # script-opts = "ytdl_hook-ytdl_path=yt-dlp";
     };
   };
 }
