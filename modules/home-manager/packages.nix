@@ -10,7 +10,9 @@
 
     superfile
 
-    google-chrome
+    (google-chrome.override {
+      commandLineArgs = "--force-device-scale-factor=1.5";
+    })
 
     fastfetch
 
