@@ -8,7 +8,7 @@ return {
       cond = os.execute("grep -q '^ID=.*nixos' /etc/os-release") == 1,
       config = true,
     },
-    { "ray-x/lsp_signature.nvim", config = true },
+    -- { "ray-x/lsp_signature.nvim", config = true },
     { "j-hui/fidget.nvim", tag = "legacy", config = true },
   },
   config = function()

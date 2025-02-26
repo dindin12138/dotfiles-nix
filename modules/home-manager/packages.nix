@@ -23,7 +23,7 @@
 
     qbittorrent-enhanced
 
-    follow
+    # follow
 
     inputs.st.packages.x86_64-linux.default
 
@@ -40,5 +40,7 @@
 
     godot_4
     # blender
+
+    obs-studio
   ];
 }
