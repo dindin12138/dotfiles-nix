@@ -88,6 +88,7 @@
   };
   "nixpkgs" = { "expr" = "import <nixpkgs> { }"; };
   "[nix]" = { "editor.defaultFormatter" = "jnoortheen.nix-ide"; };
+  "agdaMode.connection.agdaLanguageServer" = true;
   "vscode-neovim" = {
     "neovimExecutablePaths.linux" = "${pkgs.neovim}/bin/nvim";
     "NVIM_APPNAME" = "vscode-neovim";
