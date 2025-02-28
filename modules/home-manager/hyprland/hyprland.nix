@@ -1,5 +1,4 @@
-{ config, pkgs, ... }:
-{
+{ config, pkgs, ... }: {
   wayland.windowManager.hyprland = {
     enable = true;
     systemd.variables = [ "--all" ];
@@ -14,9 +13,7 @@
 
       input = {
         natural_scroll = "0";
-        touchpad = {
-          natural_scroll = "1";
-        };
+        touchpad = { natural_scroll = "1"; };
         sensitivity = "0";
       };
 
@@ -40,9 +37,7 @@
         active_opacity = "1.0";
         inactive_opacity = "1.0";
         fullscreen_opacity = "1.0";
-        blur = {
-          enabled = "false";
-        };
+        blur = { enabled = "false"; };
       };
 
       exec-once = [
@@ -77,7 +72,8 @@
       "$term" = "kitty";
       "$launch" = "wofi --show drun --prompt 'Search...'";
       "$clipboard" = "cliphist list | wofi --dmenu | cliphist decode | wl-copy";
-      "$randomwallpaper" = "${pkgs.swww}/bin/swww img $(find ~/Pictures/Wallpapers/. -name '*' | shuf -n1) --transition-type any";
+      "$randomwallpaper" =
+        "${pkgs.swww}/bin/swww img $(find ~/Pictures/Wallpapers/. -name '*' | shuf -n1) --transition-type any";
       "$lockscreen" = "hyprlock";
       "$colorpicker" = "hyprpicker";
       "$screenshot" = "grimblast";
