@@ -33,6 +33,7 @@
     ../../modules/home-manager/mpv.nix
     ../../modules/home-manager/yt-dlp.nix
     ../../modules/home-manager/ghostty.nix
+    ../../modules/home-manager/foot.nix
 
     ./special.nix
   ];

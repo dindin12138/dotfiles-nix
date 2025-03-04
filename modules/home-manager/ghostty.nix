@@ -5,7 +5,7 @@
     settings = {
       theme = "catppuccin-mocha";
       font-family = "FiraCode Nerd Font";
-      font-size = 13;
+      font-size = 20;
     };
   };
 }

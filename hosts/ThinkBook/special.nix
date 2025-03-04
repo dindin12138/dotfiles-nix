@@ -1,20 +1,26 @@
 { config, pkgs, lib, ... }: {
-  home.packages = with pkgs; [
-    (google-chrome.override {
-      commandLineArgs = "--force-device-scale-factor=1.5";
-    })
-    (obsidian.override { commandLineArgs = "--force-device-scale-factor=1.5"; })
-  ];
-
-  home.sessionVariables = {
-    GDK_DPI_SCALE = "1.6";
-    QT_SCALE_FACTOR = "1.5";
-    QT_AUTO_SCREEN_SCALE_FACTOR = "1";
+  home = {
+    packages = with pkgs; [
+      (google-chrome.override {
+        commandLineArgs = "--force-device-scale-factor=1.5";
+      })
+      (obsidian.override {
+        commandLineArgs = "--force-device-scale-factor=1.5";
+      })
+    ];
   };
 
-  gtk.cursorTheme.size = lib.mkForce 36;
+  home = {
+    sessionVariables = {
+      GDK_DPI_SCALE = "1.6";
+      QT_SCALE_FACTOR = "1.5";
+      QT_AUTO_SCREEN_SCALE_FACTOR = "1";
+    };
+  };
 
-  home.pointerCursor.size = lib.mkForce 36;
+  gtk = { cursorTheme = { size = lib.mkForce 36; }; };
+
+  home = { pointerCursor = { size = lib.mkForce 36; }; };
 
   home.file = {
     ".config/fcitx5/conf/classicui.conf".text =
