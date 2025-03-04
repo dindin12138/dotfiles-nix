@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{ pkgs, ... }: {
   programs.tmux = {
     enable = true;
     keyMode = "vi";
@@ -12,9 +11,7 @@
     customPaneNavigationAndResize = true;
     disableConfirmationPrompt = true;
     tmuxinator.enable = true;
-    extraConfig = "
-      set -g renumber-windows on
-    ";
+    extraConfig = "\n      set -g renumber-windows on\n    ";
     plugins = with pkgs.tmuxPlugins; [
       {
         plugin = catppuccin;
@@ -38,7 +35,7 @@
           set -g @catppuccin_status_modules_right "directory session host date_time"
           set -g @catppuccin_status_left_separator "█"
           set -g @catppuccin_status_right_separator "█"
-      
+
           set -g @catppuccin_status_fill "icon"
 
           set -g @catppuccin_date_time_text "%Y-%m-%d %H:%M:%S"

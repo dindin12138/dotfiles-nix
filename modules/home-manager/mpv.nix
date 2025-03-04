@@ -1,5 +1,4 @@
-{ config, ... }:
-{
+{ config, ... }: {
   programs.mpv = {
     enable = true;
     bindings = {
@@ -16,7 +15,8 @@
       save-position-on-quit = true;
       sub-auto = "fuzzy";
       keep-open = true;
-      screenshot-directory = "${config.home.homeDirectory}/Pictures/Screenshots";
+      screenshot-directory =
+        "${config.home.homeDirectory}/Pictures/Screenshots";
       gpu-api = "opengl";
       gpu-context = "wayland";
       hwdec = "auto-safe";

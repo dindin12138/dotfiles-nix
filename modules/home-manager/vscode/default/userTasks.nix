@@ -1,20 +1,15 @@
-{ pkgs, ... }:
-{
+{ pkgs, ... }: {
   version = "2.0.0";
   tasks = [
     {
       label = "cmake";
       type = "shell";
       command = "${pkgs.cmake}/bin/cmake";
-      args = [
-        "-B build"
-      ];
+      args = [ "-B build" ];
     }
     {
       label = "make";
-      options = {
-        cwd = "\${workspaceFolder}/build";
-      };
+      options = { cwd = "\${workspaceFolder}/build"; };
       group = {
         kind = "build";
         isDefault = true;
@@ -25,10 +20,7 @@
     {
       label = "cmake & make compile";
       dependsOrder = "sequence";
-      dependsOn = [
-        "cmake"
-        "make"
-      ];
+      dependsOn = [ "cmake" "make" ];
     }
     {
       label = "clang single file compile";
@@ -47,9 +39,7 @@
         kind = "build";
         isDefault = true;
       };
-      options = {
-        cwd = "\${fileDirname}";
-      };
+      options = { cwd = "\${fileDirname}"; };
       presentation = {
         echo = true;
         reveal = "always";

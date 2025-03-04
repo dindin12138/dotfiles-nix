@@ -1,7 +1,7 @@
 {
   programs.wofi = {
     enable = true;
-    style = ''${builtins.readFile ./style.css}'';
+    style = "${builtins.readFile ./style.css}";
     settings = {
       ## General
       show = "drun";
