@@ -10,14 +10,12 @@
 
     superfile
 
-    (google-chrome.override {
-      commandLineArgs = "--force-device-scale-factor=1.5";
-    })
+    # (google-chrome.override { commandLineArgs = "--force-device-scale-factor=1.5"; })
+    # (obsidian.override { commandLineArgs = "--force-device-scale-factor=1.5"; })
 
     fastfetch
 
     typora
-    obsidian
 
     zotero_7
 
@@ -32,11 +30,11 @@
 
     telegram-desktop
 
-    qq
+    # qq
 
-    whatsapp-for-linux
+    # whatsapp-for-linux
 
-    minecraft
+    # minecraft
 
     godot_4
     # blender

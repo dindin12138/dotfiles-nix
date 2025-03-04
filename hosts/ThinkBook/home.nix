@@ -29,9 +29,10 @@
     ../../modules/home-manager/music
     # ../../modules/home-manager/st
     ../../modules/home-manager/wechat
-    ../../modules/home-manager/qutebrowser.nix
+    # ../../modules/home-manager/qutebrowser.nix
     ../../modules/home-manager/mpv.nix
     ../../modules/home-manager/yt-dlp.nix
+    ../../modules/home-manager/ghostty.nix
 
     ./special.nix
   ];
