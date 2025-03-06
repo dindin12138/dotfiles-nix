@@ -69,7 +69,7 @@
         "size 50% 70%, class:^(Godot)$, title:^(Project Settings.*|Editor Settings|Open a File or Directory|Select a Folder to Scan|Command Palette|Search Help|Export|Orphan Resource Explorer|Edit Compilation Configuration Profile|Run Instances|Create New Node)$"
       ];
 
-      "$term" = "foot";
+      "$term" = "kitty";
       "$launch" = "wofi --show drun --prompt 'Search...'";
       "$clipboard" = "cliphist list | wofi --dmenu | cliphist decode | wl-copy";
       "$randomwallpaper" =
