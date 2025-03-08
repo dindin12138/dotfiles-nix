@@ -33,6 +33,7 @@
       beautysh
       gofumpt
       jq
+      cmake-format
 
       # Tools
       gnumake
