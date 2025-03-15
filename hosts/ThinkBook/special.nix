@@ -12,6 +12,7 @@
 
   home = {
     sessionVariables = {
+      BROWSER = "google-chrome-stable";
       GDK_DPI_SCALE = "1.6";
       QT_SCALE_FACTOR = "1.5";
       QT_AUTO_SCREEN_SCALE_FACTOR = "1";
@@ -25,6 +26,12 @@
   home.file = {
     ".config/fcitx5/conf/classicui.conf".text =
       lib.mkForce (import ../../modules/home-manager/fcitx5/classicui-2k.nix);
+  };
+
+  programs.vscode = {
+    package = (pkgs.vscode.override {
+      commandLineArgs = "--force-device-scale-factor=1.5";
+    });
   };
 
   services.hypridle = {
