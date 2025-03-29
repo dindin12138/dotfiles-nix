@@ -21,7 +21,7 @@
     nix-colors.url = "github:misterio77/nix-colors";
 
     st.url = "github:dindin12138/st";
-
+    zen-browser.url = "github:0xc000022070/zen-browser-flake";
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:

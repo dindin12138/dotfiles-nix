@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{ pkgs, ... }: {
   services.displayManager.sddm = {
     enable = true;
     wayland.enable = true;
@@ -14,14 +13,12 @@
   };
   environment.systemPackages = with pkgs; [
     bibata-cursors
-    (
-      pkgs.catppuccin-sddm.override {
-        flavor = "mocha";
-        font = "FiraCode Nerd Font";
-        fontSize = "16";
-        background = "${../../home-manager/wall/wallpapers/background.png}";
-        loginBackground = false;
-      }
-    )
+    (pkgs.catppuccin-sddm.override {
+      flavor = "mocha";
+      font = "FiraCode Nerd Font";
+      fontSize = "16";
+      background = "${../../home-manager/wall/wallpapers/background.png}";
+      loginBackground = false;
+    })
   ];
 }

@@ -60,6 +60,9 @@
           icon-size = 30;
           spacing = 22;
         };
+        "hyprland/window" = {
+          icon-size = lib.mkForce 30; # 2k
+        };
       };
     };
   };

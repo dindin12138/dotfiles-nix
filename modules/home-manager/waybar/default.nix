@@ -1,8 +1,7 @@
-{ pkgs, ... }:
-{
+{ pkgs, ... }: {
   programs.waybar = {
     enable = true;
-    style = ''${builtins.readFile ./style.css}'';
+    style = "${builtins.readFile ./style.css}";
     settings = {
       mainBar = {
         layer = "top";
@@ -23,7 +22,7 @@
         modules-center = [ "hyprland/workspaces" ];
         modules-right = [
           # "custom/updates"
-          "bluetooth"
+          # "bluetooth"
           "pulseaudio"
           # "backlight"
           # "battery"
@@ -44,14 +43,17 @@
 
         "custom/wallpaper" = {
           format = "";
-          on-click = "${pkgs.swww}/bin/swww img $(find ~/Pictures/Wallpapers/. -name '*.png' | shuf -n1) --transition-type any";
-          on-click-right = "${pkgs.swww}/bin/swww img ~/Pictures/Wallpapers/background.png --transition-type any";
+          on-click =
+            "${pkgs.swww}/bin/swww img $(find ~/Pictures/Wallpapers/. -name '*.png' | shuf -n1) --transition-type any";
+          on-click-right =
+            "${pkgs.swww}/bin/swww img ~/Pictures/Wallpapers/background.png --transition-type any";
           tooltip = false;
         };
 
         "custom/colorpicker" = {
           format = "󰸱";
-          on-click = "${pkgs.hyprpicker}/bin/hyprpicker --format=hex --autocopy";
+          on-click =
+            "${pkgs.hyprpicker}/bin/hyprpicker --format=hex --autocopy";
           tooltip = false;
         };
 
@@ -83,8 +85,8 @@
         "hyprland/window" = {
           format = "{}";
           icon = true;
-          # icon-size = 20; # 1080p
-          icon-size = 30; # 2k
+          icon-size = 20; # 1080p
+          # icon-size = 30; # 2k
           rewrite = {
             "(.*)Mozilla Firefox" = "Mozilla Firefox";
             "(.*)Google Chrome" = "Google Chrome";
@@ -105,9 +107,7 @@
             active = "";
             default = "";
           };
-          persistent-workspaces = {
-            "*" = 5;
-          };
+          persistent-workspaces = { "*" = 5; };
         };
 
         "mpd" = {
@@ -141,10 +141,20 @@
           format-connected-battery = " {device_battery_percentage}%";
           interval = 30;
           on-click = "${pkgs.blueman}/bin/blueman-manager";
-          tooltip-format = "{controller_alias}\t{controller_address}\n\n{num_connections} connected";
-          tooltip-format-connected = "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}";
-          tooltip-format-enumerate-connected = "{device_alias}\t{device_address}";
-          tooltip-format-enumerate-connected-battery = "{device_alias}\t{device_address}\t{device_battery_percentage}%";
+          tooltip-format = ''
+            {controller_alias}	{controller_address}
+
+            {num_connections} connected'';
+          tooltip-format-connected = ''
+            {controller_alias}	{controller_address}
+
+            {num_connections} connected
+
+            {device_enumerate}'';
+          tooltip-format-enumerate-connected =
+            "{device_alias}	{device_address}";
+          tooltip-format-enumerate-connected-battery =
+            "{device_alias}	{device_address}	{device_battery_percentage}%";
         };
 
         "pulseaudio" = {
@@ -180,7 +190,8 @@
           on-click-right = "";
           on-update = "";
           on-scroll-up = "${pkgs.brightnessctl}/bin/brightnessctl set 3%+ -q";
-          on-scroll-down = "${pkgs.brightnessctl}/bin/brightnessctl set 3%-  -q";
+          on-scroll-down =
+            "${pkgs.brightnessctl}/bin/brightnessctl set 3%-  -q";
           smooth-scrolling-threshold = 1;
         };
 
@@ -196,8 +207,16 @@
           # format-disabled = "󰖪 Disabled";
           # format-alt = " {bandwidthDownBytes} |  {bandwidthUpBytes}";
           tooltip-format = "󰖩 {ifname} via {gwaddr}";
-          tooltip-format-wifi = "󰖩 {ifname} @ {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\nUp: {bandwidthUpBytes} Down: {bandwidthDownBytes}";
-          tooltip-format-ethernet = "󰈀 {ifname}\nIP: {ipaddr}\n up: {bandwidthUpBits} down: {bandwidthDownBits}";
+          tooltip-format-wifi = ''
+            󰖩 {ifname} @ {essid}
+            IP: {ipaddr}
+            Strength: {signalStrength}%
+            Freq: {frequency}MHz
+            Up: {bandwidthUpBytes} Down: {bandwidthDownBytes}'';
+          tooltip-format-ethernet = ''
+            󰈀 {ifname}
+            IP: {ipaddr}
+             up: {bandwidthUpBits} down: {bandwidthDownBits}'';
           tooltip-format-disconnected = "󰖪 Disconnected";
           max-length = 50;
           # on-click-right = "nm-connection-editor";
@@ -284,7 +303,9 @@
 
         "clock" = {
           # timezone = "America/New_York";
-          tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
+          tooltip-format = ''
+            <big>{:%Y %B}</big>
+            <tt><small>{calendar}</small></tt>'';
           format-alt = "{:%Y-%m-%d}";
         };
       };
