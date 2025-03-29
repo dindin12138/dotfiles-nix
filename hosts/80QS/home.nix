@@ -1,5 +1,4 @@
-{ inputs, config, ... }:
-{
+{ pkgs, inputs, config, ... }: {
   imports = [
     inputs.catppuccin.homeManagerModules.catppuccin
     inputs.nix-colors.homeManagerModules.default
@@ -10,7 +9,6 @@
     ../../modules/home-manager/wofi
     ../../modules/home-manager/shell
     ../../modules/home-manager/yazi
-    # ../../modules/home-manager/joshuto
     ../../modules/home-manager/git.nix
     ../../modules/home-manager/packages.nix
     ../../modules/home-manager/firefox
@@ -25,9 +23,17 @@
     ../../modules/home-manager/screenshot
     ../../modules/home-manager/vscode
     ../../modules/home-manager/tmux.nix
-    # ../../modules/home-manager/ags
     ../../modules/home-manager/cliphist.nix
     ../../modules/home-manager/music
+    ../../modules/home-manager/wechat
+    # ../../modules/home-manager/qutebrowser.nix
+    ../../modules/home-manager/mpv.nix
+    ../../modules/home-manager/yt-dlp.nix
+    # ../../modules/home-manager/ghostty.nix
+    # ../../modules/home-manager/foot.nix
+    # ../../modules/home-manager/wezterm
+
+    ./special.nix
   ];
 
   nixpkgs = {
@@ -41,9 +47,7 @@
   home = {
     username = "din";
     homeDirectory = "/home/din";
-    sessionVariables = {
-      GOPATH = "${config.home.homeDirectory}/.cache/go";
-    };
+    sessionVariables = { GOPATH = "${config.home.homeDirectory}/.cache/go"; };
   };
 
   xdg = {
@@ -53,7 +57,8 @@
       createDirectories = true;
       extraConfig = {
         XDG_WORKSPACE_DIR = "${config.home.homeDirectory}/Workspace";
-        XDG_SCREENSHOT_DIR = "${config.home.homeDirectory}/Pictures/Screenshots";
+        XDG_SCREENSHOT_DIR =
+          "${config.home.homeDirectory}/Pictures/Screenshots";
       };
     };
   };
@@ -66,5 +71,5 @@
   systemd.user.startServices = "sd-switch";
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
-  home.stateVersion = "23.11";
+  home.stateVersion = "24.11";
 }

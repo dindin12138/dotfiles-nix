@@ -53,13 +53,6 @@
                     };
                   };
                 };
-
-                mountpoint = "/partition-root";
-                swap = {
-                  swapfile = {
-                    size = "20M";
-                  };
-                };
               };
             };
           };

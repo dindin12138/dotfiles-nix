@@ -24,7 +24,7 @@
           # "custom/updates"
           # "bluetooth"
           "pulseaudio"
-          # "backlight"
+          "backlight"
           # "battery"
           "group/hardware"
           "tray"
