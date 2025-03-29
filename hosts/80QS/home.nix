@@ -11,7 +11,6 @@
     ../../modules/home-manager/yazi
     ../../modules/home-manager/git.nix
     ../../modules/home-manager/packages.nix
-    ../../modules/home-manager/firefox
     ../../modules/home-manager/fcitx5
     ../../modules/home-manager/neovim
     ../../modules/home-manager/btop.nix
@@ -19,19 +18,14 @@
     ../../modules/home-manager/theme
     ../../modules/home-manager/wall
     ../../modules/home-manager/mako.nix
-    # ../../modules/home-manager/wezterm
     ../../modules/home-manager/screenshot
     ../../modules/home-manager/vscode
     ../../modules/home-manager/tmux.nix
     ../../modules/home-manager/cliphist.nix
     ../../modules/home-manager/music
     ../../modules/home-manager/wechat
-    # ../../modules/home-manager/qutebrowser.nix
     ../../modules/home-manager/mpv.nix
     ../../modules/home-manager/yt-dlp.nix
-    # ../../modules/home-manager/ghostty.nix
-    # ../../modules/home-manager/foot.nix
-    # ../../modules/home-manager/wezterm
 
     ./special.nix
   ];
