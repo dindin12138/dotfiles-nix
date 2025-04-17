@@ -11,7 +11,7 @@
     ../../modules/home-manager/yazi
     ../../modules/home-manager/git.nix
     ../../modules/home-manager/packages.nix
-    ../../modules/home-manager/firefox
+    # ../../modules/home-manager/firefox
     ../../modules/home-manager/fcitx5
     ../../modules/home-manager/neovim
     ../../modules/home-manager/btop.nix
