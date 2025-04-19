@@ -1,6 +1,6 @@
 {
   imports = [
-    ./swww.nix
+    # ./swww.nix
   ];
 
   home.file = {
