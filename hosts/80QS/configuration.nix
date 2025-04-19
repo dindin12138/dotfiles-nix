@@ -13,7 +13,7 @@
     ../../modules/nixos/display-manager
     ../../modules/nixos/polkit.nix
     ../../modules/nixos/packages.nix
-    ../../modules/nixos/powermanager.nix
+    # ../../modules/nixos/powermanager.nix
     # ../../modules/nixos/proxy.nix
     ../../modules/nixos/shell.nix
     ../../modules/nixos/sound.nix
@@ -26,6 +26,8 @@
     # ../../modules/nixos/docker.nix
     # ../../modules/nixos/virt-manager.nix
   ];
+
+  services.desktopManager.cosmic.enable = true;
 
   home-manager = {
     extraSpecialArgs = { inherit inputs outputs; };
