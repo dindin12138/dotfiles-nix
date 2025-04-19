@@ -43,10 +43,10 @@
 
         "custom/wallpaper" = {
           format = "";
-          on-click =
-            "${pkgs.swww}/bin/swww img $(find ~/Pictures/Wallpapers/. -name '*.png' | shuf -n1) --transition-type any";
-          on-click-right =
-            "${pkgs.swww}/bin/swww img ~/Pictures/Wallpapers/background.png --transition-type any";
+          # on-click =
+          # "${pkgs.swww}/bin/swww img $(find ~/Pictures/Wallpapers/. -name '*.png' | shuf -n1) --transition-type any";
+          # on-click-right =
+          # "${pkgs.swww}/bin/swww img ~/Pictures/Wallpapers/background.png --transition-type any";
           tooltip = false;
         };
 

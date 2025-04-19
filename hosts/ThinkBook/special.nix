@@ -27,6 +27,12 @@
       lib.mkForce (import ../../modules/home-manager/fcitx5/classicui-2k.nix);
   };
 
+  programs.vscode = {
+    package = pkgs.vscode.override {
+      commandLineArgs = "--force-device-scale-factor=1.5";
+    };
+  };
+
   services.hypridle = {
     settings = {
       listener = lib.mkBefore [{

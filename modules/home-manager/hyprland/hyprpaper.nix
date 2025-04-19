@@ -1,14 +1,14 @@
-{
+{ config, ... }: {
   services.hyprpaper = {
     enable = true;
     settings = {
       ipc = "on";
-      splash = true;
-      # splash_offset = 2.0;
+      splash = false;
+      preload =
+        [ "${config.home.homeDirectory}/Pictures/Wallpapers/background.png" ];
 
-      preload = [ "../wall/wallpapers/background.png" ];
-
-      wallpaper = [ "monitor1,../wall/wallpapers/background.png" ];
+      wallpaper =
+        [ ",${config.home.homeDirectory}/Pictures/Wallpapers/background.png" ];
     };
   };
 }
