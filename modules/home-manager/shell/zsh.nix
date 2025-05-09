@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{ pkgs, ... }: {
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -31,22 +30,26 @@
 
       camera = "mpv --profile=low-latency --untimed /dev/video0";
 
-      kbd-backlight-off = "${pkgs.brightnessctl}/bin/brightnessctl -sd platform::kbd_backlight set 0"; # turn off keyboard backlight.
-      kbd-backlight-on = "${pkgs.brightnessctl}/bin/brightnessctl -rd platform::kbd_backlight"; # turn on keyboard backlight.
+      kbd-backlight-off =
+        "${pkgs.brightnessctl}/bin/brightnessctl -sd platform::kbd_backlight set 0"; # turn off keyboard backlight.
+      kbd-backlight-on =
+        "${pkgs.brightnessctl}/bin/brightnessctl -rd platform::kbd_backlight"; # turn on keyboard backlight.
 
       vscode-neovim = "NVIM_APPNAME=vscode-neovim nvim";
 
       proxy-test = "curl -I http://www.google.com";
 
-      nix-profile-history = "nix profile history --profile /nix/var/nix/profiles/system";
-      nix-query = "nix-store --gc --print-roots | rg -v '/proc/' | rg -Po '(?<= -> ).*' | xargs -o ${pkgs.nix-tree}/bin/nix-tree";
+      nix-profile-history =
+        "nix profile history --profile /nix/var/nix/profiles/system";
+      nix-query =
+        "nix-store --gc --print-roots | rg -v '/proc/' | rg -Po '(?<= -> ).*' | xargs -o ${pkgs.nix-tree}/bin/nix-tree";
     };
-    initExtra = ''
+    initContent = ''
 
       zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
       function joshuto() {
-      	ID="''$$"
+      	ID="$$"
       	mkdir -p /tmp/$USER
       	OUTPUT_FILE="/tmp/$USER/joshuto-cwd-$ID"
       	env joshuto --output-file "$OUTPUT_FILE" $@

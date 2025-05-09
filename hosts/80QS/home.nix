@@ -1,6 +1,6 @@
 { pkgs, inputs, config, ... }: {
   imports = [
-    inputs.catppuccin.homeManagerModules.catppuccin
+    inputs.catppuccin.homeModules.catppuccin
     inputs.nix-colors.homeManagerModules.default
 
     ../../modules/home-manager/hyprland
