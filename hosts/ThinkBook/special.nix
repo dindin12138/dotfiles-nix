@@ -76,13 +76,15 @@
   programs.kitty = { font = { size = lib.mkForce 20; }; };
 
   services.mako = {
-    font = lib.mkForce "FiraCode Nerd Font 16";
-    borderSize = lib.mkForce 3;
-    width = lib.mkForce 450;
-    height = lib.mkForce 150;
-    margin = lib.mkForce "15";
-    maxIconSize = lib.mkForce 96;
-    padding = lib.mkForce "22";
+    settings = {
+      font = lib.mkForce "FiraCode Nerd Font 16";
+      borderSize = lib.mkForce 3;
+      width = lib.mkForce 450;
+      height = lib.mkForce 150;
+      margin = lib.mkForce "15";
+      maxIconSize = lib.mkForce 96;
+      padding = lib.mkForce "22";
+    };
   };
 
   programs.wofi = {
