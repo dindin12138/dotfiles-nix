@@ -24,7 +24,7 @@
     # follow
 
     inputs.st.packages.x86_64-linux.default
-    inputs.zen-browser.packages."${system}".default
+    # inputs.zen-browser.packages."${system}".default
 
     # clash-verge-rev
     # clash-meta
