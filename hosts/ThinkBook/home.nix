@@ -27,6 +27,7 @@
     ../../modules/home-manager/wechat
     ../../modules/home-manager/mpv.nix
     ../../modules/home-manager/yt-dlp.nix
+    ../../modules/home-manager/qutebrowser.nix
 
     ./special.nix
   ];

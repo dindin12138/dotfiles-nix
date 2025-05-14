@@ -1,6 +1,30 @@
 {
   programs.qutebrowser = {
     enable = true;
+    settings = {
+      tabs.show = "never";
+      statusbar.show = "never";
+      fonts = {
+        default_family = "FiraCode Nerd Font";
+        default_size = "13pt";
+      };
+      colors.webpage.darkmode.enabled = true;
+      downloads = {
+        position = "bottom";
+        remove_finished = 3;
+      };
+      editor.command =
+        [ "kitty" "--class" "float-kitty" "-e" "nvim" "+{line}" "{file}" ];
+      fileselect = {
+        handler = "external";
+        single_file.command =
+          [ "kitty" "--class" "float-kitty" "-e" "yazi" "--chooser-file" "{}" ];
+        multiple_files.command =
+          [ "kitty" "--class" "float-kitty" "-e" "yazi" "--chooser-file" "{}" ];
+        folder.command =
+          [ "kitty" "--class" "float-kitty" "-e" "yazi" "--chooser-file" "{}" ];
+      };
+    };
     extraConfig = ''
       import os
       from urllib.request import urlopen
@@ -20,7 +44,16 @@
           theme.setup(c, "mocha", True)
     '';
     keyBindings = {
-      normal = { "<Ctrl-/>" = "hint links spawn --detach mpv {hint-url}"; };
+      normal = {
+        "<Ctrl-m>" = "hint links spawn --detach mpv {hint-url}";
+        "<Ctrl-p>" = "hint images download";
+        "<Ctrl-d>" =
+          "hint links spawn  kitty --class 'float-kitty' -e yt-dlp {hint-url}";
+      };
+      command = {
+        "<Ctrl-j>" = "completion-item-focus next";
+        "<Ctrl-k>" = "completion-item-focus prev";
+      };
     };
     searchEngines = {
       w = "https://en.wikipedia.org/wiki/Special:Search?search={}&go=Go&ns0=1";
