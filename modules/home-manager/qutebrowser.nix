@@ -9,9 +9,19 @@
         default_size = "13pt";
       };
       colors.webpage.darkmode.enabled = true;
+      scrolling.smooth = true;
+      hints = {
+        border = "none";
+        chars = "weruioasdfghjklzxcnm";
+      };
       downloads = {
         position = "bottom";
         remove_finished = 3;
+      };
+      url = {
+        default_page = "https://www.google.com/";
+        start_pages = "https://www.google.com/";
+        # searchengines = { DEFAULT = "https://www.google.com/search?q={}"; };
       };
       editor.command =
         [ "kitty" "--class" "float-kitty" "-e" "nvim" "+{line}" "{file}" ];
@@ -56,6 +66,7 @@
       };
     };
     searchEngines = {
+      DEFAULT = "https://www.google.com/search?q={}";
       w = "https://en.wikipedia.org/wiki/Special:Search?search={}&go=Go&ns0=1";
       aw = "https://wiki.archlinux.org/?search={}";
       # nw = "https://wiki.nixos.org/index.php?search={}";
@@ -63,7 +74,6 @@
         "https://search.nixos.org/packages?channel=unstable&sort=relevance&query={}";
       no =
         "https://search.nixos.org/options?channel=unstable&sort=relevance&query={}";
-      g = "https://www.google.com/search?hl=en&q={}";
       bl = "https://search.bilibili.com/all?keyword={}";
       yt = "https://www.youtube.com/results?search_query={}";
     };
