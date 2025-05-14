@@ -16,7 +16,7 @@
       tl = "tmux list-sessions";
       tk = "tmux kill-session -t";
 
-      ra = "yazi";
+      ra = "y";
       nf = "fastfetch";
 
       cat = "bat";
@@ -46,32 +46,41 @@
     };
     initContent = ''
 
-      zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+            zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
-      function joshuto() {
-      	ID="$$"
-      	mkdir -p /tmp/$USER
-      	OUTPUT_FILE="/tmp/$USER/joshuto-cwd-$ID"
-      	env joshuto --output-file "$OUTPUT_FILE" $@
-      	exit_code=$?
+            function y() {
+      	    local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+      	    yazi "$@" --cwd-file="$tmp"
+      	    if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+      		    builtin cd -- "$cwd"
+      	    fi
+      	    rm -f -- "$tmp"
+            }
 
-      	case "$exit_code" in
-      		# regular exit
-      		0)
-      			;;
-      		# output contains current directory
-      		101)
-      			JOSHUTO_CWD=$(cat "$OUTPUT_FILE")
-      			cd "$JOSHUTO_CWD"
-      			;;
-      		# output selected files
-      		102)
-      			;;
-      		*)
-      			echo "Exit code: $exit_code"
-      			;;
-      	esac
-      }
+            function joshuto() {
+            	ID="$$"
+            	mkdir -p /tmp/$USER
+            	OUTPUT_FILE="/tmp/$USER/joshuto-cwd-$ID"
+            	env joshuto --output-file "$OUTPUT_FILE" $@
+            	exit_code=$?
+
+            	case "$exit_code" in
+            		# regular exit
+            		0)
+            			;;
+            		# output contains current directory
+            		101)
+            			JOSHUTO_CWD=$(cat "$OUTPUT_FILE")
+            			cd "$JOSHUTO_CWD"
+            			;;
+            		# output selected files
+            		102)
+            			;;
+            		*)
+            			echo "Exit code: $exit_code"
+            			;;
+            	esac
+            }
     '';
   };
 }
