@@ -51,6 +51,10 @@
         "float, class:(steam), title:(Friends List|Special Offers|Steam Settings|好友列表|特惠|Steam 设置)"
         "center, class:(steam), title:(关机|特惠)"
         "size 20% 80%, class:(steam), title:(好友列表)"
+        # float-kitty
+        "float, class:(float-kitty)"
+        "center, class:(float-kitty)"
+        "size 70% 70%, class:(float-kitty)"
         # Zotero
         "float, class:^(Zotero)$, title:^(Zotero Settings|Add-ons Manager|Plugins Manager|Add-on Market|Progress|Import|高级搜索|Advanced Search|Software Update)$"
         "center, class:^(Zotero)$, title:^(Zotero Settings|Add-ons Manager|Plugins Manager|Add-on Market|高级搜索|Advanced Search|Software Update)$"
