@@ -94,6 +94,7 @@
             "(.*)Zotero" = "Zotero";
             "(.*)Obsidian(.*)" = "Obsidian";
             "(.*)Typora" = "Typora";
+            "(.*)qutebrowser" = "Qutebrowser";
           };
         };
 
