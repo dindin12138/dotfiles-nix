@@ -2,6 +2,7 @@
   programs.yazi = {
     enable = true;
     enableZshIntegration = true;
+    enableFishIntegration = true;
   };
   home.file = {
     ".config/yazi/yazi.toml".source = ./yazi.toml;
