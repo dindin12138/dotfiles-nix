@@ -27,7 +27,7 @@
     # ../../modules/nixos/virt-manager.nix
   ];
 
-  services.desktopManager.cosmic.enable = true;
+  # services.desktopManager.cosmic.enable = true;
 
   home-manager = {
     extraSpecialArgs = { inherit inputs outputs; };

@@ -51,6 +51,14 @@
         "float, class:(steam), title:(Friends List|Special Offers|Steam Settings|好友列表|特惠|Steam 设置)"
         "center, class:(steam), title:(关机|特惠)"
         "size 20% 80%, class:(steam), title:(好友列表)"
+
+        # google-chrome open file & save file
+        "float, class:(Google-chrome), title:(Open File|Save File)"
+        "center, class:(Google-chrome), title:(Open File|Save File)"
+        "size 70% 70%, class:(Google-chrome), title:(Open File|Save File)"
+        "float, class:(Xdg-desktop-portal-gtk), title:(Open File|Save File)"
+        "center, class:(Xdg-desktop-portal-gtk), title:(Open File|Save File)"
+        "size 70% 70%, class:(Xdg-desktop-portal-gtk), title:(Open File|Save File)"
         # float-kitty
         "float, class:(float-kitty)"
         "center, class:(float-kitty)"
