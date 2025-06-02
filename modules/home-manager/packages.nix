@@ -21,10 +21,7 @@
 
     qbittorrent-enhanced
 
-    # follow
-
     inputs.st.packages.x86_64-linux.default
-    # inputs.zen-browser.packages."${system}".default
 
     # clash-verge-rev
     # clash-meta
@@ -33,7 +30,7 @@
 
     # qq
 
-    # whatsapp-for-linux
+    wechat-uos
 
     # minecraft
 

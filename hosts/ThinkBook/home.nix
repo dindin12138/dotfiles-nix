@@ -24,7 +24,6 @@
     ../../modules/home-manager/tmux.nix
     ../../modules/home-manager/cliphist.nix
     ../../modules/home-manager/music
-    ../../modules/home-manager/wechat
     ../../modules/home-manager/mpv.nix
     ../../modules/home-manager/yt-dlp.nix
     ../../modules/home-manager/qutebrowser.nix
