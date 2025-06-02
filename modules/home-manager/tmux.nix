@@ -28,6 +28,10 @@
       set -g window-status-current-format " ●"
       set -g window-status-current-style "#{?window_zoomed_flag,fg=yellow,fg=magenta,nobold}"
       set -g window-status-bell-style "fg=red,nobold"
+
+      set -g allow-passthrough on
+      set -ga update-environment TERM
+      set -ga update-environment TERM_PROGRAM
     '';
   };
 }
