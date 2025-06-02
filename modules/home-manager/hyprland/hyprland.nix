@@ -32,6 +32,11 @@
         "col.inactive_border" = "0xFF${base00}";
       };
 
+      master = {
+        new_status = "master";
+        new_on_top = true;
+      };
+
       decoration = {
         rounding = "4";
         active_opacity = "1.0";
