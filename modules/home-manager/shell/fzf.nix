@@ -2,6 +2,7 @@
   programs.fzf = {
     enable = true;
     enableZshIntegration = true;
+    enableFishIntegration = true;
     colors = with config.colorScheme.palette; {
       "bg+" = "#${base02}";
       bg = "#${base00}";

@@ -2,7 +2,8 @@
   programs.wezterm = {
     enable = true;
     enableZshIntegration = true;
-    extraConfig = ''${builtins.readFile ./wezterm.lua}'';
+    enableFishIntegration = true;
+    extraConfig = "${builtins.readFile ./wezterm.lua}";
   };
 }
 

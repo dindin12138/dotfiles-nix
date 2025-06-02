@@ -6,7 +6,7 @@
     baseIndex = 1;
     mouse = true;
     prefix = "C-s";
-    shell = "${pkgs.zsh}/bin/zsh";
+    shell = "${pkgs.fish}/bin/fish";
     terminal = "screen-256color";
     customPaneNavigationAndResize = true;
     disableConfirmationPrompt = true;
