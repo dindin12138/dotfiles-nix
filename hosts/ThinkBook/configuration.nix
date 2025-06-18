@@ -44,6 +44,7 @@
   i18n.defaultLocale = "en_US.UTF-8";
 
   services.xserver.videoDrivers = [ "amdgpu" ];
+  programs.dconf.enable = true;
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "24.11";
