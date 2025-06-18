@@ -93,4 +93,5 @@
     "NVIM_APPNAME" = "vscode-neovim";
   };
   "extensions.experimental.affinity" = { "asvetliakov.vscode-neovim" = 1; };
+  "markdown.preview.fontSize" = 16;
 }
