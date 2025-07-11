@@ -1,6 +1,8 @@
 { pkgs, ... }: {
   userSettings = import ./userSettings.nix { inherit pkgs; };
   userTasks = import ./userTasks.nix { inherit pkgs; };
+  enableExtensionUpdateCheck = false;
+  enableUpdateCheck = false;
   extensions = with pkgs.vscode-extensions; [
     # Theme
     catppuccin.catppuccin-vsc
