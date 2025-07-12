@@ -6,22 +6,20 @@
     catppuccin.catppuccin-vsc
     pkief.material-icon-theme
 
-    # Python
-    # ms-python.python
-    # ms-python.vscode-pylance
-    charliermarsh.ruff
+    # C / C++
+    llvm-vs-code-extensions.vscode-clangd
+    ms-vscode.cmake-tools
 
-    # Jupyter
-    ms-toolsai.jupyter
-    ms-toolsai.vscode-jupyter-slideshow
-    ms-toolsai.vscode-jupyter-cell-tags
-    ms-toolsai.jupyter-renderers
-    ms-toolsai.jupyter-keymap
+    # Debug
+    vadimcn.vscode-lldb
 
     # Tools
     eamodio.gitlens
     alefragnani.project-manager
     gruntfuggly.todo-tree
+
+    # Formatter
+    esbenp.prettier-vscode
 
     # Remote & Docker
     ms-vscode-remote.remote-ssh
