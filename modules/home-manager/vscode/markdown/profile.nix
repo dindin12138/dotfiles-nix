@@ -7,6 +7,8 @@
 
     foam.foam-vscode
     yzhang.markdown-all-in-one
+    bierner.markdown-mermaid
+    bierner.markdown-preview-github-styles
 
     # Formatter
     esbenp.prettier-vscode
@@ -14,6 +16,6 @@
     # christian-kohler.path-intellisense
 
     # Neovim
-    asvetliakov.vscode-neovim
+    # asvetliakov.vscode-neovim
   ];
 }
