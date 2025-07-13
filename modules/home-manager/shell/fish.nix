@@ -36,6 +36,13 @@
 
       vscode-neovim = "NVIM_APPNAME=vscode-neovim nvim";
 
+      code-cpp = "code --profile CPP";
+      code-rust = "code --profile Rust";
+      code-go = "code --profile Go";
+      code-python = "code --profile Python";
+      code-remote = "code --profile Remote";
+      code-markdown = "code --profile Markdown";
+
       proxy-test = "curl -I http://www.google.com";
 
       nix-profile-history =
