@@ -24,13 +24,11 @@
     "compositeKeys" = {
       "jk" = {
         "command" = "vscode-neovim.lua";
-        "args" = [
-          [
-            "local code = require('vscode')"
-            "code.action('vscode-neovim.escape')"
-            "code.action('workbench.action.files.save')"
-          ]
-        ];
+        "args" = [[
+          "local code = require('vscode')"
+          "code.action('vscode-neovim.escape')"
+          "code.action('workbench.action.files.save')"
+        ]];
       };
     };
   };

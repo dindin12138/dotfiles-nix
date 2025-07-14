@@ -42,6 +42,7 @@
       code-python = "code --profile Python";
       code-remote = "code --profile Remote";
       code-markdown = "code --profile Markdown";
+      code-neovim = "code --profile Neovim";
 
       proxy-test = "curl -I http://www.google.com";
 
