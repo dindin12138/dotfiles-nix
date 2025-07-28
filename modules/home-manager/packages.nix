@@ -8,7 +8,7 @@
     lazygit
     lazydocker
 
-    superfile
+    # superfile
 
     # (google-chrome.override { commandLineArgs = "--force-device-scale-factor=1.5"; })
     # (obsidian.override { commandLineArgs = "--force-device-scale-factor=1.5"; })
@@ -26,7 +26,7 @@
     # clash-verge-rev
     # clash-meta
 
-    telegram-desktop
+    # telegram-desktop
 
     # qq
 
