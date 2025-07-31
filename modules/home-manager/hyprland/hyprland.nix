@@ -52,6 +52,14 @@
       ];
 
       windowrulev2 = [
+        # Telegram
+        "float, class:(org.telegram.desktop), title:(Media viewer)"
+        "center, class:(org.telegram.desktop), title:(Media viewer)"
+        "size 70% 70%, class:(org.telegram.desktop), title:(Media viewer)"
+        # Chrome
+        "float, class:(google-chrome), title:(Open Files)"
+        "center, class:(google-chrome), title:(Open Files)"
+        "size 70% 70%, class:(google-chrome), title:(Open Files)"
         # Steam
         "float, class:(steam), title:(Friends List|Special Offers|Steam Settings|好友列表|特惠|Steam 设置)"
         "center, class:(steam), title:(关机|特惠)"
@@ -68,6 +76,9 @@
         "center, class:(QQ), title:(设置|图片查看器|文件管理器|收藏|QQ机器人|腾讯频道|群相册|群作业 -.*|群精华)"
         "float, class:(Qq), title:(Open Files)"
         "center, class:(Qq), title:(Open Files)"
+        # WeChat
+        "float, class:(wechat), title:(预览)"
+        "center, class:(wechat), title:(预览)"
         # Godot
         "tile, class:^(Godot)$, title:^(Godot)$"
         # Godot Chinese
