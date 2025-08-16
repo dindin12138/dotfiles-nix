@@ -32,7 +32,7 @@
 
     wechat-uos
 
-    # minecraft
+    minecraft
 
     godot_4
     # blender

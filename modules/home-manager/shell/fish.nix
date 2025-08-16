@@ -24,6 +24,7 @@
 
       duf = "nix run nixpkgs#duf";
       dust = "nix run nixpkgs#dust";
+      telegram = "nix run nixpkgs#telegram-desktop";
 
       fc = "cliphist list | fzf | cliphist decode | wl-copy";
 
