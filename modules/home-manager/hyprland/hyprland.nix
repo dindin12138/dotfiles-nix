@@ -57,9 +57,9 @@
         "center, class:(org.telegram.desktop), title:(Media viewer)"
         "size 70% 70%, class:(org.telegram.desktop), title:(Media viewer)"
         # Chrome
-        "float, class:(google-chrome), title:(Open Files)"
-        "center, class:(google-chrome), title:(Open Files)"
-        "size 70% 70%, class:(google-chrome), title:(Open Files)"
+        "float, class:(google-chrome), title:(Open Files|Open File)"
+        "center, class:(google-chrome), title:(Open Files|Open File)"
+        "size 70% 70%, class:(google-chrome), title:(Open Files|Open File)"
         # Steam
         "float, class:(steam), title:(Friends List|Special Offers|Steam Settings|好友列表|特惠|Steam 设置)"
         "center, class:(steam), title:(关机|特惠)"
