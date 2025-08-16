@@ -27,8 +27,10 @@
 
       # Formatter
       stylua
-      nixfmt-classic
-      nodePackages.prettier
+      # nixfmt-classic
+      nixfmt
+      # nodePackages.prettier
+      prettier
       shfmt
       beautysh
       gofumpt
