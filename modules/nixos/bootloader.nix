@@ -6,5 +6,6 @@
       # configurationLimit = 10;
     };
     efi.canTouchEfiVariables = true;
+    supportedFilesystems = [ "ntfs" ];
   };
 }

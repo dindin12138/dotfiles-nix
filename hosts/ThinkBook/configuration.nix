@@ -27,6 +27,7 @@
     ../../modules/nixos/docker.nix
     ../../modules/nixos/virt-manager.nix
     ../../modules/nixos/bluetooth.nix
+    ../../modules/nixos/time.nix
   ];
 
   home-manager = {
@@ -34,14 +35,6 @@
     users = {
       din = import ./home.nix;
     };
-  };
-
-  boot.supportedFilesystems = [ "ntfs" ];
-
-  time = {
-    timeZone = "Asia/Shanghai";
-    # timeZone = "Europe/London";
-    hardwareClockInLocalTime = true;
   };
 
   i18n.defaultLocale = "en_US.UTF-8";

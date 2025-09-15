@@ -7,7 +7,7 @@
     enableRosetta = true;
 
     # User owning the Homebrew prefix
-    user = "yourname";
+    user = "din";
   };
 
   homebrew = {

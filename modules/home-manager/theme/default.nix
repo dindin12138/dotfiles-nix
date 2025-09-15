@@ -5,4 +5,3 @@
     ./catppuccin.nix
   ];
 }
-

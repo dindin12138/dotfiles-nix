@@ -38,15 +38,11 @@
     ./special.nix
   ];
 
-  # nixpkgs = {
-  #   overlays = [ ];
-  #   config = {
-  #     allowUnfree = true;
-  #     allowBroken = true;
-  #     allowUnfreePredicate = _: true;
-  #     permittedInsecurePackages = [ "openssl-1.1.1w" ];
-  #   };
-  # };
+  nixpkgs = {
+    config = {
+      allowUnfree = true;
+    };
+  };
 
   home = {
     username = "din";

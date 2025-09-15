@@ -23,16 +23,44 @@
         start_pages = "https://www.google.com/";
         # searchengines = { DEFAULT = "https://www.google.com/search?q={}"; };
       };
-      editor.command =
-        [ "kitty" "--class" "float-kitty" "-e" "nvim" "+{line}" "{file}" ];
+      editor.command = [
+        "kitty"
+        "--class"
+        "float-kitty"
+        "-e"
+        "nvim"
+        "+{line}"
+        "{file}"
+      ];
       fileselect = {
         handler = "external";
-        single_file.command =
-          [ "kitty" "--class" "float-kitty" "-e" "yazi" "--chooser-file" "{}" ];
-        multiple_files.command =
-          [ "kitty" "--class" "float-kitty" "-e" "yazi" "--chooser-file" "{}" ];
-        folder.command =
-          [ "kitty" "--class" "float-kitty" "-e" "yazi" "--chooser-file" "{}" ];
+        single_file.command = [
+          "kitty"
+          "--class"
+          "float-kitty"
+          "-e"
+          "yazi"
+          "--chooser-file"
+          "{}"
+        ];
+        multiple_files.command = [
+          "kitty"
+          "--class"
+          "float-kitty"
+          "-e"
+          "yazi"
+          "--chooser-file"
+          "{}"
+        ];
+        folder.command = [
+          "kitty"
+          "--class"
+          "float-kitty"
+          "-e"
+          "yazi"
+          "--chooser-file"
+          "{}"
+        ];
       };
     };
     extraConfig = ''
@@ -57,8 +85,7 @@
       normal = {
         "<Ctrl-m>" = "hint links spawn --detach mpv {hint-url}";
         "<Ctrl-p>" = "hint images download";
-        "<Ctrl-d>" =
-          "hint links spawn  kitty --class 'float-kitty' -e yt-dlp {hint-url}";
+        "<Ctrl-d>" = "hint links spawn  kitty --class 'float-kitty' -e yt-dlp {hint-url}";
       };
       command = {
         "<Ctrl-j>" = "completion-item-focus next";
@@ -70,10 +97,8 @@
       w = "https://en.wikipedia.org/wiki/Special:Search?search={}&go=Go&ns0=1";
       aw = "https://wiki.archlinux.org/?search={}";
       # nw = "https://wiki.nixos.org/index.php?search={}";
-      np =
-        "https://search.nixos.org/packages?channel=unstable&sort=relevance&query={}";
-      no =
-        "https://search.nixos.org/options?channel=unstable&sort=relevance&query={}";
+      np = "https://search.nixos.org/packages?channel=unstable&sort=relevance&query={}";
+      no = "https://search.nixos.org/options?channel=unstable&sort=relevance&query={}";
       bl = "https://search.bilibili.com/all?keyword={}";
       yt = "https://www.youtube.com/results?search_query={}";
     };

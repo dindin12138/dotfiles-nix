@@ -1,4 +1,10 @@
-{ config, pkgs, lib, ... }: {
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
+{
   home = {
     packages = with pkgs; [
       (google-chrome.override {
@@ -18,9 +24,17 @@
     };
   };
 
-  gtk = { cursorTheme = { size = lib.mkForce 36; }; };
+  gtk = {
+    cursorTheme = {
+      size = lib.mkForce 36;
+    };
+  };
 
-  home = { pointerCursor = { size = lib.mkForce 36; }; };
+  home = {
+    pointerCursor = {
+      size = lib.mkForce 36;
+    };
+  };
 
   home.file = {
     ".config/fcitx5/conf/classicui.conf".text =
@@ -35,19 +49,18 @@
 
   services.hypridle = {
     settings = {
-      listener = lib.mkBefore [{
-        timeout = 150; # 2.5min.
-        on-timeout =
-          "${pkgs.brightnessctl}/bin/brightnessctl -sd platform::kbd_backlight set 0"; # turn off keyboard backlight.
-        on-resume =
-          "${pkgs.brightnessctl}/bin/brightnessctl -rd platform::kbd_backlight"; # turn on keyboard backlight.
-      }];
+      listener = lib.mkBefore [
+        {
+          timeout = 150; # 2.5min.
+          on-timeout = "${pkgs.brightnessctl}/bin/brightnessctl -sd platform::kbd_backlight set 0"; # turn off keyboard backlight.
+          on-resume = "${pkgs.brightnessctl}/bin/brightnessctl -rd platform::kbd_backlight"; # turn on keyboard backlight.
+        }
+      ];
     };
   };
 
   programs.waybar = {
-    style = lib.mkForce
-      "${builtins.readFile ../../modules/home-manager/waybar/style-2k.css}";
+    style = lib.mkForce "${builtins.readFile ../../modules/home-manager/waybar/style-2k.css}";
     settings = {
       mainBar = {
         modules-right = lib.mkForce [
@@ -73,7 +86,11 @@
     };
   };
 
-  programs.kitty = { font = { size = lib.mkForce 20; }; };
+  programs.kitty = {
+    font = {
+      size = lib.mkForce 20;
+    };
+  };
 
   services.mako = {
     settings = {
@@ -88,8 +105,7 @@
   };
 
   programs.wofi = {
-    style = lib.mkForce
-      "${builtins.readFile ../../modules/home-manager/wofi/style-2k.css}";
+    style = lib.mkForce "${builtins.readFile ../../modules/home-manager/wofi/style-2k.css}";
     settings = lib.mkForce {
       ## General
       show = "drun";
@@ -133,24 +149,25 @@
 
   programs.hyprlock = with config.colorScheme.palette; {
     settings = {
-      input-field = lib.mkForce [{
-        monitor = "";
-        size = "375, 90";
-        outline_thickness = 3;
-        dots_size = 0.3;
-        dots_spacing = 0.3;
-        dots_center = true;
-        outer_color = "0xFF${base05}";
-        inner_color = "0x80${base05}";
-        font_color = "0xFF${base00}";
-        fade_on_empty = false;
-        placeholder_text =
-          ''<i><span foreground="##${base00}">Input Password...</span></i>'';
-        hide_input = false;
-        position = "0, -180";
-        halign = "center";
-        valign = "center";
-      }];
+      input-field = lib.mkForce [
+        {
+          monitor = "";
+          size = "375, 90";
+          outline_thickness = 3;
+          dots_size = 0.3;
+          dots_spacing = 0.3;
+          dots_center = true;
+          outer_color = "0xFF${base05}";
+          inner_color = "0x80${base05}";
+          font_color = "0xFF${base00}";
+          fade_on_empty = false;
+          placeholder_text = ''<i><span foreground="##${base00}">Input Password...</span></i>'';
+          hide_input = false;
+          position = "0, -180";
+          halign = "center";
+          valign = "center";
+        }
+      ];
       label = lib.mkForce [
         {
           monitor = "";
@@ -177,4 +194,3 @@
     };
   };
 }
-

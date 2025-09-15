@@ -1,4 +1,5 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }:
+{
   wayland.windowManager.hyprland = {
     enable = true;
     systemd.variables = [ "--all" ];
@@ -13,13 +14,10 @@
 
       input = {
         natural_scroll = "0";
-        touchpad = { natural_scroll = "1"; };
+        touchpad = {
+          natural_scroll = "1";
+        };
         sensitivity = "0";
-      };
-
-      gestures = {
-        workspace_swipe = "true";
-        workspace_swipe_fingers = "3";
       };
 
       general = with config.colorScheme.palette; {
@@ -42,7 +40,9 @@
         active_opacity = "1.0";
         inactive_opacity = "1.0";
         fullscreen_opacity = "1.0";
-        blur = { enabled = "false"; };
+        blur = {
+          enabled = "false";
+        };
       };
 
       exec-once = [

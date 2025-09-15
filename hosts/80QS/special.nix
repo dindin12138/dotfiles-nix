@@ -1,2 +1,9 @@
-{ pkgs, ... }: { home = { packages = with pkgs; [ google-chrome obsidian ]; }; }
-
+{ pkgs, ... }:
+{
+  home = {
+    packages = with pkgs; [
+      google-chrome
+      obsidian
+    ];
+  };
+}

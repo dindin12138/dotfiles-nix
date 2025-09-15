@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   home.packages = with pkgs; [
     slurp
     grim
@@ -9,4 +10,3 @@
     (pkgs.writeShellScriptBin "grimblast" "${builtins.readFile ./grimblast}")
   ];
 }
-

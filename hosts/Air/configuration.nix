@@ -1,7 +1,6 @@
 {
   inputs,
   outputs,
-  pkgs,
   self,
   ...
 }:
@@ -14,6 +13,8 @@
     ../../modules/darwin/nix.nix
     ../../modules/darwin/homebrew.nix
     ../../modules/darwin/users.nix
+
+    ../../modules/darwin/packages.nix
   ];
 
   home-manager = {
@@ -22,17 +23,6 @@
       din = import ./home.nix;
     };
   };
-
-  # List packages installed in system profile. To search by name, run:
-  # $ nix-env -qaP | grep wget
-  environment.systemPackages = with pkgs; [
-    mkalias
-    vim
-    mas
-  ];
-
-  # Enable alternative shell support in nix-darwin.
-  # programs.fish.enable = true;
 
   # Set Git commit hash for darwin-version.
   system.configurationRevision = self.rev or self.dirtyRev or null;

@@ -28,7 +28,11 @@ in
         automatically_count_files = false;
         collapse_preview = true;
         # ratios for parent view (optional), current view and preview
-        column_ratio = [ 1 2 4 ];
+        column_ratio = [
+          1
+          2
+          4
+        ];
         scroll_offset = 6;
         show_borders = false;
         show_hidden = false;

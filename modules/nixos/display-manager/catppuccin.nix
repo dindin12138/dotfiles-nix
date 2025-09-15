@@ -14,4 +14,3 @@ pkgs.stdenv.mkDerivation {
     cp -r ./src/catppuccin-mocha/* $out/
   '';
 }
-

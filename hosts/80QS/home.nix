@@ -1,4 +1,9 @@
-{ pkgs, inputs, config, ... }: {
+{
+  inputs,
+  config,
+  ...
+}:
+{
   imports = [
     inputs.catppuccin.homeModules.catppuccin
     inputs.nix-colors.homeManagerModules.default
@@ -30,17 +35,17 @@
   ];
 
   nixpkgs = {
-    overlays = [ ];
     config = {
       allowUnfree = true;
-      allowUnfreePredicate = _: true;
     };
   };
 
   home = {
     username = "din";
     homeDirectory = "/home/din";
-    sessionVariables = { GOPATH = "${config.home.homeDirectory}/.cache/go"; };
+    sessionVariables = {
+      GOPATH = "${config.home.homeDirectory}/.cache/go";
+    };
   };
 
   xdg = {
@@ -50,8 +55,7 @@
       createDirectories = true;
       extraConfig = {
         XDG_WORKSPACE_DIR = "${config.home.homeDirectory}/Workspace";
-        XDG_SCREENSHOT_DIR =
-          "${config.home.homeDirectory}/Pictures/Screenshots";
+        XDG_SCREENSHOT_DIR = "${config.home.homeDirectory}/Pictures/Screenshots";
       };
     };
   };

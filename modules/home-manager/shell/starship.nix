@@ -1,4 +1,5 @@
-{ config, lib, ... }: {
+{ config, lib, ... }:
+{
   programs.starship = {
     enable = true;
     enableZshIntegration = true;
@@ -56,57 +57,49 @@
 
       git_status = {
         style = "bg:#${base03}";
-        format =
-          "[[($all_status$ahead_behind )](fg:#${base0D} bg:#${base03})]($style)";
+        format = "[[($all_status$ahead_behind )](fg:#${base0D} bg:#${base03})]($style)";
       };
 
       nodejs = {
         symbol = "";
         style = "bg:#${base02}";
-        format =
-          "[[ $symbol ($version) ](fg:#${base0D} bg:#${base02})]($style)";
+        format = "[[ $symbol ($version) ](fg:#${base0D} bg:#${base02})]($style)";
       };
 
       rust = {
         symbol = "";
         style = "bg:#${base02}";
-        format =
-          "[[ $symbol ($version) ](fg:#${base0D} bg:#${base02})]($style)";
+        format = "[[ $symbol ($version) ](fg:#${base0D} bg:#${base02})]($style)";
       };
 
       golang = {
         symbol = "";
         style = "bg:#${base02}";
-        format =
-          "[[ $symbol ($version) ](fg:#${base0D} bg:#${base02})]($style)";
+        format = "[[ $symbol ($version) ](fg:#${base0D} bg:#${base02})]($style)";
       };
 
       python = {
         symbol = "";
         style = "bg:#${base02}";
-        format =
-          "[[ $symbol ($version) ](fg:#${base0D} bg:#${base02})]($style)";
+        format = "[[ $symbol ($version) ](fg:#${base0D} bg:#${base02})]($style)";
       };
 
       lua = {
         symbol = "";
         style = "bg:#${base02}";
-        format =
-          "[[ $symbol ($version) ](fg:#${base0D} bg:#${base02})]($style)";
+        format = "[[ $symbol ($version) ](fg:#${base0D} bg:#${base02})]($style)";
       };
 
       c = {
         symbol = "";
         style = "bg:#${base02}";
-        format =
-          "[[ $symbol ($version) ](fg:#${base0D} bg:#${base02})]($style)";
+        format = "[[ $symbol ($version) ](fg:#${base0D} bg:#${base02})]($style)";
       };
 
       php = {
         symbol = "";
         style = "bg:#${base02}";
-        format =
-          "[[ $symbol ($version) ](fg:#${base0D} bg:#${base02})]($style)";
+        format = "[[ $symbol ($version) ](fg:#${base0D} bg:#${base02})]($style)";
       };
 
       time = {

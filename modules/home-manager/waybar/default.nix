@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   programs.waybar = {
     enable = true;
     style = "${builtins.readFile ./style.css}";
@@ -52,8 +53,7 @@
 
         "custom/colorpicker" = {
           format = "󰸱";
-          on-click =
-            "${pkgs.hyprpicker}/bin/hyprpicker --format=hex --autocopy";
+          on-click = "${pkgs.hyprpicker}/bin/hyprpicker --format=hex --autocopy";
           tooltip = false;
         };
 
@@ -108,7 +108,9 @@
             active = "";
             default = "";
           };
-          persistent-workspaces = { "*" = 5; };
+          persistent-workspaces = {
+            "*" = 5;
+          };
         };
 
         "mpd" = {
@@ -152,10 +154,8 @@
             {num_connections} connected
 
             {device_enumerate}'';
-          tooltip-format-enumerate-connected =
-            "{device_alias}	{device_address}";
-          tooltip-format-enumerate-connected-battery =
-            "{device_alias}	{device_address}	{device_battery_percentage}%";
+          tooltip-format-enumerate-connected = "{device_alias}	{device_address}";
+          tooltip-format-enumerate-connected-battery = "{device_alias}	{device_address}	{device_battery_percentage}%";
         };
 
         "pulseaudio" = {
@@ -172,7 +172,11 @@
             phone = "";
             portable = "";
             car = "";
-            default = [ "" " " " " ];
+            default = [
+              ""
+              " "
+              " "
+            ];
           };
           scroll-step = 5.0;
           on-click = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
@@ -185,14 +189,18 @@
           align = 0;
           rotate = 0;
           format = "{icon} {percent}%";
-          format-icons = [ "󱩏" "󱩑" "󱩔" "󱩖" ];
+          format-icons = [
+            "󱩏"
+            "󱩑"
+            "󱩔"
+            "󱩖"
+          ];
           on-click = "";
           on-click-middle = "";
           on-click-right = "";
           on-update = "";
           on-scroll-up = "${pkgs.brightnessctl}/bin/brightnessctl set 3%+ -q";
-          on-scroll-down =
-            "${pkgs.brightnessctl}/bin/brightnessctl set 3%-  -q";
+          on-scroll-down = "${pkgs.brightnessctl}/bin/brightnessctl set 3%-  -q";
           smooth-scrolling-threshold = 1;
         };
 
@@ -231,7 +239,13 @@
           format = "{icon}{capacity}%";
           format-charging = " {capacity}%";
           format-plugged = " {capacity}%";
-          format-icons = [ " " " " " " " " " " ];
+          format-icons = [
+            " "
+            " "
+            " "
+            " "
+            " "
+          ];
         };
 
         "cpu" = {
@@ -258,7 +272,11 @@
             children-class = "not-memory";
             transition-left-to-right = false;
           };
-          modules = [ "memory" "disk" "cpu" ];
+          modules = [
+            "memory"
+            "disk"
+            "cpu"
+          ];
         };
 
         "tray" = {
@@ -299,7 +317,11 @@
             children-class = "not-memory";
             transition-left-to-right = false;
           };
-          modules = [ "custom/exit" "custom/reboot" "custom/logout" ];
+          modules = [
+            "custom/exit"
+            "custom/reboot"
+            "custom/logout"
+          ];
         };
 
         "clock" = {
