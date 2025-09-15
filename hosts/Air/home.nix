@@ -1,5 +1,23 @@
 {
-  imports = [ ];
+  inputs,
+  ...
+}:
+{
+  imports = [
+    inputs.catppuccin.homeModules.catppuccin
+    inputs.nix-colors.homeManagerModules.default
+
+    ../../modules/home-manager/kitty.nix
+    # ../../modules/home-manager/shell
+    ../../modules/home-manager/yazi
+    # ../../modules/home-manager/git.nix
+    # ../../modules/home-manager/packages.nix
+    # ../../modules/home-manager/neovim
+    ../../modules/home-manager/btop.nix
+    ../../modules/home-manager/bat.nix
+    # ../../modules/home-manager/wall
+    ../../modules/home-manager/yt-dlp.nix
+  ];
 
   home = {
     username = "din";
