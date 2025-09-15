@@ -1,4 +1,5 @@
-{ inputs, pkgs, ... }: {
+{ inputs, pkgs, ... }:
+{
   home.packages = with pkgs; [
     fd
     ripgrep
@@ -23,16 +24,16 @@
 
     inputs.st.packages.x86_64-linux.default
 
-    # clash-verge-rev
-    # clash-meta
+    clash-verge-rev
+    clash-meta
 
     # telegram-desktop
 
     # qq
 
-    wechat-uos
+    wechat
 
-    minecraft
+    # minecraft
 
     godot_4
     # blender

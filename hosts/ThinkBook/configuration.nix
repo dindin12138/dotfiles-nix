@@ -1,4 +1,5 @@
-{ inputs, outputs, ... }: {
+{ inputs, outputs, ... }:
+{
   imports = [
     inputs.home-manager.nixosModules.home-manager
     inputs.disko.nixosModules.disko
@@ -14,7 +15,7 @@
     ../../modules/nixos/polkit.nix
     ../../modules/nixos/packages.nix
     ../../modules/nixos/powermanager.nix
-    # ../../modules/nixos/proxy.nix
+    ../../modules/nixos/proxy.nix
     ../../modules/nixos/shell.nix
     ../../modules/nixos/sound.nix
     ../../modules/nixos/ssh.nix
@@ -30,14 +31,16 @@
 
   home-manager = {
     extraSpecialArgs = { inherit inputs outputs; };
-    users = { din = import ./home.nix; };
+    users = {
+      din = import ./home.nix;
+    };
   };
 
   boot.supportedFilesystems = [ "ntfs" ];
 
   time = {
-    # timeZone = "Asia/Shanghai";
-    timeZone = "Europe/London";
+    timeZone = "Asia/Shanghai";
+    # timeZone = "Europe/London";
     hardwareClockInLocalTime = true;
   };
 

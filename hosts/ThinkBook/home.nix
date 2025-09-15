@@ -1,4 +1,9 @@
-{ inputs, config, lib, ... }: {
+{
+  inputs,
+  config,
+  ...
+}:
+{
   imports = [
     inputs.catppuccin.homeModules.catppuccin
     inputs.nix-colors.homeManagerModules.default
@@ -28,25 +33,27 @@
     ../../modules/home-manager/yt-dlp.nix
     ../../modules/home-manager/qutebrowser.nix
     ../../modules/home-manager/foot.nix
-    ../../modules/home-manager/quickshell.nix
+    # ../../modules/home-manager/quickshell.nix
 
     ./special.nix
   ];
 
-  nixpkgs = {
-    overlays = [ ];
-    config = {
-      allowUnfree = true;
-      allowBroken = true;
-      allowUnfreePredicate = _: true;
-      permittedInsecurePackages = [ "openssl-1.1.1w" ];
-    };
-  };
+  # nixpkgs = {
+  #   overlays = [ ];
+  #   config = {
+  #     allowUnfree = true;
+  #     allowBroken = true;
+  #     allowUnfreePredicate = _: true;
+  #     permittedInsecurePackages = [ "openssl-1.1.1w" ];
+  #   };
+  # };
 
   home = {
     username = "din";
     homeDirectory = "/home/din";
-    sessionVariables = { GOPATH = "${config.home.homeDirectory}/.cache/go"; };
+    sessionVariables = {
+      GOPATH = "${config.home.homeDirectory}/.cache/go";
+    };
   };
 
   xdg = {
@@ -56,8 +63,7 @@
       createDirectories = true;
       extraConfig = {
         XDG_WORKSPACE_DIR = "${config.home.homeDirectory}/Workspace";
-        XDG_SCREENSHOT_DIR =
-          "${config.home.homeDirectory}/Pictures/Screenshots";
+        XDG_SCREENSHOT_DIR = "${config.home.homeDirectory}/Pictures/Screenshots";
       };
     };
   };
