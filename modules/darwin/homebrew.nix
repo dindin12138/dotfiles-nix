@@ -1,0 +1,25 @@
+{
+  nix-homebrew = {
+    # Install Homebrew under the default prefix
+    enable = true;
+
+    # Apple Silicon Only: Also install Homebrew under the default Intel prefix for Rosetta 2
+    enableRosetta = true;
+
+    # User owning the Homebrew prefix
+    user = "yourname";
+  };
+
+  homebrew = {
+    enable = true;
+    # casks = [];
+    # masApps = {
+    # wechat = "";
+    # };
+    onActivation = {
+      cleanup = "zap";
+      autoUpdate = true;
+      upgrade = true;
+    };
+  };
+}
