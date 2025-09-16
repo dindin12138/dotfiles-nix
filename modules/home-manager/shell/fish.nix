@@ -58,6 +58,23 @@
         end
         rm -f -- "$tmp"
       '';
+      nix-fzf-search = ''
+        function nix-fzf-search
+          set q $argv
+          nix search nixpkgs $q --json 2>/dev/null \
+          | jq -r '
+              to_entries[]
+              | .key as $k
+              | ($k | split(".")[-1]) as $pkg
+              | "\($k)\t\($pkg)\t\(.value.version // "-")\t\(.value.description // "")"
+            ' \
+          | fzf --prompt=" Nixpkgs 󰄾 " \
+                --delimiter="\t" \
+                --with-nth=2 \
+                --preview 'printf "attr: %s\nversion: %s\n\n%s\n" {1} {3} {4}' \
+          | cut -f1
+        end
+      '';
     };
     plugins = [ ];
     interactiveShellInit = ''
