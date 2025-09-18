@@ -24,6 +24,7 @@
     nix-colors.url = "github:misterio77/nix-colors";
 
     st.url = "github:dindin12138/st";
+    nixvim.url = "github:dindin12138/nixvim";
   };
 
   outputs =
