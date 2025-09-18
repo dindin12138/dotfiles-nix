@@ -17,11 +17,12 @@
       tk = "tmux kill-session -t";
 
       ra = "y";
-      nf = "fastfetch";
+      nf = "${pkgs.fastfetch}/bin/fastfetch";
 
       cat = "bat";
       icat = "kitty +kitten icat";
-      lg = "lazygit";
+      lg = "${pkgs.lazygit}/bin/lazygit";
+      ld = "${pkgs.lazydocker}/bin/lazydocker";
 
       duf = "nix run nixpkgs#duf";
       dust = "nix run nixpkgs#dust";
