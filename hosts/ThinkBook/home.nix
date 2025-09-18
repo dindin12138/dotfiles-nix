@@ -18,7 +18,7 @@
     ../../modules/home-manager/packages.nix
     # ../../modules/home-manager/firefox
     ../../modules/home-manager/fcitx5
-    # ../../modules/home-manager/neovim
+    ../../modules/home-manager/neovim
     ../../modules/home-manager/btop.nix
     ../../modules/home-manager/bat.nix
     ../../modules/home-manager/theme
