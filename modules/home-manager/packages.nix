@@ -1,12 +1,13 @@
 {
-  inputs,
+  # inputs,
   pkgs,
   ...
 }:
-let
-  system = pkgs.stdenv.hostPlatform.system;
-  nvim = inputs.nixvim.packages.${system}.default;
-in
+# let
+#   system = pkgs.stdenv.hostPlatform.system;
+#   nvim = inputs.nixvim.packages.${system}.default;
+#   st = inputs.st.packages.${system}.default;
+# in
 {
   home.packages = with pkgs; [
     fd
@@ -29,10 +30,6 @@ in
     zotero
 
     qbittorrent-enhanced
-
-    inputs.st.packages.x86_64-linux.default
-
-    nvim
 
     clash-verge-rev
     clash-meta
