@@ -12,7 +12,10 @@
 
   homebrew = {
     enable = true;
-    # casks = [];
+    casks = [
+      "obsidian"
+      "typora"
+    ];
     # masApps = {
     # wechat = "";
     # };

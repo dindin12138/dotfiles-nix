@@ -2,14 +2,15 @@
   inputs,
   outputs,
   self,
+  pkgs,
   ...
 }:
 {
   imports = [
-    inputs.home-manager.nixosModules.home-manager
+    inputs.home-manager.darwinModules.home-manager
     inputs.nix-homebrew.darwinModules.nix-homebrew
 
-    ../../modules/darwin/apps-alias.nix
+    # ../../modules/darwin/apps-alias.nix
     ../../modules/darwin/nix.nix
     ../../modules/darwin/homebrew.nix
     ../../modules/darwin/users.nix
@@ -17,11 +18,20 @@
     ../../modules/darwin/packages.nix
   ];
 
+  programs.fish.enable = true;
+  environment.shells = [ pkgs.fish ];
+
+  fonts.packages = with pkgs; [
+    nerd-fonts.fira-code
+  ];
+
   home-manager = {
     extraSpecialArgs = { inherit inputs outputs; };
     users = {
       din = import ./home.nix;
     };
+    useGlobalPkgs = true;
+    useUserPackages = true;
   };
 
   # Set Git commit hash for darwin-version.
