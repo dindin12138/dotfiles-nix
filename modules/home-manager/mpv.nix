@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, pkgs, ... }:
 {
   programs.mpv = {
     enable = true;
@@ -13,6 +13,7 @@
       G = "seek 100 absolute-percent";
     };
     config = {
+      osc = false;
       save-position-on-quit = true;
       sub-auto = "fuzzy";
       keep-open = true;
@@ -24,5 +25,9 @@
       profile = "gpu-hq";
       script-opts = "ytdl_hook-ytdl_path=yt-dlp";
     };
+    scripts = with pkgs.mpvScripts; [
+      modernx
+      thumbfast
+    ];
   };
 }
