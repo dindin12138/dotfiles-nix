@@ -21,8 +21,8 @@
 
       cat = "bat";
       icat = "kitty +kitten icat";
-      lg = "${pkgs.lazygit}/bin/lazygit";
-      ld = "${pkgs.lazydocker}/bin/lazydocker";
+      lg = "lazygit";
+      ld = "lazydocker";
 
       duf = "nix run nixpkgs#duf";
       dust = "nix run nixpkgs#dust";

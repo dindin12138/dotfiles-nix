@@ -8,5 +8,7 @@ let
   st = inputs.st.packages.${system}.default;
 in
 {
-  home.packages = [ st ];
+  home.packages = [
+    st
+  ];
 }

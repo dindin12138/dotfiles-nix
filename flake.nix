@@ -40,7 +40,7 @@
     {
       darwinConfigurations = {
         "Air" = nix-darwin.lib.darwinSystem {
-          specialArgs = { inherit inputs outputs; };
+          specialArgs = { inherit self inputs outputs; };
           modules = [ ./hosts/Air/configuration.nix ];
         };
       };

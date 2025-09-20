@@ -10,6 +10,7 @@
 
     eza
 
+    lazygit
     lazydocker
 
     typora
