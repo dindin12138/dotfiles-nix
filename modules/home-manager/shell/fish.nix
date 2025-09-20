@@ -32,8 +32,8 @@
 
       camera = "mpv --profile=low-latency --untimed /dev/video0";
 
-      kbd-backlight-off = "${pkgs.brightnessctl}/bin/brightnessctl -sd platform::kbd_backlight set 0"; # turn off keyboard backlight.
-      kbd-backlight-on = "${pkgs.brightnessctl}/bin/brightnessctl -rd platform::kbd_backlight"; # turn on keyboard backlight.
+      # kbd-backlight-off = "${pkgs.brightnessctl}/bin/brightnessctl -sd platform::kbd_backlight set 0"; # turn off keyboard backlight.
+      # kbd-backlight-on = "${pkgs.brightnessctl}/bin/brightnessctl -rd platform::kbd_backlight"; # turn on keyboard backlight.
 
       vscode-neovim = "NVIM_APPNAME=vscode-neovim nvim";
 

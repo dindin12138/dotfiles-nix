@@ -14,7 +14,7 @@
     enable = true;
     casks = [
       "obsidian"
-      "typora"
+      # "typora"
     ];
     # masApps = {
     # wechat = "";
