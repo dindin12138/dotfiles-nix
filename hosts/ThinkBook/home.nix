@@ -7,8 +7,10 @@
   imports = [
     inputs.catppuccin.homeModules.catppuccin
     inputs.nix-colors.homeManagerModules.default
+    inputs.niri.homeModules.niri
 
     ../../modules/home-manager/hyprland
+    ../../modules/home-manager/niri.nix
     ../../modules/home-manager/kitty.nix
     ../../modules/home-manager/waybar
     ../../modules/home-manager/wofi

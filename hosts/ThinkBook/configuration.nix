@@ -23,6 +23,7 @@
     ../../modules/nixos/thunar.nix
     ../../modules/nixos/users.nix
     ../../modules/nixos/hyprland.nix
+    ../../modules/nixos/niri.nix
     ../../modules/nixos/networking.nix
     ../../modules/nixos/docker.nix
     ../../modules/nixos/virt-manager.nix
