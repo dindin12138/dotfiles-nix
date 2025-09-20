@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   userSettings = import ./userSettings.nix { inherit pkgs; };
   userTasks = import ./userTasks.nix { inherit pkgs; };
   enableExtensionUpdateCheck = false;
@@ -50,6 +51,6 @@
     ms-azuretools.vscode-docker
 
     # Neovim
-    asvetliakov.vscode-neovim
+    # asvetliakov.vscode-neovim
   ];
 }

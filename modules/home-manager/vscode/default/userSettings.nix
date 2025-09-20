@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   "files" = {
     "autoSave" = "afterDelay";
     "autoGuessEncoding" = true;
@@ -72,26 +73,38 @@
   "[python]" = {
     "editor" = {
       "defaultFormatter" = "charliermarsh.ruff";
-      "codeActionsOnSave" = { "source.organizeImports.ruff" = "explicit"; };
+      "codeActionsOnSave" = {
+        "source.organizeImports.ruff" = "explicit";
+      };
     };
   };
-  "jupyter.widgetScriptSources" = [ "jsdelivr.com" "unpkg.com" ];
+  "jupyter.widgetScriptSources" = [
+    "jsdelivr.com"
+    "unpkg.com"
+  ];
   "notebook.markup.fontSize" = 16;
   "nix.enableLanguageServer" = true;
   "nix.serverPath" = "${pkgs.nixd}/bin/nixd";
   "nix.formatterPath" = "${pkgs.nixfmt-classic}/bin/nixfmt";
   "nix.serverSettings" = {
     "nil" = {
-      "diagnostics.ignored" = [ "unused_binding" "unused_with" ];
+      "diagnostics.ignored" = [
+        "unused_binding"
+        "unused_with"
+      ];
       "formatting.command" = "${pkgs.nixfmt-classic}/bin/nixfmt";
     };
   };
-  "nixpkgs" = { "expr" = "import <nixpkgs> { }"; };
-  "[nix]" = { "editor.defaultFormatter" = "jnoortheen.nix-ide"; };
-  "vscode-neovim" = {
-    "neovimExecutablePaths.linux" = "${pkgs.neovim}/bin/nvim";
-    "NVIM_APPNAME" = "vscode-neovim";
+  "nixpkgs" = {
+    "expr" = "import <nixpkgs> { }";
   };
-  "extensions.experimental.affinity" = { "asvetliakov.vscode-neovim" = 1; };
+  "[nix]" = {
+    "editor.defaultFormatter" = "jnoortheen.nix-ide";
+  };
+  # "vscode-neovim" = {
+  #   "neovimExecutablePaths.linux" = "${pkgs.neovim}/bin/nvim";
+  #   "NVIM_APPNAME" = "vscode-neovim";
+  # };
+  # "extensions.experimental.affinity" = { "asvetliakov.vscode-neovim" = 1; };
   "markdown.preview.fontSize" = 16;
 }

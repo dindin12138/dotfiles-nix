@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   "files" = {
     "autoSave" = "afterDelay";
     "autoGuessEncoding" = true;
@@ -23,15 +24,20 @@
   "[python]" = {
     "editor" = {
       "defaultFormatter" = "charliermarsh.ruff";
-      "codeActionsOnSave" = { "source.organizeImports.ruff" = "explicit"; };
+      "codeActionsOnSave" = {
+        "source.organizeImports.ruff" = "explicit";
+      };
     };
   };
-  "jupyter.widgetScriptSources" = [ "jsdelivr.com" "unpkg.com" ];
+  "jupyter.widgetScriptSources" = [
+    "jsdelivr.com"
+    "unpkg.com"
+  ];
   "notebook.markup.fontSize" = 16;
-  "vscode-neovim" = {
-    "neovimExecutablePaths.linux" = "${pkgs.neovim}/bin/nvim";
-    "NVIM_APPNAME" = "vscode-neovim";
-  };
-  "extensions.experimental.affinity" = { "asvetliakov.vscode-neovim" = 1; };
+  # "vscode-neovim" = {
+  #   "neovimExecutablePaths.linux" = "${pkgs.neovim}/bin/nvim";
+  #   "NVIM_APPNAME" = "vscode-neovim";
+  # };
+  # "extensions.experimental.affinity" = { "asvetliakov.vscode-neovim" = 1; };
   "markdown.preview.fontSize" = 16;
 }

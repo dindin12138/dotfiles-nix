@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   "files" = {
     "autoSave" = "afterDelay";
     "autoGuessEncoding" = true;
@@ -64,10 +65,10 @@
     ];
     "showOptionsMovedNotification" = false;
   };
-  "vscode-neovim" = {
-    "neovimExecutablePaths.linux" = "${pkgs.neovim}/bin/nvim";
-    "NVIM_APPNAME" = "vscode-neovim";
-  };
-  "extensions.experimental.affinity" = { "asvetliakov.vscode-neovim" = 1; };
+  # "vscode-neovim" = {
+  #   "neovimExecutablePaths.linux" = "${pkgs.neovim}/bin/nvim";
+  #   "NVIM_APPNAME" = "vscode-neovim";
+  # };
+  # "extensions.experimental.affinity" = { "asvetliakov.vscode-neovim" = 1; };
   "markdown.preview.fontSize" = 16;
 }
