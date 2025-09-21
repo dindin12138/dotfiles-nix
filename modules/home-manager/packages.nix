@@ -13,15 +13,15 @@
     lazygit
     lazydocker
 
-    alacritty
-
-    fuzzel
-
     typora
 
     zotero
 
     qbittorrent-enhanced
+
+    google-chrome
+
+    obsidian
 
     clash-verge-rev
     clash-meta

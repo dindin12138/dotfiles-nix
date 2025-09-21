@@ -36,10 +36,9 @@
     ../../modules/home-manager/qutebrowser.nix
     ../../modules/home-manager/foot.nix
     # ../../modules/home-manager/quickshell.nix
-    ../../modules/home-manager/st.nix
+    # ../../modules/home-manager/st.nix
 
-    # ./special.nix
-    ./special-niri.nix
+    ./special.nix
   ];
 
   nixpkgs = {

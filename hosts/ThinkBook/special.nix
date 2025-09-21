@@ -5,47 +5,47 @@
   ...
 }:
 {
-  home = {
-    packages = with pkgs; [
-      (google-chrome.override {
-        commandLineArgs = "--force-device-scale-factor=1.5";
-      })
-      (obsidian.override {
-        commandLineArgs = "--force-device-scale-factor=1.5";
-      })
-    ];
-  };
-
-  home = {
-    sessionVariables = {
-      GDK_DPI_SCALE = "1.6";
-      QT_SCALE_FACTOR = "1.5";
-      QT_AUTO_SCREEN_SCALE_FACTOR = "1";
-    };
-  };
-
-  gtk = {
-    cursorTheme = {
-      size = lib.mkForce 36;
-    };
-  };
-
-  home = {
-    pointerCursor = {
-      size = lib.mkForce 36;
-    };
-  };
+  # home = {
+  #   packages = with pkgs; [
+  #     (google-chrome.override {
+  #       commandLineArgs = "--force-device-scale-factor=1.5";
+  #     })
+  #     (obsidian.override {
+  #       commandLineArgs = "--force-device-scale-factor=1.5";
+  #     })
+  #   ];
+  # };
+  #
+  # home = {
+  #   sessionVariables = {
+  #     GDK_DPI_SCALE = "1.6";
+  #     QT_SCALE_FACTOR = "1.5";
+  #     QT_AUTO_SCREEN_SCALE_FACTOR = "1";
+  #   };
+  # };
+  #
+  # gtk = {
+  #   cursorTheme = {
+  #     size = lib.mkForce 36;
+  #   };
+  # };
+  #
+  # home = {
+  #   pointerCursor = {
+  #     size = lib.mkForce 36;
+  #   };
+  # };
 
   home.file = {
     ".config/fcitx5/conf/classicui.conf".text =
       lib.mkForce (import ../../modules/home-manager/fcitx5/classicui-2k.nix);
   };
 
-  programs.vscode = {
-    package = pkgs.vscode.override {
-      commandLineArgs = "--force-device-scale-factor=1.5";
-    };
-  };
+  # programs.vscode = {
+  #   package = pkgs.vscode.override {
+  #     commandLineArgs = "--force-device-scale-factor=1.5";
+  #   };
+  # };
 
   services.hypridle = {
     settings = {
@@ -59,93 +59,93 @@
     };
   };
 
-  programs.waybar = {
-    style = lib.mkForce "${builtins.readFile ../../modules/home-manager/waybar/style-2k.css}";
-    settings = {
-      mainBar = {
-        modules-right = lib.mkForce [
-          "bluetooth"
-          "pulseaudio"
-          "backlight"
-          "battery"
-          "group/hardware"
-          "tray"
-          "network"
-          "idle_inhibitor"
-          "group/power"
-          "clock"
-        ];
-        "tray" = lib.mkForce {
-          icon-size = 30;
-          spacing = 22;
-        };
-        "hyprland/window" = {
-          icon-size = lib.mkForce 30; # 2k
-        };
-      };
-    };
-  };
+  # programs.waybar = {
+  #   style = lib.mkForce "${builtins.readFile ../../modules/home-manager/waybar/style-2k.css}";
+  #   settings = {
+  #     mainBar = {
+  #       modules-right = lib.mkForce [
+  #         "bluetooth"
+  #         "pulseaudio"
+  #         "backlight"
+  #         "battery"
+  #         "group/hardware"
+  #         "tray"
+  #         "network"
+  #         "idle_inhibitor"
+  #         "group/power"
+  #         "clock"
+  #       ];
+  # "tray" = lib.mkForce {
+  #   icon-size = 30;
+  #   spacing = 22;
+  # };
+  # "hyprland/window" = {
+  #   icon-size = lib.mkForce 30; # 2k
+  # };
+  # };
+  # };
+  # };
 
-  programs.kitty = {
-    font = {
-      size = lib.mkForce 20;
-    };
-  };
+  # programs.kitty = {
+  #   font = {
+  #     size = lib.mkForce 20;
+  #   };
+  # };
 
-  services.mako = {
-    settings = {
-      font = lib.mkForce "FiraCode Nerd Font 16";
-      borderSize = lib.mkForce 3;
-      width = lib.mkForce 450;
-      height = lib.mkForce 150;
-      margin = lib.mkForce "15";
-      maxIconSize = lib.mkForce 96;
-      padding = lib.mkForce "22";
-    };
-  };
+  # services.mako = {
+  #   settings = {
+  #     font = lib.mkForce "FiraCode Nerd Font 16";
+  #     borderSize = lib.mkForce 3;
+  #     width = lib.mkForce 450;
+  #     height = lib.mkForce 150;
+  #     margin = lib.mkForce "15";
+  #     maxIconSize = lib.mkForce 96;
+  #     padding = lib.mkForce "22";
+  #   };
+  # };
 
-  programs.wofi = {
-    style = lib.mkForce "${builtins.readFile ../../modules/home-manager/wofi/style-2k.css}";
-    settings = lib.mkForce {
-      ## General
-      show = "drun";
-      prompt = "Apps";
-      normal_window = true;
-      layer = "top";
-      term = "kitty";
-
-      ## Geometry
-      width = "750px";
-      height = "457px";
-      location = 0;
-      orientation = "vertical";
-      halign = "fill";
-      line_wrap = "off";
-      dynamic_lines = false;
-
-      ## Images
-      allow_markup = true;
-      allow_images = true;
-      image_size = 36;
-
-      ## Search
-      exec_search = false;
-      hide_search = false;
-      parse_search = false;
-      insensitive = false;
-
-      ## Other
-      hide_scroll = true;
-      no_actions = true;
-      sort_order = "default";
-      gtk_dark = true;
-      filter_rate = 100;
-
-      ## Keys
-      key_expand = "Tab";
-      key_exit = "Escape";
-    };
-  };
+  # programs.wofi = {
+  #   style = lib.mkForce "${builtins.readFile ../../modules/home-manager/wofi/style-2k.css}";
+  #   settings = lib.mkForce {
+  #     ## General
+  #     show = "drun";
+  #     prompt = "Apps";
+  #     normal_window = true;
+  #     layer = "top";
+  #     term = "kitty";
+  #
+  #     ## Geometry
+  #     width = "750px";
+  #     height = "457px";
+  #     location = 0;
+  #     orientation = "vertical";
+  #     halign = "fill";
+  #     line_wrap = "off";
+  #     dynamic_lines = false;
+  #
+  #     ## Images
+  #     allow_markup = true;
+  #     allow_images = true;
+  #     image_size = 36;
+  #
+  #     ## Search
+  #     exec_search = false;
+  #     hide_search = false;
+  #     parse_search = false;
+  #     insensitive = false;
+  #
+  #     ## Other
+  #     hide_scroll = true;
+  #     no_actions = true;
+  #     sort_order = "default";
+  #     gtk_dark = true;
+  #     filter_rate = 100;
+  #
+  #     ## Keys
+  #     key_expand = "Tab";
+  #     key_exit = "Escape";
+  #   };
+  # };
 
   programs.hyprlock = with config.colorScheme.palette; {
     settings = {
