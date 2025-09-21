@@ -43,6 +43,8 @@
   services.xserver.videoDrivers = [ "amdgpu" ];
   programs.dconf.enable = true;
 
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
+
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "24.11";
 }

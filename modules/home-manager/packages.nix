@@ -13,6 +13,10 @@
     lazygit
     lazydocker
 
+    alacritty
+
+    fuzzel
+
     typora
 
     zotero

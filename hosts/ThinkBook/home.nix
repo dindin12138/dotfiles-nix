@@ -38,7 +38,8 @@
     # ../../modules/home-manager/quickshell.nix
     ../../modules/home-manager/st.nix
 
-    ./special.nix
+    # ./special.nix
+    ./special-niri.nix
   ];
 
   nixpkgs = {
