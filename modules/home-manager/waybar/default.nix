@@ -19,8 +19,12 @@
           # "wlr/taskbar"
           "mpd"
           "hyprland/window"
+          "niri/window"
         ];
-        modules-center = [ "hyprland/workspaces" ];
+        modules-center = [
+          "hyprland/workspaces"
+          "niri/workspaces"
+        ];
         modules-right = [
           # "custom/updates"
           # "bluetooth"
@@ -111,6 +115,28 @@
           persistent-workspaces = {
             "*" = 5;
           };
+        };
+
+        "niri/window" = {
+          format = "{}";
+          icon = true;
+          icon-size = 20;
+          rewrite = {
+            "(.*)Mozilla Firefox" = "Mozilla Firefox";
+            "(.*)Google Chrome" = "Google Chrome";
+            "(.*)Visual Studio Code" = "Visual Studio Code";
+            "(.*)Zotero" = "Zotero";
+            "(.*)Obsidian(.*)" = "Obsidian";
+            "(.*)Typora" = "Typora";
+            "(.*)qutebrowser" = "Qutebrowser";
+          };
+        };
+
+        "niri/workspaces" = {
+          all-outputs = false;
+          format = "{}";
+          disable-click = false;
+          current-only = false;
         };
 
         "mpd" = {
@@ -280,7 +306,7 @@
         };
 
         "tray" = {
-          icon-size = 20;
+          icon-size = 25;
           spacing = 15;
         };
 
