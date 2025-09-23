@@ -24,7 +24,13 @@
     obsidian
 
     clash-verge-rev
-    clash-meta
+
+    flclash
+
+    # v2rayn
+    # xray
+
+    # clash-meta
 
     wechat
 
