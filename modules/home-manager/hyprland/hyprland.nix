@@ -3,6 +3,9 @@
   wayland.windowManager.hyprland = {
     enable = true;
     systemd.variables = [ "--all" ];
+    plugins = [
+      pkgs.hyprlandPlugins.hyprscrolling
+    ];
     settings = {
 
       monitor = "eDP-1,2880x1800@90,auto,1.5";
@@ -22,6 +25,7 @@
 
       general = with config.colorScheme.palette; {
         layout = "master";
+        # layout = "scrolling";
         # apply_sens_to_raw = "0";
         gaps_in = "4";
         gaps_out = "7";
