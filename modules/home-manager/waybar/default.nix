@@ -154,7 +154,7 @@
           tooltip-format-disconnected = "MPD (disconnected)";
           on-click = "${pkgs.mpc-cli}/bin/mpc toggle";
           # "on-click-middle": "mpc prev";
-          on-click-right = "kitty -e rmpc";
+          on-click-right = "foot -e rmpc";
           on-update = "";
           on-scroll-up = "${pkgs.mpc-cli}/bin/mpc prev";
           on-scroll-down = "${pkgs.mpc-cli}/bin/mpc next";
