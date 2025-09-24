@@ -49,7 +49,7 @@
         "waybar"
         # "${pkgs.swww}/bin/swww img ~/Pictures/Wallpapers/background.png --transition-type any"
         # "clash-verge"
-        "flclash"
+        "FlClash"
       ];
 
       windowrulev2 = [
