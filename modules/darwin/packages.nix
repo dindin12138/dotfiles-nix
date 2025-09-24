@@ -18,5 +18,6 @@
     zotero
     vscode
     raycast
+    qbittorrent-enhanced
   ];
 }
