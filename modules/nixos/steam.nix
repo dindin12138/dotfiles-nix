@@ -10,7 +10,9 @@
       noto-fonts-cjk-sans
       noto-fonts-emoji
     ];
-    extraPackages = with pkgs; [ mangohud ];
+    extraPackages = with pkgs; [
+      mangohud
+    ];
   };
 
   programs.gamemode.enable = true;
