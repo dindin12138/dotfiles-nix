@@ -34,6 +34,11 @@
     useUserPackages = true;
   };
 
+  environment.variables = {
+    HTTP_PROXY = "http://127.0.0.1:7897";
+    HTTPS_PROXY = "http://127.0.0.1:7897";
+  };
+
   system.primaryUser = "din";
 
   # Set Git commit hash for darwin-version.
