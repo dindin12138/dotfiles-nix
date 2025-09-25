@@ -1,3 +1,4 @@
+{ inputs, ... }:
 {
   nix-homebrew = {
     # Install Homebrew under the default prefix
@@ -14,6 +15,7 @@
     enable = true;
     casks = [
       "obsidian"
+      "godot"
       # "typora"
     ];
     # masApps = {

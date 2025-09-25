@@ -13,7 +13,6 @@
   environment.systemPackages = with pkgs; [
     git
     kitty
-    alacritty
     google-chrome
     zotero
     vscode
