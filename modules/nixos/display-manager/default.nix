@@ -4,7 +4,7 @@
     enable = true;
     wayland.enable = true;
     package = pkgs.kdePackages.sddm;
-    # theme = "catppuccin-mocha-mauve";
+    theme = "catppuccin-mocha-mauve";
     settings = {
       Theme = {
         CursorTheme = "Bibata-Modern-Ice";
@@ -14,13 +14,13 @@
   };
   environment.systemPackages = with pkgs; [
     bibata-cursors
-    # (pkgs.catppuccin-sddm.override {
-    #   flavor = "mocha";
-    #   accent = "mauve";
-    #   font = "FiraCode Nerd Font";
-    #   fontSize = "16";
-    #   background = "${../../home-manager/wall/wallpapers/background.png}";
-    #   loginBackground = false;
-    # })
+    (pkgs.catppuccin-sddm.override {
+      flavor = "mocha";
+      accent = "mauve";
+      font = "FiraCode Nerd Font";
+      fontSize = "16";
+      # background = "${../../home-manager/wall/wallpapers/background.png}";
+      # loginBackground = false;
+    })
   ];
 }
