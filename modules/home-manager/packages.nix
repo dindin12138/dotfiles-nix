@@ -27,6 +27,8 @@
 
     flclash
 
+    xwayland-satellite
+
     # v2rayn
     # xray
 
