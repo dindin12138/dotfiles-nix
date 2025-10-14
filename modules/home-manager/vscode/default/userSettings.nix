@@ -65,10 +65,10 @@
     ];
     "showOptionsMovedNotification" = false;
   };
-  "rust-analyzer" = {
-    "server.path" = "${pkgs.rust-analyzer}/bin/rust-analyzer";
-    "cargo.sysroot" = "discover";
-  };
+  # "rust-analyzer" = {
+  #   "server.path" = "${pkgs.rust-analyzer}/bin/rust-analyzer";
+  #   "cargo.sysroot" = "discover";
+  # };
   "ruff.path" = [ "${pkgs.ruff}/bin/ruff" ];
   "[python]" = {
     "editor" = {

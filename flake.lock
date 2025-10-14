@@ -152,6 +152,23 @@
         "url": "ssh://git@github.com/nix-community/home-manager"
       }
     },
+    "homebrew-din": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1758804810,
+        "narHash": "sha256-X3MRrh+QsHvg9+LIsbUPe4D+D6G1nKf6LwzETcV2Aj0=",
+        "ref": "refs/heads/main",
+        "rev": "f96b3153c2dc1cf9497b93bf6f5c9efdaea6b111",
+        "shallow": true,
+        "type": "git",
+        "url": "ssh://git@github.com/dindin12138/homebrew-din"
+      },
+      "original": {
+        "shallow": true,
+        "type": "git",
+        "url": "ssh://git@github.com/dindin12138/homebrew-din"
+      }
+    },
     "ixx": {
       "inputs": {
         "flake-utils": [
@@ -514,6 +531,7 @@
         "catppuccin": "catppuccin",
         "disko": "disko",
         "home-manager": "home-manager",
+        "homebrew-din": "homebrew-din",
         "niri": "niri",
         "nix-colors": "nix-colors",
         "nix-darwin": "nix-darwin",

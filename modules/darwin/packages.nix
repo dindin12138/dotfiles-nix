@@ -12,7 +12,6 @@
   # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [
     git
-    kitty
     google-chrome
     zotero
     vscode

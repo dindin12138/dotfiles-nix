@@ -12,7 +12,7 @@
     ms-vscode.cmake-tools
 
     # Debug
-    vadimcn.vscode-lldb
+    # vadimcn.vscode-lldb
 
     # Tools
     eamodio.gitlens
