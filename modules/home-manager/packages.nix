@@ -11,6 +11,7 @@
     eza
 
     lazygit
+
     lazydocker
 
     typora
@@ -32,11 +33,6 @@
     nautilus
 
     gemini-cli-bin
-
-    # v2rayn
-    # xray
-
-    # clash-meta
 
     wechat
 

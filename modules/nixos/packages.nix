@@ -5,12 +5,5 @@
     curl
     killall
     file
-
-    # gcc
-    clang
-    ninja
-    # libcxx
-    # gdb
-    # lldb
   ];
 }
