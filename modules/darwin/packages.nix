@@ -18,5 +18,8 @@
     vscode
     raycast
     qbittorrent-enhanced
+    mpv-unwrapped
+    wezterm
+    aerospace
   ];
 }

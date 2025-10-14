@@ -1,5 +1,5 @@
 return {
-	font_size = 13,
+	font_size = 15,
 	font = wezterm.font("FiraCode Nerd Font", { weight = "Regular" }),
 	color_scheme = "Catppuccin Mocha",
 

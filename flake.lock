@@ -40,15 +40,16 @@
       "locked": {
         "lastModified": 1760084311,
         "narHash": "sha256-YpNNtvA8v28Gd3/PHXCABuBWOzR0K8CyQPga13LxBH0=",
-        "owner": "catppuccin",
-        "repo": "nix",
+        "ref": "refs/heads/main",
         "rev": "fa3a9d5f80ebfe7f4974bc1939f558690cc56359",
-        "type": "github"
+        "shallow": true,
+        "type": "git",
+        "url": "ssh://git@github.com/catppuccin/nix"
       },
       "original": {
-        "owner": "catppuccin",
-        "repo": "nix",
-        "type": "github"
+        "shallow": true,
+        "type": "git",
+        "url": "ssh://git@github.com/catppuccin/nix"
       }
     },
     "disko": {
@@ -60,15 +61,16 @@
       "locked": {
         "lastModified": 1758287904,
         "narHash": "sha256-IGmaEf3Do8o5Cwp1kXBN1wQmZwQN3NLfq5t4nHtVtcU=",
-        "owner": "nix-community",
-        "repo": "disko",
+        "ref": "refs/heads/master",
         "rev": "67ff9807dd148e704baadbd4fd783b54282ca627",
-        "type": "github"
+        "shallow": true,
+        "type": "git",
+        "url": "ssh://git@github.com/nix-community/disko"
       },
       "original": {
-        "owner": "nix-community",
-        "repo": "disko",
-        "type": "github"
+        "shallow": true,
+        "type": "git",
+        "url": "ssh://git@github.com/nix-community/disko"
       }
     },
     "flake-parts": {
@@ -136,17 +138,18 @@
         ]
       },
       "locked": {
-        "lastModified": 1760103600,
-        "narHash": "sha256-R4cltQFceN3POiPhBu7aTKsrwqTiwo6zjzmitrHD80E=",
-        "owner": "nix-community",
-        "repo": "home-manager",
-        "rev": "bcccb01d0a353c028cc8cb3254cac7ebae32929e",
-        "type": "github"
+        "lastModified": 1760312644,
+        "narHash": "sha256-U9SkK45314urw9P7MmjhEgiQwwD/BTj+T3HTuz1JU1Q=",
+        "ref": "refs/heads/master",
+        "rev": "e121f3773fa596ecaba5b22e518936a632d72a90",
+        "shallow": true,
+        "type": "git",
+        "url": "ssh://git@github.com/nix-community/home-manager"
       },
       "original": {
-        "owner": "nix-community",
-        "repo": "home-manager",
-        "type": "github"
+        "shallow": true,
+        "type": "git",
+        "url": "ssh://git@github.com/nix-community/home-manager"
       }
     },
     "ixx": {
@@ -189,17 +192,18 @@
         "xwayland-satellite-unstable": "xwayland-satellite-unstable"
       },
       "locked": {
-        "lastModified": 1760106247,
-        "narHash": "sha256-6eoVSzv2sNlZx3wgIGvwYrbL8X/FpCb/5cw/N/f/v6c=",
-        "owner": "sodiboo",
-        "repo": "niri-flake",
-        "rev": "8ba0df9f335050044eddae848a7be8d9269ecc76",
-        "type": "github"
+        "lastModified": 1760376620,
+        "narHash": "sha256-wx2gkuQcEm4VAVn4YHLMHinyzbSKj669zk60gEuIEHc=",
+        "ref": "refs/heads/main",
+        "rev": "d704fb90b155dcd19311fc42e21b9d1739b17a09",
+        "shallow": true,
+        "type": "git",
+        "url": "ssh://git@github.com/sodiboo/niri-flake"
       },
       "original": {
-        "owner": "sodiboo",
-        "repo": "niri-flake",
-        "type": "github"
+        "shallow": true,
+        "type": "git",
+        "url": "ssh://git@github.com/sodiboo/niri-flake"
       }
     },
     "niri-stable": {
@@ -243,15 +247,16 @@
       "locked": {
         "lastModified": 1707825078,
         "narHash": "sha256-hTfge2J2W+42SZ7VHXkf4kjU+qzFqPeC9k66jAUBMHk=",
-        "owner": "misterio77",
-        "repo": "nix-colors",
+        "ref": "refs/heads/main",
         "rev": "b01f024090d2c4fc3152cd0cf12027a7b8453ba1",
-        "type": "github"
+        "shallow": true,
+        "type": "git",
+        "url": "ssh://git@github.com/misterio77/nix-colors"
       },
       "original": {
-        "owner": "misterio77",
-        "repo": "nix-colors",
-        "type": "github"
+        "shallow": true,
+        "type": "git",
+        "url": "ssh://git@github.com/misterio77/nix-colors"
       }
     },
     "nix-darwin": {
@@ -261,18 +266,19 @@
         ]
       },
       "locked": {
-        "lastModified": 1758805352,
-        "narHash": "sha256-BHdc43Lkayd+72W/NXRKHzX5AZ+28F3xaUs3a88/Uew=",
-        "owner": "nix-darwin",
-        "repo": "nix-darwin",
-        "rev": "c48e963a5558eb1c3827d59d21c5193622a1477c",
-        "type": "github"
+        "lastModified": 1760338583,
+        "narHash": "sha256-IGwy02SH5K2hzIFrKMRsCmyvwOwWxrcquiv4DbKL1S4=",
+        "ref": "master",
+        "rev": "9a9ab01072f78823ca627ae5e895e40d493c3ecf",
+        "shallow": true,
+        "type": "git",
+        "url": "ssh://git@github.com/nix-darwin/nix-darwin"
       },
       "original": {
-        "owner": "nix-darwin",
         "ref": "master",
-        "repo": "nix-darwin",
-        "type": "github"
+        "shallow": true,
+        "type": "git",
+        "url": "ssh://git@github.com/nix-darwin/nix-darwin"
       }
     },
     "nix-homebrew": {
@@ -282,15 +288,16 @@
       "locked": {
         "lastModified": 1758598228,
         "narHash": "sha256-qr60maXGbZ4FX5tejPRI3nr0bnRTnZ3AbbbfO6/6jq4=",
-        "owner": "zhaofengli",
-        "repo": "nix-homebrew",
+        "ref": "refs/heads/main",
         "rev": "f36e5db56e117f7df701ab152d0d2036ea85218c",
-        "type": "github"
+        "shallow": true,
+        "type": "git",
+        "url": "ssh://git@github.com/zhaofengli/nix-homebrew"
       },
       "original": {
-        "owner": "zhaofengli",
-        "repo": "nix-homebrew",
-        "type": "github"
+        "shallow": true,
+        "type": "git",
+        "url": "ssh://git@github.com/zhaofengli/nix-homebrew"
       }
     },
     "nixpkgs": {
@@ -341,11 +348,11 @@
     },
     "nixpkgs-stable": {
       "locked": {
-        "lastModified": 1759994382,
-        "narHash": "sha256-wSK+3UkalDZRVHGCRikZ//CyZUJWDJkBDTQX1+G77Ow=",
+        "lastModified": 1760139962,
+        "narHash": "sha256-4xggC56Rub3WInz5eD7EZWXuLXpNvJiUPahGtMkwtuc=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "5da4a26309e796daa7ffca72df93dbe53b8164c7",
+        "rev": "7e297ddff44a3cc93673bb38d0374df8d0ad73e4",
         "type": "github"
       },
       "original": {
@@ -357,11 +364,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1759831965,
-        "narHash": "sha256-vgPm2xjOmKdZ0xKA6yLXPJpjOtQPHfaZDRtH+47XEBo=",
+        "lastModified": 1760284886,
+        "narHash": "sha256-TK9Kr0BYBQ/1P5kAsnNQhmWWKgmZXwUQr4ZMjCzWf2c=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "c9b6fb798541223bbb396d287d16f43520250518",
+        "rev": "cf3f5c4def3c7b5f1fc012b3d839575dbe552d43",
         "type": "github"
       },
       "original": {
@@ -373,18 +380,19 @@
     },
     "nixpkgs_3": {
       "locked": {
-        "lastModified": 1759831965,
-        "narHash": "sha256-vgPm2xjOmKdZ0xKA6yLXPJpjOtQPHfaZDRtH+47XEBo=",
-        "owner": "nixos",
-        "repo": "nixpkgs",
-        "rev": "c9b6fb798541223bbb396d287d16f43520250518",
-        "type": "github"
+        "lastModified": 1760284886,
+        "narHash": "sha256-TK9Kr0BYBQ/1P5kAsnNQhmWWKgmZXwUQr4ZMjCzWf2c=",
+        "ref": "nixos-unstable",
+        "rev": "cf3f5c4def3c7b5f1fc012b3d839575dbe552d43",
+        "shallow": true,
+        "type": "git",
+        "url": "ssh://git@github.com/nixos/nixpkgs.git"
       },
       "original": {
-        "owner": "nixos",
         "ref": "nixos-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
+        "shallow": true,
+        "type": "git",
+        "url": "ssh://git@github.com/nixos/nixpkgs.git"
       }
     },
     "nixpkgs_4": {
@@ -444,15 +452,16 @@
       "locked": {
         "lastModified": 1759049472,
         "narHash": "sha256-E9KAgeYoybyIPNST9SfZJkJyyeinzs7DtitMjkA1BbI=",
-        "owner": "dindin12138",
-        "repo": "nixvim",
+        "ref": "refs/heads/main",
         "rev": "41f691bf681d5a3522b9a964edf334e0eb6707a6",
-        "type": "github"
+        "shallow": true,
+        "type": "git",
+        "url": "ssh://git@github.com/dindin12138/nixvim"
       },
       "original": {
-        "owner": "dindin12138",
-        "repo": "nixvim",
-        "type": "github"
+        "shallow": true,
+        "type": "git",
+        "url": "ssh://git@github.com/dindin12138/nixvim"
       }
     },
     "nixvim_2": {
@@ -521,15 +530,16 @@
       "locked": {
         "lastModified": 1729789650,
         "narHash": "sha256-jBVsxBAl894AltchbHYksZ44hcuxI+05Y93B9PVxfWg=",
-        "owner": "dindin12138",
-        "repo": "st",
+        "ref": "refs/heads/main",
         "rev": "0edf5ae7e02427d04814afb6a68d0b2d5960ea84",
-        "type": "github"
+        "shallow": true,
+        "type": "git",
+        "url": "ssh://git@github.com/dindin12138/st"
       },
       "original": {
-        "owner": "dindin12138",
-        "repo": "st",
-        "type": "github"
+        "shallow": true,
+        "type": "git",
+        "url": "ssh://git@github.com/dindin12138/st"
       }
     },
     "systems": {

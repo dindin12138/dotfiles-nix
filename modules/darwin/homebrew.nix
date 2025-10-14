@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ inputs, config, ... }:
 {
   nix-homebrew = {
     # Install Homebrew under the default prefix
@@ -9,14 +9,21 @@
 
     # User owning the Homebrew prefix
     user = "din";
+
+    taps = {
+      "dindin12138/homebrew-din" = inputs.homebrew-din;
+    };
   };
 
   homebrew = {
     enable = true;
+    taps = builtins.attrNames config.nix-homebrew.taps;
     casks = [
       "obsidian"
       "godot"
+      "vlc"
       # "typora"
+      "typora@free"
     ];
     # masApps = {
     # wechat = "";

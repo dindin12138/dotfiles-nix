@@ -17,6 +17,7 @@
     ../../modules/home-manager/bat.nix
     ../../modules/home-manager/yt-dlp.nix
     ../../modules/home-manager/vscode
+    ../../modules/home-manager/wezterm
   ];
 
   home = {
