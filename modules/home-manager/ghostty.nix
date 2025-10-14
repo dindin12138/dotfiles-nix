@@ -1,12 +1,13 @@
 {
+  catppuccin.ghostty.enable = true;
   programs.ghostty = {
     enable = true;
     enableZshIntegration = true;
     enableFishIntegration = true;
     settings = {
-      theme = "catppuccin-mocha";
+      # theme = "catppuccin-mocha";
       font-family = "FiraCode Nerd Font";
-      font-size = 20;
+      font-size = 13;
     };
   };
 }

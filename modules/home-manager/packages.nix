@@ -25,9 +25,13 @@
 
     clash-verge-rev
 
-    flclash
+    # flclash
 
     xwayland-satellite
+
+    nautilus
+
+    gemini-cli-bin
 
     # v2rayn
     # xray

@@ -11,7 +11,7 @@
 
     ../../modules/home-manager/hyprland
     ../../modules/home-manager/niri.nix
-    ../../modules/home-manager/kitty.nix
+    # ../../modules/home-manager/kitty.nix
     ../../modules/home-manager/waybar
     ../../modules/home-manager/wofi
     ../../modules/home-manager/shell
@@ -35,6 +35,8 @@
     ../../modules/home-manager/yt-dlp.nix
     ../../modules/home-manager/qutebrowser.nix
     ../../modules/home-manager/foot.nix
+    # ../../modules/home-manager/ghostty.nix
+    # ../../modules/home-manager/wezterm
     # ../../modules/home-manager/quickshell.nix
     # ../../modules/home-manager/st.nix
 

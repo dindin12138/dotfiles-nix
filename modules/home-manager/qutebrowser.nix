@@ -24,9 +24,9 @@
         # searchengines = { DEFAULT = "https://www.google.com/search?q={}"; };
       };
       editor.command = [
-        "kitty"
-        "--class"
-        "float-kitty"
+        "foot"
+        "--app-id"
+        "float-term"
         "-e"
         "nvim"
         "+{line}"
@@ -35,27 +35,27 @@
       fileselect = {
         handler = "external";
         single_file.command = [
-          "kitty"
-          "--class"
-          "float-kitty"
+          "foot"
+          "--app-id"
+          "float-term"
           "-e"
           "yazi"
           "--chooser-file"
           "{}"
         ];
         multiple_files.command = [
-          "kitty"
-          "--class"
-          "float-kitty"
+          "foot"
+          "--app-id"
+          "float-term"
           "-e"
           "yazi"
           "--chooser-file"
           "{}"
         ];
         folder.command = [
-          "kitty"
-          "--class"
-          "float-kitty"
+          "foot"
+          "--app-id"
+          "float-term"
           "-e"
           "yazi"
           "--chooser-file"
