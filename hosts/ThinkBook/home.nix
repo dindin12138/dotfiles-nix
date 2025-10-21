@@ -8,11 +8,13 @@
     inputs.catppuccin.homeModules.catppuccin
     inputs.nix-colors.homeManagerModules.default
     inputs.niri.homeModules.niri
+    inputs.dankMaterialShell.homeModules.dankMaterialShell.default
+    inputs.dankMaterialShell.homeModules.dankMaterialShell.niri
 
-    ../../modules/home-manager/hyprland
+    ../../modules/home-manager/hyprland/hyprpaper.nix
     ../../modules/home-manager/niri.nix
     # ../../modules/home-manager/kitty.nix
-    ../../modules/home-manager/waybar
+    # ../../modules/home-manager/waybar
     ../../modules/home-manager/wofi
     ../../modules/home-manager/shell
     ../../modules/home-manager/yazi
@@ -25,7 +27,7 @@
     ../../modules/home-manager/bat.nix
     ../../modules/home-manager/theme
     ../../modules/home-manager/wall
-    ../../modules/home-manager/mako.nix
+    # ../../modules/home-manager/mako.nix
     ../../modules/home-manager/screenshot
     ../../modules/home-manager/vscode
     ../../modules/home-manager/tmux.nix
@@ -35,6 +37,7 @@
     ../../modules/home-manager/yt-dlp.nix
     ../../modules/home-manager/qutebrowser.nix
     ../../modules/home-manager/foot.nix
+    ../../modules/home-manager/dms.nix
     # ../../modules/home-manager/ghostty.nix
     # ../../modules/home-manager/wezterm
     # ../../modules/home-manager/quickshell.nix

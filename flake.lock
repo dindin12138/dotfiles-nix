@@ -38,18 +38,64 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1760692571,
-        "narHash": "sha256-SgqC+B7F7hHDKug+zRUL83vhibCSknzhRl0+OxUYjn4=",
-        "ref": "refs/heads/main",
-        "rev": "8a084b86b6a4b2a1575e8cc67e07c4a687fce276",
-        "shallow": true,
-        "type": "git",
-        "url": "ssh://git@github.com/catppuccin/nix"
+        "lastModified": 1760953099,
+        "narHash": "sha256-sOKx2YcHa+lWEvaEOIGqLN2WWk1Wf5z6KM02tdfhMtw=",
+        "owner": "catppuccin",
+        "repo": "nix",
+        "rev": "f5b21876888265d2fee7fb0640d1b66a1c1c6503",
+        "type": "github"
       },
       "original": {
-        "shallow": true,
-        "type": "git",
-        "url": "ssh://git@github.com/catppuccin/nix"
+        "owner": "catppuccin",
+        "repo": "nix",
+        "type": "github"
+      }
+    },
+    "dankMaterialShell": {
+      "inputs": {
+        "dgop": [
+          "dgop"
+        ],
+        "dms-cli": [
+          "dms-cli"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "quickshell": "quickshell"
+      },
+      "locked": {
+        "lastModified": 1760969110,
+        "narHash": "sha256-3dqaq2LQGPUOL+BaixV8FvZHdWKcqMIa27/0czGZcO0=",
+        "owner": "AvengeMedia",
+        "repo": "DankMaterialShell",
+        "rev": "2c92f830d16675b29cd178d8cf9e8dd0b1cdcbea",
+        "type": "github"
+      },
+      "original": {
+        "owner": "AvengeMedia",
+        "repo": "DankMaterialShell",
+        "type": "github"
+      }
+    },
+    "dgop": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1760238269,
+        "narHash": "sha256-7CeGZM/Z/5Qt3AYByCRohGYGR1MRuXYzTTbkV/JxyAs=",
+        "owner": "AvengeMedia",
+        "repo": "dgop",
+        "rev": "95acdfce2d323e28fa8f5a4f345160962034f2b5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "AvengeMedia",
+        "repo": "dgop",
+        "type": "github"
       }
     },
     "disko": {
@@ -61,16 +107,35 @@
       "locked": {
         "lastModified": 1760701190,
         "narHash": "sha256-y7UhnWlER8r776JsySqsbTUh2Txf7K30smfHlqdaIQw=",
-        "ref": "refs/heads/master",
+        "owner": "nix-community",
+        "repo": "disko",
         "rev": "3a9450b26e69dcb6f8de6e2b07b3fc1c288d85f5",
-        "shallow": true,
-        "type": "git",
-        "url": "ssh://git@github.com/nix-community/disko"
+        "type": "github"
       },
       "original": {
-        "shallow": true,
-        "type": "git",
-        "url": "ssh://git@github.com/nix-community/disko"
+        "owner": "nix-community",
+        "repo": "disko",
+        "type": "github"
+      }
+    },
+    "dms-cli": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1760929955,
+        "narHash": "sha256-nSU9QvdSOjAKx8M3o0UxrcYfyrti5hYKIHKgW2ePo0g=",
+        "owner": "AvengeMedia",
+        "repo": "danklinux",
+        "rev": "fa022efc992a90305a96b22dfd5145f3f79595ae",
+        "type": "github"
+      },
+      "original": {
+        "owner": "AvengeMedia",
+        "repo": "danklinux",
+        "type": "github"
       }
     },
     "flake-parts": {
@@ -138,18 +203,17 @@
         ]
       },
       "locked": {
-        "lastModified": 1760809591,
-        "narHash": "sha256-OxGcFcQdfOK8veZkPdQuqXIotFYiy4sBQB58dMNLeHY=",
-        "ref": "refs/heads/master",
-        "rev": "870883ba11ba1c84f756c0c1f9fa74cdb2a16c1e",
-        "shallow": true,
-        "type": "git",
-        "url": "ssh://git@github.com/nix-community/home-manager"
+        "lastModified": 1760969583,
+        "narHash": "sha256-vsf5mvR0xxK4GsfLx5bMJAQ4ysdrKymMIifNw+4TP7g=",
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "rev": "c9d758b500e53db5b74aa02d17dc45b65229e8e9",
+        "type": "github"
       },
       "original": {
-        "shallow": true,
-        "type": "git",
-        "url": "ssh://git@github.com/nix-community/home-manager"
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "type": "github"
       }
     },
     "homebrew-din": {
@@ -157,16 +221,15 @@
       "locked": {
         "lastModified": 1758804810,
         "narHash": "sha256-X3MRrh+QsHvg9+LIsbUPe4D+D6G1nKf6LwzETcV2Aj0=",
-        "ref": "refs/heads/main",
+        "owner": "dindin12138",
+        "repo": "homebrew-din",
         "rev": "f96b3153c2dc1cf9497b93bf6f5c9efdaea6b111",
-        "shallow": true,
-        "type": "git",
-        "url": "ssh://git@github.com/dindin12138/homebrew-din"
+        "type": "github"
       },
       "original": {
-        "shallow": true,
-        "type": "git",
-        "url": "ssh://git@github.com/dindin12138/homebrew-din"
+        "owner": "dindin12138",
+        "repo": "homebrew-din",
+        "type": "github"
       }
     },
     "ixx": {
@@ -203,24 +266,25 @@
       "inputs": {
         "niri-stable": "niri-stable",
         "niri-unstable": "niri-unstable",
-        "nixpkgs": "nixpkgs_2",
+        "nixpkgs": [
+          "nixpkgs"
+        ],
         "nixpkgs-stable": "nixpkgs-stable",
         "xwayland-satellite-stable": "xwayland-satellite-stable",
         "xwayland-satellite-unstable": "xwayland-satellite-unstable"
       },
       "locked": {
-        "lastModified": 1760774008,
-        "narHash": "sha256-NchPYxFkN9XOOuocGXBmRFAh9NVFybmAev62zG1nL2A=",
-        "ref": "refs/heads/main",
-        "rev": "27e012b4cd49e9ac438573ec7a6db3e5835828c3",
-        "shallow": true,
-        "type": "git",
-        "url": "ssh://git@github.com/sodiboo/niri-flake"
+        "lastModified": 1760950171,
+        "narHash": "sha256-E2ySTu/oK7cYBdAI3tlGP9zVjF4mZgWJ1OZInBCMb00=",
+        "owner": "sodiboo",
+        "repo": "niri-flake",
+        "rev": "f851a923137c0a54719412146fd63d24b3214e60",
+        "type": "github"
       },
       "original": {
-        "shallow": true,
-        "type": "git",
-        "url": "ssh://git@github.com/sodiboo/niri-flake"
+        "owner": "sodiboo",
+        "repo": "niri-flake",
+        "type": "github"
       }
     },
     "niri-stable": {
@@ -243,11 +307,11 @@
     "niri-unstable": {
       "flake": false,
       "locked": {
-        "lastModified": 1760768097,
-        "narHash": "sha256-RvlONuKFKu+v7h/MorLONcPzXMMe6zs8aJUDOsfjr1I=",
+        "lastModified": 1760940149,
+        "narHash": "sha256-KbM47vD6E0cx+v4jYQZ8mD5N186AKm2CQlyh34TW58U=",
         "owner": "YaLTeR",
         "repo": "niri",
-        "rev": "8c8447918f4fd7bc6c86a8622b1db52417fbbbbd",
+        "rev": "b3245b81a6ed8edfaf5388a74d2e0a23c24941e5",
         "type": "github"
       },
       "original": {
@@ -264,16 +328,15 @@
       "locked": {
         "lastModified": 1707825078,
         "narHash": "sha256-hTfge2J2W+42SZ7VHXkf4kjU+qzFqPeC9k66jAUBMHk=",
-        "ref": "refs/heads/main",
+        "owner": "misterio77",
+        "repo": "nix-colors",
         "rev": "b01f024090d2c4fc3152cd0cf12027a7b8453ba1",
-        "shallow": true,
-        "type": "git",
-        "url": "ssh://git@github.com/misterio77/nix-colors"
+        "type": "github"
       },
       "original": {
-        "shallow": true,
-        "type": "git",
-        "url": "ssh://git@github.com/misterio77/nix-colors"
+        "owner": "misterio77",
+        "repo": "nix-colors",
+        "type": "github"
       }
     },
     "nix-darwin": {
@@ -285,17 +348,16 @@
       "locked": {
         "lastModified": 1760721282,
         "narHash": "sha256-aAHphQbU9t/b2RRy2Eb8oMv+I08isXv2KUGFAFn7nCo=",
-        "ref": "master",
+        "owner": "nix-darwin",
+        "repo": "nix-darwin",
         "rev": "c3211fcd0c56c11ff110d346d4487b18f7365168",
-        "shallow": true,
-        "type": "git",
-        "url": "ssh://git@github.com/nix-darwin/nix-darwin"
+        "type": "github"
       },
       "original": {
+        "owner": "nix-darwin",
         "ref": "master",
-        "shallow": true,
-        "type": "git",
-        "url": "ssh://git@github.com/nix-darwin/nix-darwin"
+        "repo": "nix-darwin",
+        "type": "github"
       }
     },
     "nix-homebrew": {
@@ -305,16 +367,15 @@
       "locked": {
         "lastModified": 1758598228,
         "narHash": "sha256-qr60maXGbZ4FX5tejPRI3nr0bnRTnZ3AbbbfO6/6jq4=",
-        "ref": "refs/heads/main",
+        "owner": "zhaofengli",
+        "repo": "nix-homebrew",
         "rev": "f36e5db56e117f7df701ab152d0d2036ea85218c",
-        "shallow": true,
-        "type": "git",
-        "url": "ssh://git@github.com/zhaofengli/nix-homebrew"
+        "type": "github"
       },
       "original": {
-        "shallow": true,
-        "type": "git",
-        "url": "ssh://git@github.com/zhaofengli/nix-homebrew"
+        "owner": "zhaofengli",
+        "repo": "nix-homebrew",
+        "type": "github"
       }
     },
     "nixpkgs": {
@@ -365,11 +426,11 @@
     },
     "nixpkgs-stable": {
       "locked": {
-        "lastModified": 1760580664,
-        "narHash": "sha256-/YdfibIrnqXAL8p5kqCU345mzpHoOtuVIkMiI2pF4Dc=",
+        "lastModified": 1760862643,
+        "narHash": "sha256-PXwG0TM7Ek87DNx4LbGWuD93PbFeKAJs4FfALtp7Wo0=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "98ff3f9af2684f6136c24beef08f5e2033fc5389",
+        "rev": "33c6dca0c0cb31d6addcd34e90a63ad61826b28c",
         "type": "github"
       },
       "original": {
@@ -381,38 +442,21 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1760524057,
-        "narHash": "sha256-EVAqOteLBFmd7pKkb0+FIUyzTF61VKi7YmvP1tw4nEw=",
-        "owner": "NixOS",
+        "lastModified": 1760878510,
+        "narHash": "sha256-K5Osef2qexezUfs0alLvZ7nQFTGS9DL2oTVsIXsqLgs=",
+        "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "544961dfcce86422ba200ed9a0b00dd4b1486ec5",
+        "rev": "5e2a59a5b1a82f89f2c7e598302a9cacebb72a67",
         "type": "github"
       },
       "original": {
-        "owner": "NixOS",
+        "owner": "nixos",
         "ref": "nixos-unstable",
         "repo": "nixpkgs",
         "type": "github"
       }
     },
     "nixpkgs_3": {
-      "locked": {
-        "lastModified": 1760524057,
-        "narHash": "sha256-EVAqOteLBFmd7pKkb0+FIUyzTF61VKi7YmvP1tw4nEw=",
-        "ref": "nixos-unstable",
-        "rev": "544961dfcce86422ba200ed9a0b00dd4b1486ec5",
-        "shallow": true,
-        "type": "git",
-        "url": "ssh://git@github.com/nixos/nixpkgs.git"
-      },
-      "original": {
-        "ref": "nixos-unstable",
-        "shallow": true,
-        "type": "git",
-        "url": "ssh://git@github.com/nixos/nixpkgs.git"
-      }
-    },
-    "nixpkgs_4": {
       "locked": {
         "lastModified": 1758213207,
         "narHash": "sha256-rqoqF0LEi+6ZT59tr+hTQlxVwrzQsET01U4uUdmqRtM=",
@@ -428,7 +472,7 @@
         "type": "github"
       }
     },
-    "nixpkgs_5": {
+    "nixpkgs_4": {
       "locked": {
         "lastModified": 1757967192,
         "narHash": "sha256-/aA9A/OBmnuOMgwfzdsXRusqzUpd8rQnQY8jtrHK+To=",
@@ -444,7 +488,7 @@
         "type": "github"
       }
     },
-    "nixpkgs_6": {
+    "nixpkgs_5": {
       "locked": {
         "lastModified": 1725634671,
         "narHash": "sha256-v3rIhsJBOMLR8e/RNWxr828tB+WywYIoajrZKFM+0Gg=",
@@ -463,28 +507,27 @@
     "nixvim": {
       "inputs": {
         "flake-parts": "flake-parts",
-        "nixpkgs": "nixpkgs_4",
+        "nixpkgs": "nixpkgs_3",
         "nixvim": "nixvim_2"
       },
       "locked": {
         "lastModified": 1760874229,
         "narHash": "sha256-XKhE0SwqOqEqiica5jvtmHzGiM6Ii80Pd4lYzeo9/08=",
-        "ref": "refs/heads/main",
+        "owner": "dindin12138",
+        "repo": "nixvim",
         "rev": "41880513d962dcc4255e1a020ca394551c3a3ce3",
-        "shallow": true,
-        "type": "git",
-        "url": "ssh://git@github.com/dindin12138/nixvim"
+        "type": "github"
       },
       "original": {
-        "shallow": true,
-        "type": "git",
-        "url": "ssh://git@github.com/dindin12138/nixvim"
+        "owner": "dindin12138",
+        "repo": "nixvim",
+        "type": "github"
       }
     },
     "nixvim_2": {
       "inputs": {
         "flake-parts": "flake-parts_2",
-        "nixpkgs": "nixpkgs_5",
+        "nixpkgs": "nixpkgs_4",
         "nuschtosSearch": "nuschtosSearch",
         "systems": "systems_2"
       },
@@ -526,38 +569,61 @@
         "type": "github"
       }
     },
+    "quickshell": {
+      "inputs": {
+        "nixpkgs": [
+          "dankMaterialShell",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1760228179,
+        "narHash": "sha256-4Z6k7lv3Zcgk3K+4h60LpqB9wCkR+utkYERU735U068=",
+        "ref": "refs/heads/master",
+        "rev": "c9d3ffb6043c5bf3f3009202bad7e0e5132c4a25",
+        "revCount": 693,
+        "type": "git",
+        "url": "https://git.outfoxxed.me/quickshell/quickshell"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://git.outfoxxed.me/quickshell/quickshell"
+      }
+    },
     "root": {
       "inputs": {
         "catppuccin": "catppuccin",
+        "dankMaterialShell": "dankMaterialShell",
+        "dgop": "dgop",
         "disko": "disko",
+        "dms-cli": "dms-cli",
         "home-manager": "home-manager",
         "homebrew-din": "homebrew-din",
         "niri": "niri",
         "nix-colors": "nix-colors",
         "nix-darwin": "nix-darwin",
         "nix-homebrew": "nix-homebrew",
-        "nixpkgs": "nixpkgs_3",
+        "nixpkgs": "nixpkgs_2",
         "nixvim": "nixvim",
         "st": "st"
       }
     },
     "st": {
       "inputs": {
-        "nixpkgs": "nixpkgs_6"
+        "nixpkgs": "nixpkgs_5"
       },
       "locked": {
         "lastModified": 1729789650,
         "narHash": "sha256-jBVsxBAl894AltchbHYksZ44hcuxI+05Y93B9PVxfWg=",
-        "ref": "refs/heads/main",
+        "owner": "dindin12138",
+        "repo": "st",
         "rev": "0edf5ae7e02427d04814afb6a68d0b2d5960ea84",
-        "shallow": true,
-        "type": "git",
-        "url": "ssh://git@github.com/dindin12138/st"
+        "type": "github"
       },
       "original": {
-        "shallow": true,
-        "type": "git",
-        "url": "ssh://git@github.com/dindin12138/st"
+        "owner": "dindin12138",
+        "repo": "st",
+        "type": "github"
       }
     },
     "systems": {

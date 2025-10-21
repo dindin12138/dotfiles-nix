@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   imports = [
-    # ./hyprland.nix
+    ./hyprland.nix
     ./hyprlock.nix
     ./hypridle.nix
     ./hyprpaper.nix

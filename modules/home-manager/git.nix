@@ -1,7 +1,11 @@
 {
   programs.git = {
     enable = true;
-    userName = "dindin12138";
-    userEmail = "79844759+dindin12138@users.noreply.github.com";
+    settings = {
+      user = {
+        name = "dindin12138";
+        email = "79844759+dindin12138@users.noreply.github.com";
+      };
+    };
   };
 }
