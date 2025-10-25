@@ -1,5 +1,6 @@
 {
-  catppuccin.foot.enable = true;
+  # catppuccin.foot.enable = true;
+  stylix.targets.foot.enable = true;
   programs.foot = {
     enable = true;
     server.enable = true;

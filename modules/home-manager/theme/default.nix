@@ -3,5 +3,6 @@
     ./gtk.nix
     ./qt.nix
     ./catppuccin.nix
+    ./stylix.nix
   ];
 }

@@ -42,6 +42,11 @@
     nix-colors.url = "github:misterio77/nix-colors";
     # nix-colors.url = "git+ssh://git@github.com/misterio77/nix-colors?shallow=1";
 
+    stylix = {
+      url = "github:nix-community/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     st.url = "github:dindin12138/st";
     # st.url = "git+ssh://git@github.com/dindin12138/st?shallow=1";
     nixvim.url = "github:dindin12138/nixvim";

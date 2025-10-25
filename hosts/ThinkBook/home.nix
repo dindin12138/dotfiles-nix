@@ -7,6 +7,7 @@
   imports = [
     inputs.catppuccin.homeModules.catppuccin
     inputs.nix-colors.homeManagerModules.default
+    inputs.stylix.homeModules.stylix
     inputs.niri.homeModules.niri
     inputs.dankMaterialShell.homeModules.dankMaterialShell.default
     inputs.dankMaterialShell.homeModules.dankMaterialShell.niri
