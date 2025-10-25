@@ -11,7 +11,7 @@
     inputs.dankMaterialShell.homeModules.dankMaterialShell.default
     inputs.dankMaterialShell.homeModules.dankMaterialShell.niri
 
-    ../../modules/home-manager/hyprland/hyprpaper.nix
+    # ../../modules/home-manager/hyprland
     ../../modules/home-manager/niri.nix
     # ../../modules/home-manager/kitty.nix
     # ../../modules/home-manager/waybar

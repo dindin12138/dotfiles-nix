@@ -5,9 +5,9 @@
     settings = {
       ipc = "on";
       splash = false;
-      preload = [ "${config.home.homeDirectory}/Pictures/Wallpapers/background-blur.png" ];
+      preload = [ "${config.home.homeDirectory}/Pictures/Wallpapers/background.png" ];
 
-      wallpaper = [ ",${config.home.homeDirectory}/Pictures/Wallpapers/background-blur.png" ];
+      wallpaper = [ ",${config.home.homeDirectory}/Pictures/Wallpapers/background.png" ];
     };
   };
 }
