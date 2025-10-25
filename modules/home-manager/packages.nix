@@ -8,6 +8,10 @@
     fd
     ripgrep
 
+    imv
+
+    satty
+
     eza
 
     lazygit

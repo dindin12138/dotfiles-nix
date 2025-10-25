@@ -23,7 +23,6 @@
     ../../modules/home-manager/bat.nix
     ../../modules/home-manager/theme
     ../../modules/home-manager/wall
-    ../../modules/home-manager/screenshot
     ../../modules/home-manager/vscode
     ../../modules/home-manager/tmux.nix
     ../../modules/home-manager/cliphist.nix
