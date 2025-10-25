@@ -3,6 +3,7 @@
   programs.niri = {
     enable = true;
     package = pkgs.niri;
+    config = builtins.readFile ./config.kdl;
     # settings = {
     #   input = {
     #     keyboard.numlock = true;
