@@ -37,11 +37,6 @@
     };
     # niri.url = "git+ssh://git@github.com/sodiboo/niri-flake?shallow=1";
 
-    catppuccin.url = "github:catppuccin/nix";
-    # catppuccin.url = "git+ssh://git@github.com/catppuccin/nix?shallow=1";
-    nix-colors.url = "github:misterio77/nix-colors";
-    # nix-colors.url = "git+ssh://git@github.com/misterio77/nix-colors?shallow=1";
-
     stylix = {
       url = "github:nix-community/stylix";
       inputs.nixpkgs.follows = "nixpkgs";

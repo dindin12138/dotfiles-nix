@@ -4,8 +4,7 @@
 }:
 {
   imports = [
-    inputs.catppuccin.homeModules.catppuccin
-    inputs.nix-colors.homeManagerModules.default
+    inputs.stylix.homeModules.stylix
 
     ../../modules/home-manager/shell
     ../../modules/home-manager/yazi

@@ -1,7 +1,9 @@
+{ config, ... }:
 {
   programs.wofi = {
     enable = true;
-    style = "${builtins.readFile ./style.css}";
+    # style = "${builtins.readFile ./style.css}";
+    style = (import ./style.nix) { config = config; };
     settings = {
       ## General
       show = "drun";

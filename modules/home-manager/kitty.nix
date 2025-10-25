@@ -1,12 +1,11 @@
 {
-  home.sessionVariables.TERMINAL = "kitty";
+  stylix.targets.kitty.enable = true;
   programs.kitty = {
     enable = true;
     font = {
       name = "FiraCode Nerd Font";
       size = 15;
     };
-    themeFile = "Catppuccin-Mocha";
     shellIntegration.enableZshIntegration = true;
     shellIntegration.enableFishIntegration = true;
     settings = {

@@ -2,7 +2,7 @@
   imports = [
     ./gtk.nix
     ./qt.nix
-    ./catppuccin.nix
+    # ./catppuccin.nix
     ./stylix.nix
   ];
 }

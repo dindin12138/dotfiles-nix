@@ -5,17 +5,14 @@
 }:
 {
   imports = [
-    inputs.catppuccin.homeModules.catppuccin
-    inputs.nix-colors.homeManagerModules.default
     inputs.stylix.homeModules.stylix
     inputs.niri.homeModules.niri
     inputs.dankMaterialShell.homeModules.dankMaterialShell.default
-    inputs.dankMaterialShell.homeModules.dankMaterialShell.niri
 
     ../../modules/home-manager/niri.nix
     ../../modules/home-manager/wofi
     ../../modules/home-manager/shell
-    ../../modules/home-manager/yazi
+    ../../modules/home-manager/yazi.nix
     ../../modules/home-manager/git.nix
     ../../modules/home-manager/packages.nix
     ../../modules/home-manager/fcitx5
@@ -34,8 +31,6 @@
     ../../modules/home-manager/foot.nix
     ../../modules/home-manager/dms.nix
     ../../modules/home-manager/udisk.nix
-
-    ./special.nix
   ];
 
   nixpkgs = {

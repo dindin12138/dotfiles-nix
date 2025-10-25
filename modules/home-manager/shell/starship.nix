@@ -4,16 +4,16 @@
     enable = true;
     enableZshIntegration = true;
     enableFishIntegration = true;
-    settings = with config.colorScheme.palette; {
+    settings = {
       format = lib.concatStrings [
-        "[░▒▓](#${base07})"
-        "[  ](bg:#${base07} fg:#${base00})"
-        "[](bg:#${base0D} fg:#${base07})"
+        "[░▒▓](#${config.lib.stylix.colors.base07})"
+        "[  ](bg:#${config.lib.stylix.colors.base07} fg:#${config.lib.stylix.colors.base00})"
+        "[](bg:#${config.lib.stylix.colors.base0D} fg:#${config.lib.stylix.colors.base07})"
         "$directory"
-        "[](fg:#${base0D} bg:#${base03})"
+        "[](fg:#${config.lib.stylix.colors.base0D} bg:#${config.lib.stylix.colors.base03})"
         "$git_branch"
         "$git_status"
-        "[](fg:#${base03} bg:#${base02})"
+        "[](fg:#${config.lib.stylix.colors.base03} bg:#${config.lib.stylix.colors.base02})"
         "$nodejs"
         "$rust"
         "$golang"
@@ -21,17 +21,17 @@
         "$python"
         "$lua"
         "$c"
-        "[](fg:#${base02} bg:#${base00})"
+        "[](fg:#${config.lib.stylix.colors.base02} bg:#${config.lib.stylix.colors.base00})"
         "$nix_shell"
         "$time"
-        "[ ](fg:#${base00})"
+        "[ ](fg:#${config.lib.stylix.colors.base00})"
         ''
 
           $character''
       ];
 
       directory = {
-        style = "fg:#${base05} bg:#${base0D}";
+        style = "fg:#${config.lib.stylix.colors.base05} bg:#${config.lib.stylix.colors.base0D}";
         format = "[ $path ]($style)";
         truncation_length = 3;
         truncation_symbol = "…/";
@@ -51,62 +51,62 @@
 
       git_branch = {
         symbol = "";
-        style = "bg:#${base03}";
-        format = "[[ $symbol $branch ](fg:#${base0D} bg:#${base03})]($style)";
+        style = "bg:#${config.lib.stylix.colors.base03}";
+        format = "[[ $symbol $branch ](fg:#${config.lib.stylix.colors.base0D} bg:#${config.lib.stylix.colors.base03})]($style)";
       };
 
       git_status = {
-        style = "bg:#${base03}";
-        format = "[[($all_status$ahead_behind )](fg:#${base0D} bg:#${base03})]($style)";
+        style = "bg:#${config.lib.stylix.colors.base03}";
+        format = "[[($all_status$ahead_behind )](fg:#${config.lib.stylix.colors.base0D} bg:#${config.lib.stylix.colors.base03})]($style)";
       };
 
       nodejs = {
         symbol = "";
-        style = "bg:#${base02}";
-        format = "[[ $symbol ($version) ](fg:#${base0D} bg:#${base02})]($style)";
+        style = "bg:#${config.lib.stylix.colors.base02}";
+        format = "[[ $symbol ($version) ](fg:#${config.lib.stylix.colors.base0D} bg:#${config.lib.stylix.colors.base02})]($style)";
       };
 
       rust = {
         symbol = "";
-        style = "bg:#${base02}";
-        format = "[[ $symbol ($version) ](fg:#${base0D} bg:#${base02})]($style)";
+        style = "bg:#${config.lib.stylix.colors.base02}";
+        format = "[[ $symbol ($version) ](fg:#${config.lib.stylix.colors.base0D} bg:#${config.lib.stylix.colors.base02})]($style)";
       };
 
       golang = {
         symbol = "";
-        style = "bg:#${base02}";
-        format = "[[ $symbol ($version) ](fg:#${base0D} bg:#${base02})]($style)";
+        style = "bg:#${config.lib.stylix.colors.base02}";
+        format = "[[ $symbol ($version) ](fg:#${config.lib.stylix.colors.base0D} bg:#${config.lib.stylix.colors.base02})]($style)";
       };
 
       python = {
         symbol = "";
-        style = "bg:#${base02}";
-        format = "[[ $symbol ($version) ](fg:#${base0D} bg:#${base02})]($style)";
+        style = "bg:#${config.lib.stylix.colors.base02}";
+        format = "[[ $symbol ($version) ](fg:#${config.lib.stylix.colors.base0D} bg:#${config.lib.stylix.colors.base02})]($style)";
       };
 
       lua = {
         symbol = "";
-        style = "bg:#${base02}";
-        format = "[[ $symbol ($version) ](fg:#${base0D} bg:#${base02})]($style)";
+        style = "bg:#${config.lib.stylix.colors.base02}";
+        format = "[[ $symbol ($version) ](fg:#${config.lib.stylix.colors.base0D} bg:#${config.lib.stylix.colors.base02})]($style)";
       };
 
       c = {
         symbol = "";
-        style = "bg:#${base02}";
-        format = "[[ $symbol ($version) ](fg:#${base0D} bg:#${base02})]($style)";
+        style = "bg:#${config.lib.stylix.colors.base02}";
+        format = "[[ $symbol ($version) ](fg:#${config.lib.stylix.colors.base0D} bg:#${config.lib.stylix.colors.base02})]($style)";
       };
 
       php = {
         symbol = "";
-        style = "bg:#${base02}";
-        format = "[[ $symbol ($version) ](fg:#${base0D} bg:#${base02})]($style)";
+        style = "bg:#${config.lib.stylix.colors.base02}";
+        format = "[[ $symbol ($version) ](fg:#${config.lib.stylix.colors.base0D} bg:#${config.lib.stylix.colors.base02})]($style)";
       };
 
       time = {
         disabled = false;
         time_format = "%R";
-        style = "bg:#${base00}";
-        format = "[[  $time ](fg:#${base05} bg:#${base00})]($style)";
+        style = "bg:#${config.lib.stylix.colors.base00}";
+        format = "[[  $time ](fg:#${config.lib.stylix.colors.base05} bg:#${config.lib.stylix.colors.base00})]($style)";
       };
 
       nix_shell = {

@@ -1,15 +1,16 @@
 { pkgs, ... }:
 {
+  stylix.targets.gtk.enable = true;
   gtk = {
     enable = true;
-    theme = {
-      name = "catppuccin-mocha-blue-standard";
-      package = pkgs.catppuccin-gtk.override {
-        size = "standard";
-        accents = [ "blue" ];
-        variant = "mocha";
-      };
-    };
+    # theme = {
+    #   name = "catppuccin-mocha-blue-standard";
+    #   package = pkgs.catppuccin-gtk.override {
+    #     size = "standard";
+    #     accents = [ "blue" ];
+    #     variant = "mocha";
+    #   };
+    # };
     cursorTheme = {
       name = "Bibata-Modern-Ice";
       package = pkgs.bibata-cursors;
@@ -18,9 +19,9 @@
       name = "Papirus-Dark";
       package = pkgs.papirus-icon-theme;
     };
-    font = {
-      name = "FiraCode Nerd Font";
-      size = 11;
-    };
+    # font = {
+    #   name = "FiraCode Nerd Font";
+    #   size = lib.mkForce 11;
+    # };
   };
 }

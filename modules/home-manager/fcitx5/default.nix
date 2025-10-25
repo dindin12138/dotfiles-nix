@@ -1,5 +1,6 @@
 { pkgs, ... }:
 {
+  stylix.targets.fcitx5.enable = true;
   i18n.inputMethod = {
     enable = true;
     type = "fcitx5";
@@ -9,7 +10,6 @@
     ];
   };
   home.file = {
-    ".config/fcitx5/conf/classicui.conf".text = import ./classicui.nix;
     ".local/share/fcitx5/themes/Nord/theme.conf".text = import ./theme.nix;
   };
 }
