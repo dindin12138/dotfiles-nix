@@ -7,7 +7,6 @@
     inputs.catppuccin.homeModules.catppuccin
     inputs.nix-colors.homeManagerModules.default
 
-    # ../../modules/home-manager/kitty.nix
     ../../modules/home-manager/shell
     ../../modules/home-manager/yazi
     ../../modules/home-manager/git.nix
