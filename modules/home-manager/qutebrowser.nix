@@ -5,16 +5,8 @@
     settings = {
       tabs.show = "never";
       statusbar.show = "never";
-      # fonts = {
-      #   default_family = "FiraCode Nerd Font";
-      #   default_size = "13pt";
-      # };
       colors.webpage.darkmode.enabled = true;
       scrolling.smooth = true;
-      # hints = {
-      #   border = "none";
-      #   chars = "weruioasdfghjklzxcnm";
-      # };
       downloads = {
         position = "bottom";
         remove_finished = 3;
@@ -64,24 +56,6 @@
         ];
       };
     };
-    # extraConfig = ''
-    #   import os
-    #   from urllib.request import urlopen
-    #
-    #   # load your autoconfig, use this, if the rest of your config is empty!
-    #   config.load_autoconfig()
-    #
-    #   if not os.path.exists(config.configdir / "theme.py"):
-    #       theme = "https://raw.githubusercontent.com/catppuccin/qutebrowser/main/setup.py"
-    #       with urlopen(theme) as themehtml:
-    #           with open(config.configdir / "theme.py", "a") as file:
-    #               file.writelines(themehtml.read().decode("utf-8"))
-    #
-    #   if os.path.exists(config.configdir / "theme.py"):
-    #       import theme
-    #
-    #       theme.setup(c, "mocha", True)
-    # '';
     keyBindings = {
       normal = {
         "<Ctrl-m>" = "hint links spawn --detach mpv {hint-url}";

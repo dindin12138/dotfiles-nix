@@ -33,8 +33,12 @@
     #     default-column-width = { };
     #     focus-ring = {
     #       width = 3;
-    #       active = { color = "#7fc8ff"; };
-    #       inactive = { color = "#505050"; };
+    #       active = {
+    #         color = "#7fc8ff";
+    #       };
+    #       inactive = {
+    #         color = "#505050";
+    #       };
     #     };
     #     border.enable = false;
     #     shadow.enable = false;
@@ -112,7 +116,7 @@
     #       repeat = false;
     #       hotkey-overlay.title = "Close the window";
     #     };
-
+    #
     #     "Alt+H".action = focus-column-left;
     #     "Alt+J".action = focus-window-down;
     #     "Alt+K".action = focus-window-up;
@@ -121,7 +125,7 @@
     #     "Alt+Down".action = focus-window-down;
     #     "Alt+Up".action = focus-window-up;
     #     "Alt+Right".action = focus-column-right;
-
+    #
     #     "Alt+Shift+H".action = move-column-left;
     #     "Alt+Shift+J".action = move-window-down;
     #     "Alt+Shift+K".action = move-window-up;
@@ -130,10 +134,10 @@
     #     "Alt+Shift+Down".action = move-window-down;
     #     "Alt+Shift+Up".action = move-window-up;
     #     "Alt+Shift+Right".action = move-column-right;
-
+    #
     #     "Alt+Tab".action = focus-workspace-down;
     #     "Alt+Shift+Tab".action = focus-workspace-up;
-
+    #
     #     "Alt+WheelScrollDown" = {
     #       action = focus-workspace-down;
     #       cooldown-ms = 150;
@@ -150,7 +154,7 @@
     #       action = move-column-to-workspace-up;
     #       cooldown-ms = 150;
     #     };
-
+    #
     #     "Alt+1".action = focus-workspace 1;
     #     "Alt+2".action = focus-workspace 2;
     #     "Alt+3".action = focus-workspace 3;
@@ -160,7 +164,7 @@
     #     "Alt+7".action = focus-workspace 7;
     #     "Alt+8".action = focus-workspace 8;
     #     "Alt+9".action = focus-workspace 9;
-
+    #
     #     "Alt+Shift+1".action = move-column-to-workspace 1;
     #     "Alt+Shift+2".action = move-column-to-workspace 2;
     #     "Alt+Shift+3".action = move-column-to-workspace 3;
@@ -170,12 +174,12 @@
     #     "Alt+Shift+7".action = move-column-to-workspace 7;
     #     "Alt+Shift+8".action = move-column-to-workspace 8;
     #     "Alt+Shift+9".action = move-column-to-workspace 9;
-
+    #
     #     "Alt+BracketLeft".action = consume-or-expel-window-left;
     #     "Alt+BracketRight".action = consume-or-expel-window-right;
     #     "Alt+Comma".action = consume-window-into-column;
     #     "Alt+Period".action = expel-window-from-column;
-
+    #
     #     "Alt+R".action = switch-preset-column-width;
     #     "Alt+Shift+R".action = switch-preset-window-height;
     #     "Alt+Ctrl+R".action = reset-window-height;
@@ -183,21 +187,20 @@
     #     "Alt+Shift+F".action = fullscreen-window;
     #     "Alt+Ctrl+F".action = expand-column-to-available-width;
     #     "Alt+Ctrl+C".action = center-visible-columns;
-
+    #
     #     "Alt+Minus".action = set-column-width "-10%";
     #     "Alt+Equal".action = set-column-width "+10%";
     #     "Alt+Shift+Minus".action = set-window-height "-10%";
     #     "Alt+Shift+Equal".action = set-window-height "+10%";
-
+    #
     #     "Alt+V".action = toggle-window-floating;
     #     "Alt+Shift+V".action = switch-focus-between-floating-and-tiling;
-
+    #
     #     "Alt+W".action = toggle-column-tabbed-display;
-
-    #     # "Print".action = screenshot;
-    #     # "Ctrl+Print".action = screenshot-screen;
-    #     # "Alt+Print".action = screenshot-window;
-
+    #
+    #     "Alt+S".action = screenshot;
+    #     "Alt+Shift+S".action = screenshot-window;
+    #
     #     "Alt+Escape" = {
     #       action = toggle-keyboard-shortcuts-inhibit;
     #       allow-inhibiting = false;

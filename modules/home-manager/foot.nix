@@ -1,4 +1,3 @@
-{ lib, ... }:
 {
   stylix.targets.foot.enable = true;
   programs.foot = {
@@ -7,9 +6,8 @@
     settings = {
       main = {
         term = "xterm-256color";
-        font = lib.mkForce "FiraCode Nerd Font:size=13";
         box-drawings-uses-font-glyphs = "yes";
-        # dpi-aware = "yes";
+        pad = "10x5";
       };
       cursor = {
         style = "beam";

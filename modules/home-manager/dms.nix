@@ -1,3 +1,4 @@
+{ config, ... }:
 {
   programs.dankMaterialShell = {
     enable = true;
@@ -90,8 +91,8 @@
 
       "cornerRadius" = 15;
 
-      "fontFamily" = "FiraCode Nerd Font";
-      "monoFontFamily" = "FiraCode Nerd Font Mono";
+      "fontFamily" = "${config.stylix.fonts.monospace.name}";
+      "monoFontFamily" = "${config.stylix.fonts.monospace.name}";
       "fontWeight" = 400;
       "fontScale" = 1.1;
 

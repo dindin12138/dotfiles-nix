@@ -1,5 +1,6 @@
 { pkgs, ... }:
 {
+  stylix.targets.yazi.enable = true;
   programs.yazi = {
     enable = true;
     enableZshIntegration = true;
@@ -22,6 +23,9 @@
     };
     theme = {
       mgr = {
+        hovered = {
+          reversed = true;
+        };
         preview_hovered = {
           reversed = true;
         };
