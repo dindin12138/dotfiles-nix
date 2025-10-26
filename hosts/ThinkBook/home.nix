@@ -9,7 +9,7 @@
     inputs.niri.homeModules.niri
     inputs.dankMaterialShell.homeModules.dankMaterialShell.default
 
-    ../../modules/home-manager/niri.nix
+    ../../modules/home-manager/niri
     ../../modules/home-manager/wofi
     ../../modules/home-manager/shell
     ../../modules/home-manager/yazi.nix

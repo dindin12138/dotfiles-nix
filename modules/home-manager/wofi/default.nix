@@ -3,7 +3,7 @@
   programs.wofi = {
     enable = true;
     # style = "${builtins.readFile ./style.css}";
-    style = (import ./style.nix) { config = config; };
+    style = import ./style.nix { inherit config; };
     settings = {
       ## General
       show = "drun";
