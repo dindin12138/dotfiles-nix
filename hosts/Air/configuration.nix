@@ -9,13 +9,13 @@
   imports = [
     inputs.home-manager.darwinModules.home-manager
     inputs.nix-homebrew.darwinModules.nix-homebrew
+    inputs.stylix.darwinModules.stylix
 
-    # ../../modules/darwin/apps-alias.nix
     ../../modules/darwin/nix.nix
     ../../modules/darwin/homebrew.nix
     ../../modules/darwin/users.nix
-
     ../../modules/darwin/packages.nix
+    ../../modules/darwin/stylix.nix
   ];
 
   programs.fish.enable = true;
