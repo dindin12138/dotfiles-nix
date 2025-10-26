@@ -4,7 +4,6 @@
     source-han-sans
     noto-fonts-cjk-sans
     noto-fonts-emoji
-    # fira-code-nerdfont
     nerd-fonts.fira-code
   ];
 }

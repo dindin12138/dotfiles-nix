@@ -3,6 +3,7 @@
   imports = [
     inputs.home-manager.nixosModules.home-manager
     inputs.disko.nixosModules.disko
+    inputs.stylix.nixosModules.stylix
 
     ./hardware-configuration.nix
     ./disk-config.nix
@@ -11,7 +12,7 @@
     ../../modules/nixos/fcitx5.nix
     ../../modules/nixos/fonts.nix
     ../../modules/nixos/nix.nix
-    ../../modules/nixos/display-manager
+    ../../modules/nixos/sddm.nix
     ../../modules/nixos/polkit.nix
     ../../modules/nixos/packages.nix
     ../../modules/nixos/powermanager.nix
@@ -28,6 +29,7 @@
     ../../modules/nixos/virt-manager.nix
     ../../modules/nixos/bluetooth.nix
     ../../modules/nixos/time.nix
+    ../../modules/nixos/stylix.nix
   ];
 
   home-manager = {
