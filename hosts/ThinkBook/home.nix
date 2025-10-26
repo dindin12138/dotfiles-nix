@@ -5,7 +5,7 @@
 }:
 {
   imports = [
-    inputs.stylix.homeModules.stylix
+    # inputs.stylix.homeModules.stylix
     inputs.niri.homeModules.niri
     inputs.dankMaterialShell.homeModules.dankMaterialShell.default
 
@@ -19,7 +19,7 @@
     ../../modules/home-manager/neovim
     ../../modules/home-manager/btop.nix
     ../../modules/home-manager/bat.nix
-    # ../../modules/home-manager/stylix.nix
+    ../../modules/home-manager/stylix.nix
     ../../modules/home-manager/wall
     ../../modules/home-manager/vscode
     ../../modules/home-manager/tmux.nix

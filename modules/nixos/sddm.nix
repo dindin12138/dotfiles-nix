@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 {
   services.displayManager.sddm = {
     enable = true;
@@ -7,8 +7,8 @@
     theme = "catppuccin-mocha-blue";
     settings = {
       Theme = {
-        CursorTheme = "Bibata-Modern-Ice";
-        CursorSize = 36;
+        CursorTheme = "${config.stylix.cursor.name}";
+        CursorSize = "${toString (config.stylix.cursor.size + 18)}";
       };
     };
   };
@@ -17,10 +17,10 @@
     (pkgs.catppuccin-sddm.override {
       flavor = "mocha";
       accent = "blue";
-      font = "FiraCode Nerd Font";
-      fontSize = "16";
-      # background = "${../../home-manager/wall/wallpapers/background.png}";
-      # loginBackground = false;
+      font = "${config.stylix.fonts.monospace.name}";
+      fontSize = "${toString (config.stylix.fonts.sizes.desktop + 4)}";
+      background = "${../home-manager/wall/wallpapers/background.png}";
+      loginBackground = false;
     })
   ];
 }

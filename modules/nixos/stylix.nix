@@ -43,9 +43,5 @@ in
       package = pkgs.bibata-cursors;
       size = 24;
     };
-    targets = {
-      gtk.enable = true;
-      qt.enable = true;
-    };
   };
 }

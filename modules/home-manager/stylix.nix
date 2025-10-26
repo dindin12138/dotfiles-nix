@@ -1,12 +1,8 @@
 { pkgs, ... }:
-let
-  colorScheme = "catppuccin-mocha";
-in
 {
   stylix = {
     enable = true;
     autoEnable = false;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/${colorScheme}.yaml";
     polarity = "dark";
     fonts = {
       serif = {
