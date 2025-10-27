@@ -9,7 +9,4 @@
       fcitx5-chinese-addons
     ];
   };
-  home.file = {
-    ".local/share/fcitx5/themes/Nord/theme.conf".text = import ./theme.nix;
-  };
 }

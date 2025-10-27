@@ -8,6 +8,7 @@
     # inputs.stylix.homeModules.stylix
     inputs.niri.homeModules.niri
     inputs.dankMaterialShell.homeModules.dankMaterialShell.default
+    inputs.zen-browser.homeModules.twilight
 
     ../../modules/home-manager/niri
     ../../modules/home-manager/wofi
@@ -15,7 +16,7 @@
     ../../modules/home-manager/yazi.nix
     ../../modules/home-manager/git.nix
     ../../modules/home-manager/packages.nix
-    ../../modules/home-manager/fcitx5
+    ../../modules/home-manager/fcitx5.nix
     ../../modules/home-manager/neovim
     ../../modules/home-manager/btop.nix
     ../../modules/home-manager/bat.nix
@@ -60,6 +61,8 @@
   };
 
   programs.home-manager.enable = true;
+
+  programs.zen-browser.enable = true;
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
