@@ -11,11 +11,15 @@
     extensions = [
       "material-icon-theme"
       "nix"
+      "toml"
     ];
     extraPackages = with pkgs; [
       nixd
       nil
       clang-tools
+      ruff
+      rust-analyzer
+      gopls
     ];
     mutableUserSettings = true;
     userSettings = {
