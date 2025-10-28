@@ -32,6 +32,7 @@
     ../../modules/home-manager/foot.nix
     ../../modules/home-manager/dms.nix
     ../../modules/home-manager/udisk.nix
+    ../../modules/home-manager/zed.nix
   ];
 
   nixpkgs = {
