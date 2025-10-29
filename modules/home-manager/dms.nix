@@ -6,6 +6,7 @@
     enableDynamicTheming = false;
     default.settings = {
       "wallpaperFillMode" = "Fill";
+      "blurredWallpaperLayer" = true;
 
       "use24HourClock" = true;
 
