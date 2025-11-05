@@ -8,7 +8,7 @@
     extraCompatPackages = with pkgs; [ proton-ge-bin ];
     fontPackages = with pkgs; [
       noto-fonts-cjk-sans
-      noto-fonts-emoji
+      noto-fonts-color-emoji
     ];
     extraPackages = with pkgs; [
       mangohud
