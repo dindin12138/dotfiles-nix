@@ -2,7 +2,7 @@
 {
   programs.dankMaterialShell = {
     enable = true;
-    enableSystemd = true;
+    systemd.enable = true;
     enableDynamicTheming = false;
     default.settings = {
       "wallpaperFillMode" = "Fill";
