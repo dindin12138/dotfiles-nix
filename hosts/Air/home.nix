@@ -10,6 +10,7 @@
     ../../modules/home-manager/vscode
     ../../modules/home-manager/wezterm
     ../../modules/home-manager/kitty.nix
+    ../../modules/home-manager/zed.nix
   ];
 
   home = {
