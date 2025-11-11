@@ -36,7 +36,7 @@
 
     nautilus
 
-    gemini-cli-bin
+    gemini-cli
 
     wechat
 
