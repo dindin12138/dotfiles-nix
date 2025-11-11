@@ -14,7 +14,7 @@
     ms-vscode.cmake-tools
 
     # Rust
-    # rust-lang.rust-analyzer
+    rust-lang.rust-analyzer
 
     # Go
     golang.go
@@ -32,7 +32,7 @@
     ms-toolsai.jupyter-keymap
 
     # Debug
-    # vadimcn.vscode-lldb
+    vadimcn.vscode-lldb
 
     # Tools
     eamodio.gitlens
