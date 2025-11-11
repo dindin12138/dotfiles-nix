@@ -9,6 +9,7 @@
     ../../modules/home-manager/yt-dlp.nix
     ../../modules/home-manager/vscode
     ../../modules/home-manager/wezterm
+    ../../modules/home-manager/kitty.nix
   ];
 
   home = {
