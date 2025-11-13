@@ -33,6 +33,7 @@
     ../../modules/home-manager/dms.nix
     ../../modules/home-manager/udisk.nix
     ../../modules/home-manager/zed.nix
+    ../../modules/home-manager/zen.nix
   ];
 
   nixpkgs = {
@@ -62,8 +63,6 @@
   };
 
   programs.home-manager.enable = true;
-
-  programs.zen-browser.enable = true;
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
