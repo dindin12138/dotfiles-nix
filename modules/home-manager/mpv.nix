@@ -5,12 +5,12 @@
     bindings = {
       WHEEL_UP = "seek -10";
       WHEEL_DOWN = "seek 10";
-      h = "seek -1";
-      l = "seek 1";
-      H = "seek -5";
-      L = "seek 5";
-      g = "seek 0 absolute-percent";
-      G = "seek 100 absolute-percent";
+      # h = "seek -1";
+      # l = "seek 1";
+      # H = "seek -5";
+      # L = "seek 5";
+      # g = "seek 0 absolute-percent";
+      # G = "seek 100 absolute-percent";
     };
     config = {
       osc = false;
@@ -26,8 +26,15 @@
       script-opts = "ytdl_hook-ytdl_path=yt-dlp";
     };
     scripts = with pkgs.mpvScripts; [
-      modernx
+      modernz
       thumbfast
+      mpv-cheatsheet
     ];
+    scriptOpts = {
+      modernz = {
+        seekbarfg_color = "#7fc8ff";
+        playlist_button = "yes";
+      };
+    };
   };
 }
