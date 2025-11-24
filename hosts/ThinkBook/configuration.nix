@@ -25,7 +25,7 @@
     ../../modules/nixos/users.nix
     ../../modules/nixos/niri.nix
     ../../modules/nixos/networking.nix
-    ../../modules/nixos/docker.nix
+    ../../modules/nixos/podman.nix
     ../../modules/nixos/virt-manager.nix
     ../../modules/nixos/bluetooth.nix
     ../../modules/nixos/time.nix
@@ -42,7 +42,6 @@
   i18n.defaultLocale = "en_US.UTF-8";
 
   services.xserver.videoDrivers = [ "amdgpu" ];
-  programs.dconf.enable = true;
 
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 

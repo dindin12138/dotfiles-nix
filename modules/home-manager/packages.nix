@@ -16,8 +16,6 @@
 
     lazygit
 
-    lazydocker
-
     typora
 
     zotero
