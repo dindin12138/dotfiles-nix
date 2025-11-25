@@ -8,6 +8,7 @@
       popToRootOnClose = true;
       window = {
         csd = true;
+        blur = false;
       };
       rootSearch = {
         searchFiles = false;

@@ -11,7 +11,7 @@
     inputs.zen-browser.homeModules.twilight
 
     ../../modules/home-manager/niri
-    ../../modules/home-manager/wofi
+    ../../modules/home-manager/vicinae.nix
     ../../modules/home-manager/shell
     ../../modules/home-manager/yazi.nix
     ../../modules/home-manager/git.nix
