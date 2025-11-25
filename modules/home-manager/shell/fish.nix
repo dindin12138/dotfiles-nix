@@ -21,19 +21,19 @@
 
       cat = "bat";
       lg = "lazygit";
-      ld = "lazydocker";
+      # ld = "lazydocker";
 
       duf = "nix run nixpkgs#duf";
       dust = "nix run nixpkgs#dust";
       telegram = "nix run nixpkgs#telegram-desktop";
 
-      fc = "cliphist list | fzf | cliphist decode | wl-copy";
+      # fc = "cliphist list | fzf | cliphist decode | wl-copy";
 
       camera = "mpv --profile=low-latency --untimed /dev/video0";
 
       yt-dlp-best = "yt-dlp -f 'bestvideo+bestaudio/best'";
 
-      vscode-neovim = "NVIM_APPNAME=vscode-neovim nvim";
+      # vscode-neovim = "NVIM_APPNAME=vscode-neovim nvim";
 
       code-cpp = "code --profile CPP";
       code-rust = "code --profile Rust";
@@ -41,7 +41,7 @@
       code-python = "code --profile Python";
       code-remote = "code --profile Remote";
       code-markdown = "code --profile Markdown";
-      code-neovim = "code --profile Neovim";
+      # code-neovim = "code --profile Neovim";
 
       proxy-test = "curl -I http://www.google.com";
 
