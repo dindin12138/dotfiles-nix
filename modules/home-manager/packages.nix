@@ -9,7 +9,6 @@
     google-chrome
     obsidian
     clash-verge-rev
-    xwayland-satellite
     nautilus
     gemini-cli
     wechat
