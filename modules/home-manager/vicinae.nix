@@ -1,22 +1,24 @@
+{ pkgs, config, ... }:
 {
   stylix.targets.vicinae.enable = true;
-  programs.vicinae = {
+  services.vicinae = {
     enable = true;
-    useLayerShell = true;
+    package = pkgs.vicinae;
+    autoStart = true;
+    useLayerShell = false;
     extensions = [ ];
     settings = {
+      font = {
+        name = config.stylix.fonts.monospace.name;
+        size = config.stylix.fonts.sizes.applications - 1;
+      };
       popToRootOnClose = true;
       window = {
         csd = true;
-        blur = false;
       };
       rootSearch = {
         searchFiles = false;
       };
-    };
-    systemd = {
-      enable = true;
-      autoStart = true;
     };
   };
 }

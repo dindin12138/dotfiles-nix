@@ -9,6 +9,7 @@
     inputs.niri.homeModules.niri
     inputs.dankMaterialShell.homeModules.dankMaterialShell.default
     inputs.zen-browser.homeModules.twilight
+    inputs.vicinae.homeManagerModules.default
 
     ../../modules/home-manager/niri
     ../../modules/home-manager/vicinae.nix
