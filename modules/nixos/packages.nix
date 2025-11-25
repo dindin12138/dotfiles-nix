@@ -5,5 +5,6 @@
     curl
     killall
     file
+    wl-clipboard
   ];
 }

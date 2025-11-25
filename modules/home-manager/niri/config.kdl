@@ -397,7 +397,8 @@
       Alt+E hotkey-overlay-title="Open Thunar File Manager" { spawn "thunar"; }
       // Super+Alt+L hotkey-overlay-title="Lock the Screen: hyprlock" { spawn "hyprlock"; }
       Super+Alt+L hotkey-overlay-title="Lock Screen" { spawn "dms" "ipc" "call" "lock" "lock"; }
-      Alt+C hotkey-overlay-title="Clipboard Manager" { spawn "dms" "ipc" "call" "clipboard" "toggle";}
+      // Alt+C hotkey-overlay-title="Clipboard Manager" { spawn "dms" "ipc" "call" "clipboard" "toggle";}
+      Alt+C hotkey-overlay-title="Clipboard Manager" { spawn "vicinae" "vicinae://extensions/vicinae/clipboard/history"; }
       Alt+Shift+X hotkey-overlay-title="Power Menu" { spawn "dms" "ipc" "call" "powermenu" "toggle"; }
       Mod+C hotkey-overlay-title="Control Center" { spawn "dms" "ipc" "call" "control-center" "toggle"; }
 

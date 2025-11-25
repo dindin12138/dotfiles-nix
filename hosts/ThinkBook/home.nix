@@ -24,7 +24,6 @@
     ../../modules/home-manager/wall
     ../../modules/home-manager/vscode
     ../../modules/home-manager/tmux.nix
-    ../../modules/home-manager/cliphist.nix
     ../../modules/home-manager/music
     ../../modules/home-manager/mpv.nix
     ../../modules/home-manager/yt-dlp.nix
