@@ -6,5 +6,8 @@
     killall
     file
     wl-clipboard
+    fd
+    ripgrep
+    eza
   ];
 }
