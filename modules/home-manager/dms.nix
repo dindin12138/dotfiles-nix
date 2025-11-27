@@ -1,4 +1,4 @@
-{ config, ... }:
+{ inputs, config, ... }:
 {
   programs.dankMaterialShell = {
     enable = true;
@@ -7,6 +7,12 @@
     enableVPN = false;
     enableColorPicker = false;
     enableClipboard = false;
+    plugins = {
+      dank-actions = {
+        enable = true;
+        src = "${inputs.dms-plugins}/DankActions";
+      };
+    };
     default.settings = {
       "wallpaperFillMode" = "Fill";
       "blurredWallpaperLayer" = true;

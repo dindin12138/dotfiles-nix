@@ -148,6 +148,22 @@
         "type": "github"
       }
     },
+    "dms-plugins": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1764085668,
+        "narHash": "sha256-KtOu12NVLdyho9T4EXJaReNhFO98nAXpemkb6yeOvwE=",
+        "owner": "AvengeMedia",
+        "repo": "dms-plugins",
+        "rev": "3bc66f186a8184cb8eca5fdfc0699cb4a828cd90",
+        "type": "github"
+      },
+      "original": {
+        "owner": "AvengeMedia",
+        "repo": "dms-plugins",
+        "type": "github"
+      }
+    },
     "firefox-gnome-theme": {
       "flake": false,
       "locked": {
@@ -652,6 +668,7 @@
         "dankMaterialShell": "dankMaterialShell",
         "dgop": "dgop",
         "disko": "disko",
+        "dms-plugins": "dms-plugins",
         "home-manager": "home-manager",
         "homebrew-din": "homebrew-din",
         "niri": "niri",
