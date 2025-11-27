@@ -1,4 +1,8 @@
 { config, pkgs, ... }:
+let
+  isLinux = pkgs.stdenv.isLinux;
+  isDarwin = pkgs.stdenv.isDarwin;
+in
 {
   programs.mpv = {
     enable = true;
@@ -18,10 +22,10 @@
       sub-auto = "fuzzy";
       keep-open = true;
       screenshot-directory = "${config.home.homeDirectory}/Pictures/Screenshots";
-      gpu-api = "opengl";
-      gpu-context = "wayland";
-      hwdec = "auto-safe";
-      vo = "gpu";
+      gpu-api = if isLinux then "opengl" else "auto";
+      gpu-context = if isLinux then "wayland" else "auto";
+      hwdec = if isLinux then "auto-safe" else "videotoolbox";
+      vo = "gpu-next";
       profile = "gpu-hq";
       script-opts = "ytdl_hook-ytdl_path=yt-dlp";
     };

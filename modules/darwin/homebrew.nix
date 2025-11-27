@@ -22,8 +22,6 @@
       "obsidian"
       "godot"
       "vlc"
-      "zen"
-      # custom pkg
       "typora@free"
     ];
     # masApps = {

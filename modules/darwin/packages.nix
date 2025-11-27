@@ -1,22 +1,17 @@
 { pkgs, ... }:
 {
-  home-manager.users.din.home.packages = with pkgs; [
+  # List packages installed in system profile. To search by name, run:
+  # $ nix-env -qaP | grep wget
+  environment.systemPackages = with pkgs; [
     mas
     eza
     fd
     ripgrep
-    lazygit
     gemini-cli
-  ];
-
-  # List packages installed in system profile. To search by name, run:
-  # $ nix-env -qaP | grep wget
-  environment.systemPackages = with pkgs; [
     git
     google-chrome
     zotero
     raycast
     qbittorrent-enhanced
-    mpv-unwrapped
   ];
 }
