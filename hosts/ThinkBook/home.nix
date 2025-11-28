@@ -34,6 +34,7 @@
     ../../modules/home-manager/udisk.nix
     ../../modules/home-manager/zed.nix
     ../../modules/home-manager/zen.nix
+    ../../modules/home-manager/env.nix
   ];
 
   nixpkgs = {
