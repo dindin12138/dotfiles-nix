@@ -30,6 +30,7 @@
     ../../modules/home-manager/yt-dlp.nix
     ../../modules/home-manager/qutebrowser.nix
     ../../modules/home-manager/foot.nix
+    ../../modules/home-manager/ghostty.nix
     ../../modules/home-manager/dms.nix
     ../../modules/home-manager/udisk.nix
     ../../modules/home-manager/zed.nix
