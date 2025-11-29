@@ -33,6 +33,7 @@ in
         seekbarfg_color = "#${config.lib.stylix.colors.base0D}";
         hover_effect_color = "#${config.lib.stylix.colors.base0D}";
         playlist_button = "yes";
+        fadein = "yes";
       };
     };
   };

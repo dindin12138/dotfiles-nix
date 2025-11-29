@@ -43,15 +43,4 @@
       cmake
     ];
   };
-
-  home.file = {
-    ".config/nvim/" = {
-      source = ./nvim;
-      recursive = true;
-    };
-    ".config/vscode-neovim/" = {
-      source = ./vscode-neovim;
-      recursive = true;
-    };
-  };
 }
