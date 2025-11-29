@@ -11,10 +11,10 @@
       sync_address = "https://api.atuin.sh";
       search_mode = "fuzzy";
       filter_mode = "global";
-      style = "compact";
+      style = "full";
       inline_height = 20;
       show_preview = true;
-      enter_accept = true;
+      enter_accept = false;
       history_filter = [
         "^Secret"
         "^base64"
