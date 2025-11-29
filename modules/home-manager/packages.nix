@@ -9,7 +9,6 @@
     google-chrome
     obsidian
     clash-verge-rev
-    nautilus
     gemini-cli
     wechat
     godot_4

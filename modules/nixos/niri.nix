@@ -8,7 +8,4 @@
       xdg-desktop-portal-gnome
     ];
   };
-  environment.systemPackages = with pkgs; [
-    xwayland-satellite
-  ];
 }

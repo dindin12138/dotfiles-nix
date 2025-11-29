@@ -22,7 +22,7 @@
     ../../modules/nixos/sound.nix
     ../../modules/nixos/ssh.nix
     ../../modules/nixos/steam.nix
-    ../../modules/nixos/thunar.nix
+    ../../modules/nixos/file-manager.nix
     ../../modules/nixos/users.nix
     ../../modules/nixos/niri.nix
     ../../modules/nixos/networking.nix
@@ -44,7 +44,9 @@
 
   services.xserver.videoDrivers = [ "amdgpu" ];
 
-  environment.sessionVariables.NIXOS_OZONE_WL = "1";
+  environment.sessionVariables = {
+    NIXOS_OZONE_WL = "1";
+  };
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "24.11";

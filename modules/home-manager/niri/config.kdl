@@ -348,6 +348,13 @@
       default-window-height { proportion 0.19; }
   }
 
+window-rule {
+      match app-id="google-chrome" title="Open Files"
+      open-floating true
+      default-column-width { proportion 0.75; }
+      default-window-height { proportion 0.75; }
+}
+
   // Example: block out two password managers from screen capture.
   // (This example rule is commented out with a "/-" in front.)
   /-window-rule {
@@ -394,7 +401,7 @@
       Alt+Return hotkey-overlay-title="Open a Terminal: foot" { spawn "foot"; }
       // Alt+D hotkey-overlay-title="Run an Application: wofi" { spawn "wofi"; }
       Alt+D hotkey-overlay-title="Run an Application: vicinae" { spawn "vicinae" "toggle"; }
-      Alt+E hotkey-overlay-title="Open Thunar File Manager" { spawn "thunar"; }
+      Alt+E hotkey-overlay-title="Open File Manager" { spawn "nautilus"; }
       // Super+Alt+L hotkey-overlay-title="Lock the Screen: hyprlock" { spawn "hyprlock"; }
       Super+Alt+L hotkey-overlay-title="Lock Screen" { spawn "dms" "ipc" "call" "lock" "lock"; }
       // Alt+C hotkey-overlay-title="Clipboard Manager" { spawn "dms" "ipc" "call" "clipboard" "toggle";}
