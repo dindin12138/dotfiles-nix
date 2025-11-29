@@ -9,12 +9,6 @@ in
     bindings = {
       WHEEL_UP = "seek -10";
       WHEEL_DOWN = "seek 10";
-      # h = "seek -1";
-      # l = "seek 1";
-      # H = "seek -5";
-      # L = "seek 5";
-      # g = "seek 0 absolute-percent";
-      # G = "seek 100 absolute-percent";
     };
     config = {
       osc = false;
@@ -36,7 +30,8 @@ in
     ];
     scriptOpts = {
       modernz = {
-        seekbarfg_color = "#7fc8ff";
+        seekbarfg_color = "#${config.lib.stylix.colors.base0D}";
+        hover_effect_color = "#${config.lib.stylix.colors.base0D}";
         playlist_button = "yes";
       };
     };
