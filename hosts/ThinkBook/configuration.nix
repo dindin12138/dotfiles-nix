@@ -31,6 +31,7 @@
     ../../modules/nixos/bluetooth.nix
     ../../modules/nixos/time.nix
     ../../modules/nixos/stylix.nix
+    ../../modules/nixos/nh.nix
   ];
 
   home-manager = {
