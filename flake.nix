@@ -69,7 +69,7 @@
         };
       };
       nixosConfigurations = {
-        "tb" = nixpkgs.lib.nixosSystem {
+        "nixos-tb" = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs outputs; };
           modules = [ ./hosts/ThinkBook/configuration.nix ];
         };
