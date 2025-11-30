@@ -11,6 +11,9 @@ in
     };
     config = {
       osc = false;
+      osd-bar = false;
+      border = false;
+      keepaspect-window = false;
       save-position-on-quit = true;
       sub-auto = "fuzzy";
       keep-open = true;
@@ -27,18 +30,26 @@ in
       loop-playlist = "force";
       script-opts = "ytdl_hook-ytdl_path=yt-dlp";
     };
-    scripts = with pkgs.mpvScripts; [
-      modernz
-      thumbfast
-      mpv-cheatsheet
-      pkgs.mpvScripts.builtins.autoload
-    ];
+    scripts =
+      with pkgs.mpvScripts;
+      [
+        uosc
+        thumbfast
+        mpv-cheatsheet
+      ]
+      ++ (if isLinux then [ mpris ] else [ ]);
     scriptOpts = {
-      modernz = {
-        seekbarfg_color = "#${config.lib.stylix.colors.base0D}";
-        hover_effect_color = "#${config.lib.stylix.colors.base0D}";
-        playlist_button = "yes";
-        fadein = "yes";
+      uosc = {
+        scale = 1.5;
+        top_bar = "no-border";
+        top_bar_controls = "no";
+        top_bar_title = "yes";
+        autohide = "yes";
+        timeline_style = "line";
+        timeline_line_width = 2;
+        buffered_time_threshold = 60;
+        autoload = "yes";
+        languages = "slang,en";
       };
     };
   };
