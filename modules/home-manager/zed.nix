@@ -6,7 +6,6 @@
 }:
 let
   isLinux = pkgs.stdenv.isLinux;
-  isDarwin = pkgs.stdenv.isDarwin;
 in
 {
   stylix.targets.zed.enable = true;

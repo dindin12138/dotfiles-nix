@@ -2,7 +2,6 @@
 {
   nix-homebrew = {
     enable = true;
-    # enableRosetta = true;
     user = "din";
     taps = {
       "dindin12138/homebrew-din" = inputs.homebrew-din;

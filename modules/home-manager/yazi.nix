@@ -1,11 +1,9 @@
-{ pkgs, ... }:
 {
   stylix.targets.yazi.enable = true;
   programs.yazi = {
     enable = true;
     enableZshIntegration = true;
     enableFishIntegration = true;
-    extraPackages = with pkgs; [ ];
     keymap = { };
     settings = {
       mgr = {

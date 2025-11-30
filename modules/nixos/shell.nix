@@ -1,9 +1,9 @@
 { pkgs, ... }:
 {
-  # programs.zsh.enable = true;
-  # environment.pathsToLink = [ "/share/zsh" ];
   programs.fish.enable = true;
   users.defaultUserShell = pkgs.fish;
+  # programs.zsh.enable = true;
+  # environment.pathsToLink = [ "/share/zsh" ];
   # programs.bash = {
   #   interactiveShellInit = ''
   #     if [[ $(${pkgs.procps}/bin/ps --no-header --pid=$PPID --format=comm) != "fish" && -z ''${BASH_EXECUTION_STRING} ]]

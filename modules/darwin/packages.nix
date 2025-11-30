@@ -6,7 +6,6 @@
     fd
     ripgrep
     gemini-cli
-    git
     google-chrome
     zotero
     raycast

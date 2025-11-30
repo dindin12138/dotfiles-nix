@@ -2,17 +2,13 @@
 {
   programs.neovim = {
     enable = true;
-
     defaultEditor = true;
-
     viAlias = true;
     vimAlias = true;
     vimdiffAlias = true;
-
     withNodeJs = true;
     withPython3 = true;
     withRuby = true;
-
     extraPackages = with pkgs; [
       # LSP
       lua-language-server
@@ -25,7 +21,6 @@
       ruff
       sqls
       bash-language-server
-
       # Formatter
       stylua
       # nixfmt-classic
@@ -37,7 +32,6 @@
       gofumpt
       jq
       cmake-format
-
       # Tools
       gnumake
       cmake

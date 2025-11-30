@@ -21,7 +21,7 @@
     ../../modules/home-manager/wall
     ../../modules/home-manager/vscode
     ../../modules/home-manager/tmux.nix
-    ../../modules/home-manager/music
+    ../../modules/home-manager/mpd.nix
     ../../modules/home-manager/mpv.nix
     ../../modules/home-manager/yt-dlp.nix
     ../../modules/home-manager/qutebrowser.nix

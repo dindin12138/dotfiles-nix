@@ -1,5 +1,6 @@
-{ config, ... }:
+{ pkgs, config, ... }:
 {
+  home.packages = with pkgs; [ rmpc ];
   services.mpd = {
     enable = true;
     musicDirectory = "${config.home.homeDirectory}/Music";
