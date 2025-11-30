@@ -1,7 +1,6 @@
 { config, pkgs, ... }:
 let
   isLinux = pkgs.stdenv.isLinux;
-  isDarwin = pkgs.stdenv.isDarwin;
 in
 {
   programs.mpv = {
@@ -21,12 +20,18 @@ in
       hwdec = if isLinux then "auto-safe" else "videotoolbox";
       vo = "gpu-next";
       profile = "gpu-hq";
+      video-sync = "display-resample";
+      interpolation = true;
+      tscale = "mitchell";
+      volume-max = 100;
+      loop-playlist = "force";
       script-opts = "ytdl_hook-ytdl_path=yt-dlp";
     };
     scripts = with pkgs.mpvScripts; [
       modernz
       thumbfast
       mpv-cheatsheet
+      pkgs.mpvScripts.builtins.autoload
     ];
     scriptOpts = {
       modernz = {
