@@ -11,6 +11,7 @@
     ../../modules/home-manager/ghostty.nix
     ../../modules/home-manager/zed.nix
     ../../modules/home-manager/mpv.nix
+    ../../modules/home-manager/nh.nix
   ];
 
   home = {
