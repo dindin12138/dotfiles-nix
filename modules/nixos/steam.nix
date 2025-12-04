@@ -16,6 +16,7 @@
   };
   programs.gamemode.enable = true;
   programs.gamescope.enable = true;
+  hardware.steam-hardware.enable = true;
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
