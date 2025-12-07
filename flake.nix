@@ -28,7 +28,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     st.url = "github:dindin12138/st";
-    nixvim.url = "github:dindin12138/nixvim";
+    nixvim = {
+      url = "github:dindin12138/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     dgop = {
       url = "github:AvengeMedia/dgop";
       inputs.nixpkgs.follows = "nixpkgs";
