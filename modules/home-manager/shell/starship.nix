@@ -25,9 +25,7 @@
         "$nix_shell"
         "$time"
         "[ ](fg:#${config.lib.stylix.colors.base00})"
-        ''
-
-          $character''
+        ''$character''
       ];
 
       directory = {
