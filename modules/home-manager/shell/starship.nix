@@ -25,7 +25,8 @@
         "$nix_shell"
         "$time"
         "[ ](fg:#${config.lib.stylix.colors.base00})"
-        ''$character''
+        "$line_break"
+        "$character"
       ];
 
       directory = {
@@ -94,6 +95,13 @@
         format = "[[ $symbol ($version) ](fg:#${config.lib.stylix.colors.base0D} bg:#${config.lib.stylix.colors.base02})]($style)";
       };
 
+      cpp = {
+        symbol = "";
+        disabled = false;
+        style = "bg:#${config.lib.stylix.colors.base02}";
+        format = "[[ $symbol ($version) ](fg:#${config.lib.stylix.colors.base0D} bg:#${config.lib.stylix.colors.base02})]($style)";
+      };
+
       php = {
         symbol = "";
         style = "bg:#${config.lib.stylix.colors.base02}";
@@ -109,10 +117,10 @@
 
       nix_shell = {
         disabled = false;
-        impure_msg = "[impure](bold red)";
-        pure_msg = "[pure](bold green)";
-        unknown_msg = "[unknown](bold yellow)";
-        format = "[ 󱄅 $state( ($name))](bold blue) ";
+        impure_msg = "[impure](bold fg:#${config.lib.stylix.colors.base08})";
+        pure_msg = "[pure](bold fg:#${config.lib.stylix.colors.base0B})";
+        unknown_msg = "[unknown](bold fg:#${config.lib.stylix.colors.base0A})";
+        format = "[ 󱄅 $state( ($name))](bold fg:#${config.lib.stylix.colors.base0D}) ";
       };
     };
   };
