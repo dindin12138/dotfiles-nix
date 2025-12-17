@@ -1,6 +1,7 @@
 { pkgs, config, ... }:
 {
-  programs.dankMaterialShell.greeter = {
+  # programs.dankMaterialShell.greeter = {
+  services.displayManager.dms-greeter = {
     enable = true;
     configHome = "/home/din";
     compositor = {
