@@ -20,6 +20,7 @@ in
       "copy-on-select" = true;
       "cursor-style" = "bar";
       "cursor-style-blink" = true;
+      "font-size" = if isLinux then 14 else 15;
     };
   };
 }

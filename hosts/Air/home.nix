@@ -9,9 +9,10 @@
     ../../modules/home-manager/yt-dlp.nix
     ../../modules/home-manager/vscode
     ../../modules/home-manager/ghostty.nix
-    ../../modules/home-manager/zed.nix
+    # ../../modules/home-manager/zed.nix
     ../../modules/home-manager/mpv.nix
     ../../modules/home-manager/nh.nix
+    ../../modules/home-manager/env.nix
   ];
 
   home = {

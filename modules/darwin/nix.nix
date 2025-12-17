@@ -4,6 +4,10 @@
       experimental-features = "nix-command flakes";
       # auto-optimise-store = true;
       substituters = [ "https://mirrors.ustc.edu.cn/nix-channels/store" ];
+      trusted-users = [
+        "root"
+        "@admin"
+      ];
     };
     gc = {
       automatic = true;

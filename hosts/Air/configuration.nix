@@ -25,6 +25,8 @@
     nerd-fonts.fira-code
   ];
 
+  networking.hostName = "Darwin-Air";
+
   home-manager = {
     extraSpecialArgs = { inherit inputs outputs; };
     users = {
