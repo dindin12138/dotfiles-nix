@@ -4,6 +4,7 @@
     inputs.home-manager.nixosModules.home-manager
     inputs.disko.nixosModules.disko
     inputs.stylix.nixosModules.stylix
+    inputs.dms.nixosModules.greeter
 
     ./hardware-configuration.nix
     ./disk-config.nix

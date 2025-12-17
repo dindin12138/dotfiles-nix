@@ -1,13 +1,7 @@
+{ pkgs, config, ... }:
 {
-  pkgs,
-  config,
-  inputs,
-  ...
-}:
-{
-  services.displayManager.dms-greeter = {
+  programs.dankMaterialShell.greeter = {
     enable = true;
-    package = inputs.dms.packages.${pkgs.stdenv.hostPlatform.system}.default;
     configHome = "/home/din";
     compositor = {
       name = "niri"; # Required. Can be also "hyprland" or "sway"
