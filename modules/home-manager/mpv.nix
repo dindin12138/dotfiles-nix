@@ -1,6 +1,13 @@
-{ config, pkgs, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 let
   isLinux = pkgs.stdenv.isLinux;
+  isDarwin = pkgs.stdenv.isDarwin;
+  uoscFonts = "${pkgs.mpvScripts.uosc}/share/fonts";
 in
 {
   programs.mpv = {
@@ -52,5 +59,9 @@ in
         languages = "slang,en";
       };
     };
+  };
+  xdg.configFile = lib.mkIf isDarwin {
+    "mpv/fonts/uosc_icons.otf".source = "${uoscFonts}/uosc_icons.otf";
+    "mpv/fonts/uosc_textures.ttf".source = "${uoscFonts}/uosc_textures.ttf";
   };
 }
