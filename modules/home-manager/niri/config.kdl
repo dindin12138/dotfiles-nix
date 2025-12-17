@@ -500,8 +500,10 @@ window-rule {
 
       Alt+Page_Down      { focus-workspace-down; }
       Alt+Page_Up        { focus-workspace-up; }
-      Alt+Tab              { focus-workspace-down; }
-      Alt+Shift+Tab              { focus-workspace-up; }
+      Alt+Tab            { focus-workspace-down; }
+      Alt+Shift+Tab      { focus-workspace-up; }
+      // Alt+Tab            { next-window; }
+      // Alt+Shift+Tab      { previous-window; }
       Alt+Ctrl+Page_Down { move-column-to-workspace-down; }
       Alt+Ctrl+Page_Up   { move-column-to-workspace-up; }
       Alt+Ctrl+U         { move-column-to-workspace-down; }

@@ -4,7 +4,6 @@
     inputs.home-manager.nixosModules.home-manager
     inputs.disko.nixosModules.disko
     inputs.stylix.nixosModules.stylix
-    inputs.dankMaterialShell.nixosModules.greeter
 
     ./hardware-configuration.nix
     ./disk-config.nix
@@ -13,7 +12,7 @@
     ../../modules/nixos/fcitx5.nix
     ../../modules/nixos/fonts.nix
     ../../modules/nixos/nix.nix
-    ../../modules/nixos/greetd.nix
+    ../../modules/nixos/dms-greeter.nix
     ../../modules/nixos/polkit.nix
     ../../modules/nixos/packages.nix
     ../../modules/nixos/powermanager.nix

@@ -1,9 +1,8 @@
 { inputs, config, ... }:
 {
   imports = [
-    # inputs.stylix.homeModules.stylix
     inputs.niri.homeModules.niri
-    inputs.dankMaterialShell.homeModules.dankMaterialShell.default
+    inputs.dms.homeModules.dankMaterialShell.default
     inputs.zen-browser.homeModules.twilight
     inputs.vicinae.homeManagerModules.default
 

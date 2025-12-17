@@ -2,11 +2,17 @@
 {
   programs.dankMaterialShell = {
     enable = true;
-    systemd.enable = true;
-    enableDynamicTheming = false;
-    enableVPN = false;
-    enableColorPicker = false;
-    enableClipboard = false;
+    systemd = {
+      enable = true; # Systemd service for auto-start
+      restartIfChanged = true; # Auto-restart dms.service when dankMaterialShell changes
+    };
+    # Core features
+    enableSystemMonitoring = true; # System monitoring widgets (dgop)
+    enableClipboard = false; # Clipboard history manager
+    enableVPN = false; # VPN management widget
+    enableDynamicTheming = false; # Wallpaper-based theming (matugen)
+    enableAudioWavelength = true; # Audio visualizer (cava)
+    enableCalendarEvents = true; # Calendar integration (khal)
     plugins = {
       dank-actions = {
         enable = true;
