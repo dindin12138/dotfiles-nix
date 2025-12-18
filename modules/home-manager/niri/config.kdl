@@ -197,7 +197,7 @@
           off
 
           width 4
-          active-color "#ffc87f"
+          active-color "#89b4fa"
           inactive-color "#505050"
 
           // Color of the border around windows that request your attention.
@@ -380,6 +380,30 @@ window-rule {
       place-within-backdrop true
   }
 
+recent-windows {
+    // off
+    debounce-ms 750
+
+    open-delay-ms 150
+
+    highlight {
+        active-color "#89b4faff"
+        urgent-color "#f38ba8ff"
+        padding 10
+        corner-radius 12
+    }
+
+    previews {
+        max-height 480
+        max-scale 0.5
+    }
+
+    binds {
+        Alt+Tab         { next-window; }
+        Alt+Shift+Tab   { previous-window; }
+    }
+}
+
 
   binds {
       // Keys consist of modifiers separated by + signs, followed by an XKB key name
@@ -500,10 +524,8 @@ window-rule {
 
       Alt+Page_Down      { focus-workspace-down; }
       Alt+Page_Up        { focus-workspace-up; }
-      Alt+Tab            { focus-workspace-down; }
-      Alt+Shift+Tab      { focus-workspace-up; }
-      // Alt+Tab            { next-window; }
-      // Alt+Shift+Tab      { previous-window; }
+      // Alt+Tab            { focus-workspace-down; }
+      // Alt+Shift+Tab      { focus-workspace-up; }
       Alt+Ctrl+Page_Down { move-column-to-workspace-down; }
       Alt+Ctrl+Page_Up   { move-column-to-workspace-up; }
       Alt+Ctrl+U         { move-column-to-workspace-down; }
