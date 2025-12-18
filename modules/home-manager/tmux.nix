@@ -10,9 +10,12 @@
     prefix = "`";
     shell = "${pkgs.fish}/bin/fish";
     terminal = "screen-256color";
-    customPaneNavigationAndResize = true;
+    customPaneNavigationAndResize = false;
     disableConfirmationPrompt = true;
     tmuxinator.enable = true;
+    plugins = with pkgs.tmuxPlugins; [
+      vim-tmux-navigator
+    ];
     extraConfig = ''
       set -g renumber-windows on
       set -g repeat-time 1000
