@@ -15,6 +15,7 @@
       "godot"
       "vlc"
       "typora@free"
+      "zen"
     ];
     # masApps = { wechat = ""; };
     onActivation = {
