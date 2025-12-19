@@ -32,6 +32,10 @@
       url = "github:dindin12138/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nvf = {
+      url = "github:dindin12138/nvf";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     dms = {
       url = "github:AvengeMedia/DankMaterialShell/stable";
       inputs.nixpkgs.follows = "nixpkgs";

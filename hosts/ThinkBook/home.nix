@@ -14,6 +14,7 @@
     ../../modules/home-manager/packages.nix
     ../../modules/home-manager/fcitx5.nix
     ../../modules/home-manager/nixvim.nix
+    ../../modules/home-manager/nvf.nix
     ../../modules/home-manager/btop.nix
     ../../modules/home-manager/bat.nix
     ../../modules/home-manager/stylix.nix
