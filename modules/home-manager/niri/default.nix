@@ -1,5 +1,8 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 {
+  imports = [
+    inputs.niri.homeModules.niri
+  ];
   home.packages = with pkgs; [
     xwayland-satellite
   ];

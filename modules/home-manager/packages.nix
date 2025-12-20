@@ -9,7 +9,6 @@
     google-chrome
     obsidian
     clash-verge-rev
-    gemini-cli
     wechat
     godot_4
     obs-studio

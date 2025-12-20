@@ -1,11 +1,6 @@
-{ inputs, config, ... }:
+{ config, ... }:
 {
   imports = [
-    inputs.niri.homeModules.niri
-    inputs.dms.homeModules.dankMaterialShell.default
-    inputs.zen-browser.homeModules.twilight
-    inputs.vicinae.homeManagerModules.default
-
     ../../modules/home-manager/niri
     ../../modules/home-manager/vicinae.nix
     ../../modules/home-manager/shell
@@ -28,11 +23,13 @@
     ../../modules/home-manager/foot.nix
     ../../modules/home-manager/ghostty.nix
     ../../modules/home-manager/dms.nix
+    ../../modules/home-manager/noctalia-shell.nix
     ../../modules/home-manager/zed.nix
     ../../modules/home-manager/zen.nix
     ../../modules/home-manager/env.nix
     ../../modules/home-manager/udisk.nix
     ../../modules/home-manager/nh.nix
+    ../../modules/home-manager/gemini.nix
   ];
 
   nixpkgs = {

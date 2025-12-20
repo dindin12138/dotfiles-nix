@@ -1,5 +1,13 @@
-{ pkgs, config, ... }:
 {
+  pkgs,
+  config,
+  inputs,
+  ...
+}:
+{
+  imports = [
+    inputs.vicinae.homeManagerModules.default
+  ];
   stylix.targets.vicinae.enable = true;
   services.vicinae = {
     enable = true;

@@ -5,7 +5,6 @@
     eza
     fd
     ripgrep
-    gemini-cli
     google-chrome
     zotero
     raycast

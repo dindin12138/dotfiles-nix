@@ -1,8 +1,11 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 let
   colorScheme = "catppuccin-mocha";
 in
 {
+  imports = [
+    inputs.stylix.nixosModules.stylix
+  ];
   stylix = {
     enable = true;
     autoEnable = false;

@@ -622,11 +622,11 @@
         "nixvim": "nixvim_2"
       },
       "locked": {
-        "lastModified": 1766121503,
-        "narHash": "sha256-v0zciYjwMXJh7XcR7+srujhxCFa6JYxLtjwRLSxNF+o=",
+        "lastModified": 1766135983,
+        "narHash": "sha256-qzaVASzYgJ35vlPWeuRnwM/4pLeYgC676YbOFzZjXVI=",
         "owner": "dindin12138",
         "repo": "nixvim",
-        "rev": "98dc12328b127fc9319ca41e4f907863d9b35900",
+        "rev": "ee22c6b74c4795dd1a414a00835d4697bc9dca05",
         "type": "github"
       },
       "original": {
@@ -652,6 +652,26 @@
       "original": {
         "owner": "nix-community",
         "repo": "nixvim",
+        "type": "github"
+      }
+    },
+    "noctalia": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1766192772,
+        "narHash": "sha256-E2we2DSp22pHHpIzh9pDmqLy3a1DwWnkN2m40U710S8=",
+        "owner": "noctalia-dev",
+        "repo": "noctalia-shell",
+        "rev": "6186b148eb6658499880172ae66d550b207aa5c0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "noctalia-dev",
+        "repo": "noctalia-shell",
         "type": "github"
       }
     },
@@ -758,6 +778,7 @@
         "nix-homebrew": "nix-homebrew",
         "nixpkgs": "nixpkgs",
         "nixvim": "nixvim",
+        "noctalia": "noctalia",
         "nvf": "nvf",
         "st": "st",
         "stylix": "stylix",

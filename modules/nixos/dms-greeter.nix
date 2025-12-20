@@ -1,5 +1,13 @@
-{ pkgs, config, ... }:
 {
+  pkgs,
+  config,
+  inputs,
+  ...
+}:
+{
+  imports = [
+    inputs.dms.nixosModules.greeter
+  ];
   programs.dankMaterialShell.greeter = {
     enable = true;
     configHome = "/home/din";
