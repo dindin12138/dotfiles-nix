@@ -25,8 +25,8 @@ in
       sub-auto = "fuzzy";
       keep-open = true;
       screenshot-directory = "${config.home.homeDirectory}/Pictures/Screenshots";
-      gpu-api = if isLinux then "opengl" else "auto";
-      gpu-context = if isLinux then "wayland" else "auto";
+      gpu-api = "auto";
+      gpu-context = "auto";
       hwdec = if isLinux then "auto-safe" else "videotoolbox";
       vo = "gpu-next";
       profile = "gpu-hq";
@@ -43,6 +43,7 @@ in
         uosc
         thumbfast
         mpv-cheatsheet
+        autoload
       ]
       ++ (if isLinux then [ mpris ] else [ ]);
     scriptOpts = {
@@ -55,7 +56,6 @@ in
         timeline_style = "line";
         timeline_line_width = 2;
         buffered_time_threshold = 60;
-        autoload = "yes";
         languages = "slang,en";
       };
     };
