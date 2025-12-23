@@ -5,10 +5,10 @@
   ];
   programs.dankMaterialShell = {
     enable = true;
-    systemd = {
-      enable = true; # Systemd service for auto-start
-      restartIfChanged = true; # Auto-restart dms.service when dankMaterialShell changes
-    };
+    # systemd = {
+    #   enable = true; # Systemd service for auto-start
+    #   restartIfChanged = true; # Auto-restart dms.service when dankMaterialShell changes
+    # };
     # Core features
     enableSystemMonitoring = true; # System monitoring widgets (dgop)
     enableClipboard = false; # Clipboard history manager
