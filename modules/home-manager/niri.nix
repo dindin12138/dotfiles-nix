@@ -2,6 +2,7 @@
   pkgs,
   inputs,
   config,
+  lib,
   ...
 }:
 {
@@ -72,12 +73,7 @@
 
       # --- Spawn at Startup ---
       spawn-at-startup = [
-        {
-          argv = [
-            "dms"
-            "run"
-          ];
-        }
+        { argv = [ "noctalia-shell" ]; }
         { argv = [ "clash-verge" ]; }
       ];
 
@@ -94,7 +90,7 @@
 
       xwayland-satellite = {
         enable = true;
-        # path = lib.getExe pkgs.xwayland-satellite;
+        path = lib.getExe pkgs.xwayland-satellite;
       };
 
       # --- Window Rules ---
@@ -182,7 +178,8 @@
       # --- Layer Rules ---
       layer-rules = [
         {
-          matches = [ { namespace = "dms:blurwallpaper"; } ];
+          # matches = [ { namespace = "dms:blurwallpaper"; } ];
+          matches = [ { namespace = "^noctalia-overview*"; } ];
           place-within-backdrop = true;
         }
       ];
@@ -200,99 +197,148 @@
         ];
         "Alt+E".action.spawn = [ "nautilus" ];
 
+        # "Super+Alt+L".action.spawn = [
+        #   "dms"
+        #   "ipc"
+        #   "call"
+        #   "lock"
+        #   "lock"
+        # ];
         "Super+Alt+L".action.spawn = [
-          "dms"
+          "noctalia-shell"
           "ipc"
           "call"
-          "lock"
+          "lockScreen"
           "lock"
         ];
         "Alt+C".action.spawn = [
           "vicinae"
           "vicinae://extensions/vicinae/clipboard/history"
         ];
-        "Alt+Shift+X".action.spawn = [
-          "dms"
-          "ipc"
-          "call"
-          "powermenu"
-          "toggle"
-        ];
+        # "Alt+Shift+X".action.spawn = [
+        #   "dms"
+        #   "ipc"
+        #   "call"
+        #   "powermenu"
+        #   "toggle"
+        # ];
+        # "Mod+C".action.spawn = [
+        #   "dms"
+        #   "ipc"
+        #   "call"
+        #   "control-center"
+        #   "toggle"
+        # ];
         "Mod+C".action.spawn = [
-          "dms"
+          "noctalia-shell"
           "ipc"
           "call"
-          "control-center"
+          "controlCenter"
           "toggle"
         ];
 
         # Audio
         "XF86AudioRaiseVolume" = {
           allow-when-locked = true;
+          # action.spawn = [
+          #   "dms"
+          #   "ipc"
+          #   "call"
+          #   "audio"
+          #   "increment"
+          #   "3"
+          # ];
           action.spawn = [
-            "dms"
+            "noctalia-shell"
             "ipc"
             "call"
-            "audio"
-            "increment"
-            "3"
+            "volume"
+            "increase"
           ];
         };
         "XF86AudioLowerVolume" = {
           allow-when-locked = true;
+          # action.spawn = [
+          #   "dms"
+          #   "ipc"
+          #   "call"
+          #   "audio"
+          #   "decrement"
+          #   "3"
+          # ];
           action.spawn = [
-            "dms"
+            "noctalia-shell"
             "ipc"
             "call"
-            "audio"
-            "decrement"
-            "3"
+            "volume"
+            "decrease"
           ];
         };
         "XF86AudioMute" = {
           allow-when-locked = true;
+          # action.spawn = [
+          #   "dms"
+          #   "ipc"
+          #   "call"
+          #   "audio"
+          #   "mute"
+          # ];
           action.spawn = [
-            "dms"
+            "noctalia-shell"
             "ipc"
             "call"
-            "audio"
-            "mute"
+            "volume"
+            "muteOutput"
           ];
         };
         "XF86AudioMicMute" = {
           allow-when-locked = true;
           action.spawn = [
-            "dms"
+            "noctalia-shell"
             "ipc"
             "call"
-            "audio"
-            "micmute"
+            "volume"
+            "muteInput"
           ];
         };
 
         # Brightness
         "XF86MonBrightnessUp" = {
           allow-when-locked = true;
+          # action.spawn = [
+          #   "dms"
+          #   "ipc"
+          #   "call"
+          #   "brightness"
+          #   "increment"
+          #   "5"
+          #   ""
+          # ];
           action.spawn = [
-            "dms"
+            "noctalia-shell"
             "ipc"
             "call"
             "brightness"
-            "increment"
-            "5"
-            ""
+            "increase"
           ];
         };
         "XF86MonBrightnessDown" = {
           allow-when-locked = true;
+          # action.spawn = [
+          #   "dms"
+          #   "ipc"
+          #   "call"
+          #   "brightness"
+          #   "decrement"
+          #   "5"
+          #   ""
+          # ];
           action.spawn = [
-            "dms"
+            "noctalia-shell"
             "ipc"
             "call"
             "brightness"
-            "decrement"
-            "5"
-            ""
+            "decrease"
           ];
         };
 
