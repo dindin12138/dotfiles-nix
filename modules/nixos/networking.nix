@@ -3,7 +3,10 @@
     hostName = "nixos-tb";
     networkmanager = {
       enable = true;
-      wifi.backend = "iwd";
+      wifi = {
+        backend = "iwd";
+        powersave = false;
+      };
     };
     wireless.iwd = {
       enable = true;
