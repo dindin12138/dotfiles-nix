@@ -210,7 +210,6 @@
       # --- Layer Rules ---
       layer-rules = [
         {
-          # matches = [ { namespace = "dms:blurwallpaper"; } ];
           matches = [ { namespace = "^noctalia-overview*"; } ];
           place-within-backdrop = true;
         }
@@ -229,13 +228,6 @@
         ];
         "Alt+E".action.spawn = [ "nautilus" ];
 
-        # "Super+Alt+L".action.spawn = [
-        #   "dms"
-        #   "ipc"
-        #   "call"
-        #   "lock"
-        #   "lock"
-        # ];
         "Super+Alt+L".action.spawn = [
           "noctalia-shell"
           "ipc"
@@ -247,20 +239,6 @@
           "vicinae"
           "vicinae://extensions/vicinae/clipboard/history"
         ];
-        # "Alt+Shift+X".action.spawn = [
-        #   "dms"
-        #   "ipc"
-        #   "call"
-        #   "powermenu"
-        #   "toggle"
-        # ];
-        # "Mod+C".action.spawn = [
-        #   "dms"
-        #   "ipc"
-        #   "call"
-        #   "control-center"
-        #   "toggle"
-        # ];
         "Mod+C".action.spawn = [
           "noctalia-shell"
           "ipc"
@@ -272,14 +250,6 @@
         # Audio
         "XF86AudioRaiseVolume" = {
           allow-when-locked = true;
-          # action.spawn = [
-          #   "dms"
-          #   "ipc"
-          #   "call"
-          #   "audio"
-          #   "increment"
-          #   "3"
-          # ];
           action.spawn = [
             "noctalia-shell"
             "ipc"
@@ -290,14 +260,6 @@
         };
         "XF86AudioLowerVolume" = {
           allow-when-locked = true;
-          # action.spawn = [
-          #   "dms"
-          #   "ipc"
-          #   "call"
-          #   "audio"
-          #   "decrement"
-          #   "3"
-          # ];
           action.spawn = [
             "noctalia-shell"
             "ipc"
@@ -308,13 +270,6 @@
         };
         "XF86AudioMute" = {
           allow-when-locked = true;
-          # action.spawn = [
-          #   "dms"
-          #   "ipc"
-          #   "call"
-          #   "audio"
-          #   "mute"
-          # ];
           action.spawn = [
             "noctalia-shell"
             "ipc"
@@ -337,15 +292,6 @@
         # Brightness
         "XF86MonBrightnessUp" = {
           allow-when-locked = true;
-          # action.spawn = [
-          #   "dms"
-          #   "ipc"
-          #   "call"
-          #   "brightness"
-          #   "increment"
-          #   "5"
-          #   ""
-          # ];
           action.spawn = [
             "noctalia-shell"
             "ipc"
@@ -356,15 +302,6 @@
         };
         "XF86MonBrightnessDown" = {
           allow-when-locked = true;
-          # action.spawn = [
-          #   "dms"
-          #   "ipc"
-          #   "call"
-          #   "brightness"
-          #   "decrement"
-          #   "5"
-          #   ""
-          # ];
           action.spawn = [
             "noctalia-shell"
             "ipc"
