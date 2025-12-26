@@ -12,21 +12,21 @@
   services.vicinae = {
     enable = true;
     package = pkgs.vicinae;
-    autoStart = true;
-    useLayerShell = false;
+    systemd = {
+      enable = true;
+      autoStart = true;
+    };
     extensions = [ ];
     settings = {
       font = {
-        name = config.stylix.fonts.monospace.name;
+        normal = config.stylix.fonts.monospace.name;
         size = config.stylix.fonts.sizes.applications - 1;
       };
-      popToRootOnClose = true;
-      window = {
-        csd = true;
-      };
-      rootSearch = {
-        searchFiles = false;
-      };
+      pop_to_root_on_close = true;
+      search_files_in_root = false;
+      # window = {
+      #   csd = true;
+      # };
     };
   };
 }

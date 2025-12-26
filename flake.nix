@@ -27,25 +27,13 @@
       url = "github:nix-community/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    st.url = "github:dindin12138/st";
     nixvim = {
       url = "github:dindin12138/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nvf = {
-      url = "github:dindin12138/nvf";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    dms = {
-      url = "github:AvengeMedia/DankMaterialShell/stable";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    dms-plugins = {
-      url = "github:AvengeMedia/dms-plugins";
-      flake = false;
-    };
     noctalia = {
-      url = "github:noctalia-dev/noctalia-shell";
+      # url = "github:noctalia-dev/noctalia-shell";
+      url = "github:dindin12138/noctalia-shell/stable";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     zen-browser = {

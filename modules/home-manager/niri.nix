@@ -163,6 +163,38 @@
             proportion = 0.75;
           };
         }
+        # qBittorrent Magnet Link
+        {
+          matches = [
+            {
+              app-id = "^org\\.qbittorrent\\.qBittorrent$";
+              title = "^Magnet link$";
+            }
+          ];
+          open-floating = true;
+          default-column-width = {
+            proportion = 0.75;
+          };
+          default-window-height = {
+            proportion = 0.75;
+          };
+        }
+        # Nautilus "Open Files" Dialog
+        {
+          matches = [
+            {
+              app-id = "^org\\.gnome\\.Nautilus$";
+              title = "^Open Files$";
+            }
+          ];
+          open-floating = true;
+          default-column-width = {
+            proportion = 0.75;
+          };
+          default-window-height = {
+            proportion = 0.75;
+          };
+        }
         # Rounded corners (commented out in original)
         {
           geometry-corner-radius = {

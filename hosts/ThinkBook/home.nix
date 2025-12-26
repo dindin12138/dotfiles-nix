@@ -9,7 +9,6 @@
     ../../modules/home-manager/packages.nix
     ../../modules/home-manager/fcitx5.nix
     ../../modules/home-manager/nixvim.nix
-    ../../modules/home-manager/nvf.nix
     ../../modules/home-manager/btop.nix
     ../../modules/home-manager/bat.nix
     ../../modules/home-manager/stylix.nix
@@ -22,7 +21,6 @@
     ../../modules/home-manager/qutebrowser.nix
     ../../modules/home-manager/foot.nix
     ../../modules/home-manager/ghostty.nix
-    ../../modules/home-manager/dms.nix
     ../../modules/home-manager/noctalia-shell.nix
     ../../modules/home-manager/zed.nix
     ../../modules/home-manager/zen.nix

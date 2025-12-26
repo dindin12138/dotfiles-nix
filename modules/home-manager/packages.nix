@@ -9,7 +9,7 @@
     google-chrome
     obsidian
     clash-verge-rev
-    wechat
+    # wechat
     godot_4
     obs-studio
   ];
