@@ -8,8 +8,9 @@
       autoStart = true;
     };
     extensions = [ ];
-    useLayerShell = false;
+    # useLayerShell = false;
     settings = {
+      # launcher_window.layer_shell.enabled = false;
       font = {
         normal = config.stylix.fonts.monospace.name;
         size = config.stylix.fonts.sizes.applications - 1;
