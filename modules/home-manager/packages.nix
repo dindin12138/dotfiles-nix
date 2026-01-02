@@ -13,5 +13,6 @@
     # wechat
     godot_4
     obs-studio
+    localsend
   ];
 }

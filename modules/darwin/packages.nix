@@ -9,5 +9,6 @@
     zotero
     raycast
     qbittorrent-enhanced
+    localsend
   ];
 }
