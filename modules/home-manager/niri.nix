@@ -217,10 +217,10 @@
           };
         }
         # mpv Video Player (Auto-size)
-        {
-          matches = [ { app-id = "^mpv$"; } ];
-          open-floating = true;
-        }
+        # {
+        #   matches = [ { app-id = "^mpv$"; } ];
+        #   open-floating = true;
+        # }
         # Rounded corners (commented out in original)
         {
           geometry-corner-radius = {
