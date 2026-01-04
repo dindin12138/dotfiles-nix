@@ -19,8 +19,8 @@
     # masApps = { wechat = ""; };
     onActivation = {
       cleanup = "zap";
-      autoUpdate = true;
-      upgrade = true;
+      # autoUpdate = true;
+      # upgrade = true;
     };
   };
   environment.variables = {
