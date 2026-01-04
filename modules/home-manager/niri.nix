@@ -119,7 +119,7 @@
         }
         # Float Term
         {
-          matches = [ { app-id = "float-term"; } ];
+          matches = [ { app-id = "^float-term$"; } ];
           open-floating = true;
           default-column-width = {
             proportion = 0.75;
@@ -146,7 +146,7 @@
           matches = [
             {
               app-id = "^Zotero$";
-              title = "(Create Parent Item|New Collection)";
+              title = "^(Create Parent Item|New Collection)$";
             }
           ];
           default-column-width = {
@@ -160,8 +160,8 @@
         {
           matches = [
             {
-              app-id = "google-chrome";
-              title = "Open Files";
+              app-id = "^google-chrome$";
+              title = "^Open Files$";
             }
           ];
           open-floating = true;
