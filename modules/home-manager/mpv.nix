@@ -20,8 +20,9 @@ in
       osc = false;
       osd-bar = false;
       border = false;
-      keepaspect-window = if isLinux then false else true;
-      auto-window-resize = if isLinux then false else true;
+      keepaspect-window = true;
+      auto-window-resize = true;
+      autofit-larger = "90%x90%";
       force-window = "immediate";
       save-position-on-quit = true;
       sub-auto = "fuzzy";

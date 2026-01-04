@@ -94,6 +94,7 @@
         slowdown = 2.0;
       };
 
+      # --- xwayland ---
       xwayland-satellite = {
         enable = true;
         path = lib.getExe pkgs.xwayland-satellite;
@@ -129,23 +130,25 @@
         }
         # Zotero Dialogs
         {
-          matches = [
-            {
-              app-id = "Zotero";
-              title = "(Zotero Settings|Progress|Add-ons Manager|Plugins Manager|Add-on Market|User Information|Zotero Report)";
-            }
-          ];
+          matches = [ { app-id = "^Zotero$"; } ];
           open-floating = true;
         }
-        # Zotero Creation Dialogs
         {
           matches = [
             {
-              app-id = "Zotero";
+              app-id = "^Zotero$";
+              title = "Zotero$";
+            }
+          ];
+          open-floating = false;
+        }
+        {
+          matches = [
+            {
+              app-id = "^Zotero$";
               title = "(Create Parent Item|New Collection)";
             }
           ];
-          open-floating = true;
           default-column-width = {
             proportion = 0.29;
           };
@@ -200,6 +203,23 @@
           default-window-height = {
             proportion = 0.75;
           };
+        }
+        {
+          matches = [
+            { app-id = "^imv$"; }
+          ];
+          open-floating = true;
+          default-column-width = {
+            proportion = 0.75;
+          };
+          default-window-height = {
+            proportion = 0.75;
+          };
+        }
+        # mpv Video Player (Auto-size)
+        {
+          matches = [ { app-id = "^mpv$"; } ];
+          open-floating = true;
         }
         # Rounded corners (commented out in original)
         {
