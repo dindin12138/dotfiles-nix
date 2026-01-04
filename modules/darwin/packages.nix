@@ -10,5 +10,6 @@
     raycast
     qbittorrent-enhanced
     localsend
+    obsidian
   ];
 }

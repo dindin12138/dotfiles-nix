@@ -14,6 +14,7 @@
     ../../modules/home-manager/env.nix
     ../../modules/home-manager/tmux.nix
     ../../modules/home-manager/gemini.nix
+    ../../modules/home-manager/zen.nix
     # ../../modules/home-manager/zed.nix
   ];
 
