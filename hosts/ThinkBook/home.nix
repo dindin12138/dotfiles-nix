@@ -22,7 +22,7 @@
     ../../modules/home-manager/foot.nix
     ../../modules/home-manager/ghostty.nix
     ../../modules/home-manager/noctalia-shell.nix
-    ../../modules/home-manager/dms.nix
+    # ../../modules/home-manager/dms.nix
     ../../modules/home-manager/zed.nix
     ../../modules/home-manager/zen.nix
     ../../modules/home-manager/env.nix

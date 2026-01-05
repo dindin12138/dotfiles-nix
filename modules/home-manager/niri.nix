@@ -245,8 +245,6 @@
       # --- Key Bindings ---
       binds = {
         "Alt+Shift+Slash".action.show-hotkey-overlay = [ ];
-
-        # Running programs
         "Alt+T".action.spawn = [ "foot" ];
         "Alt+Return".action.spawn = [ "foot" ];
         "Alt+D".action.spawn = [
@@ -254,14 +252,6 @@
           "toggle"
         ];
         "Alt+E".action.spawn = [ "nautilus" ];
-
-        # "Super+Alt+L".action.spawn = [
-        #   "dms"
-        #   "ipc"
-        #   "call"
-        #   "lock"
-        #   "lock"
-        # ];
         "Super+Alt+L".action.spawn = [
           "noctalia-shell"
           "ipc"
@@ -280,13 +270,6 @@
           "powermenu"
           "toggle"
         ];
-        # "Mod+C".action.spawn = [
-        #   "dms"
-        #   "ipc"
-        #   "call"
-        #   "control-center"
-        #   "toggle"
-        # ];
         "Mod+C".action.spawn = [
           "noctalia-shell"
           "ipc"
@@ -294,18 +277,8 @@
           "controlCenter"
           "toggle"
         ];
-
-        # Audio
         "XF86AudioRaiseVolume" = {
           allow-when-locked = true;
-          # action.spawn = [
-          #   "dms"
-          #   "ipc"
-          #   "call"
-          #   "audio"
-          #   "increment"
-          #   "3"
-          # ];
           action.spawn = [
             "noctalia-shell"
             "ipc"
@@ -316,14 +289,6 @@
         };
         "XF86AudioLowerVolume" = {
           allow-when-locked = true;
-          # action.spawn = [
-          #   "dms"
-          #   "ipc"
-          #   "call"
-          #   "audio"
-          #   "decrement"
-          #   "3"
-          # ];
           action.spawn = [
             "noctalia-shell"
             "ipc"
@@ -334,13 +299,6 @@
         };
         "XF86AudioMute" = {
           allow-when-locked = true;
-          # action.spawn = [
-          #   "dms"
-          #   "ipc"
-          #   "call"
-          #   "audio"
-          #   "mute"
-          # ];
           action.spawn = [
             "noctalia-shell"
             "ipc"
@@ -359,19 +317,8 @@
             "muteInput"
           ];
         };
-
-        # Brightness
         "XF86MonBrightnessUp" = {
           allow-when-locked = true;
-          # action.spawn = [
-          #   "dms"
-          #   "ipc"
-          #   "call"
-          #   "brightness"
-          #   "increment"
-          #   "5"
-          #   ""
-          # ];
           action.spawn = [
             "noctalia-shell"
             "ipc"
@@ -382,15 +329,6 @@
         };
         "XF86MonBrightnessDown" = {
           allow-when-locked = true;
-          # action.spawn = [
-          #   "dms"
-          #   "ipc"
-          #   "call"
-          #   "brightness"
-          #   "decrement"
-          #   "5"
-          #   ""
-          # ];
           action.spawn = [
             "noctalia-shell"
             "ipc"
@@ -399,14 +337,10 @@
             "decrease"
           ];
         };
-
-        # Overview
         "Alt+O" = {
           repeat = false;
           action.toggle-overview = [ ];
         };
-
-        # Window management
         "Alt+Shift+Q" = {
           repeat = false;
           action.close-window = [ ];
@@ -435,7 +369,6 @@
         "Alt+Ctrl+Home".action.move-column-to-first = [ ];
         "Alt+Ctrl+End".action.move-column-to-last = [ ];
 
-        # Monitor Focus
         "Mod+Left".action.focus-monitor-left = [ ];
         "Mod+Down".action.focus-monitor-down = [ ];
         "Mod+Up".action.focus-monitor-up = [ ];
@@ -445,7 +378,6 @@
         "Mod+K".action.focus-monitor-up = [ ];
         "Mod+L".action.focus-monitor-right = [ ];
 
-        # Monitor Move
         "Mod+Shift+Left".action.move-column-to-monitor-left = [ ];
         "Mod+Shift+Down".action.move-column-to-monitor-down = [ ];
         "Mod+Shift+Up".action.move-column-to-monitor-up = [ ];
@@ -455,7 +387,6 @@
         "Mod+Shift+K".action.move-column-to-monitor-up = [ ];
         "Mod+Shift+L".action.move-column-to-monitor-right = [ ];
 
-        # Workspace Navigation
         "Alt+Page_Down".action.focus-workspace-down = [ ];
         "Alt+Page_Up".action.focus-workspace-up = [ ];
         "Alt+Ctrl+Page_Down".action.move-column-to-workspace-down = [ ];
@@ -468,7 +399,6 @@
         "Alt+Ctrl+U".action.move-column-to-workspace-down = [ ];
         "Alt+Ctrl+I".action.move-column-to-workspace-up = [ ];
 
-        # Mouse Wheel Binds (with cooldown)
         "Alt+WheelScrollDown" = {
           cooldown-ms = 150;
           action.focus-workspace-down = [ ];
