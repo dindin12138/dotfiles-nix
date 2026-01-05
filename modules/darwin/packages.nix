@@ -12,5 +12,6 @@
     localsend
     obsidian
     aerospace
+    iina
   ];
 }

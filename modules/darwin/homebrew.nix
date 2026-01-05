@@ -12,7 +12,6 @@
     taps = builtins.attrNames config.nix-homebrew.taps;
     casks = [
       "godot"
-      "vlc"
       "typora@free"
       "pixpin"
       "zen"
