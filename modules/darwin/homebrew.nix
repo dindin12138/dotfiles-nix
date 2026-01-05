@@ -11,11 +11,11 @@
     enable = true;
     taps = builtins.attrNames config.nix-homebrew.taps;
     casks = [
-      # "obsidian" # use nixpkgs
       "godot"
       "vlc"
       "typora@free"
       "pixpin"
+      "zen"
     ];
     # masApps = { wechat = ""; };
     onActivation = {

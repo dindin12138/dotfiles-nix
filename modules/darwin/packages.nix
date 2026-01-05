@@ -11,5 +11,6 @@
     qbittorrent-enhanced
     localsend
     obsidian
+    aerospace
   ];
 }
