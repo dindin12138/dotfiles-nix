@@ -19,4 +19,5 @@
     "defaultFormatter" = "esbenp.prettier-vscode";
   };
   "editor.minimap.enabled" = false;
+  "markdown.preview.fontSize" = 16;
 }

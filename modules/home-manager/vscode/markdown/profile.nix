@@ -1,5 +1,10 @@
-{ pkgs, ... }: {
-  userSettings = import ./userSettings.nix { inherit pkgs; };
+{ pkgs, lib, ... }:
+let
+  commonConfig = import ../userSettings.nix;
+  specificConfig = import ./userSettings.nix { inherit pkgs; };
+in
+{
+  userSettings = lib.recursiveUpdate commonConfig specificConfig;
   extensions = with pkgs.vscode-extensions; [
     # Theme
     catppuccin.catppuccin-vsc
@@ -14,8 +19,5 @@
     esbenp.prettier-vscode
 
     # christian-kohler.path-intellisense
-
-    # Neovim
-    # asvetliakov.vscode-neovim
   ];
 }

@@ -1,6 +1,10 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
+let
+  commonConfig = import ../userSettings.nix;
+  specificConfig = import ./userSettings.nix { inherit pkgs; };
+in
 {
-  userSettings = import ./userSettings.nix { inherit pkgs; };
+  userSettings = lib.recursiveUpdate commonConfig specificConfig;
   userTasks = import ./userTasks.nix { inherit pkgs; };
   extensions = with pkgs.vscode-extensions; [
     # Theme
@@ -26,8 +30,5 @@
     ms-vscode-remote.remote-ssh
     ms-vscode-remote.remote-containers
     ms-azuretools.vscode-docker
-
-    # Neovim
-    # asvetliakov.vscode-neovim
   ];
 }

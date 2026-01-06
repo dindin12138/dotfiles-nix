@@ -1,25 +1,5 @@
 { pkgs, ... }:
 {
-  "files" = {
-    "autoSave" = "afterDelay";
-    "autoGuessEncoding" = true;
-    "trimTrailingWhitespace" = true;
-  };
-  "workbench" = {
-    "colorTheme" = "Catppuccin Mocha";
-    "iconTheme" = "material-icon-theme";
-  };
-  "editor" = {
-    "fontFamily" = "'FiraCode Nerd Font'";
-    "fontSize" = 16;
-    "formatOnSave" = true;
-    "formatOnPaste" = true;
-    "formatOnType" = true;
-    "tabCompletion" = "on";
-    "cursorSmoothCaretAnimation" = "on";
-    "defaultFormatter" = "esbenp.prettier-vscode";
-  };
-  "editor.minimap.enabled" = false;
   "[cpp]" = {
     "editor.defaultFormatter" = "llvm-vs-code-extensions.vscode-clangd";
     "editor.quickSuggestions" = {
@@ -101,10 +81,4 @@
   "[nix]" = {
     "editor.defaultFormatter" = "jnoortheen.nix-ide";
   };
-  # "vscode-neovim" = {
-  #   "neovimExecutablePaths.linux" = "${pkgs.neovim}/bin/nvim";
-  #   "NVIM_APPNAME" = "vscode-neovim";
-  # };
-  # "extensions.experimental.affinity" = { "asvetliakov.vscode-neovim" = 1; };
-  "markdown.preview.fontSize" = 16;
 }
