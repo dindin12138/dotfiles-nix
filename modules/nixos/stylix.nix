@@ -10,6 +10,10 @@ in
     enable = true;
     autoEnable = false;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/${colorScheme}.yaml";
+    homeManagerIntegration = {
+      autoImport = true;
+      followSystem = true;
+    };
     polarity = "dark";
     fonts = {
       serif = {
@@ -45,6 +49,12 @@ in
       name = "Bibata-Modern-Ice";
       package = pkgs.bibata-cursors;
       size = 24;
+    };
+    opacity = {
+      applications = 1.0;
+      desktop = 1.0;
+      popups = 1.0;
+      terminal = 1.0;
     };
   };
 }
