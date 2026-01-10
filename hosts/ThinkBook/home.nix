@@ -28,6 +28,7 @@
     ../../modules/home-manager/udisk.nix
     ../../modules/home-manager/nh.nix
     ../../modules/home-manager/gemini.nix
+    ../../modules/home-manager/fuzzel.nix
   ];
 
   nixpkgs = {
