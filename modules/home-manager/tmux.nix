@@ -17,20 +17,22 @@
       vim-tmux-navigator
     ];
     extraConfig = ''
+      set -g allow-passthrough on
+
       set -g renumber-windows on
       set -g repeat-time 1000
 
       set -g pane-border-lines simple
-      set -g pane-border-style fg=black,bright
+      set -g pane-border-style fg=colour8
       set -g pane-active-border-style fg=magenta
 
-      set -g status-style bg=default,fg=black,bright
+      set -g status-style bg=default,fg=colour8
       set -g status-left ""
       set -g status-right "#[fg=black,bright]#S"
 
-      set -g window-status-format " ●"
-      set -g window-status-current-format " ●"
-      set -g window-status-current-style "#{?window_zoomed_flag,fg=yellow,fg=magenta,nobold}"
+      set -g window-status-format " "
+      set -g window-status-current-format " "
+      set -g window-status-current-style "fg=#{?window_zoomed_flag,yellow,magenta},nobold"
       set -g window-status-bell-style "fg=red,nobold"
 
       set -g allow-passthrough on
