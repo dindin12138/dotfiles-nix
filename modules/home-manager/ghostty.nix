@@ -15,7 +15,7 @@ in
       "macos-titlebar-style" = "transparent";
       "macos-option-as-alt" = true;
       "window-padding-x" = 10;
-      "window-padding-y" = 10;
+      "window-padding-y" = "10, 0";
       "mouse-hide-while-typing" = true;
       "copy-on-select" = true;
       "cursor-style" = "bar";
