@@ -103,6 +103,10 @@
             name = "ISO";
             text = "";
           }
+          {
+            name = "InfiniCloud";
+            text = "󰘿";
+          }
         ];
       };
     };
