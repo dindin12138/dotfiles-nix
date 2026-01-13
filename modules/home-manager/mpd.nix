@@ -1,4 +1,13 @@
-{ pkgs, config, ... }:
+{
+  pkgs,
+  config,
+  lib,
+  ...
+}:
+let
+  isDarwin = pkgs.stdenv.isDarwin;
+  isLinux = pkgs.stdenv.isLinux;
+in
 {
   home.packages = with pkgs; [ rmpc ];
   services.mpd = {
@@ -12,10 +21,20 @@
       auto_update "yes"
       restore_paused "yes"
 
-      audio_output {
-        type "pipewire"
-        name "PipeWire Output"
-      }
+      ${lib.optionalString isLinux ''
+        audio_output {
+          type "pipewire"
+          name "PipeWire Output"
+        }
+      ''}
+
+      ${lib.optionalString isDarwin ''
+        audio_output {
+          type "osx"
+          name "CoreAudio"
+          mixer_type "software"
+        }
+      ''}
 
       audio_output {
         type "fifo"
@@ -26,7 +45,7 @@
     '';
   };
   services.mpdris2 = {
-    enable = true;
+    enable = isLinux;
     multimediaKeys = true;
     notifications = true;
   };
