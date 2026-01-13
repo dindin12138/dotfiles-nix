@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 let
   isLinux = pkgs.stdenv.isLinux;
 in
@@ -10,7 +10,6 @@ in
     enableZshIntegration = true;
     enableFishIntegration = true;
     installBatSyntax = true;
-    systemd.enable = pkgs.stdenv.isLinux;
     settings = {
       "macos-titlebar-style" = "transparent";
       "macos-option-as-alt" = true;
@@ -20,6 +19,7 @@ in
       "copy-on-select" = true;
       "cursor-style" = "bar";
       "cursor-style-blink" = true;
+      "font-size" = config.stylix.fonts.sizes.terminal;
     };
   };
 }
