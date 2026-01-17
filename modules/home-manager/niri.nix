@@ -86,7 +86,8 @@
       # --- Misc Settings ---
       hotkey-overlay.skip-at-startup = true;
       prefer-no-csd = true;
-      screenshot-path = "${config.home.homeDirectory}/Pictures/Screenshots/%Y%m%d-%H%M%S.png";
+      # screenshot-path = "${config.home.homeDirectory}/Pictures/Screenshots/%Y%m%d-%H%M%S.png";
+      screenshot-path = "${config.home.homeDirectory}/InfiniCloud/Picture/Screenshots/%Y%m%d-%H%M%S.png";
 
       # --- Animations ---
       animations = {
