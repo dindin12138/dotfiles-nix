@@ -6,6 +6,7 @@
       "..." = "cd ../..";
 
       c = "clear";
+      cl = "clear";
 
       ls = "exa";
       la = "exa -lha --group-directories-first --git";
