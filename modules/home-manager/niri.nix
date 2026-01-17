@@ -74,12 +74,6 @@
       # --- Spawn at Startup ---
       spawn-at-startup = [
         { argv = [ "noctalia-shell" ]; }
-        # {
-        #   argv = [
-        #     "dms"
-        #     "run"
-        #   ];
-        # }
         { argv = [ "clash-verge" ]; }
       ];
 
@@ -238,7 +232,6 @@
       layer-rules = [
         {
           matches = [ { namespace = "^noctalia-overview*"; } ];
-          # matches = [ { namespace = "dms:blurwallpaper"; } ];
           place-within-backdrop = true;
         }
       ];
