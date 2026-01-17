@@ -5,6 +5,8 @@
     shellAliases = {
       "..." = "cd ../..";
 
+      c = "clear";
+
       ls = "exa";
       la = "exa -lha --group-directories-first --git";
       ll = "exa -lh --group-directories-first --git";
