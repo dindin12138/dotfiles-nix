@@ -41,7 +41,7 @@
       ];
     };
     Service = {
-      ExecStartPre = pkgs.lib.mkForce ("${pkgs.coreutils}/bin/sleep 5");
+      ExecStartPre = pkgs.lib.mkForce "${pkgs.coreutils}/bin/sleep 5";
       Restart = pkgs.lib.mkForce "on-failure";
       RestartSec = pkgs.lib.mkForce "10s";
       StartLimitBurst = 30;
