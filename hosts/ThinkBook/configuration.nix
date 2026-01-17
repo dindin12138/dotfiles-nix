@@ -10,7 +10,7 @@
     ../../modules/nixos/fcitx5.nix
     ../../modules/nixos/fonts.nix
     ../../modules/nixos/nix.nix
-    ../../modules/nixos/sddm.nix
+    ../../modules/nixos/greetd.nix
     ../../modules/nixos/polkit.nix
     ../../modules/nixos/packages.nix
     ../../modules/nixos/powermanager.nix
