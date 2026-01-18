@@ -65,14 +65,14 @@
   "notebook.markup.fontSize" = 16;
   "nix.enableLanguageServer" = true;
   "nix.serverPath" = "${pkgs.nixd}/bin/nixd";
-  "nix.formatterPath" = "${pkgs.nixfmt-classic}/bin/nixfmt";
+  "nix.formatterPath" = "${pkgs.nixfmt}/bin/nixfmt";
   "nix.serverSettings" = {
     "nil" = {
       "diagnostics.ignored" = [
         "unused_binding"
         "unused_with"
       ];
-      "formatting.command" = "${pkgs.nixfmt-classic}/bin/nixfmt";
+      "formatting.command" = "${pkgs.nixfmt}/bin/nixfmt";
     };
   };
   "nixpkgs" = {
