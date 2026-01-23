@@ -8,8 +8,6 @@
 {
   imports = [
     inputs.home-manager.darwinModules.home-manager
-    inputs.nix-homebrew.darwinModules.nix-homebrew
-    inputs.stylix.darwinModules.stylix
 
     ../../modules/darwin/nix.nix
     ../../modules/darwin/homebrew.nix
@@ -36,11 +34,6 @@
     useGlobalPkgs = true;
     useUserPackages = true;
   };
-
-  # environment.variables = {
-  #   HTTP_PROXY = "http://127.0.0.1:7897";
-  #   HTTPS_PROXY = "http://127.0.0.1:7897";
-  # };
 
   system.primaryUser = "din";
 

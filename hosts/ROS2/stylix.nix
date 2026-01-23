@@ -4,7 +4,7 @@ let
 in
 {
   imports = [
-    inputs.stylix.darwinModules.stylix
+    inputs.stylix.homeModules.stylix
   ];
   stylix = {
     enable = true;

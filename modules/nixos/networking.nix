@@ -1,6 +1,5 @@
 {
   networking = {
-    hostName = "nixos-tb";
     networkmanager = {
       enable = true;
       wifi = {

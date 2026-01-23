@@ -31,10 +31,6 @@
       url = "github:dindin12138/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    # dms = {
-    #   url = "github:AvengeMedia/DankMaterialShell/stable";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
     noctalia = {
       # url = "github:noctalia-dev/noctalia-shell";
       url = "github:dindin12138/noctalia-shell/stable";
@@ -50,6 +46,7 @@
       self,
       nixpkgs,
       nix-darwin,
+      home-manager,
       ...
     }@inputs:
     let
@@ -59,13 +56,20 @@
       darwinConfigurations = {
         "Darwin-Air" = nix-darwin.lib.darwinSystem {
           specialArgs = { inherit self inputs outputs; };
-          modules = [ ./hosts/Air/configuration.nix ];
+          modules = [ ./hosts/Darwin-Air/configuration.nix ];
         };
       };
       nixosConfigurations = {
-        "nixos-tb" = nixpkgs.lib.nixosSystem {
+        "NixOS-TB" = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs outputs; };
-          modules = [ ./hosts/ThinkBook/configuration.nix ];
+          modules = [ ./hosts/NixOS-TB/configuration.nix ];
+        };
+      };
+      homeConfigurations = {
+        "ROS2" = home-manager.lib.homeManagerConfiguration {
+          pkgs = nixpkgs.legacyPackages."x86_64-linux";
+          extraSpecialArgs = { inherit inputs outputs; };
+          modules = [ ./hosts/ROS2/home.nix ];
         };
       };
     };
