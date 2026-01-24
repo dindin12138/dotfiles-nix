@@ -238,9 +238,13 @@
 
       # --- Key Bindings ---
       binds = {
-        "Alt+Shift+Slash".action.show-hotkey-overlay = [ ];
-        "Alt+T".action.spawn = [ "foot" ];
+        "Alt+T".action.spawn = [ "ghostty" ];
         "Alt+Return".action.spawn = [ "foot" ];
+        "Alt+M".action.spawn = [
+          "ghostty"
+          "-e"
+          "rmpc"
+        ];
         "Alt+D".action.spawn = [
           "vicinae"
           "toggle"
@@ -257,18 +261,11 @@
           "vicinae"
           "vicinae://extensions/vicinae/clipboard/history"
         ];
-        "Alt+Shift+X".action.spawn = [
-          "dms"
-          "ipc"
-          "call"
-          "powermenu"
-          "toggle"
-        ];
-        "Mod+C".action.spawn = [
+        "Alt+Slash".action.spawn = [
           "noctalia-shell"
           "ipc"
           "call"
-          "controlCenter"
+          "plugin:keybind-cheatsheet"
           "toggle"
         ];
         "XF86AudioRaiseVolume" = {
