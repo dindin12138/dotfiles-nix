@@ -13,7 +13,6 @@
     ../../modules/home-manager/nixvim.nix
     ../../modules/home-manager/tmux.nix
     ../../modules/home-manager/yazi.nix
-    ../../modules/home-manager/kitty.nix
   ];
 
   home = {
@@ -27,7 +26,6 @@
     ripgrep
     fastfetch
     _7zz
-    imv
   ];
 
   nixpkgs = {
