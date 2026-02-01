@@ -76,7 +76,7 @@
         function nix-fzf-search
           set q $argv
           nix search nixpkgs $q --json 2>/dev/null \
-          | jq -r '
+          | ${pkgs.jq}/bin/jq -r '
               to_entries[]
               | .key as $k
               | ($k | split(".")[-1]) as $pkg

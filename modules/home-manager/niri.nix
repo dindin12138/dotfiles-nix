@@ -261,13 +261,6 @@
           "vicinae"
           "vicinae://extensions/vicinae/clipboard/history"
         ];
-        "Alt+Slash".action.spawn = [
-          "noctalia-shell"
-          "ipc"
-          "call"
-          "plugin:keybind-cheatsheet"
-          "toggle"
-        ];
         "XF86AudioRaiseVolume" = {
           allow-when-locked = true;
           action.spawn = [
