@@ -20,7 +20,6 @@
   environment.shells = [ pkgs.fish ];
 
   fonts.packages = with pkgs; [
-    source-han-sans
     nerd-fonts.fira-code
   ];
 
