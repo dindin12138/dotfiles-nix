@@ -4,6 +4,7 @@
     enable = true;
     enableZshIntegration = true;
     enableFishIntegration = true;
+    shellWrapperName = "y";
     keymap = { };
     settings = {
       mgr = {

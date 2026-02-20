@@ -51,8 +51,8 @@
       enable = true;
       createDirectories = true;
       extraConfig = {
-        XDG_WORKSPACE_DIR = "${config.home.homeDirectory}/Workspace";
-        XDG_SCREENSHOT_DIR = "${config.home.homeDirectory}/Pictures/Screenshots";
+        WORKSPACE = "${config.home.homeDirectory}/Workspace";
+        SCREENSHOT = "${config.home.homeDirectory}/Pictures/Screenshots";
       };
     };
   };
