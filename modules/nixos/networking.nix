@@ -21,5 +21,4 @@
       allowedUDPPorts = [ 53317 ];
     };
   };
-
 }
