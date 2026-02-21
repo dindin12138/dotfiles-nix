@@ -18,6 +18,8 @@
       "typora@free"
       "pixpin"
       "zen"
+      "clash-verge-rev"
+      "baidunetdisk"
     ];
     # masApps = { wechat = ""; };
     onActivation = {
