@@ -1,7 +1,7 @@
 { config, ... }:
 {
   imports = [
-    ../../modules/home-manager/niri.nix
+    ../../modules/home-manager/niri
     ../../modules/home-manager/vicinae.nix
     ../../modules/home-manager/shell
     ../../modules/home-manager/yazi.nix
@@ -30,12 +30,6 @@
     ../../modules/home-manager/gemini.nix
     ../../modules/home-manager/rclone.nix
   ];
-
-  nixpkgs = {
-    config = {
-      allowUnfree = true;
-    };
-  };
 
   home = {
     username = "din";

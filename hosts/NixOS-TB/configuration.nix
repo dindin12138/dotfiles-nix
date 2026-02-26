@@ -35,6 +35,8 @@
     users = {
       din = import ./home.nix;
     };
+    useGlobalPkgs = true;
+    useUserPackages = true;
   };
 
   networking.hostName = "NixOS-TB";
