@@ -258,19 +258,19 @@
         "type": "github"
       }
     },
-    "homebrew-din": {
+    "homebrew-tap": {
       "flake": false,
       "locked": {
-        "lastModified": 1765954459,
-        "narHash": "sha256-SQSAWjQfwHYvQCC8m9/F9Ng7TiRn3crqFNA+S3fFIFY=",
+        "lastModified": 1772075487,
+        "narHash": "sha256-jc2JenzPn+tCfjtJNswC7yZxHRoFzobRmfwkckQZhxE=",
         "owner": "dindin12138",
-        "repo": "homebrew-din",
-        "rev": "6aed302046f3cfaf7e1202415e244939c7ab6e78",
+        "repo": "homebrew-tap",
+        "rev": "2cd6f8a14848e04e1c2ff0a6b018a83ba14952b5",
         "type": "github"
       },
       "original": {
         "owner": "dindin12138",
-        "repo": "homebrew-din",
+        "repo": "homebrew-tap",
         "type": "github"
       }
     },
@@ -443,11 +443,11 @@
         "nixvim": "nixvim_2"
       },
       "locked": {
-        "lastModified": 1770353534,
-        "narHash": "sha256-X6fu8fqJz3gV1I4DWfDg0KweEuwdtT7/l89vIzBd0gw=",
+        "lastModified": 1772093810,
+        "narHash": "sha256-0dP6CS7XmmUo4AfHr8TKhnML/EGehGZaAO9vTuI7VNQ=",
         "owner": "dindin12138",
         "repo": "nixvim",
-        "rev": "d898f7cc675c085c59a768e557744e0476a1b593",
+        "rev": "763a631d58812edab34baa9a7c0c2e3b749c58dc",
         "type": "github"
       },
       "original": {
@@ -526,7 +526,7 @@
       "inputs": {
         "disko": "disko",
         "home-manager": "home-manager",
-        "homebrew-din": "homebrew-din",
+        "homebrew-tap": "homebrew-tap",
         "niri": "niri",
         "nix-darwin": "nix-darwin",
         "nix-homebrew": "nix-homebrew",
