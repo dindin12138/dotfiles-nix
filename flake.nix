@@ -7,8 +7,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-homebrew.url = "github:zhaofengli/nix-homebrew";
-    homebrew-din = {
-      url = "github:dindin12138/homebrew-din";
+    homebrew-tap = {
+      url = "github:dindin12138/homebrew-tap";
       flake = false;
     };
     home-manager = {

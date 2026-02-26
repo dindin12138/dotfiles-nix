@@ -7,7 +7,7 @@
     enable = true;
     user = "din";
     taps = {
-      "dindin12138/homebrew-din" = inputs.homebrew-din;
+      "dindin12138/tap" = inputs.homebrew-tap;
     };
   };
   homebrew = {
@@ -20,6 +20,7 @@
       "zen"
       "clash-verge-rev"
       "baidunetdisk"
+      "omniwm"
     ];
     # masApps = { wechat = ""; };
     onActivation = {
