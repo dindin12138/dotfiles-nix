@@ -22,6 +22,7 @@
     ../../modules/nixos/file-manager.nix
     ../../modules/nixos/users.nix
     ../../modules/nixos/niri.nix
+    ../../modules/nixos/hyprland.nix
     ../../modules/nixos/networking.nix
     ../../modules/nixos/podman.nix
     ../../modules/nixos/virt-manager.nix

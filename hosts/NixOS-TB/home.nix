@@ -2,6 +2,7 @@
 {
   imports = [
     ../../modules/home-manager/niri
+    ../../modules/home-manager/hyprland/hyprland.nix
     ../../modules/home-manager/vicinae.nix
     ../../modules/home-manager/shell
     ../../modules/home-manager/yazi.nix

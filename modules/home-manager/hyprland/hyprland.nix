@@ -3,11 +3,7 @@
   wayland.windowManager.hyprland = {
     enable = true;
     systemd.variables = [ "--all" ];
-    plugins = [
-      pkgs.hyprlandPlugins.hyprscrolling
-    ];
     settings = {
-
       monitor = "eDP-1,2880x1800@90,auto,1.5";
 
       misc = {
@@ -23,15 +19,14 @@
         sensitivity = "0";
       };
 
-      general = with config.colorScheme.palette; {
-        layout = "master";
-        # layout = "scrolling";
+      general = {
+        layout = "scrolling";
         # apply_sens_to_raw = "0";
         gaps_in = "4";
         gaps_out = "7";
         border_size = "3";
-        "col.active_border" = "0xFF${base05}";
-        "col.inactive_border" = "0xFF${base00}";
+        "col.active_border" = "0xFF${config.lib.stylix.colors.base0D}";
+        "col.inactive_border" = "0xFF${config.lib.stylix.colors.base00}";
       };
 
       master = {
@@ -39,8 +34,12 @@
         new_on_top = true;
       };
 
+      # scrolling = {
+      #   explicit_column_widths = "0.45,0.55,1.0";
+      # };
+
       decoration = {
-        rounding = "4";
+        rounding = "12";
         active_opacity = "1.0";
         inactive_opacity = "1.0";
         fullscreen_opacity = "1.0";
@@ -50,80 +49,57 @@
       };
 
       exec-once = [
-        "waybar"
-        # "${pkgs.swww}/bin/swww img ~/Pictures/Wallpapers/background.png --transition-type any"
-        # "clash-verge"
-        "FlClash"
+        "noctalia-shell"
+        "clash-verge"
       ];
 
-      windowrulev2 = [
-        # Telegram
-        "float, class:(org.telegram.desktop), title:(Media viewer)"
-        "center, class:(org.telegram.desktop), title:(Media viewer)"
-        "size 70% 70%, class:(org.telegram.desktop), title:(Media viewer)"
-        # Chrome
-        "float, class:(google-chrome), title:(Open Files|Open File)"
-        "center, class:(google-chrome), title:(Open Files|Open File)"
-        "size 70% 70%, class:(google-chrome), title:(Open Files|Open File)"
-        # Steam
-        "float, class:(steam), title:(Friends List|Special Offers|Steam Settings|好友列表|特惠|Steam 设置)"
-        "center, class:(steam), title:(关机|特惠)"
-        "size 20% 80%, class:(steam), title:(好友列表)"
-        # float-kitty
-        "float, class:(float-kitty)"
-        "center, class:(float-kitty)"
-        "size 70% 70%, class:(float-kitty)"
-        # Zotero
-        "float, class:^(Zotero)$, title:^(Zotero Settings|Add-ons Manager|Plugins Manager|Add-on Market|Progress|Import|高级搜索|Advanced Search|Software Update)$"
-        "center, class:^(Zotero)$, title:^(Zotero Settings|Add-ons Manager|Plugins Manager|Add-on Market|高级搜索|Advanced Search|Software Update)$"
-        # QQ
-        "float, class:(QQ), title:(设置|图片查看器|文件管理器|收藏|QQ机器人|腾讯频道|群相册|群作业 -.*|群精华)"
-        "center, class:(QQ), title:(设置|图片查看器|文件管理器|收藏|QQ机器人|腾讯频道|群相册|群作业 -.*|群精华)"
-        "float, class:(Qq), title:(Open Files)"
-        "center, class:(Qq), title:(Open Files)"
-        # WeChat
-        "float, class:(wechat), title:(预览)"
-        "center, class:(wechat), title:(预览)"
-        # Godot
-        "tile, class:^(Godot)$, title:^(Godot)$"
-        # Godot Chinese
-        "center, class:^(Godot)$, title:^(项目设置（project.godot）|编辑器设置)$"
-        "size 50% 70%, class:^(Godot)$, title:^(项目设置（project.godot）|编辑器设置)$"
-        # Godot English
-        "center, class:^(Godot)$, title:^(Project Settings.*|Editor Settings|Open a File or Directory|Select a Folder to Scan|Quick Settings|Command Palette|Manage Editor Feature Profiles|Export Template Manager|Configure FBX Importer|Run Instances|Search Help|Thanks from the Godot community!|Export|Orphan Resource Explorer|Edit Compilation Configuration Profile|Create New Node)$"
-        "size 50% 70%, class:^(Godot)$, title:^(Project Settings.*|Editor Settings|Open a File or Directory|Select a Folder to Scan|Command Palette|Search Help|Export|Orphan Resource Explorer|Edit Compilation Configuration Profile|Run Instances|Create New Node)$"
-      ];
-
-      "$term" = "kitty";
-      "$launch" = "wofi --show drun --prompt 'Search...'";
-      "$clipboard" = "cliphist list | wofi --dmenu | cliphist decode | wl-copy";
-      # "$randomwallpaper" =
-      # "${pkgs.swww}/bin/swww img $(find ~/Pictures/Wallpapers/. -name '*' | shuf -n1) --transition-type any";
-      "$lockscreen" = "hyprlock";
-      "$colorpicker" = "hyprpicker";
-      "$screenshot" = "grimblast";
-      "$filemanager" = "thunar";
-      "$editor" = "nvim";
-      "$browser" = "firefox";
-      "$music" = "$term -e ncmpcpp";
-      "$note" = "obsidian";
+      # windowrulev2 = [
+      #   # Telegram
+      #   "float, class:(org.telegram.desktop), title:(Media viewer)"
+      #   "center, class:(org.telegram.desktop), title:(Media viewer)"
+      #   "size 70% 70%, class:(org.telegram.desktop), title:(Media viewer)"
+      #   # Chrome
+      #   "float, class:(google-chrome), title:(Open Files|Open File)"
+      #   "center, class:(google-chrome), title:(Open Files|Open File)"
+      #   "size 70% 70%, class:(google-chrome), title:(Open Files|Open File)"
+      #   # Steam
+      #   "float, class:(steam), title:(Friends List|Special Offers|Steam Settings|好友列表|特惠|Steam 设置)"
+      #   "center, class:(steam), title:(关机|特惠)"
+      #   "size 20% 80%, class:(steam), title:(好友列表)"
+      #   # float-kitty
+      #   "float, class:(float-kitty)"
+      #   "center, class:(float-kitty)"
+      #   "size 70% 70%, class:(float-kitty)"
+      #   # Zotero
+      #   "float, class:^(Zotero)$, title:^(Zotero Settings|Add-ons Manager|Plugins Manager|Add-on Market|Progress|Import|高级搜索|Advanced Search|Software Update)$"
+      #   "center, class:^(Zotero)$, title:^(Zotero Settings|Add-ons Manager|Plugins Manager|Add-on Market|高级搜索|Advanced Search|Software Update)$"
+      #   # QQ
+      #   "float, class:(QQ), title:(设置|图片查看器|文件管理器|收藏|QQ机器人|腾讯频道|群相册|群作业 -.*|群精华)"
+      #   "center, class:(QQ), title:(设置|图片查看器|文件管理器|收藏|QQ机器人|腾讯频道|群相册|群作业 -.*|群精华)"
+      #   "float, class:(Qq), title:(Open Files)"
+      #   "center, class:(Qq), title:(Open Files)"
+      #   # WeChat
+      #   "float, class:(wechat), title:(预览)"
+      #   "center, class:(wechat), title:(预览)"
+      #   # Godot
+      #   "tile, class:^(Godot)$, title:^(Godot)$"
+      #   # Godot Chinese
+      #   "center, class:^(Godot)$, title:^(项目设置（project.godot）|编辑器设置)$"
+      #   "size 50% 70%, class:^(Godot)$, title:^(项目设置（project.godot）|编辑器设置)$"
+      #   # Godot English
+      #   "center, class:^(Godot)$, title:^(Project Settings.*|Editor Settings|Open a File or Directory|Select a Folder to Scan|Quick Settings|Command Palette|Manage Editor Feature Profiles|Export Template Manager|Configure FBX Importer|Run Instances|Search Help|Thanks from the Godot community!|Export|Orphan Resource Explorer|Edit Compilation Configuration Profile|Create New Node)$"
+      #   "size 50% 70%, class:^(Godot)$, title:^(Project Settings.*|Editor Settings|Open a File or Directory|Select a Folder to Scan|Command Palette|Search Help|Export|Orphan Resource Explorer|Edit Compilation Configuration Profile|Run Instances|Create New Node)$"
+      # ];
 
       bind = [
         # APPs
-        "ALT,Return,exec,$term"
-        "ALTSHIFT,Return,exec,$term tmux attach"
-        "ALT,D,exec,$launch"
-        "ALT,E,exec,$filemanager"
-        "ALT,C,exec,$clipboard"
-        "ALT,G,exec,$browser"
-        "ALT,M,exec,$music"
-        "ALT,O,exec,$note"
-        "ALT,B,exec,waybar"
-        "ALT,T,exec,killall -SIGUSR1 .waybar-wrapped"
-        "ALT,P,exec,$colorpicker"
-        "SUPER,L,exec,$lockscreen"
+        "ALT,Return,exec,foot"
+        "ALT,D,exec,vicinae toggle"
+        "ALT,E,exec,nautilus"
+        "ALT,C,exec,vicinae vicinae://extensions/vicinae/clipboard/history"
+        "ALT,M,exec,ghostty -e rmpc"
+        "SUPER,L,exec,noctalia-shell ipc call lockScreen lock"
         "ALT,S,exec,$screenshot --notify copysave area"
-        # "ALT,W,exec,$randomwallpaper"
 
         # Hyprland
         "ALTSHIFT,Q,killactive"
@@ -197,16 +173,16 @@
       ];
 
       binde = [
-        ",XF86MonBrightnessUp,exec,${pkgs.brightnessctl}/bin/brightnessctl set 3%+ -q"
-        ",XF86MonBrightnessDown,exec,${pkgs.brightnessctl}/bin/brightnessctl set 3%-  -q"
-        ",XF86AudioRaiseVolume,exec,wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 3%+"
-        ",XF86AudioLowerVolume,exec,wpctl set-volume @DEFAULT_AUDIO_SINK@ 3%-"
-        ",XF86AudioMute,exec,wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
-        ",XF86AudioMicMute,exec,wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
-        ",XF86AudioNext,exec,${pkgs.mpc-cli}/bin/mpc next"
-        ",XF86AudioPrev,exec,${pkgs.mpc-cli}/bin/mpc prev"
-        ",XF86AudioPlay,exec,${pkgs.mpc-cli}/bin/mpc toggle"
-        ",XF86AudioStop,exec,${pkgs.mpc-cli}/bin/mpc stop"
+        ",XF86MonBrightnessUp,exec,noctalia-shell ipc call brightness increase"
+        ",XF86MonBrightnessDown,exec,noctalia-shell ipc call brightness decrease"
+        ",XF86AudioRaiseVolume,exec,noctalia-shell ipc call volume increase"
+        ",XF86AudioLowerVolume,exec,noctalia-shell ipc call volume decrease"
+        ",XF86AudioMute,exec,noctalia-shell ipc call volume muteOutput"
+        ",XF86AudioMicMute,exec,noctalia-shell ipc call volume muteInput"
+        ",XF86AudioNext,exec,${pkgs.mpc}/bin/mpc next"
+        ",XF86AudioPrev,exec,${pkgs.mpc}/bin/mpc prev"
+        ",XF86AudioPlay,exec,${pkgs.mpc}/bin/mpc toggle"
+        ",XF86AudioStop,exec,${pkgs.mpc}/bin/mpc stop"
       ];
     };
   };
