@@ -44,7 +44,7 @@ in
       [
         uosc
         thumbfast
-        mpv-cheatsheet
+        # mpv-cheatsheet
         autoload
       ]
       ++ (if isLinux then [ mpris ] else [ ]);
