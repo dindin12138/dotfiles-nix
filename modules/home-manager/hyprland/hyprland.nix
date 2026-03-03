@@ -34,9 +34,12 @@
         new_on_top = true;
       };
 
-      # scrolling = {
-      #   explicit_column_widths = "0.45,0.55,1.0";
-      # };
+      scrolling = {
+        explicit_column_widths = "0.45,0.55,1.0";
+        fullscreen_on_one_column = false;
+        column_width = 1;
+        focus_fit_method = 1;
+      };
 
       decoration = {
         rounding = "12";
@@ -48,48 +51,48 @@
         };
       };
 
+      animations = {
+        bezier = [
+          "fluent, 0.25, 1, 0.5, 1"
+          "niri_slide, 0.25, 1.0, 0.1, 1.0"
+        ];
+        animation = [
+          "windowsMove, 1, 8, niri_slide"
+          "workspaces, 1, 8, niri_slide, slidevert"
+          "windowsIn, 1, 8, niri_slide, popin 85%"
+          "windowsOut, 1, 8, niri_slide, popin 85%"
+          "border, 1, 5, default"
+          "fade, 1, 4, fluent"
+        ];
+      };
+
+      ecosystem = {
+        no_update_news = true;
+        no_donation_nag = true;
+      };
+
       exec-once = [
         "noctalia-shell"
         "clash-verge"
       ];
 
-      # windowrulev2 = [
-      #   # Telegram
-      #   "float, class:(org.telegram.desktop), title:(Media viewer)"
-      #   "center, class:(org.telegram.desktop), title:(Media viewer)"
-      #   "size 70% 70%, class:(org.telegram.desktop), title:(Media viewer)"
-      #   # Chrome
-      #   "float, class:(google-chrome), title:(Open Files|Open File)"
-      #   "center, class:(google-chrome), title:(Open Files|Open File)"
-      #   "size 70% 70%, class:(google-chrome), title:(Open Files|Open File)"
-      #   # Steam
-      #   "float, class:(steam), title:(Friends List|Special Offers|Steam Settings|好友列表|特惠|Steam 设置)"
-      #   "center, class:(steam), title:(关机|特惠)"
-      #   "size 20% 80%, class:(steam), title:(好友列表)"
-      #   # float-kitty
-      #   "float, class:(float-kitty)"
-      #   "center, class:(float-kitty)"
-      #   "size 70% 70%, class:(float-kitty)"
-      #   # Zotero
-      #   "float, class:^(Zotero)$, title:^(Zotero Settings|Add-ons Manager|Plugins Manager|Add-on Market|Progress|Import|高级搜索|Advanced Search|Software Update)$"
-      #   "center, class:^(Zotero)$, title:^(Zotero Settings|Add-ons Manager|Plugins Manager|Add-on Market|高级搜索|Advanced Search|Software Update)$"
-      #   # QQ
-      #   "float, class:(QQ), title:(设置|图片查看器|文件管理器|收藏|QQ机器人|腾讯频道|群相册|群作业 -.*|群精华)"
-      #   "center, class:(QQ), title:(设置|图片查看器|文件管理器|收藏|QQ机器人|腾讯频道|群相册|群作业 -.*|群精华)"
-      #   "float, class:(Qq), title:(Open Files)"
-      #   "center, class:(Qq), title:(Open Files)"
-      #   # WeChat
-      #   "float, class:(wechat), title:(预览)"
-      #   "center, class:(wechat), title:(预览)"
-      #   # Godot
-      #   "tile, class:^(Godot)$, title:^(Godot)$"
-      #   # Godot Chinese
-      #   "center, class:^(Godot)$, title:^(项目设置（project.godot）|编辑器设置)$"
-      #   "size 50% 70%, class:^(Godot)$, title:^(项目设置（project.godot）|编辑器设置)$"
-      #   # Godot English
-      #   "center, class:^(Godot)$, title:^(Project Settings.*|Editor Settings|Open a File or Directory|Select a Folder to Scan|Quick Settings|Command Palette|Manage Editor Feature Profiles|Export Template Manager|Configure FBX Importer|Run Instances|Search Help|Thanks from the Godot community!|Export|Orphan Resource Explorer|Edit Compilation Configuration Profile|Create New Node)$"
-      #   "size 50% 70%, class:^(Godot)$, title:^(Project Settings.*|Editor Settings|Open a File or Directory|Select a Folder to Scan|Command Palette|Search Help|Export|Orphan Resource Explorer|Edit Compilation Configuration Profile|Run Instances|Create New Node)$"
-      # ];
+      windowrule = [
+        "float on, center on, size (monitor_w*0.7) (monitor_h*0.7), match:class (org.telegram.desktop), match:title (Media viewer)"
+        "float on, center on, size (monitor_w*0.7) (monitor_h*0.7), match:class (google-chrome), match:title (Open Files|Open File)"
+        "float on, match:class (steam), match:title (Friends List|Special Offers|Steam Settings|好友列表|特惠|Steam 设置)"
+        "center on, match:class (steam), match:title (关机|特惠)"
+        "size (monitor_w*0.2) (monitor_h*0.8), match:class (steam), match:title (好友列表)"
+        "float on, center on, size (monitor_w*0.7) (monitor_h*0.7), match:class (float-kitty)"
+        "float on, match:class ^(Zotero)$, match:title ^(Zotero Settings|Add-ons Manager|Plugins Manager|Add-on Market|Progress|Import|高级搜索|Advanced Search|Software Update)$"
+        "center on, match:class ^(Zotero)$, match:title ^(Zotero Settings|Add-ons Manager|Plugins Manager|Add-on Market|高级搜索|Advanced Search|Software Update)$"
+        "float on, center on, match:class (QQ), match:title (设置|图片查看器|文件管理器|收藏|QQ机器人|腾讯频道|群相册|群作业 -.*|群精华)"
+        "float on, center on, match:class (Qq), match:title (Open Files)"
+        "float on, center on, match:class (wechat), match:title (预览)"
+        "tile on, match:class ^(Godot)$, match:title ^(Godot)$"
+        "center on, size (monitor_w*0.5) (monitor_h*0.7), match:class ^(Godot)$, match:title ^(项目设置（project.godot）|编辑器设置)$"
+        "center on, match:class ^(Godot)$, match:title ^(Project Settings.*|Editor Settings|Open a File or Directory|Select a Folder to Scan|Quick Settings|Command Palette|Manage Editor Feature Profiles|Export Template Manager|Configure FBX Importer|Run Instances|Search Help|Thanks from the Godot community!|Export|Orphan Resource Explorer|Edit Compilation Configuration Profile|Create New Node)$"
+        "size (monitor_w*0.5) (monitor_h*0.7), match:class ^(Godot)$, match:title ^(Project Settings.*|Editor Settings|Open a File or Directory|Select a Folder to Scan|Command Palette|Search Help|Export|Orphan Resource Explorer|Edit Compilation Configuration Profile|Run Instances|Create New Node)$"
+      ];
 
       bind = [
         # APPs
@@ -103,8 +106,8 @@
 
         # Hyprland
         "ALTSHIFT,Q,killactive"
-        "ALTSHIFT,x,exit"
-        "ALT,F,fullscreen"
+        "ALTSHIFT,X,exit"
+        "ALTSHIFT,F,fullscreen"
         "ALT,space,togglefloating"
 
         # Focus
@@ -118,12 +121,12 @@
         "ALT,J,movefocus,d"
 
         # Move
-        "ALTSHIFT,left,movewindow,l"
-        "ALTSHIFT,right,movewindow,r"
+        "ALTSHIFT,left,layoutmsg,swapcol l"
+        "ALTSHIFT,right,layoutmsg,swapcol r"
+        "ALTSHIFT,H,layoutmsg,swapcol l"
+        "ALTSHIFT,L,layoutmsg,swapcol r"
         "ALTSHIFT,up,movewindow,u"
         "ALTSHIFT,down,movewindow,d"
-        "ALTSHIFT,H,movewindow,l"
-        "ALTSHIFT,L,movewindow,r"
         "ALTSHIFT,K,movewindow,u"
         "ALTSHIFT,J,movewindow,d"
 
@@ -152,14 +155,20 @@
         "ALTSHIFT,0,movetoworkspace,10"
 
         # Resize window
-        "ALTCTRL,left,resizeactive,-20 0"
-        "ALTCTRL,right,resizeactive,20 0"
-        "ALTCTRL,up,resizeactive,0 -20"
-        "ALTCTRL,down,resizeactive,0 20"
-        "ALTCTRL,H,resizeactive,-20 0"
-        "ALTCTRL,L,resizeactive,20 0"
-        "ALTCTRL,K,resizeactive,0 -20"
-        "ALTCTRL,J,resizeactive,0 20"
+        # "ALTCTRL,left,resizeactive,-20 0"
+        # "ALTCTRL,right,resizeactive,20 0"
+        # "ALTCTRL,up,resizeactive,0 -20"
+        # "ALTCTRL,down,resizeactive,0 20"
+        # "ALTCTRL,H,resizeactive,-20 0"
+        # "ALTCTRL,L,resizeactive,20 0"
+        # "ALTCTRL,K,resizeactive,0 -20"
+        # "ALTCTRL,J,resizeactive,0 20"
+        "ALT,R,layoutmsg,colresize +conf"
+        "ALT,F,layoutmsg,colresize 1.0"
+        "ALT,minus,layoutmsg,colresize -0.1"
+        "ALT,equal,layoutmsg,colresize +0.1"
+        "ALTSHIFT,minus,resizeactive,0 -100"
+        "ALTSHIFT,equal,resizeactive,0 100"
 
         # Mouse
         "ALT,mouse_down,workspace,e+1"
@@ -179,10 +188,10 @@
         ",XF86AudioLowerVolume,exec,noctalia-shell ipc call volume decrease"
         ",XF86AudioMute,exec,noctalia-shell ipc call volume muteOutput"
         ",XF86AudioMicMute,exec,noctalia-shell ipc call volume muteInput"
-        ",XF86AudioNext,exec,${pkgs.mpc}/bin/mpc next"
-        ",XF86AudioPrev,exec,${pkgs.mpc}/bin/mpc prev"
-        ",XF86AudioPlay,exec,${pkgs.mpc}/bin/mpc toggle"
-        ",XF86AudioStop,exec,${pkgs.mpc}/bin/mpc stop"
+        ",XF86AudioNext,exec,noctalia-shell ipc call media next"
+        ",XF86AudioPrev,exec,noctalia-shell ipc call media previous"
+        ",XF86AudioPlay,exec,noctalia-shell ipc call media play"
+        ",XF86AudioStop,exec,noctalia-shell ipc call media pause"
       ];
     };
   };
