@@ -15,11 +15,19 @@
     taps = builtins.attrNames config.nix-homebrew.taps;
     casks = [
       "godot"
-      "typora@free"
       "pixpin"
       "zen"
       "clash-verge-rev"
       "baidunetdisk"
+      "google-chrome"
+      "zotero"
+      "raycast"
+      "localsend"
+      "obsidian"
+      "iina"
+      "wechat"
+
+      "typora@free"
       "omniwm"
     ];
     # masApps = { wechat = ""; };

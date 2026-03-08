@@ -5,13 +5,6 @@
     eza
     fd
     ripgrep
-    google-chrome
-    zotero
-    raycast
     qbittorrent-enhanced
-    localsend
-    obsidian
-    iina
-    wechat
   ];
 }
