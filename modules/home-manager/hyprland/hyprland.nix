@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, ... }:
 {
   wayland.windowManager.hyprland = {
     enable = true;
@@ -21,7 +21,6 @@
 
       general = {
         layout = "scrolling";
-        # apply_sens_to_raw = "0";
         gaps_in = "4";
         gaps_out = "7";
         border_size = "3";
@@ -42,13 +41,27 @@
       };
 
       decoration = {
-        rounding = "12";
-        active_opacity = "1.0";
-        inactive_opacity = "1.0";
-        fullscreen_opacity = "1.0";
+        rounding = "20";
         blur = {
-          enabled = "false";
+          enabled = "true";
+          size = 3;
+          passes = 2;
+          vibrancy = 0.1696;
         };
+        shadow = {
+          enabled = true;
+          range = 4;
+          render_power = 3;
+          color = "rgba(1a1a1aee)";
+        };
+      };
+
+      layerrule = {
+        name = "noctalia";
+        "match:namespace" = "noctalia-background-.*$";
+        ignore_alpha = 0.5;
+        blur = true;
+        blur_popups = true;
       };
 
       animations = {
