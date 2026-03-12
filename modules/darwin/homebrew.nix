@@ -26,6 +26,7 @@
       "obsidian"
       "iina"
       "wechat"
+      "neteasemusic"
 
       "typora@free"
       "omniwm"
