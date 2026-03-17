@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, pkgs, ... }:
 {
   wayland.windowManager.hyprland = {
     enable = true;
@@ -84,6 +84,12 @@
         no_donation_nag = true;
       };
 
+      env = [
+        # grimblast
+        "DEFAULT_TARGET_DIR,${config.home.homeDirectory}/InfiniCloud/Picture/Screenshots"
+        "DATE_FORMAT,%Y%m%d-%H%M%S"
+      ];
+
       exec-once = [
         "noctalia-shell"
         "clash-verge"
@@ -115,7 +121,7 @@
         "ALT,C,exec,vicinae vicinae://extensions/vicinae/clipboard/history"
         "ALT,M,exec,ghostty -e rmpc"
         "SUPER,L,exec,noctalia-shell ipc call lockScreen lock"
-        "ALT,S,exec,$screenshot --notify copysave area"
+        "ALT,S,exec,${pkgs.grimblast}/bin/grimblast --notify copysave area"
 
         # Hyprland
         "ALTSHIFT,Q,killactive"
