@@ -28,7 +28,7 @@
     ../../modules/home-manager/env.nix
     ../../modules/home-manager/udisk.nix
     ../../modules/home-manager/nh.nix
-    ../../modules/home-manager/gemini.nix
+    ../../modules/home-manager/ai.nix
     ../../modules/home-manager/rclone.nix
   ];
 
