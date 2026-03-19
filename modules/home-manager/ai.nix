@@ -26,22 +26,22 @@
     };
     rules = { };
     commands = { };
-    lspServers = {
-      clangd = {
-        command = "clangd";
-        args = [
-          "--background-index"
-        ];
-        extensionToLanguage = {
-          ".c" = "c";
-          ".cpp" = "cpp";
-          ".cc" = "cpp";
-          ".cxx" = "cpp";
-          ".h" = "c";
-          ".hpp" = "cpp";
-        };
-      };
-    };
+    # lspServers = {
+    #   clangd = {
+    #     command = "clangd";
+    #     args = [
+    #       "--background-index"
+    #     ];
+    #     extensionToLanguage = {
+    #       ".c" = "c";
+    #       ".cpp" = "cpp";
+    #       ".cc" = "cpp";
+    #       ".cxx" = "cpp";
+    #       ".h" = "c";
+    #       ".hpp" = "cpp";
+    #     };
+    #   };
+    # };
   };
 
   programs.gemini-cli = {
