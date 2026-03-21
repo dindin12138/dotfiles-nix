@@ -2,9 +2,10 @@
   description = "Din's nix config";
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs-standalone.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     nix-darwin = {
       url = "github:nix-darwin/nix-darwin/master";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs-standalone";
     };
     nix-homebrew.url = "github:zhaofengli/nix-homebrew";
     homebrew-tap = {
@@ -44,6 +45,7 @@
     {
       self,
       nixpkgs,
+      nixpkgs-standalone,
       nix-darwin,
       home-manager,
       ...
@@ -66,7 +68,7 @@
       };
       homeConfigurations = {
         "ROS2" = home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages."x86_64-linux";
+          pkgs = nixpkgs-standalone.legacyPackages."x86_64-linux";
           extraSpecialArgs = { inherit inputs outputs; };
           modules = [ ./hosts/ROS2/home.nix ];
         };
