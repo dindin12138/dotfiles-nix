@@ -19,6 +19,10 @@
             app-id = "^steam$";
             title = "^(Steam 设置|特惠|Steam Settings|Special Offers)$";
           }
+          {
+            app-id = "^wechat$";
+            title = "^(Photos and Videos|Settings|Open)$";
+          }
         ];
         open-floating = true;
       }

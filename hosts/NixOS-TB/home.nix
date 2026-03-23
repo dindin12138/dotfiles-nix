@@ -44,6 +44,7 @@
     enable = true;
     userDirs = {
       enable = true;
+      setSessionVariables = false;
       createDirectories = true;
       extraConfig = {
         WORKSPACE = "${config.home.homeDirectory}/Workspace";

@@ -9,7 +9,7 @@
     ../../modules/home-manager/bat.nix
     ../../modules/home-manager/btop.nix
     ../../modules/home-manager/env.nix
-    ../../modules/home-manager/gemini.nix
+    ../../modules/home-manager/ai.nix
     ../../modules/home-manager/git.nix
     ../../modules/home-manager/nixvim.nix
     ../../modules/home-manager/tmux.nix
