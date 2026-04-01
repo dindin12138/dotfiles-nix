@@ -28,6 +28,7 @@
       "wechat"
       "neteasemusic"
       "ghostty"
+      "stats"
 
       "typora@free"
       "omniwm"
