@@ -27,6 +27,7 @@
       "iina"
       "wechat"
       "neteasemusic"
+      "ghostty"
 
       "typora@free"
       "omniwm"

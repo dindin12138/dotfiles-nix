@@ -1,15 +1,15 @@
 { pkgs, config, ... }:
 let
-  isLinux = pkgs.stdenv.isLinux;
+  isDarwin = pkgs.stdenv.isDarwin;
 in
 {
   stylix.targets.ghostty.enable = true;
   programs.ghostty = {
     enable = true;
-    package = if isLinux then pkgs.ghostty else pkgs.ghostty-bin;
+    package = if isDarwin then null else pkgs.ghostty;
     enableZshIntegration = true;
     enableFishIntegration = true;
-    installBatSyntax = true;
+    installBatSyntax = if isDarwin then false else true;
     settings = {
       "macos-titlebar-style" = "transparent";
       "macos-option-as-alt" = true;
